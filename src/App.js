@@ -1,12 +1,14 @@
+import "./App.css";
+import LandingPage from "./components/LandingPage/LandingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import './App.css';
-import { TopHeading } from './constatnts/TopHeading';
-import './index.css'
 function App() {
   return (
-    <div className="App">
-      <TopHeading text={'About ConsoleDot'}/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
