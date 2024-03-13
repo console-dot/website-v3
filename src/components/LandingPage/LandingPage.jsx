@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import { NavBar } from "../Navbar";
+import AboutScreen from "../AboutScreen/AboutScreen";
 
 export default function LandingPage() {
   return (
@@ -54,9 +55,11 @@ export default function LandingPage() {
                 </p>
               </button>
             </div>
+          
           </div>
         </div>
       </div>
+      <AboutScreen/>
     </>
   );
 }
