@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { logo } from "../../assets/images";
 
 export const NavBar = () => {
@@ -9,18 +9,27 @@ export const NavBar = () => {
     "Case Studies",
     "Careers",
   ];
+
+  // State to toggle the visibility of the navigation items
+  const [showNav, setShowNav] = useState(false);
+
+  // Function to toggle the visibility of navigation items on tap of mobile
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
+
   return (
     <div
-      style={{ backgroundColor: "rgba(1, 12, 41, 1)" }}
+      style={{ backgroundColor: "rgba(1, 12, 41, 1)", position: "sticky", top: 0, zIndex: 1 }}
       className="w-full h-[76px] bg-nav flex flex-row bg-opacity-7"
     >
-      <div className="w-1/3 flex flex-row">
-        <div className="w-[80%] bg-white flex flex-row items-center justify-center gap-4">
+      <div className="w-1/3  flex flex-row relative z-10">
+        <div className="lg:w-[80%] xs:w-auto bg-white flex flex-row items-center justify-center gap-4">
           <div className="flex flex-row gap-4 items-center">
             <div className="w-[37px] h-[37px]">
               <img src={logo} alt="" style={{ marginLeft: "4px" }} />
             </div>
-            <div>
+            <div className="z-10">
               <span
                 style={{ color: "rgb(60, 90, 133)" }}
                 className="font-poppins text-xl font-semibold leading-[46px] tracking-normal text-left"
@@ -37,7 +46,7 @@ export const NavBar = () => {
           </div>
         </div>
         <div
-          className="w-[75px]"
+          className="w-[5px]"
           style={{
             borderTop: "76px solid white",
             borderRight: "100px solid transparent",
@@ -45,13 +54,46 @@ export const NavBar = () => {
         ></div>
       </div>
       <div className="w-2/3 items-center justify-center flex">
-        <ul className="flex flex-row text-white justify-around font-sans gap-8 text-[14px]">
-          {navBar.map((i) => (
-            <li className="p-2 cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple">
-              {i}
+        {/* Hamburger menu icon for small screens */}
+        <div className="lg:hidden ml-auto" onClick={toggleNav}>
+          <svg
+            className="w-6 h-6 text-white mr-4 cursor-pointer"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </div>
+        {/* Navigation items for desktop */}
+        <ul
+          className={`lg:flex lg:flex-row lg:text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
+        >
+          {navBar.map((item, index) => (
+            <li
+              key={index}
+              className="p-2 cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple"
+            >
+              {item}
             </li>
           ))}
         </ul>
+        {/* Dropdown menu for small screens */}
+        <div className={`${showNav ? "block" : "hidden"} lg:hidden absolute bg-nav top-[76px] left-0 w-full z-50`}>
+          <ul onClick={() => setShowNav(false)} className="flex flex-col text-white font-bold gap-4 p-4">
+            {navBar.map((item, index) => (
+              <li key={index} className="cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
