@@ -3,10 +3,16 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import Header from "../Header/Header";
 import { NavBar } from "../Navbar";
 import AboutScreen from "../AboutScreen/AboutScreen";
+import AboutUs from "../AboutUs/AboutUs";
+import OurServices from "../OurServices/OurServices"
+import OffshoringServices from "../OffshoringServices/OffshoringServices";
+import Footer from "../Footer/Footer";
+
 
 export default function LandingPage() {
   return (
     <>
+    <div className="bg-offwhite">
       <Header />
       <NavBar />
       <div
@@ -28,19 +34,19 @@ export default function LandingPage() {
           <div className="w-[58%] mt-[150px]">
             <p
               style={{ color: "rgba(255, 255, 255, 1)" }}
-              className="font-poppins text-3xl font-normal leading-none tracking-normal text-center"
+              className="font-poppins xl:text-[37px] lg:text-[37px] md:text-[37px] sm:text-[20px] xs:text-[20px] font-normal leading-none tracking-normal text-center"
             >
               WELCOME TO
             </p>
             <p
               style={{ color: "rgba(255, 255, 255, 1)" }}
-              className="font-poppins sm: text-[26px]  lg: text-[44px] font-bold leading-[52px] tracking-normal text-center mt-[20px]"
+              className="font-poppins {lg:text-[44px] md:text-[44px] sm:text-[24px] xs:text-[24px]}  font-bold leading-[52px] tracking-normal text-center mt-[20px]"
             >
               CONSOLEDOT
             </p>
             <p
               style={{ color: "rgba(255, 255, 255, 1)" }}
-              className="font-lato sm: text-[12px]  font-normal leading-7 text-center mt-[30px]"
+              className="font-lato {lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px]}  font-normal leading-7 text-center mt-[10px]"
             >
               We represent the connected world, offering innovative and
               customer-centric information technology experiences, enabling
@@ -73,6 +79,11 @@ export default function LandingPage() {
         </div>
       </div>
       <AboutScreen />
+      <AboutUs/>
+      <OurServices/>
+      <OffshoringServices/>
+      <Footer/>
+      </div>
     </>
   );
 }

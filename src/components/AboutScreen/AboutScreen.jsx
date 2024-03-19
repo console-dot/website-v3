@@ -5,31 +5,31 @@ export default function AboutScreen() {
   return (
     <>
       {/* About Section */}
-      <div className="flex flex-wrap bg-white py-12">
+      <div className="flex flex-wrap bg-offwhite py-12">
         {/* Left side: Text */}
         <div className="w-full md:w-1/2 p-8">
-          <p className="text-black font-poppins text-3xl font-normal leading-none tracking-normal">
-            ABOUT US
+          <p className="text-custom-blue font-poppins lg:text-[16px]  md:text-16px sm:text-[12px] xs:text-[12px] font-normal leading-none tracking-normal">
+            About the compny
           </p>
-          <p className="text-black font-poppins text-2xl font-bold leading-10 tracking-normal mt-4">
-            Our Mission
+          <p className="text-custom-purple font-poppins lg:text-[28px]  md:text-28px sm:text-[18px] xs:text-[18px] font-bold leading-10 tracking-normal mt-4">
+            About Consoledot
           </p>
-          <p className="text-black font-lato text-base font-normal leading-7 mt-4">
-            We represent the connected world, offering innovative and
-            customer-centric information technology experiences, enabling
-            Enterprises, Associates, and Society to Rise. Dedicated to providing
-            high-quality software solutions to meet evolving business needs
-            across industries, we combine technical expertise with a
-            customer-centric approach as a full stack development company.
+          <div class="flex items-center lg:ml-[8%] sm: ml-">
+            <div class="h-0.5 bg-custom-purple w-16"></div>
+            <div class="w-2 h-2 bg-black rounded-full mx-1"></div>
+            <div class="h-0.5 bg-custom-purple w-16"></div>
+          </div>
+
+          <p className="text-aboutustext font-lato lg:text-[16px]  md:text-16px sm:text-[12px] xs:text-[12px] font-normal leading-7 mt-4">
+            At ConsoleDot, we believe in the power of technology to transform
+            businesses and drive societal progress. As a leading software
+            solutions provider, we are dedicated to delivering high-quality and
+            customer- centric experiences that enable enterprises, associates,
+            and society to rise.
           </p>
-          <button className="text-white px-5 py-2.5 bg-gradient-to-r from-custom-blue to-custom-purple hover:to-custom-purple-hover hover:from-custom-blue-hover rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue mt-8">
-            <p className="font-Lato text-base font-medium leading-7 tracking-normal">
-              Contact us
-            </p>
-          </button>
         </div>
         {/* Right side: Image */}
-        <div className="w-auto md:w-1/2 flex items-center justify-center">
+        <div className="w-auto md:w-1/2 flex items-center justify-center ">
           <div className="w-3/4 relative">
             {/* Dashed border */}
             <div class="border-dashed border-2 border-custom-blue  bg-gradient-to-r from- to-cyan-600">
