@@ -46,9 +46,32 @@ const Footer = () => {
             across industries.
           </p>
         </div>
-
         {/* Second Column */}
-        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-1/2 xs:w-1/2 mb-10">
+        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10 ">
+          {/* Navigation */}
+          <p
+            className=" lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] pl-6"
+            style={{ font: "poppins" }}
+          >
+            Navigation
+            <div className=" lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] pt-8 font-lato">
+              <div>
+                <a href="#">Customer</a>
+              </div>
+              <div>
+                <a href="#">Technologies</a>
+              </div>
+              <div>
+                <a href="#">Carrer</a>
+              </div>
+              <div>
+                <a href="#">Contact Us</a>
+              </div>
+            </div>
+          </p>
+        </div>
+        {/* Second Column */}
+        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
           {/* Privacy Policy & Terms */}
           <ul className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs">
             <li>
@@ -65,7 +88,7 @@ const Footer = () => {
         </div>
 
         {/* Third Column */}
-        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-1/2 xs:w-1/2 mb-10">
+        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
           {/* Contact Info */}
           <div className="flex items-start mb-4">
             <div className="mr-3">
@@ -88,47 +111,68 @@ const Footer = () => {
             </div>
             <p className="text-xs">info@consoledot.com</p>
           </div>
-        </div>
-
-        {/* Custom Icons */}
-        {/* <div className="w-full lg:w-1/4 md:w-1/2 sm:w-1/2 xs:w-1/2 mb-10">
-          <div
-            style={{ width: "20%", gap: "5px" }}
-            className="h-8 flex items-center xl:flex lg:flex md:flex sm:hidden xs:hidden"
-          >
-            <div
-              style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-              className="w-8 h-8 flex justify-center items-center"
-            >
-              <LinkedinIcon color={"white"} />
+          {/* social icon section start */}
+          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full lg:ml-[25px] md:ml-[25px]  flex justify-center sm:flex sm:justify-center xs:flex xs:justify-center xs:gap-3 items-center">
+            <div className="lg:flex md:flex sm:hidden xs:hidden gap-3 ">
+              <LinkedinIcon color="custom-purple"
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30% ",
+                }}
+              />
+              <TwitterIcon
+                color={"white"}
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
+              <CIcon
+                color={"rgba(14, 119, 137, 1)"}
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
+              <AIcon
+                color={"white"}
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
+              <OIcon
+                color={"white"}
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
             </div>
-            <div
-              style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-              className="w-8 h-8 flex justify-center items-center"
-            >
+            <div className="lg:hidden md:hidden sm:flex xs:flex flex justify-center items-center " style={{gap:"6px"}}>
+              <LinkedinIcon />
               <TwitterIcon color={"white"} />
-            </div>
-            <div
-              style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-              className="w-8 h-8 flex justify-center items-center"
-            >
-              <CIcon color={"white"} />
-            </div>
-            <div
-              style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-              className="w-8 h-8 flex justify-center items-center"
-            >
+              <CIcon color={"rgba(14, 119, 137, 1)"} />
               <AIcon color={"white"} />
-            </div>
-            <div
-              style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-              className="w-8 h-8 flex justify-center items-center"
-            >
               <OIcon color={"white"} />
             </div>
           </div>
-        </div> */}
+
+          {/* social icon section end */}
+        </div>
       </div>
+
+      {/* Custom Icons */}
 
       {/* Horizontal Line */}
       <hr className="border-gray-400 my-10" />

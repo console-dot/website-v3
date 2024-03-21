@@ -16,7 +16,9 @@ import logowhite from "./logowhite.png";
 import Contact from "./Contact.png";
 import Mail from "./Mail.png";
 import Address from "./Address.png";
+import StarEffect from "./StarEffect.png";
 
+export {StarEffect};
 export { Contact };
 export { Mail };
 export { Address }

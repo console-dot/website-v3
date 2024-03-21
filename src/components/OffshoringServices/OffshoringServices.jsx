@@ -3,12 +3,12 @@ import CardArray from "./OffshoringServicesCard";
 import { imageGit } from "../../assets/images";
 const OffshoringServices = () => {
   return (
-    <div className="flex flex-col items-center mt-4 ">
+    <div className="flex flex-col items-center mt-8 ">
       <div className="font-Lato lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-custom-blue">
-        Our Expertise
+        Explore Our Offshoring Models
       </div>
       <div className="font-Poppins lg:text-[28px] md:text-[28px] sm:text-[18px] xs:text-[18px] font-bold text-custom-purple mt-4">
-        Our Services
+        Offshoring Services at ConsoleDot
       </div>
       <div className="font-Rubik text-4xl font-normal leading-10 text-center mt-4">
         <div className="flex items-center lg:ml-[8%] sm:ml-auto">
@@ -20,7 +20,7 @@ const OffshoringServices = () => {
       <div className="mt-4">
         <CardArray />
       </div>
-      <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[85%] flex flex-col justify-center items-center p-[2rem] relative">
+      <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[85%] flex flex-col justify-center items-center p-[2rem] relative mt-12">
         <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
         <img
           src={imageGit}

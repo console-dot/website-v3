@@ -8,7 +8,7 @@ import useIsMobile from "../../utils/hooks/useIsMobile";
 const OurServices = () => {
   const isMobile = useIsMobile();
   return (
-    <div className="flex flex-col items-center mt-4">
+    <div className="flex flex-col items-center mt-8">
       <div className="font-Lato lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-custom-blue">
         Our Expertise
       </div>

@@ -5,7 +5,7 @@ export default function AboutScreen() {
   return (
     <>
       {/* About Section */}
-      <div className="flex flex-wrap bg-offwhite py-12">
+      <div className="flex flex-wrap bg-offwhite py-12 mt-8">
         {/* Left side: Text */}
         <div className="w-full md:w-1/2 p-8">
           <p className="text-custom-blue font-poppins lg:text-[16px]  md:text-16px sm:text-[12px] xs:text-[12px] font-normal leading-none tracking-normal">

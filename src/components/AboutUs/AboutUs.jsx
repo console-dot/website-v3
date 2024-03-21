@@ -3,7 +3,7 @@ import CardArray from '../AboutUsCard/AboutUsCard'; // Import the CardArray comp
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-col items-center mt-4">
+    <div className="flex flex-col items-center mt-8">
       <div className="font-Lato lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-custom-blue">
         Testimonials
       </div>

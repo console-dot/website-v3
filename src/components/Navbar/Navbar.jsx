@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { logo } from "../../assets/images";
 
 export const NavBar = () => {
   const navBar = [
-    "Home",
-    "Offshoring Models",
-    "Services",
-    "Case Studies",
-    "Careers",
+    { name: "Home", link: "/" },
+    { name: "Offshoring Models", link: "/offshoringmodels" },
+    { name: "Services", link: "/services" },
+    { name: "Case Studies", link: "/case-studies" },
+    { name: "Careers", link: "/careers" },
   ];
 
   // State to toggle the visibility of the navigation items
@@ -20,7 +21,7 @@ export const NavBar = () => {
 
   return (
     <div
-      style={{ backgroundColor: "rgba(1, 12, 41, 1)", position: "sticky", top: 0, zIndex: 1 }}
+      style={{ backgroundColor: "rgba(1, 12, 41, 1)", position: "sticky", top: 0, zIndex: 1000 }}
       className="w-full h-[76px] bg-nav flex flex-row bg-opacity-7"
     >
       <div className="w-1/3  flex flex-row relative z-10">
@@ -76,11 +77,8 @@ export const NavBar = () => {
           className={`lg:flex lg:flex-row lg:text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
         >
           {navBar.map((item, index) => (
-            <li
-              key={index}
-              className="p-2 cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple"
-            >
-              {item}
+            <li key={index} className="p-2">
+              <Link to={item.link} className="cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple">{item.name}</Link>
             </li>
           ))}
         </ul>
@@ -89,7 +87,7 @@ export const NavBar = () => {
           <ul onClick={() => setShowNav(false)} className="flex flex-col text-white font-bold gap-4 p-4">
             {navBar.map((item, index) => (
               <li key={index} className="cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple">
-                {item}
+                <Link to={item.link}>{item.name}</Link>
               </li>
             ))}
           </ul>

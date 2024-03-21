@@ -1,14 +1,26 @@
 import "./App.css";
 import LandingPage from "./components/LandingPage/LandingPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { NavBar } from "./components/Navbar"; 
+import Header from "./components/Header/Header";
+import { OffshoringModels } from "./Pages/OffshoringModels";
+import Footer from "./components/Footer/Footer";
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Router> {/* Wrap your entire application with Router */}
+      <div>
+      <Header />
+        <NavBar /> {/* Render your NavBar component */}
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/Offshoringmodels" element={<OffshoringModels />} />
+          {/* Define routes for other pages */}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
