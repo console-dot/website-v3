@@ -1,12 +1,9 @@
 import React from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
-import Header from "../Header/Header";
-import { NavBar } from "../Navbar";
 import AboutScreen from "../AboutScreen/AboutScreen";
 import AboutUs from "../AboutUs/AboutUs";
 import OurServices from "../OurServices/OurServices";
 import OffshoringServices from "../OffshoringServices/OffshoringServices";
-import Footer from "../Footer/Footer";
 import { StarEffect } from "../../assets/images";
 
 
@@ -69,7 +66,6 @@ export default function LandingPage() {
         <AboutUs />
         <OurServices />
         <OffshoringServices />
-        
       </div>
     </>
   );

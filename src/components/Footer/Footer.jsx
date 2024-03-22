@@ -114,7 +114,7 @@ const Footer = () => {
           {/* social icon section start */}
           <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full lg:ml-[25px] md:ml-[25px]  flex justify-center sm:flex sm:justify-center xs:flex xs:justify-center xs:gap-3 items-center">
             <div className="lg:flex md:flex sm:hidden xs:hidden gap-3 ">
-              <LinkedinIcon color="custom-purple"
+              <LinkedinIcon color="white"
                 style={{
                   backgroundColor: "black",
                   height: "30px",
@@ -132,7 +132,7 @@ const Footer = () => {
                 }}
               />
               <CIcon
-                color={"rgba(14, 119, 137, 1)"}
+                color={"white"}
                 style={{
                   backgroundColor: "black",
                   height: "30px",
@@ -160,7 +160,7 @@ const Footer = () => {
               />
             </div>
             <div className="lg:hidden md:hidden sm:flex xs:flex flex justify-center items-center " style={{gap:"6px"}}>
-              <LinkedinIcon />
+              <LinkedinIcon color={"white"} />
               <TwitterIcon color={"white"} />
               <CIcon color={"rgba(14, 119, 137, 1)"} />
               <AIcon color={"white"} />

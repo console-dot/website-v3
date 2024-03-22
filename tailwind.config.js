@@ -21,6 +21,9 @@ module.exports = {
         xl: "1280px",
         "2xl": "1536px",
       },
+      borderWidth: {
+        "custom-border-w-3": "8px", // Add custom border width here, adjust as needed
+      },
       keyframes: {
         moveBorder: {
           "0%": { transform: "translateX(0) translateY(0)" },
