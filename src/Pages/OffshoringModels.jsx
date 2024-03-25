@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
+import { OffshoreModel } from "../components/OffshoreModel";
+import { OffShoreModelHero } from "../components/OffshoreModelHero";
+import OffshoringServices from "../components/OffshoringServices/OffshoringServices";
+import { OffShoreModelText } from "../components/OffShoreModelText";
+import { OffShoreModelText1 } from "../components/OffShoreModelText";
+
 export const OffshoringModels = () => {
   return (
-    <div className="flex flex-col items-center mt-8 " >
-        <div className="font-Lato lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-custom-blue">
-        Explore Our Offshoring Models
-      </div>
-      <div className="font-Poppins lg:text-[28px] md:text-[28px] sm:text-[18px] xs:text-[18px] font-bold text-custom-purple mt-4">
-        Offshoring Services at ConsoleDot
-      </div>
-      <div className="font-Rubik text-4xl font-normal leading-10 text-center mt-4">
-        <div className="flex items-center lg:ml-[8%] sm:ml-auto">
-          <div className="h-0.5 bg-custom-purple w-16"></div>
-          <div className="w-2 h-2 bg-black rounded-full mx-1"></div>
-          <div className="h-0.5 bg-custom-purple w-16"></div>
-        </div>
-      </div>
+    <div className="bg-offwhite w-full flex flex-col justify-center items-center">
+      <OffShoreModelHero />
 
+      <div className="w-full flex flex-col justify-start items-center">
+        <OffShoreModelText1/>
+        <OffshoreModel />
+        <OffshoringServices />
+        <OffShoreModelText />
+      </div>
     </div>
-  )
-}
+  );
+};

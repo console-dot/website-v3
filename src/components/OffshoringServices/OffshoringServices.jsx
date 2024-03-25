@@ -1,5 +1,5 @@
 import React from "react";
-import CardArray from "./OffshoringServicesCard";
+import {CardArray} from "./OffshoringServicesCard";
 import { imageGit } from "../../assets/images";
 const OffshoringServices = () => {
   return (

@@ -17,7 +17,16 @@ import Contact from "./Contact.png";
 import Mail from "./Mail.png";
 import Address from "./Address.png";
 import StarEffect from "./StarEffect.png";
+import offshorehero from "./offshorehero.png";
+import offshoreimg1 from "./offshoreimg1.png";
+import offshoreimg2 from  "./offshoreimg2.png"
+import offshoreimg3 from  "./offshoreimg3.png"
 
+
+export {offshoreimg2}
+export {offshoreimg3}
+export {offshoreimg1};
+export {offshorehero};
 export {StarEffect};
 export { Contact };
 export { Mail };

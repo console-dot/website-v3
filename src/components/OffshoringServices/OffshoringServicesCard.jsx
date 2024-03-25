@@ -47,7 +47,7 @@ const Card = ({ heading, description }) => {
   );
 };
 
-const CardArray = () => {
+export const CardArray = () => {
   const cards = [
     {
       heading: "Hourly (Time & Material)" ,
@@ -99,4 +99,4 @@ const CardArray = () => {
   );
 };
 
-export default CardArray;
+
