@@ -5,6 +5,7 @@ import { NavBar } from "./components/Navbar";
 import Header from "./components/Header/Header";
 import { OffshoringModels } from "./Pages/OffshoringModels";
 import Footer from "./components/Footer/Footer";
+import { WebDevelopment } from "./Pages/WebDevelopment";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Offshoringmodels" element={<OffshoringModels />} />
+          <Route path="/webdev" element={<WebDevelopment />} />
           {/* Define routes for other pages */}
         </Routes>
         <Footer />

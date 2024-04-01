@@ -12,6 +12,8 @@ module.exports = {
         "custom-grey" :'#8C8787',
         "offwhite": '#eaeaea',
         "aboutustext": '#8C8888',
+        "primaryText":"#0E7789",
+        "dottedBorder":"#3C5A85"
       },
       screens: {
         xs: "320px",
