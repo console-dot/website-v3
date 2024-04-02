@@ -15,7 +15,10 @@ module.exports = {
         "primaryText":"#0E7789",
         "dottedBorder":"#3C5A85",
         "webHeading":"#1B2B4E",
-        "webDescrip" : "#8C8787"
+        "webDescrip" : "#8C8787",
+        "btnGroup":"#E1ECF1",
+        "fromclr":"#0E7789",
+        "toclr":"#3C5A85"
       },
       screens: {
         xs: "320px",

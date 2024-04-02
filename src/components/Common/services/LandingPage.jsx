@@ -1,7 +1,7 @@
 import React from "react";
-import { IoIosArrowDropdown } from "react-icons/io";
-import { StarEffect } from "../../assets/images";
-export default function WebLandingPage() {
+import { StarEffect } from "../../../assets/images";
+
+export default function LandingPage({data}) {
   return (
     <div className="bg-offwhite " >
       <div
@@ -26,9 +26,9 @@ export default function WebLandingPage() {
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="w-full flex justify-start items-start">
             <div className="pl-16 flex flex-col gap-8">
-              <h1 className="text-[16px] text-white">Our Services</h1>
-              <h1 className="text-[28px] text-white mb-4 font-bold">WEB DEVELOPMENT</h1>
-              <h1 className="text-[16px] text-white">{"home > services > Web Development"} </h1>
+              <h1 className="text-[16px] text-white">{data.topHeading}</h1>
+              <h1 className="text-[28px] text-white mb-4 font-bold">{data.midHeading}</h1>
+              <h1 className="text-[16px] text-white">{data.bottomHeading}</h1>
             </div>
           </div>
         </div>

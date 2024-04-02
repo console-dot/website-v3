@@ -1,16 +1,17 @@
 import React from 'react'
-import { WebProcessCard } from './WebProcessCard'
 import {processCardsData} from "../../constatnts/ProcessCardsData"
 import { WebProcessHeading } from './WebProcessHeading'
 import { WebProcessTopDescriptions } from './WebProcessTopDescriptions'
 import { WebProcessBottomDescr } from './WebProcessBottomDescr'
+import { HalfBorderCard } from '../../constatnts/HalfBorderCard'
 export const WebProcess = () => {
   return (
-    <div className='p-16'>
+    <div className='px-16'>
       <div className='mb-4' > <WebProcessHeading/></div>
       <WebProcessTopDescriptions/>
-        <WebProcessCard data={processCardsData}/>
+        <HalfBorderCard data={processCardsData}/>
         <WebProcessBottomDescr/>
+        
     </div>
   )
 }

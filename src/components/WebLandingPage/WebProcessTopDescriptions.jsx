@@ -2,7 +2,7 @@ import React from 'react'
 
 export const WebProcessTopDescriptions = () => {
   return (
-    <div className='flex gap-4 w-[90%]'>
+    <div className='flex gap-4 w-[94%]'>
         <div className='flex flex-col w-full'>
             <h1 className='text-[16px] leading-6 font-poppins font-bold text-start text-webHeading'>
             Impact Analysis:(in case of adding new feature in existing system)

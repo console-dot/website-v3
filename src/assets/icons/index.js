@@ -3,10 +3,25 @@ export * from "./TwitterIcon";
 export * from "./CIcon";
 export * from "./AIcon";
 export * from "./OIcon";
-
+export * from "./Inverted2"
 export * from "./LinkedinIconpurple";
 export * from "./TwitterIconpurple";
 export * from "./CIconpurple";
 export * from "./AIconpurple";
 export * from "./OIconpurple";
-export * from "./Vector"
+export * from "./Vector";
+export * from "./WebTop";
+export * from "./Inverted1";
+export * from "./ReactIcon";
+export * from "./AngularIcon";
+export * from "./VueIcon";
+export * from "./SvelteIcon";
+export * from "./EmberIcon";
+export * from "./BootstrapIcon";
+export * from "./MUIIcon";
+export * from "./BulmaIcon";
+export * from "./SIcon";
+export * from "./RepoIcon";
+export * from "./UserCentricIcon";
+export * from "./CrossPlatformIcon";
+export * from "./OptimizationIcon";

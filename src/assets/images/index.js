@@ -30,6 +30,7 @@ import Vector6 from "./Vector6.png";
 import Vector7 from "./Vector7.png";
 import Vector8 from "./Vector8.png";
 import Vector9 from "./Vector9.png";
+import Top from "./WebTop.png";
 export {offshoreimg2}
 export {offshoreimg3}
 export {offshoreimg1};
@@ -53,5 +54,5 @@ export { logo };
 export { user };
 export { S1Icon };
 export { aboutService };
-export {Vector, Vector2, Vector3, Vector4, Vector5, Vector6, Vector7, Vector8, Vector9};
+export {Vector, Vector2, Vector3, Vector4, Vector5, Vector6, Vector7, Vector8, Vector9,Top};
 

@@ -1,9 +1,8 @@
 import React from "react";
-import { Dot } from "./Dot";
-import LinkedinIcon from "../../assets/icons/LinkedinIcon";
-import {  Vector2 } from "../../assets/images";
-import {Vector} from "../../assets/icons"
-export const WebProcessCard = ({ data }) => {
+import { Vector } from "../assets/icons";
+import { Dot } from "../components/WebLandingPage";
+
+export const HalfBorderCard = ({ data }) => {
   return (
     <div className="w-full h-auto flex justify-start items-start py-4">
       {data?.map((i,index) => (
