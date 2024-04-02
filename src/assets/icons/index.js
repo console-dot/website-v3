@@ -9,3 +9,4 @@ export * from "./TwitterIconpurple";
 export * from "./CIconpurple";
 export * from "./AIconpurple";
 export * from "./OIconpurple";
+export * from "./Vector"

@@ -21,8 +21,15 @@ import offshorehero from "./offshorehero.png";
 import offshoreimg1 from "./offshoreimg1.png";
 import offshoreimg2 from  "./offshoreimg2.png"
 import offshoreimg3 from  "./offshoreimg3.png"
-
-
+import Vector from "./Vector.png";
+import Vector2 from "./Vector2.png";
+import Vector3 from "./Vector3.png";
+import Vector4 from "./Vector4.png";
+import Vector5 from "./Vector5.png";
+import Vector6 from "./Vector6.png";
+import Vector7 from "./Vector7.png";
+import Vector8 from "./Vector8.png";
+import Vector9 from "./Vector9.png";
 export {offshoreimg2}
 export {offshoreimg3}
 export {offshoreimg1};
@@ -46,4 +53,5 @@ export { logo };
 export { user };
 export { S1Icon };
 export { aboutService };
+export {Vector, Vector2, Vector3, Vector4, Vector5, Vector6, Vector7, Vector8, Vector9};
 

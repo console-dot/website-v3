@@ -1,12 +1,13 @@
 import React from "react";
 import { Dot } from "./Dot";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon";
-
+import {  Vector2 } from "../../assets/images";
+import {Vector} from "../../assets/icons"
 export const WebProcessCard = ({ data }) => {
   return (
-    <div className="w-full h-[450px] flex justify-start items-start border-2 p-4">
-      {data?.map((i) => (
-        <div
+    <div className="w-full h-auto flex justify-start items-start py-4">
+      {data?.map((i,index) => (
+        <div key={index}
           className={`w-full h-[162px] relative px-2 flex ${
             parseInt(i?.heading) % 2 === 0 ? "" : "mt-[70px]"
           } ${
@@ -16,8 +17,8 @@ export const WebProcessCard = ({ data }) => {
           } border-dottedBorder border-dashed`}
         >
           
-          <div className="w-[81px] h-[78px] border-2 border-gray-300 bg-cyan-400 flex items-center justify-center rounded-full">
-            <LinkedinIcon/>
+          <div className="w-[80px] h-[80px] border-2 border-#c6dde40 bg-dottedBorder flex items-center justify-center rounded-full">
+            <Vector/>
           </div>
           <div className="flex justify-center items-center ">
             <h1 className="text-[36px] text-primaryText font-bold">

@@ -1,14 +1,16 @@
 import React from 'react'
 import WebLandingPage from '../components/WebLandingPage/WebLandingPage'
-import { WebProcessCard } from '../components/WebLandingPage/WebProcessCard'
-import { processCardsData } from '../constatnts'
+import { WebProcess } from '../components/WebLandingPage'
+
+
 
 export const WebDevelopment = () => {
 
   return (
-    <div>
+    <div className='w-full mb-16'>
         <WebLandingPage/>
-        <WebProcessCard data={processCardsData}/>
+        <WebProcess/>
+        
     </div>
   )
 }

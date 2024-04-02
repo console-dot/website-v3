@@ -13,7 +13,9 @@ module.exports = {
         "offwhite": '#eaeaea',
         "aboutustext": '#8C8888',
         "primaryText":"#0E7789",
-        "dottedBorder":"#3C5A85"
+        "dottedBorder":"#3C5A85",
+        "webHeading":"#1B2B4E",
+        "webDescrip" : "#8C8787"
       },
       screens: {
         xs: "320px",

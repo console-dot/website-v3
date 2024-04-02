@@ -9,17 +9,20 @@ export const Dot = ({ direction }) => {
         setPosition("top-[-4px] left-[-4.5px]");
         break;
       case "top-right":
-        setPosition("top-[-4px] right-[-4px]");
+        setPosition("top-[-6px] right-[-6px]");
         break;
       case "bottom-left":
         setPosition("left-[-3px] bottom-[-4.5px]");
         break;
+        case "bottom-right":
+        setPosition("right-[-5px] bottom-[-6.5px]");
+        break;
       default:
-        setPosition("right-[-4px] bottom-[-5px]");
+        setPosition("");
     }
   }, []); // Empty dependency array means this effect runs only once on mount
 
   return (
-    <div className={`w-2 h-2 bg-dottedBorder rounded-full absolute ${position}`}></div>
+    <div className={`w-3 h-3 bg-dottedBorder rounded-full absolute ${position}`}></div>
   );
 };
