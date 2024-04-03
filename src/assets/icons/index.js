@@ -25,3 +25,4 @@ export * from "./RepoIcon";
 export * from "./UserCentricIcon";
 export * from "./CrossPlatformIcon";
 export * from "./OptimizationIcon";
+export * from "./ServicesImage";

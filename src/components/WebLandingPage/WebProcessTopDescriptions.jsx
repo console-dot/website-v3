@@ -7,14 +7,14 @@ export const WebProcessTopDescriptions = () => {
             <h1 className='text-[16px] leading-6 font-poppins font-bold text-start text-webHeading'>
             Impact Analysis:(in case of adding new feature in existing system)
             </h1>
-            <p className='text-webDescrip text-[16px] text-start leading-6'>
+            <p className='text-webDescrip text-[16px] text-start leading-6 text-justify'>
             Assess the potential impact of the new features or changes on the existing system.
             Identify dependencies and potential areas of conflict with the current functionality.
             </p>
         </div>
         <div className='flex flex-col'>
             <h1 className='text-[16px] font-poppins font-bold text-start leading-6 text-webHeading'>
-            Heading
+            Design
             </h1>
             <p className='text-webDescrip leading-6 text-[16px] text-start'>
             Create wireframes and design user interfaces with a focus on user-centric principles.

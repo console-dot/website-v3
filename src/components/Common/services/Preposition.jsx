@@ -5,14 +5,14 @@ import { Inverted1, Inverted2 } from "../../../assets/icons";
 
 export const Preposition = ({title, heading, proposition}) => {
   return (
-    <div className="w-full flex justify-center items-center px-36">
-      
+    <div className="w-full flex justify-center items-center p-12">
+      <div className="flex items-center justify-center h-auto px-12 gap-4 bg-white">
         <div className="flex flex-col gap-2 items-start w-[30%]">
           <h1 className="text-[16px] leading-5 text-dottedBorder">
             {title}
           </h1>
           <h1 className="text-[28px] leading-10 text-dottedBorder font-bold">
-            {heading}
+            {heading?.toUpperCase()}
           </h1>
           <div className="mb-8">
             <Divider />
@@ -23,7 +23,7 @@ export const Preposition = ({title, heading, proposition}) => {
             <p className="text-[16px] leading-6 text-webDescrip">{proposition}</p>
             <div className="flex justify-start items-start"> <Inverted2/></div>
         </div>
-      
+        </div>
     </div>
   );
 };

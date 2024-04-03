@@ -1,7 +1,7 @@
 import React from "react";
 import { WebProcess } from "../components/WebLandingPage";
 
-import { Top } from "../assets/images";
+import { Top, WebBg } from "../assets/images";
 
 import {
   AngularIcon,
@@ -22,6 +22,7 @@ import { Preposition, TopComponent } from "../components/Common";
 import { TechStack } from "../components/Common/services/TechStack";
 import { WhyChoose } from "../components/Common/services/WhyChoose";
 import LandingPage from "../components/Common/services/LandingPage";
+import OffshoringServices from "../components/OffshoringServices/OffshoringServices";
 
 export const WebDevelopment = () => {
   const techStackData = [
@@ -129,7 +130,7 @@ export const WebDevelopment = () => {
         "We understand the need for speed. Our optimization strategies ensure your website performs at its best, providing a seamless user experience.",
     },
   ];
-  const landingPageData={topHeading:'Our Services', midHeading:"WEB DEVELOPMENT",bottomHeading:"home > services > Web Development"}
+  const landingPageData={topHeading:'Our Services', midHeading:"WEB DEVELOPMENT",bottomHeading:"Home > Services > Web Development",backgroundImage: WebBg}
   return (
     <div className="w-full mb-16">
       <LandingPage data={landingPageData} />
@@ -146,7 +147,7 @@ export const WebDevelopment = () => {
       </div>
       <Preposition
         title={"Proposition"}
-        heading={"My Proposition"}
+        heading={"our Proposition"}
         proposition={
           "Seamless Fusion of Design and Functionality - Consoledot's web development is a testament to user-centric design and cross-platform compatibility, ensuring your digital footprint leaves an indelible mark."
         }
