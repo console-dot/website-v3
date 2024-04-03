@@ -16,7 +16,7 @@ export const HalfBorderCard = ({ data }) => {
           } border-dottedBorder border-dashed`}
         >
           
-          <div className="w-[80px] h-[80px] border-2 border-#c6dde40 bg-dottedBorder flex items-center justify-center rounded-full">
+          <div className={`w-[80px] h-[80px] border-2 border-#c6dde40 ${i?.heading==="01"? 'bg-firstProcess' : "bg-dottedBorder"} flex items-center justify-center rounded-full`}>
             <Vector/>
           </div>
           <div className="flex justify-center items-center ">

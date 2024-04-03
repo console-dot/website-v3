@@ -18,7 +18,8 @@ module.exports = {
         "webDescrip" : "#8C8787",
         "btnGroup":"#E1ECF1",
         "fromclr":"#0E7789",
-        "toclr":"#3C5A85"
+        "toclr":"#3C5A85",
+        "firstProcess":"#30D1C7"
       },
       screens: {
         xs: "320px",

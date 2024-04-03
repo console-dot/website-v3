@@ -19,8 +19,8 @@ import Address from "./Address.png";
 import StarEffect from "./StarEffect.png";
 import offshorehero from "./offshorehero.png";
 import offshoreimg1 from "./offshoreimg1.png";
-import offshoreimg2 from  "./offshoreimg2.png"
-import offshoreimg3 from  "./offshoreimg3.png"
+import offshoreimg2 from "./offshoreimg2.png";
+import offshoreimg3 from "./offshoreimg3.png";
 import Vector from "./Vector.png";
 import Vector2 from "./Vector2.png";
 import Vector3 from "./Vector3.png";
@@ -32,28 +32,49 @@ import Vector8 from "./Vector8.png";
 import Vector9 from "./Vector9.png";
 import Top from "./WebTop.png";
 import WebBg from "./WebBG.png";
-export {offshoreimg2}
-export {offshoreimg3}
-export {offshoreimg1};
-export {offshorehero};
-export {StarEffect};
+import MobdevBg from "./MobDevImage.png";
+import BlockchainBG from "./BlockchainBG.png";
+import AIBg from "./AIBg.png";
+import ArVrBg from "./ARVRBg.png";
+import UiUxBg from "./uiuxbg.png";
+export { offshoreimg2 };
+export { offshoreimg3 };
+export { offshoreimg1 };
+export { offshorehero };
+export { StarEffect };
 export { Contact };
 export { Mail };
-export { Address }
+export { Address };
 export { logowhite };
 export { imageGit };
 export { circletickicon };
-export { image1 } ;
-export { image2 } ;
-export { image3 } ;
-export { image4 } ;
+export { image1 };
+export { image2 };
+export { image3 };
+export { image4 };
 export { IconBg };
-export { S3Icon }
+export { S3Icon };
 export { S2Icon };
-export { cardsymbol };  
+export { cardsymbol };
 export { logo };
 export { user };
 export { S1Icon };
 export { aboutService };
-export {Vector, Vector2, Vector3, Vector4, Vector5, Vector6, Vector7, Vector8, Vector9,Top,WebBg};
-
+export {
+  Vector,
+  Vector2,
+  Vector3,
+  Vector4,
+  Vector5,
+  Vector6,
+  Vector7,
+  Vector8,
+  Vector9,
+  Top,
+  WebBg,
+  MobdevBg,
+  BlockchainBG,
+  AIBg,
+  ArVrBg,
+  UiUxBg
+};

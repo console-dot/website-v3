@@ -17,7 +17,7 @@ export const TopComponent = ({title,heading, description , image}) => {
             </p>
         </div>
         <div className='w-1/2'>
-            <ServicesImage/>
+            {image}
         </div>
     </div>
   )
