@@ -12,7 +12,7 @@ export const TopComponent = ({title,heading, description , image}) => {
             <h1 className='text-[16px] leading-5 text-dottedBorder'>{title}</h1>
             <h1 className='text-[28px] leading-10 text-dottedBorder font-bold'>{heading.toUpperCase()}</h1>
             <div className='mb-8'><Divider/></div>
-            <p className='text-webDescrip text-[16px] leading-6'>
+            <p className='text-webDescrip text-[16px] leading-6 text-justify'>
             {description}
             </p>
         </div>
