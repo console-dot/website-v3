@@ -154,7 +154,7 @@ export const WebDevelopment = () => {
       />
       <WebProcess />
       <TechStack data={techStackData} />
-      <WhyChoose heading={"Why Choose Consoledot for Web Development?"} data={whyChooseData}/>
+      <WhyChoose heading={"Why Choose Consoledot for Web Development?"} data={whyChooseData} cardsInRow={"grid-cols-3"}/>
     </div>
   );
 };

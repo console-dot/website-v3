@@ -2,7 +2,7 @@ import React from "react";
 import { Divider } from "../../../constatnts/Divider";
 import { UserCentricIcon } from "../../../assets/icons";
 
-export const WhyChoose = ({ heading, data }) => {
+export const WhyChoose = ({ heading, data , cardsInRow }) => {
   return (
     <div className="w-full p-12">
       <div className="flex flex-col gap-2 items-center justify-center w-full">
@@ -16,10 +16,10 @@ export const WhyChoose = ({ heading, data }) => {
           <Divider />
         </div>
       </div>
-      <div className="w-full grid grid-cols-3 mt-8">
+      <div className={`w-full grid ${cardsInRow} gap-8 mt-8`}>
         {data?.map((i) => (
           <div
-            className="w-[348px] h-[330px] flex flex-col  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-2"
+            className=" flex flex-col  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-2"
           >
             <div className="flex flex-col items-center justify-center p-8 gap-4">
               <div className="w-[80px] h-[80px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
