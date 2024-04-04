@@ -1,5 +1,4 @@
 import React from "react";
-import { MdContactPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import { logowhite } from "../../assets/images";
 import { Contact } from "../../assets/images";
 import { Mail } from "../../assets/images";
@@ -12,8 +11,8 @@ import OIcon from "../../assets/icons/OIcon";
 
 const Footer = () => {
   return (
-    <footer className="bg-custom-blue text-white py-10 lg:px-20 md:px-10 sm:px-5 xs:px-5 mt-[-50px]">
-      <div className="container mx-auto flex flex-wrap justify-between items-start mt-20">
+    <footer className="bg-custom-blue text-white py-10    mt-[-50px]">
+      <div className="container mx-auto flex flex-wrap justify-between md:px-[110px] px-5 items-start mt-20">
         {/* First Column */}
         <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
           {/* Company Logo */}
@@ -24,13 +23,13 @@ const Footer = () => {
             <div>
               {/* Company Name */}
               <span
-                className="font-poppins text-xl font-semibold leading-[46px] tracking-normal text-left"
-                style={{ color: "rgb(60, 90, 133)" }}
+                className="font-poppins md:text-[33px] text-[23px] text-white  font-semibold leading-[46px] tracking-normal text-left"
+
               >
                 Console
               </span>
               <span
-                className="font-poppins text-xl font-semibold leading-[46px] tracking-normal text-left"
+                className="font-poppins md:text-[33px] text-[23px] text-custom-purple  font-semibold leading-[46px] tracking-normal text-left"
                 style={{ color: "rgb(140, 202, 212)" }}
               >
                 Dot
@@ -38,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
           {/* Company Description */}
-          <p className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs text-left">
+          <p className=" md:w-80 w-auto text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs text-justify">
             ConsoleDot is a leading software solutions provider dedicated to
             delivering innovative and customer-centric experiences. Our
             comprehensive range of services combines technical expertise with a
@@ -47,14 +46,15 @@ const Footer = () => {
           </p>
         </div>
         {/* Second Column */}
-        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10 ">
+        <div className="w-auto lg:w-1/4 md:w-1/2 sm:w-full xs:w-auto ">
           {/* Navigation */}
+          <div className="pl-6 leading-7">
           <p
-            className=" lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] pl-6"
+            className=" md:text-[16px] text-[12px]"
             style={{ font: "poppins" }}
-          >
+          ></p>
             Navigation
-            <div className=" lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] pt-8 font-lato">
+            <div className=" md:text-[14px] text-[12px] pt-8  font-lato">
               <div>
                 <a href="#">Customer</a>
               </div>
@@ -68,14 +68,15 @@ const Footer = () => {
                 <a href="#">Contact Us</a>
               </div>
             </div>
-          </p>
+            </div>
         </div>
         {/* Second Column */}
-        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
+        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full ">
           {/* Privacy Policy & Terms */}
-          <ul className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs">
+          <ul className="md:text-[16px] text-[12px]">
+            <div className="leading-10">
             <li>
-              <a href="#" className="underline">
+              <a href="#" className="underline" >
                 Privacy Policy
               </a>
             </li>
@@ -84,6 +85,7 @@ const Footer = () => {
                 Terms and Conditions
               </a>
             </li>
+            </div>
           </ul>
         </div>
 
@@ -112,7 +114,7 @@ const Footer = () => {
             <p className="text-xs">info@consoledot.com</p>
           </div>
           {/* social icon section start */}
-          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full lg:ml-[25px] md:ml-[25px]  flex justify-center sm:flex sm:justify-center xs:flex xs:justify-center xs:gap-3 items-center">
+          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full md:ml-24 ml-0 md:mt-20 mt-1  flex justify-center md:flex md:justify-center   md:items-end">
             <div className="lg:flex md:flex sm:hidden xs:hidden gap-3 ">
               <LinkedinIcon color="white"
                 style={{
@@ -175,10 +177,10 @@ const Footer = () => {
       {/* Custom Icons */}
 
       {/* Horizontal Line */}
-      <hr className="border-gray-400 my-10" />
+      <hr className="border-custom-lightBlue" />
 
       {/* Copyright */}
-      <div className="text-center text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs">
+      <div className="text-center text-[12px] md:text-[16px] mt-">
         Copyright © 2024 ConsoleDot. All rights reserved.
       </div>
     </footer>
