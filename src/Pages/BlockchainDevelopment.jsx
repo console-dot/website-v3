@@ -20,7 +20,7 @@ export const BlockchainDevelopment = () => {
       <div className="pb-4">
         {" "}
         <TopComponent
-          title={"Our Services"}
+          title={"Services"}
           heading={"Empowering Businesses in the Palm of Your Hand"}
           description={
             "At ConsoleDot, we believe in the transformative power of blockchain. Our Blockchain Development services aren't just about technology; they're about reshaping industries, enhancing security, and providing unparalleled transparency. Choose ConsoleDot for innovative solutions that redefine the way you do business."

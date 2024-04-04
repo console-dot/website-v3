@@ -22,7 +22,7 @@ export const WebDevelopment = () => {
       <div className=" pb-4">
         {" "}
         <TopComponent
-          title={"Our Services"}
+          title={"Services"}
           heading={"Transforming Visions into Captivating Digital Experiences"}
           description={
             "At Consoledot, our Web Development services go beyond mere website creation; we embark on a journey to craft immersive digital experiences. From responsive designs to seamless user interfaces, our team ensures that your online presence captivates and engages, leaving a lasting impression on your audience."

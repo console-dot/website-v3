@@ -53,3 +53,4 @@ export * from "./AdobePhotoIcon";
 export * from "./AdobeillusIcon";
 export * from "./SketchIcon";
 export * from "./FigmaIcon";
+export * from "./MobTop";

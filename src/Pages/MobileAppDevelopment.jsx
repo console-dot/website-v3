@@ -1,5 +1,5 @@
 import React from "react";
-import { MobTopcompImg } from "../assets/icons";
+import { MobTop, MobTopcompImg } from "../assets/icons";
 import { Preposition, Process, TopComponent } from "../components/Common";
 import { TechStack } from "../components/Common/services/TechStack";
 import { WhyChoose } from "../components/Common/services/WhyChoose";
@@ -8,6 +8,7 @@ import { processCardsMobDev } from "../constatnts/ProcessCardsData";
 import { techStackDataMobDev } from "../constatnts/techStackData";
 import { whyChooseDataMob } from "../constatnts/whyChooseData";
 import { landingPageDataMob } from "../constatnts/landingPageData";
+import { OffshoreModel } from "../components/OffshoreModel";
 
 export const MobileAppDevelopment = () => {
   return (
@@ -17,12 +18,13 @@ export const MobileAppDevelopment = () => {
         <div className="pb-4">
           {" "}
           <TopComponent
-            title={"Our Services"}
+            title={"Services"}
             heading={"Empowering Businesses in the Palm of Your Hand"}
             description={
               "Consoledot's Mobile App Development services bring your business to the forefront of users' daily lives. Whether you're targeting iOS, Android, or both, our expert team crafts mobile solutions that drive engagement and elevate user satisfaction."
             }
-            image={<MobTopcompImg />}
+            image={<MobTop />}
+            
           />
         </div>
         <Preposition
@@ -49,6 +51,7 @@ export const MobileAppDevelopment = () => {
             "Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof"
           }
         />
+        
       </div>
     </div>
   );
