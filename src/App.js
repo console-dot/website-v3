@@ -11,6 +11,10 @@ import { BlockchainDevelopment } from "./Pages/BlockchainDevelopment";
 import { AIDevelopment } from "./Pages/AIDevelopment";
 import { ArVrDevelopment } from "./Pages/ArVrDevelopment";
 import { UiUxDevelopment } from "./Pages/UiUxDevelopment";
+import { ProductResearch } from "./Pages/ProductResearch";
+import { CaseStudy } from "./Pages/CaseStudy";
+import { Careers } from "./Pages/Careers";
+import { Faqs } from "./Pages/Faqs";
 
 
 function App() {
@@ -28,6 +32,10 @@ function App() {
           <Route path="/ai" element={<AIDevelopment />} />
           <Route path="/arvr" element={<ArVrDevelopment />} />
           <Route path="/uiux" element={<UiUxDevelopment />} />
+          <Route path="/product-research" element={<ProductResearch />} />
+          <Route path="/case-study" element={<CaseStudy />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/faqs" element={<Faqs />} />
           {/* Define routes for other pages */}
         </Routes>
         <Footer />

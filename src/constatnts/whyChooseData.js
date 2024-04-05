@@ -185,3 +185,27 @@ export const whyChooseDataUiUx = [
       "ConsoleDot takes a holistic approach to user experience, ensuring that every interaction with your product or application is memorable, delightful, and user-friendly.",
   },
 ];
+
+export const whyChooseDataProductResearch = [
+  {
+    id: 1,
+    title: "Holistic Approach",
+    icon: <MobExpertise />,
+    description:
+      "Our product research services take a holistic approach, considering market dynamics, client needs, and a strategic road map for development.",
+  },
+  {
+    id: 2,
+    title: "Proven Success",
+    icon: <MonInnovatIcon />,
+    description:
+      "Consoledot has a track record of successfully guiding businesses through informed product development, leading to market success.",
+  },
+  {
+    id: 3,
+    title: "Strategic Partnership",
+    icon: <MobileCollabIcon />,
+    description:
+      "We don't just provide services; we form strategic partnerships. Consoledot is committed to being your trusted advisor throughout the product development journey.",
+  }
+];

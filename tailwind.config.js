@@ -19,7 +19,8 @@ module.exports = {
         "btnGroup":"#E1ECF1",
         "fromclr":"#0E7789",
         "toclr":"#3C5A85",
-        "firstProcess":"#30D1C7"
+        "firstProcess":"#30D1C7",
+        "checks":"#25324B"
       },
       screens: {
         xs: "320px",

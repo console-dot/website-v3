@@ -37,6 +37,11 @@ import BlockchainBG from "./BlockchainBG.png";
 import AIBg from "./AIBg.png";
 import ArVrBg from "./ARVRBg.png";
 import UiUxBg from "./uiuxbg.png";
+import PrductResearchBg from "./ProductResearchBg.png";
+import CaseStudyBg from "./CaseStudyBg.png";
+import CSTopBorder from "./CaseBorderTop.png";
+import CsBottomBorder from "./CsBottomBorder.png";
+import FaqBg from "./FaqBg.png";
 export { offshoreimg2 };
 export { offshoreimg3 };
 export { offshoreimg1 };
@@ -76,5 +81,10 @@ export {
   BlockchainBG,
   AIBg,
   ArVrBg,
-  UiUxBg
+  UiUxBg,
+  PrductResearchBg,
+  CaseStudyBg,
+  CSTopBorder,
+  CsBottomBorder,
+  FaqBg
 };

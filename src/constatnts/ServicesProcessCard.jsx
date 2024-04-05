@@ -6,7 +6,7 @@ export const ServicesProcessCard = ({ data }) => {
   return (
     <div className="w-full h-auto flex justify-start items-start py-4 gap-8">
       {data?.map((i, index) => (<div className={`flex flex-col gap-4 ${
-            parseInt(i?.heading) % 2 != 0 ? "" : `flex-col-reverse mt-20`
+            parseInt(i?.heading) % 2 != 0 ? "flex-col-reverse" :"flex-col mt-32" 
           }`}>
         <div
           key={index}
