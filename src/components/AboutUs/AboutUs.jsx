@@ -1,5 +1,5 @@
 import React from "react";
-import { CardArray} from "./AboutUsCard"; // Import the CardArray component
+import Card, { CardArray} from "./AboutUsCard"; // Import the CardArray component
 
 export const AboutUs = () => {
   return (
@@ -20,7 +20,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="mt-6">
-        <CardArray />
+        <Card />
       </div>
     </div>
   );
