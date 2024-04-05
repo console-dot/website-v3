@@ -29,6 +29,9 @@ export const WhyChoose = ({ heading, data , cardsInRow }) => {
               <h1 className="text-[16px] text-webHeading leading-6 font-bold">
                 {i.title}
               </h1>
+              {i?.subHeading && <h1 className="text-[16px] font-poppins my-1 text-webHeading leading-6">
+                {i.subHeading}
+              </h1> }
               <span className="text-[16px] text-webHeading leading-6 text-justify ">
                 {i.description}
               </span>

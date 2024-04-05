@@ -42,6 +42,7 @@ import CaseStudyBg from "./CaseStudyBg.png";
 import CSTopBorder from "./CaseBorderTop.png";
 import CsBottomBorder from "./CsBottomBorder.png";
 import FaqBg from "./FaqBg.png";
+import CustomSoftBg from "./customeSoftBg.png";
 export { offshoreimg2 };
 export { offshoreimg3 };
 export { offshoreimg1 };
@@ -86,5 +87,6 @@ export {
   CaseStudyBg,
   CSTopBorder,
   CsBottomBorder,
-  FaqBg
+  FaqBg,
+  CustomSoftBg
 };

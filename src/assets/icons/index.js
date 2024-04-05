@@ -70,4 +70,8 @@ export * from "./CaseIcon7";
 export * from "./CaseIcon8";
 export * from "./CaseIcon9";
 export * from "./CaseIcon10";
-export * from "./CaseStudyTopBorder"
+export * from "./CaseStudyTopBorder";
+export * from "./CustomSoftTop";
+export * from "./MvpIcon";
+export * from "./ERPIcon";
+export * from "./CloudCompIcon";

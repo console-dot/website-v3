@@ -1,4 +1,4 @@
-import { AIBg, ArVrBg, BlockchainBG, CaseStudyBg, FaqBg, MobdevBg, PrductResearchBg, UiUxBg, WebBg } from "../assets/images"
+import { AIBg, ArVrBg, BlockchainBG, CaseStudyBg, CustomSoftBg, FaqBg, MobdevBg, PrductResearchBg, UiUxBg, WebBg } from "../assets/images"
 
 export   const landingPageDataMob={topHeading:'Our Services', midHeading:"MONBILE APP DEVELOPMENT",bottomHeading:"Home > Services > MOBILE APP Development",backgroundImage: MobdevBg}
 export   const landingPageDataWeb={topHeading:'Our Services', midHeading:"WEB DEVELOPMENT",bottomHeading:"Home > Services > Web Development",backgroundImage: WebBg}
@@ -10,3 +10,4 @@ export   const landingPageDataProductResearch={topHeading:'Our Services',midHead
 export   const landingPageDataCaseStudy={topHeading:'Join Us',midHeading:"Case Studies", bottomHeading:"Home > Careers",backgroundImage: CaseStudyBg}
 export   const landingPageDataCareers={topHeading:'Join Us',midHeading:"Careers", bottomHeading:"Home > Careers",backgroundImage: CaseStudyBg}
 export   const landingPageDataFaqs={topHeading:'FAQs',midHeading:"Frequently asked questions", bottomHeading:"Home > FAQs",backgroundImage: FaqBg}
+export   const landingPageDataCustomSoft={topHeading:'Our Services',midHeading:"Custom Software Development", bottomHeading:"Home > Services > Custom Software Development",backgroundImage: CustomSoftBg}

@@ -15,6 +15,7 @@ import { ProductResearch } from "./Pages/ProductResearch";
 import { CaseStudy } from "./Pages/CaseStudy";
 import { Careers } from "./Pages/Careers";
 import { Faqs } from "./Pages/Faqs";
+import { CustomSoftware } from "./Pages/CustomSoftware";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/case-study" element={<CaseStudy />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/faqs" element={<Faqs />} />
+          <Route path="/custome-software" element={<CustomSoftware />} />
           {/* Define routes for other pages */}
         </Routes>
         <Footer />
