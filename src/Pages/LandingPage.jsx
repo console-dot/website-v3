@@ -15,7 +15,6 @@ export default function LandingPage() {
         <AboutUs />
         <OurServices />
         <OffshoringServices />
-        <ContactSection />
       </div>
     </>
   );

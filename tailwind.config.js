@@ -15,7 +15,17 @@ module.exports = {
         "custom-grey": "#8C8787",
         offwhite: "#eaeaea",
         aboutustext: "#8C8888",
-        "custom-white": "#FFFFFF"
+        "custom-white": "#FFFFFF",
+        "primaryText":"#0E7789",
+        "dottedBorder":"#3C5A85",
+        "webHeading":"#1B2B4E",
+        "webDescrip" : "#8C8787",
+        "btnGroup":"#E1ECF1",
+        "fromclr":"#0E7789",
+        "toclr":"#3C5A85",
+        "firstProcess":"#30D1C7",
+        "checks":"#25324B",
+        'backgroundColor':"#f8f9fc"
       },
       screens: {
         xs: "320px",
