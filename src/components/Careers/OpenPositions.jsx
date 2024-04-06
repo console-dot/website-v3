@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { MdNavigateBefore } from "react-icons/md";
 
-export const OpenPositions = ({ data }) => {
+export const OpenPositions = ({ data ,filterData}) => {
+  
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
-
+  const newData = filterData ? filterData : data;
   // Calculate the index of the first and last item of the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems =newData?.slice(indexOfFirstItem, indexOfLastItem);
 
   // Logic to handle pagination click
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
+console.log(currentItems)
   return (
     <div className="flex flex-col gap-4">
       {currentItems.map((i, index) => (
@@ -104,7 +105,7 @@ export const OpenPositions = ({ data }) => {
       {/* Pagination */}
       <div className="flex justify-center items-center mt-4">
        <div className="p-1 bg-btnGroup"> <MdNavigateBefore className="text-xl"/></div>
-        {[...Array(Math.ceil(data.length / itemsPerPage))].map((_, index) => (
+        {[...Array(Math.ceil(newData.length / itemsPerPage))].map((_, index) => (
           <button
             key={index}
             onClick={() => paginate(index + 1)}

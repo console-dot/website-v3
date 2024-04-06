@@ -1,5 +1,5 @@
 import React from "react";
-import { MobTop, MobTopcompImg } from "../assets/icons";
+import { ArVrTop, MobTop, MobTopcompImg } from "../assets/icons";
 import { Preposition, Process, TopComponent } from "../components/Common";
 import { TechStack } from "../components/Common/services/TechStack";
 import { WhyChoose } from "../components/Common/services/WhyChoose";
@@ -8,7 +8,6 @@ import { processCardsMobDev } from "../constatnts/ProcessCardsData";
 import { techStackDataMobDev } from "../constatnts/techStackData";
 import { whyChooseDataMob } from "../constatnts/whyChooseData";
 import { landingPageDataMob } from "../constatnts/landingPageData";
-import { OffshoreModel } from "../components/OffshoreModel";
 
 export const MobileAppDevelopment = () => {
   return (
@@ -23,7 +22,7 @@ export const MobileAppDevelopment = () => {
             description={
               "Consoledot's Mobile App Development services bring your business to the forefront of users' daily lives. Whether you're targeting iOS, Android, or both, our expert team crafts mobile solutions that drive engagement and elevate user satisfaction."
             }
-            image={<MobTop />}
+            image={<ArVrTop />}
             
           />
         </div>

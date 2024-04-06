@@ -31,6 +31,7 @@ import Vector7 from "./Vector7.png";
 import Vector8 from "./Vector8.png";
 import Vector9 from "./Vector9.png";
 import Top from "./WebTop.png";
+import ContactBg from "./ContactBg.png";
 import WebBg from "./WebBG.png";
 import MobdevBg from "./MobDevImage.png";
 import BlockchainBG from "./BlockchainBG.png";
@@ -88,5 +89,6 @@ export {
   CSTopBorder,
   CsBottomBorder,
   FaqBg,
-  CustomSoftBg
+  CustomSoftBg,
+  ContactBg
 };

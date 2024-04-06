@@ -1,5 +1,4 @@
-import React from "react";
-import { MdContactPhone, MdEmail, MdLocationOn } from "react-icons/md";
+import React, { useEffect, useState } from "react";
 import { imageGit, logowhite } from "../../assets/images";
 import { Contact } from "../../assets/images";
 import { Mail } from "../../assets/images";
@@ -9,12 +8,63 @@ import TwitterIcon from "../../assets/icons/TwitterIcon";
 import CIcon from "../../assets/icons/CIcon";
 import AIcon from "../../assets/icons/AIcon";
 import OIcon from "../../assets/icons/OIcon";
-import OffshoringServices from "../OffshoringServices/OffshoringServices";
+import { footerData } from "../../constatnts/footerData";
 
 const Footer = () => {
+  const [page, setPage] = useState("");
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    let url = window.location.pathname;
+    setPage(url.substring(url.lastIndexOf("/") + 1));
+  }, []);
+
+  useEffect(() => {
+    switch (page) {
+      case "mobdev":
+        setData(footerData.mobDev);
+        break;
+      case "webdev":
+        setData(footerData.webDev);
+        break;
+      case "blockchain":
+        setData(footerData.blockchainDev);
+        break;
+      case "ai":
+        setData(footerData.aiDev);
+        break;
+      case "arvr":
+        setData(footerData.arvrDev);
+        break;
+      case "uiux":
+        setData(footerData.uiuxDev);
+        break;
+      case "product-research":
+        setData(footerData.productResearch);
+        break;
+      case "custome-software":
+        setData(footerData.customSoftDevelopment);
+        break;
+      case "":
+        setData(footerData.home);
+        break;
+      case "Offshoringmodels":
+        setData(footerData.offshoringModels);
+        break;
+      default:
+        setData({
+          heading: "Inquire Now",
+          subHeading: "Get in touch with us to avail our services",
+          btnText: "Get in Touch",
+        });
+        break;
+    }
+  }, [page]);
+
   return (
     <div className="flex flex-col justify-center w-full items-center">
-    <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[85%] flex flex-col justify-center items-center p-[2rem] relative mt-12">
+      <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center px-28 py-[3rem] relative">
+        <div className="flex justify-center items-center text-center">
         <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
         <img
           src={imageGit}
@@ -22,24 +72,24 @@ const Footer = () => {
           className="absolute inset-0 object-cover w-full h-full opacity-20"
         />
 
-        <div className="relative z-10 flex flex-col items-center">
-          <h2 className="font-bold lg:text-[28px] md:text-[28px] sm:text-[16px] xs:text-[16px] sm:text-center text-white mb-4 font-poppins">
-            Get in touch with ConsoleDot
+        <div className="relative z-10 flex flex-col items-center gap-12">
+          <h2 className="font-bold lg:text-[28px] md:text-[28px] sm:text-[16px] text-center xs:text-[16px] sm:text-center text-white  font-poppins">
+            {data?.heading?.toUpperCase()}
           </h2>
-          <p className="text-white text-center lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-poppins mb-6">
-            Get in touch with us to avail our services
+          <p className="text-white text-center lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-poppins ">
+            {data?.subHeading}
           </p>
           <button
             type="button"
-            className="relative flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-5 py-2.5 w-[182px] rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+            className="font-Lato px-8 text-base font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
           >
-            <p className="font-Lato text-base font-medium leading-[28px] tracking-normal text-center">
-              Get In Touch
-            </p>
+            {/* <p className="font-Lato text-base font-medium leading-[28px] tracking-normal text-center"> */}
+            {data?.btnText}
           </button>
         </div>
+        </div>
       </div>
-      
+
       <footer className="bg-custom-blue text-white py-10 lg:px-20 md:px-10 sm:px-5 xs:px-5 mt-[-50px]">
         <div className="container mx-auto flex flex-wrap justify-between items-start mt-20">
           {/* First Column */}

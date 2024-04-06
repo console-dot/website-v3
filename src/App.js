@@ -16,12 +16,13 @@ import { CaseStudy } from "./Pages/CaseStudy";
 import { Careers } from "./Pages/Careers";
 import { Faqs } from "./Pages/Faqs";
 import { CustomSoftware } from "./Pages/CustomSoftware";
+import { Contact } from "./Pages/Contact";
 
 
 function App() {
   return (
     <Router> {/* Wrap your entire application with Router */}
-      <div>
+      <div className="bg-backgroundColor">
       <Header />
         <NavBar /> {/* Render your NavBar component */}
         <Routes>
@@ -38,6 +39,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/custome-software" element={<CustomSoftware />} />
+          <Route path="/contact" element={<Contact />} />
           {/* Define routes for other pages */}
         </Routes>
         <Footer />

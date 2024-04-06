@@ -20,7 +20,8 @@ module.exports = {
         "fromclr":"#0E7789",
         "toclr":"#3C5A85",
         "firstProcess":"#30D1C7",
-        "checks":"#25324B"
+        "checks":"#25324B",
+        'backgroundColor':"#f8f9fc"
       },
       screens: {
         xs: "320px",
