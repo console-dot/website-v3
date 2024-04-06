@@ -62,7 +62,7 @@ const Footer = () => {
   }, [page]);
 
   return (
-    <div className="flex flex-col justify-center w-full items-center">
+    <div className="flex flex-col justify-center w-full items-center bg-offwhite">
       <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center px-28 py-[3rem] relative">
         <div className="flex justify-center items-center text-center">
           <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
@@ -81,7 +81,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="font-Lato px-8 text-base font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+              className="font-Lato  text-base font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
             >
               {/* <p className="font-Lato text-base font-medium leading-[28px] tracking-normal text-center"> */}
               {data?.btnText}
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <footer className="bg-custom-blue text-white py-10 lg:px-20 md:px-10 sm:px-5 xs:px-5 mt-[-50px]">
+      <footer className="w-auto bg-custom-blue text-white py-10 lg:px-20 md:px-10 sm:px-5 xs:px-5 mt-[-50px]">
         <div className="container mx-auto flex flex-wrap justify-between items-start mt-20">
           {/* First Column */}
           <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
@@ -125,31 +125,36 @@ const Footer = () => {
             </p>
           </div>
           {/* Second Column */}
-          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10 ">
+          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
             {/* Navigation */}
-            <p
-              className=" lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] pl-6"
-              style={{ font: "poppins" }}
-            >
-              Navigation
-              <div className=" lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] pt-8 font-lato">
-                <div>
-                  <a href="#">Customer</a>
-                </div>
-                <div>
-                  <a href="#">Technologies</a>
-                </div>
-                <div>
-                  <a href="#">Carrer</a>
-                </div>
-                <div>
-                  <a href="#">Contact Us</a>
+            <div className="w-auto lg:w-1/4 md:w-1/2 sm:w-full xs:w-auto flex justify-center">
+              <div className="leading-7 md:pl-48">
+                <p
+                  className=" text-left md:text-[16px] text-[12px]"
+                  style={{ font: "poppins" }}
+                >
+                  Navigation
+                </p>
+                <div className="md:text-[14px] text-[12px] pt-8 font-lato text-left">
+                  <div>
+                    <a href="#">Customer</a>
+                  </div>
+                  <div>
+                    <a href="#">Technologies</a>
+                  </div>
+                  <div>
+                    <a href="#">Career</a>
+                  </div>
+                  <div>
+                    <a href="#">Contact Us</a>
+                  </div>
                 </div>
               </div>
-            </p>
+            </div>
           </div>
+
           {/* Second Column */}
-          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
+          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10 md:pl-10">
             {/* Privacy Policy & Terms */}
             <ul className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs">
               <li>

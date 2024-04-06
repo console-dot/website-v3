@@ -26,9 +26,9 @@ const OurServices = () => {
       </div>
       </div>
 
-      <div className="pl-24 pr-24 pt-16  ">
+      <div className="pl-16 pr-16 pt-16  ">
         <Card />
-        <div className="flex md:justify-end justify-center md:mt-0 2 mb-2 ">
+        <div className="flex md:justify-end justify-center md:mt-0  mb-8 ">
         <button
           type="button"
           onClick=""
@@ -39,7 +39,7 @@ const OurServices = () => {
       </div>
       </div>
       {/* service Div */}
-      <OSC/>
+      
       </>
   );
 };

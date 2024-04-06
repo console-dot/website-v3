@@ -2,12 +2,12 @@ import React from "react";
 
 export const OffShoreModelText1 = () => {
   return (
-    <div className="w-[99%] md:w-[93%] flex justify-center items-center">
+    <div className="w-[99%] md:w-full  flex justify-center items-center pl-20 pr-20">
       <div>
-        <p className="text-aboutustext text-justify justify-center md:text-[16px] text-[12px] mt-12 md:w-[89%] w-[90%]   md:pl-14 pl-4">
+        <p className="text-aboutustext text-justify justify-center md:text-[16px] text-[12px] mt-12   ">
           At ConsoleDot, we take pride in being your trusted partner for
           offshoring services, offering unparalleled software development
-          solutions tailored to meet your unique business needs. Our dedicated
+          solutions tailored to meet your unique  business needs. Our dedicated
           team of experts, state-of-the-art infrastructure, and a commitment to
           excellence make us the preferred choice for companies seeking reliable
           offshoring services.
@@ -19,9 +19,9 @@ export const OffShoreModelText1 = () => {
 
 export const OffShoreModelText = () => {
   return (
-    <div className="w-[99%] md:w-[93%] flex justify-center items-center">
+    <div className="w-[99%] md:w-full  flex justify-center items-center pl-20 pr-20">
       <div>
-        <p className="text-aboutustext text-left justify-center text-[16px] mt-8 md:w-[90%] w-[99%] mb-20  lg:ml-16 md:ml-14 xs:ml-auto ">
+      <p className="text-aboutustext text-justify justify-center md:text-[16px] text-[12px] mt-4 mb-12   ">
           Choose the offshoring model that best aligns with your project's
           specific needs and objectives. ConsoleDot is committed to providing
           tailored solutions, ensuring the success of your projects in today's

@@ -72,10 +72,10 @@ const cards = [
 
 export const Card = () => {
   return (
-    <div className="mb-8 ">
+    <div className=" ">
     <Slider {...settings}>
       {cards.map((d, index) => (
-        <div key={index} className=" mb-8 ">
+        <div key={index} className="  ">
           <div className="bg-white h-[500px] shadow-lg rounded-lg p-9 flex flex-col items-center justify-center relative group border-b-4  border-custom-purple">
           {/* Hover image */}
             <img src={ourserviceshover} alt="hover image" className="absolute mt-2 h-[530px] w-[500px]  opacity-0 hover:opacity-80" />

@@ -5,7 +5,7 @@ import { circletickicon } from "../../assets/images";
 const Card = ({ heading, description }) => {
   return (
     <div
-      className="bg-white shadow-lg md:w-[415px] md:h-[460px] w-[350px] h-[450px] rounded-lg p-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-custom-purple  transition duration-300 ease-in-out mt-6 md:mb-0"
+      className="bg-white shadow-lg md:w-[440px] md:h-[460px] w-[350px] h-[450px] rounded-lg p-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-custom-purple  transition duration-300 ease-in-out mt-6 md:mb-0"
           >
       {/* Header Section */}
       <div className="text-center mb-4 mt-8 text-custom-purple">

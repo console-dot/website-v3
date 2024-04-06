@@ -16,7 +16,7 @@ export const OffshoringModels = () => {
         <OffshoreModel />
         <OffshoringServices />
         <OffShoreModelText />
-        <ContactSection1/>
+        
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ export const OffshoreModel = () => {
         </div>
       </div>
       {/* Hourly (Time & Material) start */}
-      <div className="w-full md:pl-[7rem] flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5 ">
+      <div className="w-full pl-20 pr-20 flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5 ">
         {/* Left side */}
         <div className="w-auto md:w-[50%] md:p-0 p-3">
           <div className="w-auto  flex flex-col">
@@ -86,7 +86,7 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Right side */}
-        <div className="w-auto md:w-1/2 flex md:justify-start justify-center relative md:order-1 order-2">
+        <div className="w-auto md:w-1/2 flex md:justify-center justify-center relative md:order-1 order-2">
           <div className="w-3/4 relative justify-start ">
             <img
               className="  md:w-[500px] md:h-[400px]   w-[85%]"
@@ -100,17 +100,17 @@ export const OffshoreModel = () => {
       {/* Hourly (Time & Material) End */}
 
       {/* Fixed-price start */}
-      <div className="w-full  flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full pl-20 pr-20 flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
         {/* Right side */}
         <div className="w-auto md:w-[50%] md:p-0 p-3 md:pl-5 md:order-2 order-1">
-          <div className="w-auto  flex flex-col">
+          <div className="w-[600px]  flex flex-col pl-16">
             <div>
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold leading-8 tracking-normal md:mt-4 mt-2">
                 Fixed Price
               </p>
               <p className="text-aboutustext font-lato text-justify   md:text-[16px] text-[12px]  leading-6 md:mt-4 mt-2">
                 For projects with well-defined scopes, our fixed-price model
-                ensures budget <span className="md:block"></span>predictability. We provide a comprehensive quote,and you pay a predetermined <span className="md:block"></span> amount for the entire project.
+                ensures budget predictability. We provide a comprehensive quote,and you pay a predetermined amount for the entire project.
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -157,7 +157,7 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Left side */}
-        <div className="w-auto md:w-1/2 flex  justify-center relative md:order-1 order-2">
+        <div className="w-auto md:w-1/2 flex  justify-start relative md:order-1 order-2">
           <div className="w-auto relative  ">
             <img
               className="  md:w-[500px] md:h-[400px] "
@@ -169,7 +169,7 @@ export const OffshoreModel = () => {
         </div>
       </div>
       {/* Fixed-price End */}
-      <div className="w-full md:pl-[7rem] flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full pl-20 pr-20 flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
         {/* Left side */}
         <div className="w-auto md:w-[50%] md:p-0 p-3">
           <div className="w-auto  flex flex-col">
@@ -228,7 +228,7 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Right side */}
-        <div className="w-auto md:w-1/2 flex md:justify-start justify-center relative md:order-1 order-2">
+        <div className="w-auto md:w-1/2 flex md:justify-center justify-center relative md:order-1 order-2">
           <div className="w-3/4 relative justify-start ">
             <img
               className="  md:w-[500px] md:h-[400px]   w-[85%]"
