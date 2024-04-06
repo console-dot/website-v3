@@ -165,90 +165,116 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Third Column */}
-          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
-            {/* Contact Info */}
-            <div className="flex items-start mb-4">
-              <div className="mr-3">
-                <img src={Contact} alt="Contact Icon" width={20} height={20} />
-              </div>
-              <p className="text-xs">+92-327-406-7437</p>
+        {/* Third Column */}
+        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
+          {/* Contact Info */}
+          <div className="flex items-start mb-4">
+            <div className="mr-3">
+              <img src={Contact} alt="Contact Icon" width={20} height={20} />
             </div>
-            <div className="flex items-start mb-4">
-              <div className="mr-3">
-                <img src={Address} alt="Address Icon" width={30} height={30} />
-              </div>
-              <p className="text-xs">
-                Ahmed Arcade, Suite 9, 1st Floor, Ferozpur Rd, Muslim Town Mor
-                Flyover, Lahore, 54600
-              </p>
+            <p className="text-xs">+92-327-406-7437</p>
+          </div>
+          <div className="flex items-start mb-4">
+            <div className="mr-3">
+              <img src={Address} alt="Address Icon" width={30} height={30} />
             </div>
-            <div className="flex items-start mb-4">
-              <div className="mr-3">
-                <img src={Mail} alt="Mail Icon" width={20} height={20} />
-              </div>
-              <p className="text-xs">info@consoledot.com</p>
+            <p className="text-xs">
+              Ahmed Arcade, Suite 9, 1st Floor, Ferozpur Rd, Muslim Town Mor
+              Flyover, Lahore, 54600
+            </p>
+          </div>
+          <div className="flex items-start mb-4">
+            <div className="mr-3">
+              <img src={Mail} alt="Mail Icon" width={20} height={20} />
             </div>
-            {/* social icon section start */}
-            <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full lg:ml-[25px] md:ml-[25px]  flex justify-center sm:flex sm:justify-center xs:flex xs:justify-center xs:gap-3 items-center">
-              <div className="lg:flex md:flex sm:hidden xs:hidden gap-3 ">
+            <p className="text-xs">info@consoledot.com</p>
+          </div>
+          {/* social icon section start */}
+          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full md:ml-24 ml-0 md:mt-20 mt-1  flex justify-center md:flex md:justify-center   md:items-end opacity-25">
+            <div className="lg:flex md:flex sm:hidden xs:hidden gap-3 ">
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
                 <LinkedinIcon
-                  color="white"
+                  color="#14213D"
                   style={{
-                    backgroundColor: "black",
                     height: "30px",
                     width: "45px",
                     opacity: "30% ",
                   }}
                 />
-                <TwitterIcon
-                  color={"white"}
-                  style={{
-                    backgroundColor: "black",
-                    height: "30px",
-                    width: "45px",
-                    opacity: "30%",
-                  }}
-                />
-                <CIcon
-                  color={"white"}
-                  style={{
-                    backgroundColor: "black",
-                    height: "30px",
-                    width: "45px",
-                    opacity: "30%",
-                  }}
-                />
-                <AIcon
-                  color={"white"}
-                  style={{
-                    backgroundColor: "black",
-                    height: "30px",
-                    width: "45px",
-                    opacity: "30%",
-                  }}
-                />
-                <OIcon
-                  color={"white"}
-                  style={{
-                    backgroundColor: "black",
-                    height: "30px",
-                    width: "45px",
-                    opacity: "30%",
-                  }}
-                />
               </div>
               <div
-                className="lg:hidden md:hidden sm:flex xs:flex flex justify-center items-center "
-                style={{ gap: "6px" }}
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
               >
-                <LinkedinIcon color={"white"} />
-                <TwitterIcon color={"white"} />
-                <CIcon color={"rgba(14, 119, 137, 1)"} />
-                <AIcon color={"white"} />
-                <OIcon color={"white"} />
+              <TwitterIcon
+                color="#14213D"
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
+              <CIcon
+                color="#14213D"
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
+
+              <AIcon
+                color="#14213D"
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
+
+              <OIcon
+                color="#14213D"
+                style={{
+                  backgroundColor: "black",
+                  height: "30px",
+                  width: "45px",
+                  opacity: "30%",
+                }}
+              />
               </div>
             </div>
+            <div
+              className="lg:hidden md:hidden sm:flex xs:flex flex justify-center items-center "
+              style={{ gap: "6px" }}
+            >
+              <LinkedinIcon color={"white"} />
+              <TwitterIcon color={"white"} />
+              <CIcon color={"rgba(14, 119, 137, 1)"} />
+              <AIcon color={"white"} />
+              <OIcon color={"white"} />
+            </div>
+          </div>
 
             {/* social icon section end */}
           </div>
@@ -256,15 +282,14 @@ const Footer = () => {
 
         {/* Custom Icons */}
 
-        {/* Horizontal Line */}
-        <hr className="border-gray-400 my-10" />
+      {/* Horizontal Line */}
+      <hr className="border-custom-lightBlue" />
 
-        {/* Copyright */}
-        <div className="text-center text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs">
-          Copyright © 2024 ConsoleDot. All rights reserved.
-        </div>
-      </footer>
-    </div>
+      {/* Copyright */}
+      <div className="text-center text-[12px] md:text-[16px] mt-">
+        Copyright © 2024 ConsoleDot. All rights reserved.
+      </div>
+    </footer>
   );
 };
 

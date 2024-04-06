@@ -1,7 +1,7 @@
 import "./App.css";
-import LandingPage from "./components/LandingPage/LandingPage";
+import LandingPage from "./Pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { NavBar } from "./components/Navbar"; 
+import { NavBar } from "./components/Navbar";
 import Header from "./components/Header/Header";
 import { OffshoringModels } from "./Pages/OffshoringModels";
 import Footer from "./components/Footer/Footer";
@@ -17,14 +17,17 @@ import { Careers } from "./Pages/Careers";
 import { Faqs } from "./Pages/Faqs";
 import { CustomSoftware } from "./Pages/CustomSoftware";
 import { Contact } from "./Pages/Contact";
-
+import { Services } from "./Pages/Services";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [section, setSection] = useState("");
+  useEffect(() => console.log(section), [section]);
   return (
-    <Router> {/* Wrap your entire application with Router */}
+    <Router>
       <div className="bg-backgroundColor">
-      <Header />
-        <NavBar /> {/* Render your NavBar component */}
+        <Header />
+        <NavBar setSection={setSection} /> 
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Offshoringmodels" element={<OffshoringModels />} />
@@ -40,7 +43,8 @@ function App() {
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/custome-software" element={<CustomSoftware />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Define routes for other pages */}
+          <Route path="/Services" element={<Services item={section} />} />
+        
         </Routes>
         <Footer />
       </div>

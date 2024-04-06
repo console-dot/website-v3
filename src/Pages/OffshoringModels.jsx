@@ -4,6 +4,7 @@ import { OffShoreModelHero } from "../components/OffshoreModelHero";
 import OffshoringServices from "../components/OffshoringServices/OffshoringServices";
 import { OffShoreModelText } from "../components/OffShoreModelText";
 import { OffShoreModelText1 } from "../components/OffShoreModelText";
+import { ContactSection1 } from "../components/OffshoringServices/ContactSection";
 
 export const OffshoringModels = () => {
   return (
@@ -15,6 +16,7 @@ export const OffshoringModels = () => {
         <OffshoreModel />
         <OffshoringServices />
         <OffShoreModelText />
+        <ContactSection1/>
       </div>
     </div>
   );
