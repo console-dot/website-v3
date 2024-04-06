@@ -3,11 +3,11 @@ import { DashedBg, aboutService } from "../../assets/images";
 
 export const AboutScreen = () => {
   return (
-    <div className="w-[100%] flex justify-center mt-6 md:mt-16 ">
-      <div className="flex flex-wrap  bg-offwhite w-[95%]  ">
+    <div className="w-[100%] flex  mt-6 md:mt-16 ">
+      <div className="flex flex-wrap  bg-offwhite md:p-5 p-2  ">
         <div className="w-full md:w-1/2 md:p-20 p-8">
           <p className="text-custom-blue font-poppins md:text-[16px] text-[12px] font-normal leading-none tracking-normal">
-            About the compny
+            About the company
           </p>
           <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold  tracking-normal md:mt-3 mt-1 ">
             ABOUT CONSOLEDOT

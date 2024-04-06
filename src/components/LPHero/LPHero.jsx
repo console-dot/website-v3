@@ -53,7 +53,7 @@ export const LPHero = () => {
             <button
               onClick={() => navigate("/contact")}
               className="text-white h-[38px] w-[182px] bg-gradient-to-tl border-1 border-white from-custom-blue1 to-custom-purple rounded-full active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
-              style={{ border: "2px solid white" }}
+              style={{ border: "1px solid white" }}
             >
               <p
                 className="font-Lato text-base font-medium leading-[28px] tracking-normal"

@@ -86,18 +86,13 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Right side */}
-        <div className="w-auto md:w-1/2 flex md:justify-start justify-center md:pl-5  relative ">
-          <div className="w-3/4 justify-center relative">
+        <div className="w-auto md:w-1/2 flex md:justify-start justify-center relative md:order-1 order-2">
+          <div className="w-3/4 relative justify-start ">
             <img
-              src={DashedBg}
-              alt="Loading.."
-              className="md:w-[500px] md:h-[400px] w-[350px] h-[250px]"
-            />
-            <img
-              className="  md:left-[50px] md:w-[350px] md:h-[290px] top-11 left-3 w-[85%]"
+              className="  md:w-[500px] md:h-[400px]   w-[85%]"
               src={offshoreimg1}
               alt="Img not found"
-              style={{ position: "absolute" }}
+              style={{ position: "relative" }}
             />
           </div>
         </div>
@@ -105,7 +100,7 @@ export const OffshoreModel = () => {
       {/* Hourly (Time & Material) End */}
 
       {/* Fixed-price start */}
-      <div className="w-full md:pl-[7rem] flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full  flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
         {/* Right side */}
         <div className="w-auto md:w-[50%] md:p-0 p-3 md:pl-5 md:order-2 order-1">
           <div className="w-auto  flex flex-col">
@@ -115,8 +110,7 @@ export const OffshoreModel = () => {
               </p>
               <p className="text-aboutustext font-lato text-justify   md:text-[16px] text-[12px]  leading-6 md:mt-4 mt-2">
                 For projects with well-defined scopes, our fixed-price model
-                ensures budget predictability. We provide a comprehensive quote,
-                and you pay a predetermined amount for the entire project.
+                ensures budget <span className="md:block"></span>predictability. We provide a comprehensive quote,and you pay a predetermined <span className="md:block"></span> amount for the entire project.
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -163,18 +157,13 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Left side */}
-        <div className="w-auto md:w-1/2 flex md:justify-start justify-center relative md:order-1 order-2">
-          <div className="w-3/4 relative justify-start ">
+        <div className="w-auto md:w-1/2 flex  justify-center relative md:order-1 order-2">
+          <div className="w-auto relative  ">
             <img
-              src={DashedBg}
-              alt="Loading.."
-              className="md:w-[500px] md:h-[400px] w-[350px] h-[250px]"
-            />
-            <img
-              className="  md:left-[50px] md:w-[350px] md:h-[290px] top-11 left-3 w-[85%]"
+              className="  md:w-[500px] md:h-[400px] "
               src={offshoreimg2}
               alt="Img not found"
-              style={{ position: "absolute" }}
+              style={{ position: "relative" }}
             />
           </div>
         </div>
@@ -239,18 +228,13 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Right side */}
-        <div className="w-auto md:w-1/2 flex md:justify-start justify-center md:pl-5  relative ">
-          <div className="w-3/4 justify-center relative">
+        <div className="w-auto md:w-1/2 flex md:justify-start justify-center relative md:order-1 order-2">
+          <div className="w-3/4 relative justify-start ">
             <img
-              src={DashedBg}
-              alt="Loading.."
-              className="md:w-[500px] md:h-[400px] w-[350px] h-[250px]"
-            />
-            <img
-              className="  md:left-[50px] md:w-[350px] md:h-[290px] top-11 left-3 w-[85%]"
+              className="  md:w-[500px] md:h-[400px]   w-[85%]"
               src={offshoreimg3}
               alt="Img not found"
-              style={{ position: "absolute" }}
+              style={{ position: "relative" }}
             />
           </div>
         </div>

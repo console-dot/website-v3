@@ -3,7 +3,7 @@ import { image1, image2, image3, image4 } from "../../assets/images";
 
 export const OSC = ({ isMobile }) => {
   return (
-    <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 px-4 md:px-28 p-[3rem] ">
+    <div className="bg-gradient-to-t from-custom-blue to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 px-4 md:px-28 p-[3rem] ">
       {servicesData.map((service, index) => (
         <div
           key={index}
@@ -21,13 +21,13 @@ export const OSC = ({ isMobile }) => {
           </div>
 
           <div className=" ml-5 md:mt-0 md:w-[60%] justify-start md:text-left">
-            <h2 className="font-bold md:text-[48px] text-[26px] text-white font-poppins">
+            <span className="font-bold md:text-[48px] text-[26px] text-white font-poppins">
               {service.title}
-            </h2>
+            </span>
             <div className="md:w-[70%]">
-              <p className="text-white font-poppins md:text-[16px] text-[12px]">
+              <span className="text-white font-poppins md:text-[16px] text-[12px]">
                 {service.description}
-              </p>
+              </span>
             </div>
           </div>
         </div>

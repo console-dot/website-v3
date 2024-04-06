@@ -1,5 +1,5 @@
 import React from "react";
-import CardArray from "../OurServicesCard/OurServicesCard";
+import {Card, OurServicesCard} from "../OurServicesCard/OurServicesCard";
 import { image1 } from "../../assets/images";
 import { image2 } from "../../assets/images";
 import { image3 } from "../../assets/images";
@@ -9,7 +9,8 @@ import { OSC } from "../OurServicesCard/OSC";
 const OurServices = () => {
   const isMobile = useIsMobile();
   return (
-    <div className="flex flex-col items-center mt-8 ">
+    <>
+    <div className="flex flex-col items-center ">
       <div className="font-Lato  md:text-[16px] text-[12px] text-custom-blue">
         Our Expertise
       </div>
@@ -23,13 +24,23 @@ const OurServices = () => {
           <div class="h-0.5 bg-custom-purple md:w-20 w-12"></div>
         </div>
       </div>
+      </div>
 
-      <div className="mt-4">
-        <CardArray />
+      <div className="pl-24 pr-24 pt-16  ">
+        <Card />
+        <div className="flex md:justify-end justify-center md:mt-0 2 mb-2 ">
+        <button
+          type="button"
+          onClick=""
+          className="text-custom-purple just border-[0.5px] hover:bg-custom-purple hover:text-offwhite px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue rounded-full font-Lato font-medium"
+        >
+          View All
+        </button>
+      </div>
       </div>
       {/* service Div */}
       <OSC/>
-    </div>
+      </>
   );
 };
 

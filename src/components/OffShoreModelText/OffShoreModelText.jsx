@@ -4,7 +4,7 @@ export const OffShoreModelText1 = () => {
   return (
     <div className="w-[99%] md:w-[93%] flex justify-center items-center">
       <div>
-        <p className="text-aboutustext text-justify justify-center md:text-[16px] text-[12px] mt-12 md:w-[90%] w-[90%]   md:ml-14 ml-4 ">
+        <p className="text-aboutustext text-justify justify-center md:text-[16px] text-[12px] mt-12 md:w-[89%] w-[90%]   md:pl-14 pl-4">
           At ConsoleDot, we take pride in being your trusted partner for
           offshoring services, offering unparalleled software development
           solutions tailored to meet your unique business needs. Our dedicated

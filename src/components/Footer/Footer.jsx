@@ -12,7 +12,7 @@ import OIcon from "../../assets/icons/OIcon";
 const Footer = () => {
   return (
     <footer className="bg-custom-blue text-white py-10    mt-[-50px]">
-      <div className="container mx-auto flex flex-wrap justify-between md:px-[110px] px-5 items-start mt-20">
+      <div className="container mx-auto flex flex-wrap justify-center  md:px-[110px] px-5 items-start mt-20">
         {/* First Column */}
         <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
           {/* Company Logo */}
@@ -22,10 +22,7 @@ const Footer = () => {
             </div>
             <div>
               {/* Company Name */}
-              <span
-                className="font-poppins md:text-[33px] text-[23px] text-white  font-semibold leading-[46px] tracking-normal text-left"
-
-              >
+              <span className="font-poppins md:text-[33px] text-[23px] text-white  font-semibold leading-[46px] tracking-normal text-left">
                 Console
               </span>
               <span
@@ -46,15 +43,16 @@ const Footer = () => {
           </p>
         </div>
         {/* Second Column */}
-        <div className="w-auto lg:w-1/4 md:w-1/2 sm:w-full xs:w-auto ">
+        <div className="w-auto lg:w-1/4 md:w-1/2  sm:w-full xs:w-auto flex justify-center">
           {/* Navigation */}
-          <div className="pl-6 leading-7">
-          <p
-            className=" md:text-[16px] text-[12px]"
-            style={{ font: "poppins" }}
-          ></p>
-            Navigation
-            <div className=" md:text-[14px] text-[12px] pt-8  font-lato">
+          <div className="leading-7">
+            <p
+              className="md:text-[16px] text-[12px]"
+              style={{ font: "poppins" }}
+            >
+              Navigation
+            </p>
+            <div className="md:text-[14px] text-[12px] pt-8 font-lato text-left">
               <div>
                 <a href="#">Customer</a>
               </div>
@@ -62,29 +60,29 @@ const Footer = () => {
                 <a href="#">Technologies</a>
               </div>
               <div>
-                <a href="#">Carrer</a>
+                <a href="#">Career</a>
               </div>
               <div>
                 <a href="#">Contact Us</a>
               </div>
             </div>
-            </div>
+          </div>
         </div>
-        {/* Second Column */}
-        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full ">
+        {/* Third Column */}
+        <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full flex justify-center">
           {/* Privacy Policy & Terms */}
           <ul className="md:text-[16px] text-[12px]">
-            <div className="leading-10">
-            <li>
-              <a href="#" className="underline" >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="underline">
-                Terms and Conditions
-              </a>
-            </li>
+            <div className="leading-10 text-left">
+              <li>
+                <a href="#" className="underline">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="underline">
+                  Terms and Conditions
+                </a>
+              </li>
             </div>
           </ul>
         </div>
@@ -114,18 +112,27 @@ const Footer = () => {
             <p className="text-xs">info@consoledot.com</p>
           </div>
           {/* social icon section start */}
-          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full md:ml-24 ml-0 md:mt-20 mt-1  flex justify-center md:flex md:justify-center   md:items-end">
+          <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full md:ml-24 ml-0 md:mt-20 mt-1  flex justify-center md:flex md:justify-center   md:items-end opacity-25">
             <div className="lg:flex md:flex sm:hidden xs:hidden gap-3 ">
-              <LinkedinIcon color="white"
-                style={{
-                  backgroundColor: "black",
-                  height: "30px",
-                  width: "45px",
-                  opacity: "30% ",
-                }}
-              />
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
+                <LinkedinIcon
+                  color="#14213D"
+                  style={{
+                    height: "30px",
+                    width: "45px",
+                    opacity: "30% ",
+                  }}
+                />
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
               <TwitterIcon
-                color={"white"}
+                color="#14213D"
                 style={{
                   backgroundColor: "black",
                   height: "30px",
@@ -133,8 +140,13 @@ const Footer = () => {
                   opacity: "30%",
                 }}
               />
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
               <CIcon
-                color={"white"}
+                color="#14213D"
                 style={{
                   backgroundColor: "black",
                   height: "30px",
@@ -142,8 +154,14 @@ const Footer = () => {
                   opacity: "30%",
                 }}
               />
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
+
               <AIcon
-                color={"white"}
+                color="#14213D"
                 style={{
                   backgroundColor: "black",
                   height: "30px",
@@ -151,8 +169,14 @@ const Footer = () => {
                   opacity: "30%",
                 }}
               />
+              </div>
+              <div
+                style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                className="w-8 h-8 flex justify-center items-center rounded-lg"
+              >
+
               <OIcon
-                color={"white"}
+                color="#14213D"
                 style={{
                   backgroundColor: "black",
                   height: "30px",
@@ -160,8 +184,12 @@ const Footer = () => {
                   opacity: "30%",
                 }}
               />
+              </div>
             </div>
-            <div className="lg:hidden md:hidden sm:flex xs:flex flex justify-center items-center " style={{gap:"6px"}}>
+            <div
+              className="lg:hidden md:hidden sm:flex xs:flex flex justify-center items-center "
+              style={{ gap: "6px" }}
+            >
               <LinkedinIcon color={"white"} />
               <TwitterIcon color={"white"} />
               <CIcon color={"rgba(14, 119, 137, 1)"} />
