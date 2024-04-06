@@ -5,7 +5,7 @@ import useIsMobile from "../../utils/hooks/useIsMobile";
 import { S1Icon ,S2Icon  } from "../../assets/images";
 import { Navigate } from "react-router-dom";
 import Slider from "react-slick";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

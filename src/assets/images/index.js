@@ -44,6 +44,13 @@ import CSTopBorder from "./CaseBorderTop.png";
 import CsBottomBorder from "./CsBottomBorder.png";
 import FaqBg from "./FaqBg.png";
 import CustomSoftBg from "./customeSoftBg.png";
+import DashedBg from "./DashedBg.png";
+import LPheroimgbg from "./LPheroimgbg.png"
+import ourserviceshover from "./ourserviceshover.png";
+
+export { DashedBg };
+export {LPheroimgbg}
+export {ourserviceshover} ;
 export { offshoreimg2 };
 export { offshoreimg3 };
 export { offshoreimg1 };
