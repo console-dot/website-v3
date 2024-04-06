@@ -1,5 +1,5 @@
 import React from "react";
-import { FiPhoneCall } from "react-icons/fi";
+import { FaPhoneVolume } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon";
 import TwitterIcon from "../../assets/icons/TwitterIcon";
@@ -12,7 +12,7 @@ export default function Header() {
     <>
       <div
         style={{
-          background: "linear-gradient(180deg, #3C5A85 0%, #0E7789 100%)",
+          background: "linear-gradient(0deg, #3C5A85 0%, #0E7789 100%)",
         }}
         className="w-full h-[50px] flex flex-row justify-between items-center"
       >
@@ -30,7 +30,7 @@ export default function Header() {
               style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
               className="w-8 h-8 flex justify-center items-center"
             >
-              <FiPhoneCall color={"white"} />
+              <FaPhoneVolume  color={"white"}/>
             </div>
             <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
               +92 327 4067337

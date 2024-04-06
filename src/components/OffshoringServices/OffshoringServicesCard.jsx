@@ -5,9 +5,8 @@ import { circletickicon } from "../../assets/images";
 const Card = ({ heading, description }) => {
   return (
     <div
-      className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between hover:-translate-y-2 hover:border-dashed border border-transparent transition duration-300 ease-in-out mb-6 md:mb-0"
-      style={{ width: "360px", height: "438px" }}
-    >
+      className="bg-white shadow-lg md:w-[415px] md:h-[460px] w-[350px] h-[450px] rounded-lg p-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-custom-purple  transition duration-300 ease-in-out mt-6 md:mb-0"
+          >
       {/* Header Section */}
       <div className="text-center mb-4 mt-8 text-custom-purple">
         <h2 className="text-[24px] font-bold mb-2">{heading}</h2>
@@ -21,26 +20,23 @@ const Card = ({ heading, description }) => {
               {" "}
               {/* Added text-custom-grey class */}
               <img
-                src={ circletickicon }
+                src={circletickicon}
                 alt="circletickicon"
                 className="mr-4"
               />{" "}
-
-              <span>{point}</span> 
+              <span>{point}</span>
             </li>
           ))}
         </ul>
       </div>
 
       {/* Footer Section */}
-      <div className="w-full flex justify-center mt-[10%]">
+      <div className="w-full flex justify-around mt-6">
         <button
           type="button"
-          className="text-white px-5 py-2.5 w-[182px] bg-custom-purple hover:to-custom-purple-hover hover:from-custom-blue-hover rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+          className="font-Lato text-base font-medium leading-[28px] tracking-normal text-center px-24 py-2.5  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-purple hover:text-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
         >
-          <p className="font-Lato text-base font-medium leading-[28px] tracking-normal text-center">
-            Avail Service
-          </p>
+          Avail Service
         </button>
       </div>
     </div>
@@ -50,7 +46,7 @@ const Card = ({ heading, description }) => {
 export const CardArray = () => {
   const cards = [
     {
-      heading: "Hourly (Time & Material)" ,
+      heading: "Hourly (Time & Material)",
       description: [
         "High Flexibility",
         "Variable Cost Predictability",
@@ -98,5 +94,3 @@ export const CardArray = () => {
     </div>
   );
 };
-
-

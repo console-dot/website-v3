@@ -8,10 +8,14 @@ module.exports = {
       },
       colors: {
         "custom-blue": "rgba(25, 40, 78, 1)",
+        "custom-lightBlue": "#0E77891A",
+
         "custom-purple": "rgba(14, 119, 137, 1)",
-        "custom-grey" :'#8C8787',
-        "offwhite": '#eaeaea',
-        "aboutustext": '#8C8888',
+        "custom-blue1": "#3C5A85",
+        "custom-grey": "#8C8787",
+        offwhite: "#eaeaea",
+        aboutustext: "#8C8888",
+        "custom-white": "#FFFFFF"
       },
       screens: {
         xs: "320px",

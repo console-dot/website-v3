@@ -19,31 +19,35 @@ import Address from "./Address.png";
 import StarEffect from "./StarEffect.png";
 import offshorehero from "./offshorehero.png";
 import offshoreimg1 from "./offshoreimg1.png";
-import offshoreimg2 from  "./offshoreimg2.png"
-import offshoreimg3 from  "./offshoreimg3.png"
+import offshoreimg2 from "./offshoreimg2.png";
+import offshoreimg3 from "./offshoreimg3.png";
+import DashedBg from "./DashedBg.png";
+import LPheroimgbg from "./LPheroimgbg.png"
+import ourserviceshover from "./ourserviceshover.png";
 
-
-export {offshoreimg2}
-export {offshoreimg3}
-export {offshoreimg1};
-export {offshorehero};
-export {StarEffect};
+export {LPheroimgbg}
+export {ourserviceshover} ;
+export { DashedBg };
+export { offshoreimg2 };
+export { offshoreimg3 };
+export { offshoreimg1 };
+export { offshorehero };
+export { StarEffect };
 export { Contact };
 export { Mail };
-export { Address }
+export { Address };
 export { logowhite };
 export { imageGit };
 export { circletickicon };
-export { image1 } ;
-export { image2 } ;
-export { image3 } ;
-export { image4 } ;
+export { image1 };
+export { image2 };
+export { image3 };
+export { image4 };
 export { IconBg };
-export { S3Icon }
+export { S3Icon };
 export { S2Icon };
-export { cardsymbol };  
+export { cardsymbol };
 export { logo };
 export { user };
 export { S1Icon };
 export { aboutService };
-
