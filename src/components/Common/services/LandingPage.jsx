@@ -28,7 +28,7 @@ export default function LandingPage({data}) {
           <div className="w-full flex justify-start items-center">
             <div className="pl-16 flex flex-col gap-8">
               <h1 className="text-[16px] text-white">{data.topHeading}</h1>
-              <h1 className="text-[28px] text-white mb-4 font-bold">{data.midHeading}</h1>
+              <h1 className="text-[28px] text-white mb-4 font-bold">{data.midHeading.toUpperCase()}</h1>
               <h1 className="text-[16px] text-white">{data.bottomHeading}</h1>
             </div>
           </div>

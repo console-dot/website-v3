@@ -72,7 +72,7 @@ const Footer = () => {
             className="absolute inset-0 object-cover w-full h-full opacity-20"
           />
 
-          <div className="relative z-10 flex flex-col items-center gap-12">
+          <div className="relative z-10 flex flex-col items-center gap-4">
             <h2 className="font-bold lg:text-[28px] md:text-[28px] sm:text-[16px] text-center xs:text-[16px] sm:text-center text-white  font-poppins">
               {data?.heading?.toUpperCase()}
             </h2>
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <footer className="bg-custom-blue text-white py-10 lg:px-20 md:px-10 sm:px-5 xs:px-5 mt-[-50px]">
+      <footer className="bg-footerBg text-white py-10 lg:px-20 md:px-10 sm:px-5 xs:px-5 mt-[-50px]">
         <div className="container mx-auto flex flex-wrap justify-between items-start mt-20">
           {/* First Column */}
           <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">

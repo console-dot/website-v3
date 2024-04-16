@@ -22,11 +22,13 @@ module.exports = {
         "webDescrip" : "#8C8787",
         "btnGroup":"#E1ECF1",
         "fromclr":"#0E7789",
+        "footerBg":"#273C69",
         "toclr":"#3C5A85",
         "firstProcess":"#30D1C7",
+        "webdevHover":"#30B1C7",
         "checks":"#25324B",
         'backgroundColor':"#f8f9fc"
-      },
+      },safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]'],
       screens: {
         xs: "320px",
         sm: "640px",

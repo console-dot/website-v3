@@ -14,7 +14,7 @@ export const Careers = () => {
   const [filterData, setFilterData]=useState();
   
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-8">
       <LandingPage data={landingPageDataCareers} />
       <div className="p-16 w-full flex flex-col gap-16">
         <SearchInput setFilterData={setFilterData}/>

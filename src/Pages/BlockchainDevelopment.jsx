@@ -14,7 +14,7 @@ import { landingPageDataBlockchain } from "../constatnts/landingPageData";
 export const BlockchainDevelopment = () => {
  
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-8">
       <LandingPage data={landingPageDataBlockchain} />
       <div className="p-16">
       <div className="pb-4">
@@ -29,8 +29,8 @@ export const BlockchainDevelopment = () => {
         />
       </div>
       
-      <Process data={processCardsBlockchainDev} heading={"How ConsoleDot Executes the Blockchain Development Process"} title={"Web dev process"}/>
-      <WhyChoose heading={"Why Choose Consoledot for App Development?"} data={whyChooseDataBlockchain} cardsInRow={"grid-cols-4"}/>
+      <Process data={processCardsBlockchainDev} heading={"How ConsoleDot Executes the Blockchain Development Process"} title={"Blockchain Development Process"}/>
+      <WhyChoose heading={"Why Choose Consoledot for Blockchain Development?"} data={whyChooseDataBlockchain} cardsInRow={"grid-cols-4"}/>
      
       <TechStack data={techStackDataBlockchain} description={"Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof:"}/>
       </div>
