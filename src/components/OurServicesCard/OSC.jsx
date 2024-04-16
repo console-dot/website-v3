@@ -3,6 +3,7 @@ import { image1, image2, image3, image4 } from "../../assets/images";
 
 export const OSC = ({ isMobile }) => {
   return (
+    <div className="pt-6">
     <div className="bg-gradient-to-t from-custom-blue to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 px-4 md:px-28 p-[3rem] ">
       {servicesData.map((service, index) => (
         <div
@@ -32,6 +33,7 @@ export const OSC = ({ isMobile }) => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };

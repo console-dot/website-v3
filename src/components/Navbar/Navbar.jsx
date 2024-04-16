@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets/images";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { Services } from "../../Pages";
@@ -12,7 +12,7 @@ export const NavBar = ({ section, setSection }) => {
       name: "Services",
       dropdown: [
         {
-          name: "customSoftware",
+          name: "Custom Software",
           link: "services/custom-software-development",
         },
         { name: "UI/UX Design", link: "services/ui-ux-design" },
@@ -44,13 +44,15 @@ export const NavBar = ({ section, setSection }) => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-  
 
-  
-
+  // Function to close the dropdown menu
   const closeDropdown = () => {
     setShowDropdown(false);
   };
+
+  // Get current location
+  const location = useLocation();
+
   return (
     <div
       style={{
@@ -117,9 +119,13 @@ export const NavBar = ({ section, setSection }) => {
           {navBar.map((item, index) => (
             <li key={index} className="">
               {item.dropdown ? (
-                <div className="Absolute m-2" >
+                <div className="Absolute m-2 hover:m-0">
                   <span
-                    className="cursor-pointer hover:bg-gradient-to-tr  from-custom-blue to-custom-purple flex items-center"
+                    className={`cursor-pointer flex items-center ${
+                      location.pathname === item.link
+                        ? "bg-gradient-to-tr from-custom-blue to-custom-purple text-white"
+                        : "text-white hover:bg-gradient-to-tr hover:px-2 hover:py-2  from-custom-blue to-custom-purple"
+                    }`}
                     onClick={toggleDropdown}
                   >
                     {item.name}{" "}
@@ -132,15 +138,20 @@ export const NavBar = ({ section, setSection }) => {
                     </div>
                   </span>
                   {showDropdown && (
-                    <ul className="absolute bg-custom-purple shadow-md mt-[19px]">
+                    <ul className="absolute bg-custom-purple shadow-md mt-[18px]">
                       {item.dropdown.map((subitem, subindex) => (
-                        <li key={subindex} className="p-2">
-                          <p
+                        <li key={subindex} className="p-2 ">
+                          <Link
+                            to={subitem.link}
                             onClick={() => setSection(subitem?.name)}
-                            className="hover:text-custom-blue cursor-pointer"
+                            className={`${
+                              location.pathname === subitem.link
+                                ? "text-white"
+                                : "text-custom-blue hover:text-white"
+                            } cursor-pointer`}
                           >
                             {subitem.name}
-                          </p>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -149,7 +160,11 @@ export const NavBar = ({ section, setSection }) => {
               ) : (
                 <Link
                   to={item.link}
-                  className="cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-custom-blue to-custom-purple flex items-center"
+                  className={`cursor-pointer px-2 py-2 ${
+                    location.pathname === item.link
+                      ? "bg-gradient-to-r from-custom-blue to-custom-purple text-white"
+                      : "hover:bg-gradient-to-r from-custom-blue to-custom-purple text-white"
+                  } flex items-center`}
                 >
                   {item.name}
                 </Link>
@@ -170,7 +185,9 @@ export const NavBar = ({ section, setSection }) => {
             {navBar.map((item, index) => (
               <li
                 key={index}
-                className="cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple"
+                className={`cursor-pointer hover:bg-gradient-to-r from-custom-blue to-custom-purple ${
+                  location.pathname === item.link ? "text-white" : ""
+                }`}
               >
                 <Link to={item.link}>{item.name}</Link>
               </li>

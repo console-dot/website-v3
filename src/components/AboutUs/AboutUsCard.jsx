@@ -101,7 +101,7 @@ const Card = () => {
         {cards.map((d, index) => (
           <div
             key={index} // Using index as key
-            className={`bg-white flex  items-center justify-center transition-transform duration-300 rounded-xl p-3 py-20 `}
+            className={`bg-white flex items-center justify-center transition-transform duration-300 rounded-xl p-3 py-20 ${index % 2 !== 0 ? "odd-border1" : ""}`}
             onMouseOver={() => setHovered(true)}
             onMouseOut={() => setHovered(false)}
             // Adjusting card width and height with margin

@@ -10,7 +10,7 @@ const OurServices = () => {
   const isMobile = useIsMobile();
   return (
     <>
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center pt-6 ">
       <div className="font-Lato  md:text-[16px] text-[12px] text-custom-blue">
         Our Expertise
       </div>
@@ -26,9 +26,9 @@ const OurServices = () => {
       </div>
       </div>
 
-      <div className="pl-16 pr-16 pt-16  ">
+      <div className="xl:pl-16 xl:pr-16 xl:pt-16 lg:pl-16 lg:pr-16 lg:pt-16 md:pl-16 md:pr-16 md:pt-16 pl-5 pr-5 pt-6">
         <Card />
-        <div className="flex md:justify-end justify-center md:mt-0  mb-8 ">
+        <div className="flex md:justify-end justify-center md:pt-3 pt-10 ">
         <button
           type="button"
           onClick=""

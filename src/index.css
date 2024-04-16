@@ -7,6 +7,37 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+.odd-border1 {
+  border-top: 2px dashed;
+  border-left: 2px dashed;
+  border-right: 2px dashed;
+  border-bottom: 2px dashed;
+  border-radius: 2%;
+  border-color: #3C5A85; /* Customize the dashed border as needed */
+}
+
+.odd-border {
+  border-top: 2px dashed;
+  border-left: 2px dashed;
+  border-right: 2px dashed;
+  border-radius: 2%;
+  border-color: #3C5A85; /* Customize the dashed border as needed */
+}
+
+
+.slick-dots li button:before {
+  content: '_' !important;
+  color: rgba(14, 119, 137, 1) !important;
+  font-size: 36px !important;
+  font-weight: bolder !important;
+  line-height: 30px !important;
+}
+@media screen and (max-width: 480px) {
+  .slick-dots li button:before {
+    line-height: 10px !important;
+  }
+}
+
 .slick-slide > div{
   margin: 0 10px !important;
   
