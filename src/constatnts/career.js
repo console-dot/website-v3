@@ -75,7 +75,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:5
@@ -85,7 +85,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:6
@@ -95,7 +95,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:5
@@ -105,7 +105,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:5
@@ -115,7 +115,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:6
@@ -125,7 +125,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:5
@@ -135,7 +135,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:5
@@ -145,7 +145,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:6
@@ -155,7 +155,7 @@ export const openPositionData=[
         minExp:"02 years",
         openPosition:"02",
         qualification:"Bachelors in Computer Science",
-        type: "Full-time",
+        type: "Full-Time",
         depatrment:"Software Engineering",
         capacity:10,
         applied:5

@@ -19,7 +19,7 @@ export const WhyChoose = ({ heading, data , cardsInRow }) => {
       <div className={`w-full grid ${cardsInRow} gap-8 mt-8`}>
         {data?.map((i) => (
           <div
-            className=" flex flex-col bg-white  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-2"
+            className=" flex flex-col bg-white border-2 border-transparent  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4"
           >
             <div className="flex flex-col items-center justify-center p-8 gap-4">
               <div className="w-[80px] h-[80px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
@@ -29,7 +29,8 @@ export const WhyChoose = ({ heading, data , cardsInRow }) => {
               <h1 className="text-[16px] text-webHeading leading-6 font-bold">
                 {i.title}
               </h1>
-              {i?.subHeading && <h1 className="text-[16px] font-poppins my-1 text-webHeading leading-6">
+              {i?.subHeading && 
+               <h1 className="text-[16px] text-center font-poppins my-1 text-dottedBorder leading-6">
                 {i.subHeading}
               </h1> }
               <span className="text-[16px] text-webHeading leading-6 text-justify ">

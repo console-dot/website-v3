@@ -49,12 +49,12 @@ export const ProductResearchKeyComp = () => {
   ];
   return (
     <div className="flex flex-col items-center justify-center w-full mt-12">
-      <div className="flex flex-col gap-2 items-center justify-center w-2/5">
+      <div className="flex flex-col gap-2 items-center justify-center w-3/5">
         <h1 className="text-[16px] leading-5 text-dottedBorder">
           Key Components
         </h1>
-        <h1 className="text-[28px] leading-10 text-dottedBorder font-bold text-center">
-          Key Components of Consoledot's Product Research Services:
+        <h1 className="text-[28px] w-full leading-10 text-dottedBorder font-bold text-center">
+          KEY COMPONENTS OF CONSOLEDOT's PRODUCT RESEARCH SERVICES:
         </h1>
         <div className="">
           <Divider />

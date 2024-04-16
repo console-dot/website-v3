@@ -16,7 +16,7 @@ export const WebDevelopment = () => {
   
   
   return (
-    <div className="w-full mb-16 ">
+    <div className="w-full mb-8 ">
       <LandingPage data={landingPageDataWeb} />
       <div className="p-16">
       <div className=" pb-4">

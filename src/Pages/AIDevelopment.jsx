@@ -17,7 +17,7 @@ import { landingPageDataAI } from "../constatnts/landingPageData";
 
 export const AIDevelopment = () => {
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-8">
       <LandingPage data={landingPageDataAI} />
       <div className="p-16">
         <div className="pb-4">
