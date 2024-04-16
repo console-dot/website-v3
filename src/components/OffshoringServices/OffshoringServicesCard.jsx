@@ -4,9 +4,7 @@ import { circletickicon } from "../../assets/images";
 
 const Card = ({ heading, description }) => {
   return (
-    <div
-      className="bg-white shadow-lg md:w-[415px] md:h-[460px] w-[350px] h-[450px] rounded-lg p-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-custom-purple  transition duration-300 ease-in-out mt-6 md:mb-0"
-          >
+    <div className="bg-white  shadow-lg xl:w-full lg:w-full md:w-full md:h-[460px] w-[350px] h-[450px] rounded-lg p-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-2 hover:border-custom-blue1  transition duration-300 ease-in-out mt-6 md:mb-0">
       {/* Header Section */}
       <div className="text-center mb-4 mt-8 text-custom-purple">
         <h2 className="text-[24px] font-bold mb-2">{heading}</h2>
@@ -81,8 +79,7 @@ export const CardArray = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center mb-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="flex md:flex-row flex-col items-center mb-8 gap-6">
         {cards.map((card, index) => (
           <Card
             key={index}
@@ -91,6 +88,6 @@ export const CardArray = () => {
           />
         ))}
       </div>
-    </div>
+    
   );
 };

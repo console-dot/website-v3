@@ -1,15 +1,20 @@
-import React, { useState } from "react";
-import { StarEffect } from "../../assets/images";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import { StarEffect } from "../../assets/images";
 
 export const LPHero = () => {
   const navigate = useNavigate();
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true); // Set to true by default
 
-  const handleHover = () => {
-    setIsHovered(!isHovered);
-  };
+  useEffect(() => {
+    // Set isHovered to false after a delay to mimic initial hover animation
+    const timer = setTimeout(() => {
+      setIsHovered(false);
+    }, 1000); // Adjust delay as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleButtonClick = () => {
     const scrollPosition = window.innerHeight * 0.8;
     window.scrollTo({
@@ -17,6 +22,7 @@ export const LPHero = () => {
       behavior: "smooth",
     });
   };
+
   return (
     <div
       className="relative md:h-[664px] h-[550px] w-full overflow-hidden bg-gradient-to-tl from-custom-blue to-custom-purple"
@@ -64,33 +70,44 @@ export const LPHero = () => {
             </button>
           </div>
           <div className="flex justify-center md:mt-20 m-10">
-            <div className="">
-              <button
-                className={`text-5xl transform hover:scale-110 rounded-full transition-all border-emerald-100 duration-300 bg-gradient-to-bl from-custom-blue to-custom-purple`}
+            <button
+              className={`text-5xl rounded-full transition-all border-emerald-100 duration-300 bg-gradient-to-bl from-custom-blue to-custom-purple`}
+              style={{
+                border: "3px solid white",
+                position: "relative",
+                width: "50px",
+                height: "50px",
+                animation: isHovered
+                  ? "bounce 1.5s infinite alternate"
+                  : "bounce 1.5s infinite",
+              }}
+              onClick={handleButtonClick}
+            >
+              <strong
                 style={{
-                  border: "3px solid white",
-                  position: "relative",
-                  width: "50px",
-                  height: "50px",
+                  position: "absolute",
+                  top: "21%",
+                  right: "18%",
+                  fontSize: "30px",
+                  transform: isHovered ? "scale(1.1)" : "none",
+                  transition: "transform 2s ease-in-out",
                 }}
-                onMouseEnter={handleHover}
-                onMouseLeave={handleHover}
-                onClick={handleButtonClick}
               >
-                <strong
-                  style={{
-                    position: "absolute",
-                    top: "21%",
-                    right: "18%",
-                    fontSize: "30px",
-                    transform: isHovered ? "rotate(180deg)" : "rotate(0deg)",
-                    transition: "transform 0.3s ease-in-out",
-                  }}
-                >
-                  <IoIosArrowUp />
-                </strong>
-              </button>
-            </div>
+                <IoIosArrowDown />
+              </strong>
+              <style>
+                {`
+                  @keyframes bounce {
+                    0% {
+                      transform: translateY(-20px);
+                    }
+                    100% {
+                      transform: translateY(30px);
+                    }
+                  }
+                `}
+              </style>
+            </button>
           </div>
         </div>
       </div>

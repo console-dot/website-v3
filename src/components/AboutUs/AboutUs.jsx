@@ -3,7 +3,7 @@ import Card, { CardArray} from "./AboutUsCard"; // Import the CardArray componen
 
 export const AboutUs = () => {
   return (
-    <div className="w-full">
+    <div className="">
       <div className="flex flex-col items-center  w-[100%]  mt-6 md:mt-16 h-auto">
         <div className="font-Lato md:text-[16px] text-[12px] text-custom-blue leading-none">
           Testimonials
@@ -19,9 +19,9 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="pl-24 pr-24 pt-16  ">
+      <div className="xl:pl-16 xl:pr-16 xl:pt-16 lg:pl-16 lg:pr-16 lg:pt-16 md:pl-16 md:pr-16 md:pt-16 pl-5 pr-5 pt-6  ">
         <Card />
-        <div className="flex md:justify-end justify-center md:mt-0 mt-2 ">
+        <div className="flex md:justify-end justify-center md:pt-3 pt-10 ">
         <button
           type="button"
           onClick=""
