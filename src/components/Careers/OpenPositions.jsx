@@ -80,7 +80,7 @@ console.log(currentItems)
           <div className="flex flex-col gap-4 justify-start items-center">
             <button
               type="button"
-              className="text-white p-2 px-8 bg-gradient-to-r from-fromclr to-toclr rounded-full"
+              className="text-white p-2 px-8 bg-gradient-to-r from-fromclr to-toclr hover:bg-gradient-to-r hover:from-toclr hover:to-fromclr rounded-full"
             >
               Apply
             </button>

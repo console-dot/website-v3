@@ -13,7 +13,7 @@ import { landingPageDataUiUx } from "../constatnts/landingPageData";
 
 export const UiUxDevelopment = () => {
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-8">
       <LandingPage data={landingPageDataUiUx} />
       <div className="p-16">
         <div className="pb-4">

@@ -76,7 +76,7 @@ export const techStackDataBlockchain = [
     },
     {
       id: 3,
-      title: "Database",
+      title: "DataBase",
       icons: [
         <ReactIcon />,
         <FlutterIcon />,
@@ -106,7 +106,7 @@ export const techStackDataBlockchain = [
     },
     {
         id: 6,
-        title: "Apis",
+        title: "APIs",
         icons: [
           <ReactIcon />,
           <FlutterIcon />,

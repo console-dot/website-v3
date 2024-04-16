@@ -11,7 +11,7 @@ import { landingPageDataMob } from "../constatnts/landingPageData";
 
 export const MobileAppDevelopment = () => {
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-8">
       <LandingPage data={landingPageDataMob} />
       <div className="p-16">
         <div className="pb-4">
@@ -35,8 +35,8 @@ export const MobileAppDevelopment = () => {
         />
         <Process
           data={processCardsMobDev}
-          heading={"Web Development Process/Adding new Feature in existing App"}
-          title={"Web dev process"}
+          heading={"Mobile Development Process/Adding new Feature in existing App"}
+          title={"Mobile Development Process"}
         />
         <WhyChoose
           heading={"Why Choose Consoledot for App Development?"}

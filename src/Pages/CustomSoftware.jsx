@@ -1,21 +1,19 @@
 import React from "react";
-import { CustomSoftTop, ProductResearchTop } from "../assets/icons";
+import { CustomSoftTop } from "../assets/icons";
 import {  Preposition, TopComponent } from "../components/Common";
 import { WhyChoose } from "../components/Common/services/WhyChoose";
 import LandingPage from "../components/Common/services/LandingPage";
 
 import {
-    whyChooseDataCustomSoft,
-  whyChooseDataProductResearch
+    whyChooseDataCustomSoft
 } from "../constatnts/whyChooseData";
-import { landingPageDataCustomSoft, landingPageDataProductResearch } from "../constatnts/landingPageData";
-import { ProductResearchKeyComp } from "../components/ProductResearch/ProductResearchKeyComp";
+import { landingPageDataCustomSoft } from "../constatnts/landingPageData";
 import { WhyChoosePara } from "../components/CustomSoftware/WhyChoosePara";
 import { WhyWeWork } from "../components/CustomSoftware/WhyWeWork";
 
 export const CustomSoftware = () => {
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-8">
       <LandingPage data={landingPageDataCustomSoft} />
       <div className="p-16">
         <div className="pb-4">

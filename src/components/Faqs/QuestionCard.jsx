@@ -10,9 +10,9 @@ export const QuestionCard = ({ data }) => {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-2 gap-8 w-full h-full">
+      <div className="grid grid-cols-2 gap-8 w-full h-full P-4">
         {data?.map((i, index) => (
-          <div key={index} className=" p-2 shadow-md bg-white">
+          <div key={index} className=" p-4 shadow-md bg-white">
             <div
               className="flex items-center gap-4 cursor-pointer"
               onClick={() => handleClick(index)}

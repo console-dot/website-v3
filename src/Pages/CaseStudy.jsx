@@ -8,7 +8,7 @@ import { BottomContent } from "../components/CaseStudy/BottomContent";
 
 export const CaseStudy = () => {
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-8">
       <LandingPage data={landingPageDataCaseStudy} />
       <div className="p-16 flex flex-col gap-12">
         <div>
