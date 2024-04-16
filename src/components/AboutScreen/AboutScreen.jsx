@@ -27,22 +27,20 @@ export const AboutScreen = () => {
           </p>
         </div>
         <div className="w-full md:w-1/2 flex justify-center relative md:pl-9 pl-0">
-          <div className="w-3/4 relative justify-center ">
-            <img
-              src={DashedBg}
-              alt="Loading.."
-              className="md:w-[500px] md:h-[400px] w-[276px] h-[226px]"
-            />
-            <img
-              className=" md:top-[40px] md:left-[70px] md:w-[350px] md:h-[290px] top-11 left-3 w-[85%]"
-              src={aboutService}
-              alt="Img not found"
-              style={{
-                position: "absolute",
-              }}
-            />
-          </div>
-        </div>
+  <div className="w-3/4 relative justify-center">
+    <img
+      src={DashedBg}
+      alt="Loading.."
+      className="w-full h-[auto] md:max-w-[500px] xl:max-w-[600px]"
+    />
+    <img
+      className="absolute top-[40px] left-[50%] transform translate-x-[-50%] md:top-[40px] md:left-[50%] xs:w-[200px] xs:h-[150px] md:w-[280px] md:h-[200px] xl:w-[400px] xl:h-[340px]"
+      src={aboutService}
+      alt="Img not found"
+    />
+  </div>
+</div>
+
       </div>
     </div>
   );

@@ -298,11 +298,11 @@ const Footer = () => {
 
         {/* Horizontal Line */}
       </footer>
-      <div className="bg-custom-blue w-full">
-        <hr className="border-white opacity-35" />
+      <div className="bg-footerBg w-full">
+        <hr className="border-white opacity-35 w-[90%] m-auto" />
 
         {/* Copyright */}
-        <div className="text-center text-white mb-2 mt-2 font-italic opacity-35 text-[10px] md:text-[12px]">
+        <div className="text-center text-white mb-10 mt-4 font-italic opacity-35 text-[10px] md:text-[12px] ">
           Copyright © 2024 ConsoleDot. All rights reserved.
         </div>
       </div>
