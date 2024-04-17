@@ -26,8 +26,8 @@ export const AboutScreen = () => {
             and society to rise.
           </p>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center relative md:pl-9 pl-0">
-        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%]flex justify-center relative md:order-1 order-2">
+        <div className="w-full md:w-1/2 flex justify-center relative pl-0">
+        <div className="xl:w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] xs:w-[100%]flex justify-center relative md:order-1 order-2">
           <div className="w-[100%] relative justify-start">
             <img
               className="md:w-[528px] md:h-[408px] w-full h-auto"
