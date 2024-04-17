@@ -24,10 +24,10 @@ export const TopContent = () => {
             Provide an overview of the client or project context.
           </p>
           <h1 className="text-[14px] leading-5 text-start font-bold text-webHeading">
-            A. Introduction
+          B. Objectives
           </h1>
           <p className="text-[16px] leading-5 text-justify text-webDescrip">
-            Provide an overview of the client or project context.
+          Outline the goals and objectives of the software development project.
           </p>
         </div>
         <div>

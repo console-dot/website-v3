@@ -21,7 +21,7 @@ export const BlockchainDevelopment = () => {
         {" "}
         <TopComponent
           title={"Services"}
-          heading={"Empowering Businesses in the Palm of Your Hand"}
+          heading={"EMPOWERING TOMORROW: CONSOLEDOT'S BLOCKCHAIN DEVELOPMENT SOLUTIONS"}
           description={
             "At ConsoleDot, we believe in the transformative power of blockchain. Our Blockchain Development services aren't just about technology; they're about reshaping industries, enhancing security, and providing unparalleled transparency. Choose ConsoleDot for innovative solutions that redefine the way you do business."
           }

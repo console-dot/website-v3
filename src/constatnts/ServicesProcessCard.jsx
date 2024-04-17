@@ -16,8 +16,8 @@ export const ServicesProcessCard = ({ data }) => {
             i?.borders
           } border-dottedBorder border-dashed`}
         >
-          <div className="w-[80px] h-[80px] border-2 border-#c6dde40 bg-dottedBorder flex items-center justify-center rounded-full">
-            <Vector />
+          <div className="w-[80px] h-[80px] border-2 border-#c6dde40 bg-dottedBorder hover:bg-custom-purple flex items-center justify-center rounded-full">
+            <img src={i.icon} alt="" />
           </div>
           <div className="flex justify-center items-center ">
             <h1 className="text-[36px] text-primaryText font-bold">

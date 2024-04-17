@@ -47,7 +47,17 @@ import CustomSoftBg from "./customeSoftBg.png";
 import DashedBg from "./DashedBg.png";
 import LPheroimgbg from "./LPheroimgbg.png"
 import ourserviceshover from "./ourserviceshover.png";
+import BlockChainDev1 from "./BlockChainDev1.png";
+import BlockChainDev2 from "./BlockChainDev2.png";
+import BlockChainDev3 from "./BlockChainDev3.png";
+import BlockChainDev4 from "./BlockChainDev4.png";
+import BlockChainDev5 from "./BlockChainDev5.png";
 
+export {BlockChainDev1};
+export {BlockChainDev2};
+export {BlockChainDev3};
+export {BlockChainDev4};
+export {BlockChainDev5};
 export { DashedBg };
 export {LPheroimgbg}
 export {ourserviceshover} ;

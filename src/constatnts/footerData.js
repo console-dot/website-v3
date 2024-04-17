@@ -32,23 +32,23 @@ export const footerData =
       },
       blockchainDev: {
         heading: "Your success, our commitment",
-        subHeading: "Embark on a journey of innovation and user engagement. Contact ConsoleDot today for a personalized consultation. Together, let's bring your app vision to life and propel your brand to new heights. Elevate user experiences with ConsoleDot's Mobile App Development.",
-        btnText: "Ready to Elevate Your Mobile Presence? Let's Talk ConsoleDot!",
+        subHeading: "Embark on a journey of blockchain innovation and security. Contact ConsoleDot today for a personalized consultation. Together, let's reshape your industry and propel your business to new heights. Empower your future with ConsoleDot's Blockchain Development. Your success, our commitment.",
+        btnText: "Ready to Transform Your Business with Blockchain? Let's Talk ConsoleDot!",
       },
       aiDev: {
         heading: "Your success, our commitment",
-        subHeading: "Embark on a journey of innovation and user engagement. Contact ConsoleDot today for a personalized consultation. Together, let's bring your app vision to life and propel your brand to new heights. Elevate user experiences with ConsoleDot's Mobile App Development.",
-        btnText: "Ready to Elevate Your Mobile Presence? Let's Talk ConsoleDot!",
+        subHeading: "Embark on a transformative journey with GenAi. Contact ConsoleDot today for a personalized consultation. Together, let's harness the power of artificial intelligence and propel your business to new heights. Revolutionize your future with ConsoleDot's GenAi. Your success, our commitment.",
+        btnText: "Ready to Embrace the Future with GenAi? Let's Talk ConsoleDot!",
       },
       arvrDev: {
-        heading: "Get in touch with consoledot",
-        subHeading: "Get in touch with us to avail our services",
-        btnText: "Get in Touch",
+        heading: "Your success, our commitment",
+        subHeading: "Elevate your brand with ConsoleDot's AR/VR solutions. Contact ConsoleDot today for a personalized consultation. Together, let's craft immersive experiences that redefine engagement and propel your business to new heights. Immerse and innovate with ConsoleDot's AR/VR. Your success, our commitment.",
+        btnText: "Ready to Immerse Your Audience? Let's Talk ConsoleDot!",
       },
       uiuxDev: {
         heading: "Your success, our commitment",
-        subHeading: "Embark on a journey of innovation and user engagement. Contact ConsoleDot today for a personalized consultation. Together, let's bring your app vision to life and propel your brand to new heights. Elevate user experiences with ConsoleDot's Mobile App Development.",
-        btnText: "Ready to Elevate Your Mobile Presence? Let's Talk ConsoleDot!",
+        subHeading: "Transform your digital presence with ConsoleDot's UI/UX design solutions. Contact ConsoleDot today for a personalized consultation. Together, let's create designs that inspire, engage, and drive meaningful connections with your audience. Craft experiences, inspire engagement with ConsoleDot's UI/UX. Your success, our commitment.",
+        btnText: "Ready to Elevate Your User Experience? Let's Talk ConsoleDot!",
       },
       caseStudy: {
         heading: "Inquire Now",

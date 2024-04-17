@@ -1,4 +1,10 @@
+import OIcon from "../assets/icons/OIcon";
 import {
+  BlockChainDev1,
+  BlockChainDev2,
+  BlockChainDev3,
+  BlockChainDev4,
+  BlockChainDev5,
   Vector,
   Vector2,
   Vector3,
@@ -44,7 +50,7 @@ export const processCardsData = [
     flexDirection: "flex-col",
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
-    icon: Vector5,
+    icon: Vector5
   },
   {
     heading: "06",
@@ -82,7 +88,7 @@ export const processCardsBlockchainDev = [
     flexDirection: "flex-col",
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
-    icon: Vector,
+    icon: BlockChainDev1,
     title: "Strategic Planning",
     desccription:
       "We begin with a strategic consultation to understand your business needs, identifying opportunities where blockchain can bring substantial value.",
@@ -92,7 +98,7 @@ export const processCardsBlockchainDev = [
     flexDirection: "flex-col-reverse",
     borders: "border-t-2 border-l-2",
     dotDirection: "top-right",
-    icon: Vector2,
+    icon: BlockChainDev2,
     title: "Use Case Analysis",
     desccription:
       "Our team conducts a detailed use case analysis to pinpoint how blockchain can optimize your processes, streamline operations, and enhance trust.",
@@ -102,7 +108,7 @@ export const processCardsBlockchainDev = [
     flexDirection: "flex-col",
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
-    icon: Vector3,
+    icon: BlockChainDev3,
     title: "Smart Contract Development",
     desccription:
       "Leveraging our expertise, we develop smart contracts tailored to your specific requirements, ensuring automation, transparency, and security in your transactions.",
@@ -112,7 +118,7 @@ export const processCardsBlockchainDev = [
     flexDirection: "flex-col-reverse",
     borders: "border-t-2 border-l-2",
     dotDirection: "top-right",
-    icon: Vector4,
+    icon: BlockChainDev4,
     title: "Decentralized Application (DApp) Development",
     desccription:
       "ConsoleDot specializes in creating decentralized applications that harness the power of blockchain, providing users with a secure and seamless experience.",
@@ -122,7 +128,7 @@ export const processCardsBlockchainDev = [
     flexDirection: "flex-col",
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
-    icon: Vector5,
+    icon: BlockChainDev5,
     title: "Integration & Testing",
     desccription:
       "We seamlessly integrate blockchain solutions into your existing infrastructure, conducting rigorous testing to guarantee functionality, security, and compliance.",

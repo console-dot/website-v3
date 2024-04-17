@@ -17,7 +17,7 @@ export const HalfBorderCard = ({ data }) => {
         >
           
           <div className={`w-[80px] h-[80px] border-2 border-#c6dde40 hover:bg-webdevHover cursor-pointer bg-dottedBorder flex items-center justify-center rounded-full`}>
-            <Vector/>
+            <img src={i.icon} alt="" />
           </div>
           <div className="flex justify-center items-center ">
             <h1 className="text-[36px] text-primaryText font-bold">
