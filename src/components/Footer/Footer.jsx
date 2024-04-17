@@ -109,7 +109,7 @@ const Footer = () => {
               </div>
             </div>
             {/* Company Description */}
-            <p className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs text-left opacity-[85%]">
+            <p className="text-sm lg:text-base  md:text-sm sm:text-xs xs:text-xs text-justify opacity-[85%]">
               ConsoleDot is a leading software solutions provider dedicated to
               delivering innovative and customer-centric experiences. Our
               comprehensive range of services combines technical expertise with
@@ -298,11 +298,11 @@ const Footer = () => {
 
         {/* Horizontal Line */}
       </footer>
-      <div className="bg-custom-blue w-full">
-        <hr className="border-white opacity-35" />
+      <div className="bg-footerBg w-full">
+        <hr className="border-white opacity-35 w-[90%] m-auto" />
 
         {/* Copyright */}
-        <div className="text-center text-white mb-2 mt-2 font-italic opacity-35 text-[10px] md:text-[12px]">
+        <div className="text-center text-white mb-10 mt-4 font-italic opacity-35 text-[10px] md:text-[12px] ">
           Copyright © 2024 ConsoleDot. All rights reserved.
         </div>
       </div>

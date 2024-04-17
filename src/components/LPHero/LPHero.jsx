@@ -58,7 +58,7 @@ export const LPHero = () => {
           <div className="flex justify-center md:mt-14 m-8 ">
             <button
               onClick={() => navigate("/contact")}
-              className="text-white h-[38px] w-[182px] bg-gradient-to-tl border-1 border-white from-custom-blue1 to-custom-purple rounded-full active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+              className="text-white h-[38px] w-[182px] border-1 border-white bg-gradient-to-tl  from-custom-blue1 to-custom-purple rounded-full active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
               style={{ border: "1px solid white" }}
             >
               <p

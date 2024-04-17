@@ -1,5 +1,5 @@
 import React from "react";
-import { DashedBg, aboutService } from "../../assets/images";
+import {aboutService } from "../../assets/images";
 
 export const AboutScreen = () => {
   return (
@@ -18,7 +18,7 @@ export const AboutScreen = () => {
             <div class="h-0.5 bg-custom-purple md:w-24 w-16"></div>
           </div>
 
-          <p className="text-aboutustext font-lato  md:text-[16px] text-[12px] font-normal md:leading-10 leading-[28px] mt-4">
+          <p className="text-aboutustext text-justify  font-lato  md:text-[16px] text-[12px] font-normal md:leading-10 leading-[28px] mt-4">
             At ConsoleDot, we believe in the power of technology to transform
             businesses and drive societal progress. As a leading software
             solutions provider, we are dedicated to delivering high-quality and
@@ -27,22 +27,18 @@ export const AboutScreen = () => {
           </p>
         </div>
         <div className="w-full md:w-1/2 flex justify-center relative md:pl-9 pl-0">
-          <div className="w-3/4 relative justify-center ">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%]flex justify-center relative md:order-1 order-2">
+          <div className="w-[100%] relative justify-start">
             <img
-              src={DashedBg}
-              alt="Loading.."
-              className="md:w-[500px] md:h-[400px] w-[276px] h-[226px]"
-            />
-            <img
-              className=" md:top-[40px] md:left-[70px] md:w-[350px] md:h-[290px] top-11 left-3 w-[85%]"
+              className="md:w-[528px] md:h-[408px] w-full h-auto"
               src={aboutService}
               alt="Img not found"
-              style={{
-                position: "absolute",
-              }}
+              style={{ position: "relative" }}
             />
           </div>
         </div>
+      </div>
+
       </div>
     </div>
   );
