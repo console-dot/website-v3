@@ -28,11 +28,11 @@ export const OffshoreModel = () => {
       </div>
 
       {/* Hourly (Time & Material) start */}
-      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-between items-center md:flex-row  bg-offwhite md:mt-9 mt-5">
         {/* Left side */}
-        <div className="w-full md:w-[50%] md:p-0 p-3">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
           <div className="w-full flex flex-col">
-            <div>
+            <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold leading-8 tracking-normal md:mt-4 mt-2">
                 Hourly <small>(Time & Material)</small>
               </p>
@@ -74,7 +74,7 @@ export const OffshoreModel = () => {
                   Cost-effectiveness for short-term projects.
                 </span>
               </div>
-              <div className="flex md:justify-start justify-center md:mt-8 mt-4">
+              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
                 <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-purple text-custom-white rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-lightBlue hover:text-custom-purple active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
@@ -85,10 +85,10 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Right side */}
-        <div className="w-full md:w-1/2 flex justify-center relative md:order-1 order-2">
-          <div className="w-3/4 relative justify-start">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] flex justify-center relative md:order-1 order-2">
+          <div className="w-[100%]] relative justify-start">
             <img
-              className="md:w-full md:h-auto w-full h-auto"
+              className="md:w-[528px] md:h-[408px] w-full h-auto"
               src={offshoreimg1}
               alt="Img not found"
               style={{ position: "relative" }}
@@ -99,11 +99,11 @@ export const OffshoreModel = () => {
       {/* Hourly (Time & Material) End */}
 
       {/* Fixed-price start */}
-      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
         {/* Right side */}
-        <div className="w-full md:w-[50%] md:p-0 p-3 md:pl-5 md:order-2 order-1">
-          <div className="w-full flex flex-col xl:pl-16 lg:pl-8 pl-0">
-            <div>
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3 md:pl-5 md:order-2 order-1">
+          <div className="w-full flex flex-col pl-0">
+            <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold leading-8 tracking-normal md:mt-4 mt-2">
                 Fixed Price
               </p>
@@ -145,7 +145,7 @@ export const OffshoreModel = () => {
                   Suitable for projects with a stable and known scope.
                 </span>
               </div>
-              <div className="flex md:justify-start justify-center md:mt-8 mt-4">
+              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
                 <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-purple text-custom-white rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-lightBlue hover:text-custom-purple active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
@@ -156,10 +156,10 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Left side */}
-        <div className="w-full md:w-1/2 flex justify-center relative md:order-1 order-2">
-          <div className="w-3/4 relative justify-start">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%]flex justify-center relative md:order-1 order-2">
+          <div className="w-[100%] relative justify-start">
             <img
-              className="md:w-full md:h-auto w-full h-auto"
+              className="md:w-[528px] md:h-[408px] w-full h-auto"
               src={offshoreimg2}
               alt="Img not found"
               style={{ position: "relative" }}
@@ -169,11 +169,11 @@ export const OffshoreModel = () => {
       </div>
       {/* Fixed-price End */}
 
-      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-center items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
         {/* Left side */}
-        <div className="w-full md:w-[50%] md:p-0 p-3">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
           <div className="w-full flex flex-col">
-            <div>
+            <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold leading-8 tracking-normal md:mt-4 mt-2">
                 BOT<small>(Build-Operate-Transfer)</small>Model
               </p>
@@ -216,7 +216,7 @@ export const OffshoreModel = () => {
                   Risk mitigation through ConsoleDot's expertise.
                 </span>
               </div>
-              <div className="flex md:justify-start justify-center md:mt-8 mt-4">
+              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2 ">
                 <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-purple text-custom-white rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-lightBlue hover:text-custom-purple active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
@@ -227,10 +227,10 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Right side */}
-        <div className="w-full md:w-1/2 flex justify-center relative md:order-1 order-2">
-          <div className="w-3/4 relative justify-start">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] flex justify-center relative md:order-1 order-2">
+          <div className="w-[100%] relative justify-start">
             <img
-              className="md:w-full md:h-auto w-full h-auto"
+              className="md:w-[528px] md:h-[408px] w-full h-auto"
               src={offshoreimg3}
               alt="Img not found"
               style={{ position: "relative" }}

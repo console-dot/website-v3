@@ -109,7 +109,7 @@ const Footer = () => {
               </div>
             </div>
             {/* Company Description */}
-            <p className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs text-left opacity-[85%]">
+            <p className="text-sm lg:text-base  md:text-sm sm:text-xs xs:text-xs text-justify opacity-[85%]">
               ConsoleDot is a leading software solutions provider dedicated to
               delivering innovative and customer-centric experiences. Our
               comprehensive range of services combines technical expertise with
