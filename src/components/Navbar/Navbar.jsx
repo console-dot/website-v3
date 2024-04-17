@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets/images";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
@@ -34,6 +34,8 @@ export const NavBar = ({ section, setSection }) => {
 
   const [showNav, setShowNav] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null); // Ref for the dropdown
+
   const toggleNav = () => {
     setShowNav(!showNav);
   };
@@ -41,8 +43,16 @@ export const NavBar = ({ section, setSection }) => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+
   const closeDropdown = () => {
     setShowDropdown(false);
+  };
+
+  const handleMouseLeave = () => {
+    // Check if the dropdown is open before closing
+    if (showDropdown) {
+      setShowDropdown(false);
+    }
   };
 
   const location = useLocation();
@@ -112,7 +122,7 @@ export const NavBar = ({ section, setSection }) => {
           {navBar?.map((item, index) => (
             <li key={index} className="hover:bg-[rgb(60,90,133,0.5)]  hover:text-[rgb(98,192,209)]">
               {item.dropdown ? (
-                <div className="m-2">
+                <div className="m-2" ref={dropdownRef} >
                   <span
                     className={`cursor-pointer flex items-center `}
                     onClick={toggleDropdown}
@@ -127,7 +137,7 @@ export const NavBar = ({ section, setSection }) => {
                     </div>
                   </span>
                   {showDropdown && (
-                    <ul className="absolute bg-custom-purple shadow-md mt-[18px]">
+                    <ul className="absolute bg-custom-purple shadow-md mt-[18px]" onMouseLeave={handleMouseLeave}>
                       {item.dropdown.map((subitem, subindex) => (
                         <li key={subindex} className="p-2 ">
                           <Link
