@@ -107,18 +107,14 @@ export const NavBar = ({ section, setSection }) => {
         </div>
         {/* Navigation items for desktop */}
         <ul
-          className={`lg:flex items-center lg:flex-row lg:text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
+          className={`lg:flex items-center lg:flex-row lg:text-white text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
         >
           {navBar?.map((item, index) => (
-            <li key={index} className="">
+            <li key={index} className="hover:bg-[rgb(60,90,133,0.5)]  hover:text-[rgb(98,192,209)]">
               {item.dropdown ? (
                 <div className="m-2">
                   <span
-                    className={`cursor-pointer flex items-center ${
-                      location.pathname === item.link
-                        ? "bg-gradient-to-tr from-custom-blue to-custom-purple text-white"
-                        : "text-white hover:bg-gradient-to-tr p-2  from-custom-blue to-custom-purple"
-                    }`}
+                    className={`cursor-pointer flex items-center `}
                     onClick={toggleDropdown}
                   >
                     {item.name}{" "}
@@ -153,10 +149,10 @@ export const NavBar = ({ section, setSection }) => {
               ) : (
                 <Link
                   to={item.link}
-                  className={`cursor-pointer px-2 py-2 ${
+                  className={`cursor-pointer px-2 py-2 text-white ${
                     location.pathname === item.link
-                      ? "bg-gradient-to-r from-custom-blue to-custom-purple text-white"
-                      : "hover:bg-gradient-to-r from-custom-blue to-custom-purple text-white"
+                      ? "bg-[rgb(60,90,133,0.5)] text-[rgb(98,192,209)]"
+                      : "hover:bg-[rgb(60,90,133,0.5)] "
                   } flex items-center`}
                 >
                   {item.name}
