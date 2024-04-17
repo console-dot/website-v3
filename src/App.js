@@ -31,17 +31,17 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Offshoringmodels" element={<OffshoringModels />} />
-          <Route path="/webdev" element={<WebDevelopment />} />
-          <Route path="/mobdev" element={<MobileAppDevelopment />} />
+          <Route path="/web-app-development" element={<WebDevelopment />} />
+          <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
           <Route path="/blockchain" element={<BlockchainDevelopment />} />
           <Route path="/ai" element={<AIDevelopment />} />
           <Route path="/arvr" element={<ArVrDevelopment />} />
-          <Route path="/uiux" element={<UiUxDevelopment />} />
+          <Route path="/ui-ux" element={<UiUxDevelopment />} />
           <Route path="/product-research" element={<ProductResearch />} />
           <Route path="/case-study" element={<CaseStudy />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/faqs" element={<Faqs />} />
-          <Route path="/custome-software" element={<CustomSoftware />} />
+          <Route path="/custome-software-development" element={<CustomSoftware />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Services" element={<Services item={section} />} />
         

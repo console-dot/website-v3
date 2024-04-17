@@ -13,44 +13,38 @@ export const NavBar = ({ section, setSection }) => {
       dropdown: [
         {
           name: "Custom Software",
-          link: "services/custom-software-development",
+          link: "custome-software-development",
         },
-        { name: "UI/UX Design", link: "services/ui-ux-design" },
-        { name: "Product Research", link: "services/product-research" },
-        { name: "AI/ML Development", link: "services/ai-ml-development" },
+        { name: "UI/UX Design", link: "ui-ux" },
+        { name: "Product Research", link: "product-research" },
+        { name: "AI/ML Development", link: "ai" },
         {
           name: "Mobile App Development",
-          link: "services/mobile-app-development",
+          link: "mobile-app-development",
         },
-        { name: "Web Development", link: "services/web-development" },
+        { name: "Web Development", link: "web-app-development" },
+        { name: "Blockchain", link: "blockchain" },
         { name: "Quality Assurance", link: "services/quality-assurance" },
         { name: "Digital Marketing", link: "services/digital-marketing" },
       ],
     },
-    { name: "Case Studies", link: "/case-studies" },
+    { name: "Case Studies", link: "/case-study" },
     { name: "Careers", link: "/careers" },
   ];
 
-  // State to toggle the visibility of the navigation items
   const [showNav, setShowNav] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false); // Define showDropdown state
-
-  // Function to toggle the visibility of navigation items on tap of mobile
+  const [showDropdown, setShowDropdown] = useState(false);
   const toggleNav = () => {
     setShowNav(!showNav);
   };
 
-  // Function to toggle the visibility of submenu items
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-
-  // Function to close the dropdown menu
   const closeDropdown = () => {
     setShowDropdown(false);
   };
 
-  // Get current location
   const location = useLocation();
 
   return (
@@ -95,7 +89,6 @@ export const NavBar = ({ section, setSection }) => {
         ></div>
       </div>
       <div className="w-2/3 items-center justify-center flex">
-        {/* Hamburger menu icon for small screens */}
         <div className="lg:hidden ml-auto" onClick={toggleNav}>
           <svg
             className="w-6 h-6 text-white mr-4 cursor-pointer"
@@ -114,17 +107,17 @@ export const NavBar = ({ section, setSection }) => {
         </div>
         {/* Navigation items for desktop */}
         <ul
-          className={`lg:flex lg:flex-row lg:text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
+          className={`lg:flex items-center lg:flex-row lg:text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
         >
-          {navBar.map((item, index) => (
+          {navBar?.map((item, index) => (
             <li key={index} className="">
               {item.dropdown ? (
-                <div className="Absolute m-2 hover:m-0">
+                <div className="m-2">
                   <span
                     className={`cursor-pointer flex items-center ${
                       location.pathname === item.link
                         ? "bg-gradient-to-tr from-custom-blue to-custom-purple text-white"
-                        : "text-white hover:bg-gradient-to-tr hover:px-2 hover:py-2  from-custom-blue to-custom-purple"
+                        : "text-white hover:bg-gradient-to-tr p-2  from-custom-blue to-custom-purple"
                     }`}
                     onClick={toggleDropdown}
                   >

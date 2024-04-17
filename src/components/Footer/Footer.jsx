@@ -136,10 +136,10 @@ const Footer = () => {
                     <a href="#">Technologies</a>
                   </div>
                   <div className="md:leading-10 leading-6 opacity-[85%]">
-                    <a href="#">Career</a>
+                    <a href="careers">Career</a>
                   </div>
                   <div className="md:leading-10 leading-6 opacity-[85%]">
-                    <a href="#">Contact Us</a>
+                    <a href="contact">Contact Us</a>
                   </div>
                 </div>
               </div>
