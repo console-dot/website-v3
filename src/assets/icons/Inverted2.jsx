@@ -3,8 +3,7 @@ import React from "react";
 export const Inverted2 = () => {
   return (
     <svg
-      width="86"
-      height="64"
+     className="lg:w-[86px] lg:h-[66px] xl:w-[86px] xl:h-[66px] 2xl:w-[86px] 2xl:h-[66px] md:w-[76px] md:h-[76px] sm:w-[66px] sm:h-[66px] xxs:w-[56px] xs:h-[66px] xs:w-[56px] xxs:h-[66px]"
       viewBox="0 0 86 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -30,6 +30,7 @@ module.exports = {
         'backgroundColor':"#f8f9fc"
       },safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]'],
       screens: {
+        'xxs':"2px",
         xs: "320px",
         sm: "640px",
         md: "768px",

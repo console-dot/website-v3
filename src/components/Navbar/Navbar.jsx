@@ -66,7 +66,7 @@ export const NavBar = ({ section, setSection }) => {
         zIndex: 1000,
         height: "60px",
       }}
-      className="w-full bg-nav flex flex-row bg-opacity-7"
+      className="w-full bg-nav overflow-hidden flex flex-row bg-opacity-7"
     >
       <div className="w-1/3  flex flex-row relative z-10">
         <div className="lg:w-[80%] xs:w-auto bg-white flex flex-row items-center justify-center gap-4">

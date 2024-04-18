@@ -3,8 +3,7 @@ import React from "react";
 export const CloudCompIcon = () => {
   return (
     <svg
-      width="50"
-      height="50"
+      className="w-[50px] h-[50px]"
       viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

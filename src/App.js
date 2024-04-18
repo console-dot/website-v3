@@ -46,7 +46,7 @@ function App() {
           <Route path="/Services" element={<Services item={section} />} />
         
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
