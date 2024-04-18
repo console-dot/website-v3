@@ -65,7 +65,9 @@ import uiuxdev1 from "./uiuxdev1.png";
 import uiuxdev2 from "./uiuxdev2.png";
 import uiuxdev3 from "./uiuxdev3.png";
 import uiuxdev4 from "./uiuxdev4.png";
+import NotFoundImg from "./NotFoundImg.gif";
 
+export {NotFoundImg};
 export {uiuxdev1};
 export {uiuxdev2};
 export {uiuxdev3};
