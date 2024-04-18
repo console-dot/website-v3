@@ -6,12 +6,6 @@
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
-.slick-arroe{
-  margin-left: -10px !important;
-}
-.slick-next:before {
-  margin-left: -10px !important;
-}
 
 *,
 ::before,
@@ -709,6 +703,10 @@ video {
   margin: 2rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -1022,6 +1020,10 @@ video {
   height: 100%;
 }
 
+.h-\[237px\] {
+  height: 237px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1180,6 +1182,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[45\%\] {
+  width: 45%;
 }
 
 .-translate-y-1\/2 {
@@ -2029,6 +2039,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-custom-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2220,6 +2235,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-custom-lightBlue:hover {
+  background-color: #0E77891A;
+}
+
 .hover\:bg-gradient-to-r:hover {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2400,6 +2419,14 @@ video {
     margin-top: 1rem;
   }
 
+  .xs\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .xs\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
   .xs\:flex {
     display: flex;
   }
@@ -2473,6 +2500,37 @@ video {
     padding-right: 0.5rem;
   }
 
+  .xs\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .xs\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .xs\:py-2\.5 {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .xs\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .xs\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .xs\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .xs\:pr-8 {
+    padding-right: 2rem;
+  }
+
   .xs\:text-\[12px\] {
     font-size: 12px;
   }
@@ -2510,6 +2568,14 @@ video {
 
   .sm\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .sm\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .sm\:mt-7 {
+    margin-top: 1.75rem;
   }
 
   .sm\:flex {
@@ -2571,6 +2637,32 @@ video {
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .sm\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sm\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .sm\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .sm\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .sm\:pr-8 {
+    padding-right: 2rem;
   }
 
   .sm\:text-center {
@@ -2688,6 +2780,14 @@ video {
     margin-top: 2.25rem;
   }
 
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .md\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2726,6 +2826,14 @@ video {
 
   .md\:h-\[76px\] {
     height: 76px;
+  }
+
+  .md\:h-\[408px\] {
+    height: 408px;
+  }
+
+  .md\:h-\[600px\] {
+    height: 600px;
   }
 
   .md\:w-1\/2 {
@@ -2782,6 +2890,22 @@ video {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .md\:w-\[48\%\] {
+    width: 48%;
+  }
+
+  .md\:w-\[528px\] {
+    width: 528px;
+  }
+
+  .md\:w-\[99\%\] {
+    width: 99%;
   }
 
   .md\:grid-cols-2 {
@@ -2916,6 +3040,26 @@ video {
     padding-top: 110px;
   }
 
+  .md\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .md\:pl-20 {
+    padding-left: 5rem;
+  }
+
+  .md\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .md\:pr-20 {
+    padding-right: 5rem;
+  }
+
+  .md\:pr-6 {
+    padding-right: 1.5rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -2996,6 +3140,10 @@ video {
     height: 66px;
   }
 
+  .lg\:h-\[460px\] {
+    height: 460px;
+  }
+
   .lg\:w-1\/4 {
     width: 25%;
   }
@@ -3026,6 +3174,14 @@ video {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .lg\:w-\[48\%\] {
+    width: 48%;
   }
 
   .lg\:grid-cols-3 {
@@ -3066,6 +3222,16 @@ video {
     padding-right: 5rem;
   }
 
+  .lg\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .lg\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
   .lg\:pl-16 {
     padding-left: 4rem;
   }
@@ -3076,6 +3242,30 @@ video {
 
   .lg\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .lg\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .lg\:pl-1 {
+    padding-left: 0.25rem;
+  }
+
+  .lg\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .lg\:pl-\[7\%\] {
+    padding-left: 7%;
+  }
+
+  .lg\:pr-8 {
+    padding-right: 2rem;
+  }
+
+  .lg\:pr-\[7\%\] {
+    padding-right: 7%;
   }
 
   .lg\:font-sans {
@@ -3114,6 +3304,10 @@ video {
     height: 66px;
   }
 
+  .xl\:h-\[460px\] {
+    height: 460px;
+  }
+
   .xl\:w-\[30\%\] {
     width: 30%;
   }
@@ -3132,6 +3326,14 @@ video {
 
   .xl\:w-full {
     width: 100%;
+  }
+
+  .xl\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .xl\:w-\[48\%\] {
+    width: 48%;
   }
 
   .xl\:grid-cols-3 {
@@ -3154,9 +3356,28 @@ video {
     padding: 4rem;
   }
 
+  .xl\:p-6 {
+    padding: 1.5rem;
+  }
+
   .xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .xl\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .xl\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .xl\:py-2\.5 {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
   }
 
   .xl\:pl-16 {
@@ -3169,6 +3390,22 @@ video {
 
   .xl\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .xl\:pl-20 {
+    padding-left: 5rem;
+  }
+
+  .xl\:pl-\[5\%\] {
+    padding-left: 5%;
+  }
+
+  .xl\:pr-20 {
+    padding-right: 5rem;
+  }
+
+  .xl\:pr-\[5\%\] {
+    padding-right: 5%;
   }
 
   .xl\:text-\[16px\] {
