@@ -3,7 +3,7 @@ import { AdobePhotoIcon, AdobeXdIcon, AdobeillusIcon, AngularIcon, ArCoreIcon, A
 export const techStackDataBlockchain = [
     {
       id: 1,
-      title: "Frontend Technologies",
+      title: "Blockchain Platforms",
       icons: [
         <EtheriumIcon />,
         <SmartContractIcon />,
@@ -13,7 +13,7 @@ export const techStackDataBlockchain = [
     },
     {
       id: 2,
-      title: "Backend Technologies",
+      title: "Smart Contract Languages",
       icons: [
         <EtheriumIcon />,
         <SmartContractIcon />,
@@ -23,7 +23,7 @@ export const techStackDataBlockchain = [
     },
     {
       id: 3,
-      title: "Database",
+      title: "Development Tools",
       icons: [
         <EtheriumIcon />,
         <SmartContractIcon />,
@@ -33,7 +33,7 @@ export const techStackDataBlockchain = [
     },
     {
       id: 4,
-      title: "VCS",
+      title: "Decentralized Storage",
       icons: [
         <EtheriumIcon />,
         <SmartContractIcon />,
@@ -43,7 +43,7 @@ export const techStackDataBlockchain = [
     },
     {
       id: 5,
-      title: "Testing tools",
+      title: "Security",
       icons: [
         <EtheriumIcon />,
         <SmartContractIcon />,
@@ -127,9 +127,9 @@ export const techStackDataBlockchain = [
         <EmberIcon />,
         <BootstrapIcon />,
         <MUIIcon />,
-        <SIcon />,
-        <BulmaIcon />,
         <RepoIcon />,
+        <BulmaIcon />,
+        <SIcon />,
       ],
     },
     {

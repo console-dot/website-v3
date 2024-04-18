@@ -17,7 +17,7 @@ const Footer = () => {
   useEffect(() => {
     let url = window.location.pathname;
     setPage(url.substring(url.lastIndexOf("/") + 1));
-  }, []);
+  }, [page]);
 
   useEffect(() => {
     switch (page) {

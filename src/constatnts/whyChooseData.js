@@ -72,28 +72,28 @@ export const whyChooseDataBlockchain = [
     title: "Expertise",
     icon: <MobExpertise />,
     description:
-      "Our team comprises seasoned mobile app developers with a proven track record of creating successful applications across diverse industries.",
+      "ConsoleDot boasts a team of seasoned blockchain developers with a proven track record in delivering robust solutions across diverse industries.",
   },
   {
     id: 2,
     title: "Innovative Solutions",
     icon: <MonInnovatIcon />,
     description:
-      "ConsoleDot thrives on innovation. We bring fresh ideas to the table, ensuring your app stands out in a crowded marketplace.",
+      "We're not just developers; we're innovators. ConsoleDot brings fresh perspectives to the table, ensuring your blockchain solution is at the forefront of technological advancement.",
   },
   {
     id: 3,
     title: "Client Collaboration",
     icon: <MobileCollabIcon />,
     description:
-      "Your vision is integral to our process. We foster open communication, keeping you involved at every stage to ensure the final product aligns perfectly with your expectations.",
+      "Your vision is the cornerstone of our development process. We collaborate closely with you to ensure the final blockchain solution aligns seamlessly with your business goals.",
   },
   {
     id: 4,
     title: "Customization",
     icon: <MobCustomizationIcon />,
     description:
-      "We understand that every app is unique. ConsoleDot tailors solutions to meet your specific business needs, delivering a truly customized app experience.",
+      "We understand that one size doesn't fit all. ConsoleDot tailors blockchain solutions to meet your specific business needs, providing a truly customized experience.",
   },
 ];
 export const whyChooseDataAI = [
@@ -209,7 +209,7 @@ export const whyChooseDataProductResearch = [
     title: "Strategic Partnership",
     icon: <MobileCollabIcon />,
     description:
-      "We don't just provide services; we form strategic partnerships. Consoledot is committed to being your trusted advisor throughout the product development journey.",
+      "We don't just provide services; we form strategic partnerships. Consoledot is committed to being your trusted advisor throughout the product development journey..",
   }
 ];
 

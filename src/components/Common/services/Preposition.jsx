@@ -8,7 +8,7 @@ export const Preposition = ({ title, heading, proposition }) => {
       <div className="flex items-center justify-center px-12 gap-4 bg-white h-[237px]">
         <div className="flex flex-col gap-2 items-start w-[30%]">
           <h1 className="text-[16px] leading-5 text-dottedBorder">{title}</h1>
-          <h1 className="text-[28px] leading-10 text-primaryText font-bold">
+          <h1 className="text-[28px] leading-10 text-custom-purple font-bold">
             {heading?.toUpperCase()}
           </h1>
           <div className="mb-8">
