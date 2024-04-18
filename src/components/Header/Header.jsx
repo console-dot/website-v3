@@ -14,7 +14,7 @@ export default function Header() {
         style={{
           background: "linear-gradient(0deg, #3C5A85 0%, #0E7789 100%)",
         }}
-        className="w-full h-[50px] flex flex-row justify-between items-center"
+        className="w-full xxs:hidden h-[50px] flex flex-row justify-between items-center"
       >
         {/* Left */}
         <div
@@ -30,7 +30,7 @@ export default function Header() {
               style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
               className="w-8 h-8 flex justify-center items-center"
             >
-              <FaPhoneVolume  color={"white"}/>
+              <FaPhoneVolume color={"white"} />
             </div>
             <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
               +92 327 4067337
@@ -56,7 +56,7 @@ export default function Header() {
         {/* Right */}
         <div
           style={{ width: "20%", gap: "5px" }}
-          className="h-8 flex items-center xl:flex lg:flex md:flex sm:hidden xs:hidden"
+          className="h-8 flex items-center xl:flex lg:flex md:flex sm:hidden xs:hidden xxs:hidden"
         >
           {/*  */}
           <div

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets/images";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
@@ -13,44 +13,48 @@ export const NavBar = ({ section, setSection }) => {
       dropdown: [
         {
           name: "Custom Software",
-          link: "services/custom-software-development",
+          link: "custome-software-development",
         },
-        { name: "UI/UX Design", link: "services/ui-ux-design" },
-        { name: "Product Research", link: "services/product-research" },
-        { name: "AI/ML Development", link: "services/ai-ml-development" },
+        { name: "UI/UX Design", link: "ui-ux" },
+        { name: "Product Research", link: "product-research" },
+        { name: "AI/ML Development", link: "ai" },
         {
           name: "Mobile App Development",
-          link: "services/mobile-app-development",
+          link: "mobile-app-development",
         },
-        { name: "Web Development", link: "services/web-development" },
+        { name: "Web Development", link: "web-app-development" },
+        { name: "Blockchain", link: "blockchain" },
         { name: "Quality Assurance", link: "services/quality-assurance" },
         { name: "Digital Marketing", link: "services/digital-marketing" },
       ],
     },
-    { name: "Case Studies", link: "/case-studies" },
+    { name: "Case Studies", link: "/case-study" },
     { name: "Careers", link: "/careers" },
   ];
 
-  // State to toggle the visibility of the navigation items
   const [showNav, setShowNav] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false); // Define showDropdown state
+  const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null); // Ref for the dropdown
 
-  // Function to toggle the visibility of navigation items on tap of mobile
   const toggleNav = () => {
     setShowNav(!showNav);
   };
 
-  // Function to toggle the visibility of submenu items
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
 
-  // Function to close the dropdown menu
   const closeDropdown = () => {
     setShowDropdown(false);
   };
 
-  // Get current location
+  const handleMouseLeave = () => {
+    // Check if the dropdown is open before closing
+    if (showDropdown) {
+      setShowDropdown(false);
+    }
+  };
+
   const location = useLocation();
 
   return (
@@ -62,7 +66,7 @@ export const NavBar = ({ section, setSection }) => {
         zIndex: 1000,
         height: "60px",
       }}
-      className="w-full bg-nav flex flex-row bg-opacity-7"
+      className="w-full bg-nav overflow-hidden flex flex-row bg-opacity-7"
     >
       <div className="w-1/3  flex flex-row relative z-10">
         <div className="lg:w-[80%] xs:w-auto bg-white flex flex-row items-center justify-center gap-4">
@@ -95,7 +99,6 @@ export const NavBar = ({ section, setSection }) => {
         ></div>
       </div>
       <div className="w-2/3 items-center justify-center flex">
-        {/* Hamburger menu icon for small screens */}
         <div className="lg:hidden ml-auto" onClick={toggleNav}>
           <svg
             className="w-6 h-6 text-white mr-4 cursor-pointer"
@@ -114,18 +117,14 @@ export const NavBar = ({ section, setSection }) => {
         </div>
         {/* Navigation items for desktop */}
         <ul
-          className={`lg:flex lg:flex-row lg:text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
+          className={`lg:flex items-center lg:flex-row lg:text-white text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
         >
-          {navBar.map((item, index) => (
-            <li key={index} className="">
+          {navBar?.map((item, index) => (
+            <li key={index} className="hover:bg-[rgb(60,90,133,0.5)]  hover:text-[rgb(98,192,209)]">
               {item.dropdown ? (
-                <div className="Absolute m-2 hover:m-0">
+                <div className="m-2" ref={dropdownRef} >
                   <span
-                    className={`cursor-pointer flex items-center ${
-                      location.pathname === item.link
-                        ? "bg-gradient-to-tr from-custom-blue to-custom-purple text-white"
-                        : "text-white hover:bg-gradient-to-tr hover:px-2 hover:py-2  from-custom-blue to-custom-purple"
-                    }`}
+                    className={`cursor-pointer flex items-center `}
                     onClick={toggleDropdown}
                   >
                     {item.name}{" "}
@@ -138,7 +137,7 @@ export const NavBar = ({ section, setSection }) => {
                     </div>
                   </span>
                   {showDropdown && (
-                    <ul className="absolute bg-custom-purple shadow-md mt-[18px]">
+                    <ul className="absolute bg-custom-purple shadow-md mt-[18px]" onMouseLeave={handleMouseLeave}>
                       {item.dropdown.map((subitem, subindex) => (
                         <li key={subindex} className="p-2 ">
                           <Link
@@ -160,10 +159,10 @@ export const NavBar = ({ section, setSection }) => {
               ) : (
                 <Link
                   to={item.link}
-                  className={`cursor-pointer px-2 py-2 ${
+                  className={`cursor-pointer px-2 py-2 text-white ${
                     location.pathname === item.link
-                      ? "bg-gradient-to-r from-custom-blue to-custom-purple text-white"
-                      : "hover:bg-gradient-to-r from-custom-blue to-custom-purple text-white"
+                      ? "bg-[rgb(60,90,133,0.5)] text-[rgb(98,192,209)]"
+                      : "hover:bg-[rgb(60,90,133,0.5)] "
                   } flex items-center`}
                 >
                   {item.name}

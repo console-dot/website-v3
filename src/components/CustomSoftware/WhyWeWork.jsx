@@ -40,7 +40,7 @@ export const WhyWeWork = () => {
     <div className="">
       <div className="flex flex-col gap-2 items-center justify-center w-full">
         <h1 className="text-[16px] leading-5 text-dottedBorder">Why We Work</h1>
-        <h1 className="text-[28px] leading-10 text-dottedBorder font-bold">
+        <h1 className="text-[28px] xs:text-[20px] xxs:text-[16px] leading-10 text-dottedBorder font-bold">
           HOW CONSOLEDOT DELIVERS:
         </h1>
         <div className="">
@@ -52,41 +52,40 @@ export const WhyWeWork = () => {
           isVisible ? "slide-in" : "slide-out"
         } flex flex-col w-full justify-center items-center mt-8 gap-8`}
       >
-        
-          <div className="flex gap-8 w-[45%] bg-white my-4 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed">
-            <div>
-              <div className="w-[80px] h-[80px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
-                <CloudCompIcon />
-              </div>
+        <div className="flex gap-8 lg:w-[45%] xl:w-[45%] 2xl:w-[45%] md:w-[70%] sm:w-[70%] xs:w-full xxs:w-full  bg-white  p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed">
+          <div>
+            <div className="w-[80px] h-[80px] xs:w-[60px] xs:h-[60px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
+              <CloudCompIcon />
             </div>
-            <div className="flex flex-col ">
-              <h1 className="text-[16px] text-webHeading leading-6 mb-2 font-bold">
-                Expertise in Action
-              </h1>
-              <h1 className="text-[16px] text-webHeading leading-6 text-justify ">
-                ConsoleDot brings a seasoned team of developers, designers, and
-                project managers to the table. Expect nothing less than
-                excellence in execution and meticulous attention to detail.
-              </h1>
-            
+          </div>
+          <div className="flex flex-col">
+            <h1 className="text-[16px] text-webHeading leading-6 mb-2 font-bold">
+              Expertise in Action
+            </h1>
+            <h1 className="text-[16px] text-webHeading leading-6 text-justify ">
+              ConsoleDot brings a seasoned team of developers, designers, and
+              project managers to the table. Expect nothing less than excellence
+              in execution and meticulous attention to detail.
+            </h1>
           </div>
         </div>
-        
-          <div className="flex gap-8 w-[45%] bg-white  p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed">
-            <div>
-              <div className="w-[80px] h-[80px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
-                <CloudCompIcon1 />
-              </div>
+
+        <div className="flex gap-8 lg:w-[45%] xl:w-[45%] 2xl:w-[45%] md:w-[70%] sm:w-[70%] xs:w-full xxs:w-full bg-white  p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed">
+          <div>
+            <div className="w-[80px] h-[80px] xs:w-[60px] xs:h-[60px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
+              <CloudCompIcon />
             </div>
-            <div className="flex flex-col">
-              <h1 className="text-[16px] text-webHeading leading-6 mb-2 font-bold">
-              Collaborative Ingenuity
-              </h1>
-              <h1 className="text-[16px] text-webHeading leading-6 text-justify ">
-                Your vision is our canvas. We work collaboratively with you, ensuring our solutions align perfectly with your unique business aspirations
-              </h1>
-            </div>
-          
+          </div>
+          <div className="flex flex-col">
+            <h1 className="text-[16px] text-webHeading leading-6 mb-2 font-bold">
+              Expertise in Action
+            </h1>
+            <h1 className="text-[16px] text-webHeading leading-6 text-justify ">
+              ConsoleDot brings a seasoned team of developers, designers, and
+              project managers to the table. Expect nothing less than excellence
+              in execution and meticulous attention to detail.
+            </h1>
+          </div>
         </div>
       </div>
     </div>
