@@ -75,3 +75,4 @@ export * from "./CustomSoftTop";
 export * from "./MvpIcon";
 export * from "./ERPIcon";
 export * from "./CloudCompIcon";
+export * from "./CloudCompIcon1";

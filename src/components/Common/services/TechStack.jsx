@@ -17,7 +17,7 @@ export const TechStack = ({ data, description }) => {
           <h1 className="text-[14px] leading-5 text-dottedBorder">
             Tech Stack We Use
           </h1>
-          <h1 className="text-[28px] font-poppins leading-10 text-dottedBorder font-bold">
+          <h1 className="text-[28px] font-poppins leading-10 text-custom-purple font-bold">
             TECH STACK
           </h1>
           <div className="mb-8">

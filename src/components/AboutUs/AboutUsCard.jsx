@@ -49,51 +49,26 @@ const Card = () => {
 
   const cards = [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Abubakar",
-      designation: "Java Developer",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+      name: "Full Name",
+      designation: "Desgination",
     },
     {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Nouman",
-      designation: "Java Developer",
+      name: "Full Name",
+      designation: "Desgination",
     },
     {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Hamza",
-      designation: "Java Developer",
+      name: "Full Name",
+      designation: "Desgination",
     },
     {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Abuzar",
-      designation: "HR Head",
+      name: "Full Name",
+      designation: "Desgination",
     },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Haris",
-      designation: "Developer",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Shuja",
-      designation: "Marketer",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Abuzar",
-      designation: "HR Head",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Haris",
-      designation: "Developer",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Shuja",
-      designation: "Marketer",
-    },
-  ];
+     ];
 
   return (
     <div className="">

@@ -5,16 +5,12 @@ import { Inverted1, Inverted2 } from "../../../assets/icons";
 export const Preposition = ({ title, heading, proposition }) => {
   return (
     <div className="w-full flex  mt-16 mb-16">
-      <div className="flex lg:flex-row xl:flex-row 2xl:flex-row md:flex-col sm:flex-col xs:flex-col xxs:flex-col items-center justify-center lg:px-12 xl:px-12 2xl:px-12 md:px-8 sm:px-4 xs:px-2 xxs:px-1 gap-4 sm:gap-2 xs:gap-0 xxs:gap-0 bg-white lg:h-[237px]">
-        <div className="flex flex-col gap-2 lg:items-start xl:w-[30%] 2xl:w-[30%] lg:w-[30%] md:w-full sm:w-full xs:w-full md:justify-center sm:justify-center xs:justify-center">
-          <div>
-            <h1 className="text-[16px] leading-5 text-dottedBorder">{title}</h1>
-          </div>
-          <div>
-            <h1 className="text-[28px] leading-10 text-primaryText font-bold">
-              {heading?.toUpperCase()}
-            </h1>
-          </div>
+      <div className="flex items-center justify-center px-12 gap-4 bg-white h-[237px]">
+        <div className="flex flex-col gap-2 items-start w-[30%]">
+          <h1 className="text-[16px] leading-5 text-dottedBorder">{title}</h1>
+          <h1 className="text-[28px] leading-10 text-custom-purple font-bold">
+            {heading?.toUpperCase()}
+          </h1>
           <div className="mb-8">
             <Divider />
           </div>

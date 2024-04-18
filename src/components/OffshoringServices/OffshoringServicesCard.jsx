@@ -4,7 +4,7 @@ import { circletickicon } from "../../assets/images";
 
 const Card = ({ heading, description }) => {
   return (
-    <div className="bg-white  shadow-lg xl:w-full lg:w-full md:w-full md:h-[460px] w-[350px] h-[450px] rounded-lg p-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-2 hover:border-custom-blue1  transition duration-300 ease-in-out mt-6 md:mb-0">
+    <div className="bg-white  shadow-lg xl:w-full lg:w-full md:w-full xl:h-[460px] lg:h-[460px] md:h-[600px] w-[350px] h-[450px] rounded-lg xl:p-6 lg:pl-1 lg:pb-6  md:pl-6 md:pb-6 sm:pl-6 sm:pb-6 xs:pl-6 xs:pb-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-2 hover:border-custom-blue1  transition duration-300 ease-in-out mt-6 md:mb-0">
       {/* Header Section */}
       <div className="text-center mb-4 mt-8 text-custom-purple">
         <h2 className="text-[24px] font-bold mb-2">{heading}</h2>
@@ -32,7 +32,7 @@ const Card = ({ heading, description }) => {
       <div className="w-full flex justify-around mt-6">
         <button
           type="button"
-          className="font-Lato text-base font-medium leading-[28px] tracking-normal text-center px-24 py-2.5  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-purple hover:text-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+          className="font-Lato text-base font-medium  tracking-normal text-center xl:px-24  xl:py-2.5 lg:px-24  lg:py-1 md:px-24  md:py-2.5 sm:px-24  sm:py-2 xs:px-24  xs:py-2.5 bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-purple hover:text-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
         >
           Avail Service
         </button>

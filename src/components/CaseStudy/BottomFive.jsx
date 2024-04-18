@@ -53,19 +53,19 @@ export const BottomFive = () => {
         <div className="">
           <div className="flex z-9999 relative items-center justify-between mr-12">
             <div>
-              <CircleLarge text={1} />
+              <CircleLarge text={10} />
             </div>
             <div>
-              <CircleSmall text={2} />
+              <CircleSmall text={9} />
             </div>
             <div>
-              <CircleLarge text={3} />
+              <CircleLarge text={8} />
             </div>
             <div>
-              <CircleSmall text={4} />
+              <CircleSmall text={7} />
             </div>
             <div>
-              <CircleLarge text={5} />
+              <CircleLarge text={6} />
             </div>
           </div>
         </div>

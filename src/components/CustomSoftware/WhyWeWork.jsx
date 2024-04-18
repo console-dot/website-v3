@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Divider } from "../../constatnts/Divider";
-import { CloudCompIcon } from "../../assets/icons";
+import { CloudCompIcon1 } from "../../assets/icons";
+import { CloudCompIcon } from "../../assets/icons/CloudCompIcon";
 
 export const WhyWeWork = () => {
   const [isVisible, setIsVisible] = useState(false);
