@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const PageNotFound = () => {
   return (
-    <section className="page_404 xl:mt-16 lg:mt-14 md:mt-12 mt-8  ">
+    <section className="page_404  bg-white  ">
       <div className="row ">
         <div className="col-sm-12">
           <p className="text-center  text-7xl sm:text-3xl xs:text-3xl font-popins text-custom-purple  ">
@@ -22,7 +22,7 @@ export const PageNotFound = () => {
               </p>
               <Link
                 to="/"
-                className="link_404 inline-block sm:text-2xl xs:text-xl bg-custom-purple hover:bg-custom-lightBlue rounded-xl py-2 px-4 sm:py-1 sm:px-2 xs:py-1 xs:px-2 text-white hover:text-custom-purple font-bold"
+                className="link_404 inline-block text-xl sm:text-2xl rounded-3xl text-white hover:text-custom-purple  bg-custom-purple hover:bg-custom-lightBlue "
               >
                 Go to Home
               </Link>
