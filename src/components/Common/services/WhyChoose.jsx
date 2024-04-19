@@ -9,7 +9,7 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
         <h1 className="text-[16px]  leading-5 text-dottedBorder">
           Why Choose Us
         </h1>
-        <h1 className="text-[28px] xs:text-[20px] xxs:text-[16px] leading-10 text-dottedBorder font-bold">
+        <h1 className="text-[28px] xs:text-[20px] xxs:text-[16px] leading-10 text-custom-purple font-bold">
           {heading.toUpperCase()}
         </h1>
         <div className="">

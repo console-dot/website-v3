@@ -16,7 +16,7 @@ export default function LandingPage() {
         <AboutUs />
         <OurServices />
         <OSC/>
-        <OffshoringServices />
+        <OffshoringServices  title={"Explore Our Offshoring Models"} heading={"OFFSHORING SERVICES AT CONSOLEDOT"}/>
       </div>
     </>
   );

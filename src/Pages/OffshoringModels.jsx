@@ -14,7 +14,7 @@ export const OffshoringModels = () => {
       <div className="w-full flex flex-col justify-start items-center">
         <OffShoreModelText1/>
         <OffshoreModel />
-        <OffshoringServices />
+        <OffshoringServices title={'Model Comparison'}  heading={"OFFSHORING MODELS COMPARISON"}/>
         <OffShoreModelText />
         
       </div>

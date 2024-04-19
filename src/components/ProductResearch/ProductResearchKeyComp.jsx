@@ -53,19 +53,19 @@ export const ProductResearchKeyComp = () => {
         <h1 className="text-[16px] leading-5 text-dottedBorder">
           Key Components
         </h1>
-        <h1 className="text-[28px] w-full leading-10 text-dottedBorder font-bold text-center">
+        <h1 className="text-[28px] w-full leading-10 text-custom-purple font-bold text-center">
           KEY COMPONENTS OF CONSOLEDOT's PRODUCT RESEARCH SERVICES:
         </h1>
         <div className="">
           <Divider />
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8 mt-8">
+      <div className="grid xl:grid-cols-2 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8 mt-8">
         {data?.map((i) => (
           <div
-            className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-8 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed`}
+            className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-4 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed`}
           >
-            <div className="py-[40px] xs:py-4 xxs:py-4 xxs:flex xxs:w-full xxs:justify-center xs:flex xs:w-full xs:justify-center">
+            <div className="py-[40px] xs:py-4 xxs:py-4 xxs:flex p-4 lg-w-full xxs:justify-center  xs:justify-center">
               <div className="w-[80px] h-[80px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
                 {i.icon}
               </div>
