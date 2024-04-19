@@ -6,20 +6,25 @@ import TwitterIcon from "../../assets/icons/TwitterIcon";
 import CIcon from "../../assets/icons/CIcon";
 import AIcon from "../../assets/icons/AIcon";
 import OIcon from "../../assets/icons/OIcon";
+import useIsMobile from "../../utils/hooks/useIsMobile";
+import useIsXs from "../../utils/hooks/useIsXs";
 
 export default function Header() {
+  const isMobileView = useIsMobile();
+  const isXs = useIsXs();
   return (
     <>
       <div
         style={{
           background: "linear-gradient(0deg, #3C5A85 0%, #0E7789 100%)",
+          display: isXs ? "none" : "",
         }}
-        className="w-full xxs:hidden h-[50px] flex flex-row justify-between items-center"
+        className="w-full h-[50px] flex flex-row justify-between items-center"
       >
         {/* Left */}
         <div
           //   style={{ width: "30%" }}
-          className="h-8 flex items-center ml-[5%] xl:w-[30%] lg:w-[30%] md:w-[30%] sm:w-[100%] xs:w-[100%]"
+          className="h-8 flex items-center justify-between ml-[5%] xl:w-[30%] lg:w-[30%] md:w-[80%] sm:w-[100%] xs:w-[100%]"
         >
           {/*  */}
           <div
@@ -55,7 +60,11 @@ export default function Header() {
         </div>
         {/* Right */}
         <div
-          style={{ width: "20%", gap: "5px" }}
+          style={{
+            width: "20%",
+            gap: "5px",
+            display: isMobileView ? "none" : "",
+          }}
           className="h-8 flex items-center xl:flex lg:flex md:flex sm:hidden xs:hidden xxs:hidden"
         >
           {/*  */}

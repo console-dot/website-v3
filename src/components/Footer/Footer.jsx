@@ -17,14 +17,14 @@ const Footer = () => {
   useEffect(() => {
     let url = window.location.pathname;
     setPage(url.substring(url.lastIndexOf("/") + 1));
-  }, [page]);
+  }, [window.location.pathname]);
 
   useEffect(() => {
     switch (page) {
-      case "mobdev":
+      case "mobile-app-development":
         setData(footerData.mobDev);
         break;
-      case "webdev":
+      case "web-app-development":
         setData(footerData.webDev);
         break;
       case "blockchain":
@@ -36,7 +36,7 @@ const Footer = () => {
       case "arvr":
         setData(footerData.arvrDev);
         break;
-      case "uiux":
+      case "ui-ux":
         setData(footerData.uiuxDev);
         break;
       case "product-research":
@@ -81,7 +81,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="font-Lato  text-base sm:text-[1rem] xs:text-[1rem] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+              className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
             >
               {data?.btnText}
             </button>

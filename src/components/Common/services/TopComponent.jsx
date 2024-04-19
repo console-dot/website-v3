@@ -7,7 +7,7 @@ export const TopComponent = ({ title, heading, description, image }) => {
     <div className="flex w-full lg:flex-row xl:flex-row 2xl:flex-row md:flex-col sm:flex-col xs:flex-col xxs:flex-col xl:gap-16 2xl:gap-16 lg:gap-16 md:gap-8 sm:gap-4">
       <div className="flex flex-col gap-2 sm:text-center xs:text-center xxs:text-center md:text-center lg:text-start xl:text-start 2xl:text-start w-full md:w-full sm:w-full xs:w-full xxs:w-full">
         <h1 className="text-[16px] leading-5 text-dottedBorder">{title}</h1>
-        <h1 className="text-[28px] leading-10 text-dottedBorder sm:text-center xs:text-center xxs:text-center md:text-center lg:text-start xl:text-start 2xl:text-start  w-full font-bold">
+        <h1 className="text-[28px] leading-10 text-custom-purple sm:text-center xs:text-center xxs:text-center md:text-center lg:text-start xl:text-start 2xl:text-start  w-full font-bold">
           {heading.toUpperCase()}
         </h1>
         <div className="mb-8 flex w-full sm:justify-center xs:justify-center xxs:justify-center md:justify-center lg:justify-start xl:justify-start 2xl:justify-start">

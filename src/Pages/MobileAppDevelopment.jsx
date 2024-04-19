@@ -26,6 +26,7 @@ export const MobileAppDevelopment = () => {
             
           />
         </div>
+        
         <Preposition
           title={"Proposition"}
           heading={"our Proposition"}

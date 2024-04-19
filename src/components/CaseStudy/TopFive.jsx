@@ -5,7 +5,6 @@ import {
   CaseIcon3,
   CaseIcon4,
   CaseIcon5,
-  CaseStudyTopBorder,
 } from "../../assets/icons";
 import { CSTopBorder } from "../../assets/images";
 import { CircleLarge } from "./CircleLarge";

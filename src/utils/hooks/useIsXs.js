@@ -1,24 +1,26 @@
 import { useState, useEffect } from 'react';
 
-const useIsMobile = () => {
+const useIsXs = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 640); // You can adjust the breakpoint as needed
     };
 
-    handleResize(); // Check on mount
+    // Initial check on mount
+    handleResize();
 
+    // Listen to window resize events
     window.addEventListener('resize', handleResize);
 
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []); // Empty dependency array ensures that this effect runs only once on mount
+  }, []);
 
   return isMobile;
 };
 
-export default useIsMobile;
+export default useIsXs;

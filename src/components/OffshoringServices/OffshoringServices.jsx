@@ -2,14 +2,15 @@ import React from "react";
 import { CardArray } from "./OffshoringServicesCard";
 import { imageGit } from "../../assets/images";
 import { ContactSection } from "./ContactSection";
-const OffshoringServices = () => {
+const OffshoringServices = ({title,heading}) => {
+  
   return (
     <div className="w-full flex flex-col items-center mt-8 ">
       <div className="font-Lato lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-custom-blue">
-        Explore Our Offshoring Models
+        {title}
       </div>
       <div className="font-Poppins lg:text-[28px] md:text-[28px] sm:text-[18px] xs:text-[18px] font-bold text-custom-purple mt-4">
-        OFFSHORING SERVICES AT CONSOLEDOT
+        {heading}
       </div>
       <div className="  leading-10 text-center mt-4">
         <div className="flex items-center ">

@@ -12,7 +12,7 @@ export const NavBar = ({ section, setSection }) => {
       dropdown: [
         {
           name: "Custom Software",
-          link: "custome-software-development",
+          link: "custom-software",
         },
         { name: "UI/UX Design", link: "ui-ux" },
         { name: "Product Research", link: "product-research" },
