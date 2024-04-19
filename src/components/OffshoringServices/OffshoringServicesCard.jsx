@@ -30,11 +30,10 @@ const Card = ({ heading, description }) => {
 
       {/* Footer Section */}
       <div className="w-full flex justify-around mt-6">
-        <button
-          type="button"
-          className="font-Lato text-base font-medium  tracking-normal text-center xl:px-24  xl:py-2.5 lg:px-24  lg:py-1 md:px-24  md:py-2.5 sm:px-24  sm:py-2 xs:px-24  xs:py-2.5 bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-purple hover:text-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
-        >
-          Avail Service
+        <button className="xl:px-24  xl:py-2.5 lg:px-24  lg:py-1 md:px-24  md:py-2.5 sm:px-24  sm:py-2 xs:px-24  xs:py-2.5  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+          <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
+            Avail Service
+          </p>
         </button>
       </div>
     </div>
@@ -80,14 +79,13 @@ export const CardArray = () => {
 
   return (
     <div className="flex md:flex-row flex-col items-center mb-8 gap-6">
-        {cards.map((card, index) => (
-          <Card
-            key={index}
-            heading={card.heading}
-            description={card.description}
-          />
-        ))}
-      </div>
-    
+      {cards.map((card, index) => (
+        <Card
+          key={index}
+          heading={card.heading}
+          description={card.description}
+        />
+      ))}
+    </div>
   );
 };

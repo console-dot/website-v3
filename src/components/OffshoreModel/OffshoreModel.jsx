@@ -20,9 +20,9 @@ export const OffshoreModel = () => {
         </div>
         <div className="leading-10 md:mt-2 mt-1">
           <div className="flex items-center">
-            <div class="h-0.5 bg-custom-purple md:w-[80px] w-12"></div>
+            <div class="h-0.5 bg-custom-purple md:w-[100px] w-12"></div>
             <div class="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
-            <div class="h-0.5 bg-custom-purple md:w-[80px] w-12"></div>
+            <div class="h-0.5 bg-custom-purple md:w-[100px] w-12"></div>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
-                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-purple text-custom-white rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-lightBlue hover:text-custom-purple active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>
@@ -146,7 +146,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
-                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-purple text-custom-white rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-lightBlue hover:text-custom-purple active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>
@@ -217,7 +217,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2 ">
-                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-purple text-custom-white rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-lightBlue hover:text-custom-purple active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>

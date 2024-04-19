@@ -870,6 +870,10 @@ video {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -1280,6 +1284,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1688,6 +1696,10 @@ video {
   padding-top: 40px;
 }
 
+.pb-\[20px\] {
+  padding-bottom: 20px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1728,6 +1740,11 @@ video {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -2085,6 +2102,74 @@ video {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.slick-arroe{
+  margin-left: -10px !important;
+}
+
+.slick-next:before {
+  margin-left: -10px !important;
+}
+
+.odd-border1 {
+  border-top: 2px dashed;
+  border-left: 2px dashed;
+  border-right: 2px dashed;
+  border-bottom: 2px dashed;
+  border-radius: 2%;
+  border-color: #3C5A85;
+  /* Customize the dashed border as needed */
+}
+
+.odd-border {
+  border-top: 2px dashed;
+  border-left: 2px dashed;
+  border-right: 2px dashed;
+  border-radius: 2%;
+  border-color: #3C5A85;
+  /* Customize the dashed border as needed */
+}
+
+.slick-dots li button:before {
+  content: '_' !important;
+  color: rgba(14, 119, 137, 1) !important;
+  font-size: 36px !important;
+  font-weight: bolder !important;
+  line-height: 30px !important;
+}
+
+@media screen and (max-width: 480px) {
+  .slick-dots li button:before {
+    line-height: 10px !important;
+  }
+}
+
+.slick-slide > div{
+  margin: 0 10px !important;
+}
+
+.slick-prev {
+  display: block;
+}
+
+.dot-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #555;
 }
 
 .App-header {
@@ -2609,8 +2694,37 @@ video {
     padding-right: 2rem;
   }
 
+  .xs\:pl-2 {
+    padding-left: 0.5rem;
+  }
+
+  .xs\:pl-5 {
+    padding-left: 1.25rem;
+  }
+
+  .xs\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .xs\:pb-4 {
+    padding-bottom: 1rem;
+  }
+
+  .xs\:pb-9 {
+    padding-bottom: 2.25rem;
+  }
+
+  .xs\:pb-\[25px\] {
+    padding-bottom: 25px;
+  }
+
   .xs\:text-center {
     text-align: center;
+  }
+
+  .xs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .xs\:text-\[12px\] {
@@ -2833,6 +2947,16 @@ video {
 
   .sm\:text-center {
     text-align: center;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .sm\:text-\[12px\] {

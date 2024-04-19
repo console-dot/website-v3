@@ -16,6 +16,69 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.slick-arroe{
+  margin-left: -10px !important;
+}
+.slick-next:before {
+  margin-left: -10px !important;
+}
+
+.odd-border1 {
+  border-top: 2px dashed;
+  border-left: 2px dashed;
+  border-right: 2px dashed;
+  border-bottom: 2px dashed;
+  border-radius: 2%;
+  border-color: #3C5A85; /* Customize the dashed border as needed */
+}
+
+.odd-border {
+  border-top: 2px dashed;
+  border-left: 2px dashed;
+  border-right: 2px dashed;
+  border-radius: 2%;
+  border-color: #3C5A85; /* Customize the dashed border as needed */
+}
+
+
+.slick-dots li button:before {
+  content: '_' !important;
+  color: rgba(14, 119, 137, 1) !important;
+  font-size: 36px !important;
+  font-weight: bolder !important;
+  line-height: 30px !important;
+}
+@media screen and (max-width: 480px) {
+  .slick-dots li button:before {
+    line-height: 10px !important;
+  }
+}
+
+.slick-slide > div{
+  margin: 0 10px !important;
+  
+}
+.slick-prev {
+  display: block;
+}
+.dot-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #555;
+}
 
 .App-header {
   background-color: #282c34;

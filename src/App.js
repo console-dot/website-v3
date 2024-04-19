@@ -19,6 +19,7 @@ import { CustomSoftware } from "./Pages/CustomSoftware";
 import { Contact } from "./Pages/Contact";
 import { Services } from "./Pages/Services";
 import { useEffect, useState } from "react";
+import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 
 function App() {
   const [section, setSection] = useState("");
@@ -44,12 +45,11 @@ function App() {
           <Route path="/custome-software" element={<CustomSoftware />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Services" element={<Services item={section} />} />
-        
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </div>
     </Router>
   );
 }
-
 export default App;
