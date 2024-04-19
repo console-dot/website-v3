@@ -72,7 +72,7 @@ export const Card = () => {
     <div className="">
       <Slider {...settings}>
         {cards.map((d, index) => (
-          <div key={index} className={index % 2 != 0 ? "odd-border" : ""} >
+          <div key={index} className={index % 2 != 0 ? "odd-border" : ""}  >
             <div className="bg-white h-[500px] shadow-lg rounded-lg p-9 flex flex-col items-center justify-center relative group border-b-4  border-custom-purple ">
               {/* Hover image */}
               <div className="absolute  w-full h-[500px] rounded-lg bg-custom-blue opacity-0 transition-opacity duration-300 group-hover:opacity-90">
