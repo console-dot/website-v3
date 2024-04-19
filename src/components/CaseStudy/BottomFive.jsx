@@ -1,25 +1,19 @@
 import React from "react";
 import {
-  CaseIcon1,
   CaseIcon10,
-  CaseIcon2,
-  CaseIcon3,
-  CaseIcon4,
-  CaseIcon5,
   CaseIcon6,
   CaseIcon7,
   CaseIcon8,
   CaseIcon9,
-  CaseStudyTopBorder,
 } from "../../assets/icons";
-import { CSTopBorder, CsBottomBorder } from "../../assets/images";
+import {  CsBottomBorder } from "../../assets/images";
 import { CircleLarge } from "./CircleLarge";
 import { CircleSmall } from "./CircleSmall";
 
 export const BottomFive = () => {
   return (
     <div className="p-8">
-      <div className="flex gap-[64px] items-center mr-12 mb-4 pl-4">
+      <div className="flex gap-[64px] items-center mr-12 mb-4 pl-4 ">
         <div>
           <CaseIcon6 />
         </div>

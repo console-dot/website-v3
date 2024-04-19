@@ -11,8 +11,8 @@ export const TechStack = ({ data, description }) => {
   let iconic = data?.filter((i) => i.id === selectedButton);
 
   return (
-    <div className="flex w-full  mt-12">
-      <div className=" bg-white w-full lg:p-12 xl:p-12 2xl:p-12 md:p-0">
+    <div className="flex w-full mt-12">
+      <div className=" bg-white w-full lg:p-12 xl:p-12 2xl:p-12 md:p-0 xs:p-2">
         <div className="flex flex-col gap-2 items-center justify-center w-full">
           <h1 className="text-[14px] leading-5 text-dottedBorder">
             Tech Stack We Use

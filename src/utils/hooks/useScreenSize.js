@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const useIsMobile = () => {
+const useScreenSize = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 1180);
     };
 
     handleResize(); // Check on mount
@@ -21,4 +21,4 @@ const useIsMobile = () => {
   return isMobile;
 };
 
-export default useIsMobile;
+export default useScreenSize;

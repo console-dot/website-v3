@@ -5,7 +5,7 @@ import { Inverted1, Inverted2 } from "../../../assets/icons";
 export const Preposition = ({ title, heading, proposition }) => {
   return (
     <div className="w-full flex  mt-16 mb-16 ">
-      <div className="flex lg:flex-row md:flex-col sm:flex-col xxs:flex-col xs:flex-col items-center justify-center px-12 md:px-8 sm:px-8 xs:px-2 xxs:px-1 gap-4 bg-white lg:h-[237px] xl:h-[237px] 2xl:h-[237px] md:h-[237px] sm:h-[237px] xs:h-full">
+      <div className="flex pb-8 pt-2 lg:flex-row md:flex-col sm:flex-col xxs:flex-col xs:flex-col items-center justify-center px-12 md:px-8 sm:px-8 xs:px-2 xxs:px-1 gap-4 bg-white lg:h-[237px] xl:h-[237px] 2xl:h-[237px] md:h-[237px] sm:h-[237px] xs:h-full">
         <div className="flex flex-col md:justify-center sm:justify-center xs:justify-center xxs:justify-center gap-2 items-start xl:w-[30%] 2xl:w-[30%] lg:w-[30%] md:w-full sm:w-full xs:w-full xxs:w-full">
           <div className="flex md:justify-center md:w-full sm:justify-center sm:w-full xs:justify-center xs:w-full xxs:justify-center xxs:w-full">
             {" "}
@@ -29,7 +29,7 @@ export const Preposition = ({ title, heading, proposition }) => {
               {proposition}
             </p>
           </div>
-          <div className=" absolute lg:left-[100%] xl:left-[100%] 2xl:left-[100%] md:left-[100%] sm:left-[100%] xs:left-[92%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
+          <div className=" absolute lg:left-[100%] xl:left-[100%] 2xl:left-[100%] md:left-[100%] sm:left-[100%] xs:left-[86%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
             <Inverted2 />
           </div>
         </div>
