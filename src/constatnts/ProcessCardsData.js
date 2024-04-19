@@ -36,6 +36,10 @@ export const processCardsData = [
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
     icon: Vector,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "02",
@@ -43,6 +47,10 @@ export const processCardsData = [
     borders: "border-t-2 border-l-2",
     dotDirection: "top-right",
     icon: Vector2,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "03",
@@ -50,6 +58,10 @@ export const processCardsData = [
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
     icon: Vector3,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "04",
@@ -57,13 +69,21 @@ export const processCardsData = [
     borders: "border-t-2 border-l-2",
     dotDirection: "top-right",
     icon: Vector4,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "05",
     flexDirection: "flex-col",
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
-    icon: Vector5
+    icon: Vector5,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "06",
@@ -71,6 +91,10 @@ export const processCardsData = [
     borders: "border-t-2 border-l-2",
     dotDirection: "top-right",
     icon: Vector6,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "07",
@@ -78,6 +102,10 @@ export const processCardsData = [
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
     icon: Vector7,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "08",
@@ -85,6 +113,10 @@ export const processCardsData = [
     borders: "border-t-2 border-l-2",
     dotDirection: "top-right",
     icon: Vector8,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
   {
     heading: "09",
@@ -92,6 +124,10 @@ export const processCardsData = [
     borders: "border-l-2 border-b-2",
     dotDirection: "bottom-right",
     icon: Vector9,
+    topHeading:'Impact Analysis:(in case of adding new feature in existing system)',
+    topData:"Assess the potential impact of the new features or changes on the existing system. Identify dependencies and potential areas of conflict with the current functionality.",
+    bottomHeading:"Requirement Analysis",
+    bottomData:"Understand client requirements, business goals, and target audience"
   },
 ];
 
