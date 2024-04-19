@@ -4,8 +4,8 @@ import { Dot } from "../components/WebLandingPage";
 
 export const ServicesProcessCard = ({ data }) => {
   return (
-    <div className="w-full h-auto flex justify-start items-start py-4 gap-8">
-      {data?.map((i, index) => (<div className={`flex flex-col gap-4 ${
+    <div className="w-full h-auto grid xl:grid-cols-5 2xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 xxs:grid-cols-1 justify-start items-start py-4 2xl:gap-8 xl:gap-8 lg:gap-8 md:gap-8 sm:gap-4 xs:gap-4 xxs:gap-2">
+      {data?.map((i, index) => (<div className={`flex flex-col w-full gap-4 ${
             parseInt(i?.heading) % 2 != 0 ? "flex-col-reverse" :"flex-col mt-32" 
           }`}>
         <div

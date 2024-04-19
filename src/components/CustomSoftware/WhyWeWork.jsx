@@ -1,40 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Divider } from "../../constatnts/Divider";
-import { CloudCompIcon1 } from "../../assets/icons";
-import { CloudCompIcon } from "../../assets/icons/CloudCompIcon";
+import { CloudCompIcon } from "../../assets/icons";
 
 export const WhyWeWork = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const checkVisibility = () => {
-      const element = document.querySelector(".animate-it");
-      if (!element) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Update visibility state based on whether the container is in view
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.5 } // Trigger when 50% of the container is in view
+    );
 
-      const elementTop = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
-      // Check if the top of the element is within the viewport
-      if (elementTop < windowHeight) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+    // Clean up the observer when the component unmounts
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
       }
     };
-
-    // Initial check when component mounts
-    checkVisibility();
-
-    const handleScroll = () => {
-      checkVisibility();
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  }, []); // Empty dependency array ensures the effect runs only once
 
   return (
     <div className="">
@@ -48,13 +39,14 @@ export const WhyWeWork = () => {
         </div>
       </div>
       <div
-        className={`animate-it ${
-          isVisible ? "slide-in" : "slide-out"
-        } flex flex-col w-full justify-center items-center mt-8 gap-8`}
+        ref={containerRef}
+        className={`flex flex-col w-full justify-center items-center mt-8 gap-8 ${
+          isVisible ? "animate-slide-in" : ""
+        }`}
       >
         <div className="flex gap-8 lg:w-[45%] xl:w-[45%] 2xl:w-[45%] md:w-[70%] sm:w-[70%] xs:w-full xxs:w-full  bg-white  p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed">
           <div>
-            <div className="w-[80px] h-[80px] xs:w-[60px] xs:h-[60px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
+            <div className="w-[80px] h-[80px] xs:w-[60px] xs:h-[60px] xxs:h-[50px] xxs:w-[50px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
               <CloudCompIcon />
             </div>
           </div>
@@ -70,9 +62,9 @@ export const WhyWeWork = () => {
           </div>
         </div>
 
-        <div className="flex gap-8 lg:w-[45%] xl:w-[45%] 2xl:w-[45%] md:w-[70%] sm:w-[70%] xs:w-full xxs:w-full bg-white  p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed">
+        <div className="flex gap-8 lg:w-[45%] xl:w-[45%] 2xl:w-[45%] md:w-[70%] sm:w-[70%] xs:w-full xxs:w-full  bg-white  p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed">
           <div>
-            <div className="w-[80px] h-[80px] xs:w-[60px] xs:h-[60px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
+            <div className="w-[80px] h-[80px] xs:w-[60px] xs:h-[60px] xxs:h-[50px] xxs:w-[50px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
               <CloudCompIcon />
             </div>
           </div>

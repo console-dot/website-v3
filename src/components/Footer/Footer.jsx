@@ -72,8 +72,8 @@ const Footer = () => {
             className="absolute inset-0 object-cover w-full h-full opacity-20"
           />
 
-          <div className="relative z-10 flex flex-col items-center gap-4">
-            <h2 className="font-bold lg:text-[28px] md:text-[28px] sm:text-[16px] text-center xs:text-[16px] sm:text-center text-white  font-poppins">
+          <div className="relative z-10 flex flex-col items-center xs:w-full xs:justify-center gap-4">
+            <h2 className="font-bold lg:text-[28px] md:text-[28px] sm:text-[16px] text-center xs:text-[16px] sm:text-center text-white xs:w-full font-poppins">
               {data?.heading?.toUpperCase()}
             </h2>
             <p className="text-white text-center lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-poppins ">
@@ -81,7 +81,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="font-Lato  text-base font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+              className="font-Lato  text-base sm:text-[1rem] xs:text-[1rem] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
             >
               {data?.btnText}
             </button>
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <footer className="w-auto bg-footerBg text-white py-10 lg:px-20 md:px-10 px-16 mt-[-50px]">
+      <footer className="w-full bg-footerBg text-white py-10 lg:px-20 md:px-10 px-16 mt-[-50px]">
         <div className="container mx-auto flex flex-wrap justify-between items-start mt-20">
           {/* First Column */}
           <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full mb-10">
@@ -266,27 +266,33 @@ const Footer = () => {
                 <div
                   style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
                   className="w-8 h-8 flex justify-center items-center rounded-lg"
-                ><LinkedinIcon color="#14213D" /></div>
-                 <div
-                  style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                  className="w-8 h-8 flex justify-center items-center rounded-lg"
                 >
-                <TwitterIcon color="#14213D" /></div>
+                  <LinkedinIcon color="#14213D" />
+                </div>
                 <div
                   style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
                   className="w-8 h-8 flex justify-center items-center rounded-lg"
                 >
-                <CIcon color="#14213D" /></div>
+                  <TwitterIcon color="#14213D" />
+                </div>
                 <div
                   style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
                   className="w-8 h-8 flex justify-center items-center rounded-lg"
                 >
-                <AIcon color="#14213D" /></div>
+                  <CIcon color="#14213D" />
+                </div>
                 <div
                   style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
                   className="w-8 h-8 flex justify-center items-center rounded-lg"
                 >
-                <OIcon color="#14213D" /></div>
+                  <AIcon color="#14213D" />
+                </div>
+                <div
+                  style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
+                  className="w-8 h-8 flex justify-center items-center rounded-lg"
+                >
+                  <OIcon color="#14213D" />
+                </div>
               </div>
             </div>
 

@@ -16,10 +16,10 @@ export const Careers = () => {
   return (
     <div className="w-full mb-8">
       <LandingPage data={landingPageDataCareers} />
-      <div className="p-16 w-full flex flex-col gap-16">
+      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xxs:p-2 w-full flex flex-col gap-16">
         <SearchInput setFilterData={setFilterData}/>
-        <div className="flex w-full gap-8">
-          <div className="w-2/6 pt-2">
+        <div className="flex lg:flex-row xl:flex-row 2xl:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col w-full gap-8">
+          <div className="lg:w-2/5 xl:w-2/5 2xl:w-2/5  pt-2">
             <Checks
               data={checksTypeOfEmployement}
               heading={"Type of Employment"}

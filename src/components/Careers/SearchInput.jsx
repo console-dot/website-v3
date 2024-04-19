@@ -44,7 +44,7 @@ export const SearchInput = ({setFilterData}) => {
         <span className="absolute top-1/2 transform -translate-y-1/2 right-4">
           <button
             type="button"
-            className="text-white px-5 py-2.5 w-[172px] h-[50px] bg-gradient-to-r from-custom-blue to-custom-purple hover:from-custom-purple hover:to-custom-blue rounded-full"
+            className="text-white xs:hidden xxs:hidden lg:px-5 xl:px-5 2xl:px-5 md:px-3 sm:px-3 xs:px-3 lg:py-2.5 xl:py-2.5 2xl:py-2.5 md:py-1 sm:py-1 xs:py-1 2xl:w-[172px] xl:w-[172px] lg:w-[172px] md:w-[172px] lg:h-[50px] xl:h-[50px] 2xl:h-[50px] bg-gradient-to-r from-custom-blue to-custom-purple hover:from-custom-purple hover:to-custom-blue rounded-full"
             onClick={handleSearchClick}
           >
             <p className="font-Lato text-base font-medium leading-[28px] tracking-normal text-center">

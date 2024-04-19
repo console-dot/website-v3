@@ -41,3 +41,33 @@
     transform: rotate(360deg);
   }
 }
+
+.animate-it.slide-in {
+  animation: slideIn 1s ease forwards;
+}
+
+.animate-it.slide-out {
+  animation: slideOut 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
