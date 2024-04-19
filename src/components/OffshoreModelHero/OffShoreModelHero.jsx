@@ -1,6 +1,7 @@
 import React from "react";
-import { Breadcrumb } from "../BreadCrumbs";
 import { StarEffect, offshorehero } from "../../assets/images";
+
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 export const OffShoreModelHero = () => {
   return (
@@ -43,16 +44,16 @@ export const OffShoreModelHero = () => {
             EXCEPTIONAL DEVELOPMENT SOLUTIONS
           </p>
           <span className="md:block md:mt-1"></span>
-          <p className="md:mt-4 mt-2 md:text-[14px] text-[8px] font-semibold ">
-            <a href="/" className="text-white  hover:text-custom-purple">
+          <p className="md:mt-4 mt-2 md:text-[16px] text-[12px] font-poppins flex-row">
+            <a href="/" className="text-white hover:text-custom-purple">
               Home
             </a>{" "}
-            /
+            <MdKeyboardArrowRight className="inline" />{" "}
             <a
               href="/Offshoringmodels"
-              className="text-white  hover:text-custom-purple"
+              className="text-white hover:text-custom-purple"
             >
-               {" "}Offshoring Models
+              Offshoring Models
             </a>
           </p>
         </div>

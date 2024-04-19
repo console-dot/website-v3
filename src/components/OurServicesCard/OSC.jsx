@@ -4,11 +4,11 @@ import { image1, image2, image3, image4 } from "../../assets/images";
 export const OSC = ({ isMobile }) => {
   return (
     <div className="pt-6">
-    <div className="bg-gradient-to-t from-custom-blue to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 px-4 md:px-28 p-[3rem] ">
+    <div className="bg-gradient-to-t from-custom-blue xs:pl-10  to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 px-4 md:px-28 p-[3rem] ">
       {servicesData.map((service, index) => (
         <div
           key={index}
-          className={"flex items-center flex-row md:w-[25%] md:pb-0 pb-[15px]" }
+          className={"flex items-center flex-row md:w-[25%] md:pb-0 pb-[15px] xs:pb-[25px]" }
          
         >
           <div className="md:w-24 md:h-24 w-24 h-24 rounded-full border-2 border-white relative" >

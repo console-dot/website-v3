@@ -1695,6 +1695,10 @@ video {
   padding-top: 40px;
 }
 
+.pb-\[20px\] {
+  padding-bottom: 20px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2671,6 +2675,30 @@ video {
 
   .xs\:pr-8 {
     padding-right: 2rem;
+  }
+
+  .xs\:pl-2 {
+    padding-left: 0.5rem;
+  }
+
+  .xs\:pl-5 {
+    padding-left: 1.25rem;
+  }
+
+  .xs\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .xs\:pb-4 {
+    padding-bottom: 1rem;
+  }
+
+  .xs\:pb-9 {
+    padding-bottom: 2.25rem;
+  }
+
+  .xs\:pb-\[25px\] {
+    padding-bottom: 25px;
   }
 
   .xs\:text-center {
