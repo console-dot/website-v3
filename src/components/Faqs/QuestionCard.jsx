@@ -10,7 +10,7 @@ export const QuestionCard = ({ data }) => {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-2 gap-8 w-full h-full P-4">
+      <div className="grid lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8 w-full h-full P-4">
         {data?.map((i, index) => (
           <div key={index} className=" p-4 shadow-md bg-white">
             <div

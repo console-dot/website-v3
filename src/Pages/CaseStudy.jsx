@@ -10,8 +10,8 @@ export const CaseStudy = () => {
   return (
     <div className="w-full mb-8">
       <LandingPage data={landingPageDataCaseStudy} />
-      <div className="p-16 flex flex-col gap-12">
-        <div>
+      <div className="lg:p-16 xl:p-16 2xl:p-16 md:p-8 sm:p-8 xs:p-4 xxs:p-2 flex flex-col gap-12">
+        <div className="">
           <TopFive />
           <TopContent />
         </div>

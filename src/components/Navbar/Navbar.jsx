@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets/images";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
-import { Services } from "../../Pages";
 
 export const NavBar = ({ section, setSection }) => {
   const navBar = [
@@ -33,29 +32,31 @@ export const NavBar = ({ section, setSection }) => {
   ];
 
   const [showNav, setShowNav] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const dropdownRef = useRef(null); // Ref for the dropdown
+  const [dropdownStates, setDropdownStates] = useState(navBar.map(() => false));
+  const dropdownRefs = useRef(navBar.map(() => React.createRef())); // Refs for the dropdowns
+  const location = useLocation();
 
   const toggleNav = () => {
     setShowNav(!showNav);
   };
 
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
+  const toggleDropdown = (index) => {
+    const newDropdownStates = [...dropdownStates];
+    newDropdownStates[index] = !newDropdownStates[index];
+    setDropdownStates(newDropdownStates);
   };
 
-  const closeDropdown = () => {
-    setShowDropdown(false);
+  const closeDropdown = (index) => {
+    const newDropdownStates = [...dropdownStates];
+    newDropdownStates[index] = false;
+    setDropdownStates(newDropdownStates);
   };
 
-  const handleMouseLeave = () => {
-    // Check if the dropdown is open before closing
-    if (showDropdown) {
-      setShowDropdown(false);
+  const handleMouseLeave = (index) => {
+    if (dropdownStates[index]) {
+      closeDropdown(index);
     }
   };
-
-  const location = useLocation();
 
   return (
     <div
@@ -66,7 +67,7 @@ export const NavBar = ({ section, setSection }) => {
         zIndex: 1000,
         height: "60px",
       }}
-      className="w-full bg-nav overflow-hidden flex flex-row bg-opacity-7"
+      className="w-full bg-nav flex flex-row bg-opacity-7"
     >
       <div className="w-1/3  flex flex-row relative z-10">
         <div className="lg:w-[80%] xs:w-auto bg-white flex flex-row items-center justify-center gap-4">
@@ -122,22 +123,22 @@ export const NavBar = ({ section, setSection }) => {
           {navBar?.map((item, index) => (
             <li key={index} className="hover:bg-[rgb(60,90,133,0.5)]  hover:text-[rgb(98,192,209)]">
               {item.dropdown ? (
-                <div className="m-2" ref={dropdownRef} >
+                <div className="m-2" ref={dropdownRefs.current[index]} >
                   <span
                     className={`cursor-pointer flex items-center `}
-                    onClick={toggleDropdown}
+                    onClick={() => toggleDropdown(index)}
                   >
                     {item.name}{" "}
                     <div className="ml-1 mt-1  text-xl">
-                      {showDropdown ? (
+                      {dropdownStates[index] ? (
                         <RiArrowDropUpLine />
                       ) : (
                         <RiArrowDropDownLine />
                       )}
                     </div>
                   </span>
-                  {showDropdown && (
-                    <ul className="absolute bg-custom-purple shadow-md mt-[18px]" onMouseLeave={handleMouseLeave}>
+                  {dropdownStates[index] && (
+                    <ul className="absolute bg-custom-purple shadow-md mt-[18px]" onMouseLeave={() => handleMouseLeave(index)}>
                       {item.dropdown.map((subitem, subindex) => (
                         <li key={subindex} className="p-2 ">
                           <Link

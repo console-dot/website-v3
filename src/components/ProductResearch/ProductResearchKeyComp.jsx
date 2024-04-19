@@ -49,7 +49,7 @@ export const ProductResearchKeyComp = () => {
   ];
   return (
     <div className="flex flex-col items-center justify-center w-full mt-12">
-      <div className="flex flex-col gap-2 items-center justify-center w-3/5">
+      <div className="flex flex-col gap-2 items-center justify-center w-3/5 sm:w-full md:w-full xs:w-full xxs:w-full ">
         <h1 className="text-[16px] leading-5 text-dottedBorder">
           Key Components
         </h1>
@@ -60,49 +60,37 @@ export const ProductResearchKeyComp = () => {
           <Divider />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-8 mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8 mt-8">
         {data?.map((i) => (
           <div
-            className={`flex flex-row gap-8 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed`}
+            className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-8 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed`}
           >
-            <div className="py-[40px]">
+            <div className="py-[40px] xs:py-4 xxs:py-4 xxs:flex xxs:w-full xxs:justify-center xs:flex xs:w-full xs:justify-center">
               <div className="w-[80px] h-[80px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
                 {i.icon}
               </div>
             </div>
-            <div className="flex flex-col gap-4 ">
-              <div
-                className={`flex w-full `}
-              >
+            <div className="flex flex-col gap-4 w-full">
+              <div className={`flex w-full `}>
                 <h1 className="font-poppins text-[14px] leading-6 font-bold text-webHeading px-2">
                   {i.heading}
                 </h1>
               </div>
-              <div
-                className={`flex gap-4 flex-row `}
-              >
+              <div className={`flex gap-4 flex-row `}>
                 <div className=" ">
-                <div className="w-[30px] h-[30px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
-                  <TickIcon />
-                </div></div>
-                <p
-                  className={`text-[14px]`}
-                >
-                  {i.para1}
-                </p>
+                  <div className="w-[30px] h-[30px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
+                    <TickIcon />
+                  </div>
+                </div>
+                <p className={`text-[14px]`}>{i.para1}</p>
               </div>
-              <div
-                className={`flex gap-4 flex-row`}
-              >
+              <div className={`flex gap-4 flex-row`}>
                 <div className=" ">
-                <div className="w-[30px] h-[30px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
-                  <TickIcon />
-                </div></div>
-                <p
-                  className={`text-[14px]`}
-                >
-                  {i.para2}
-                </p>
+                  <div className="w-[30px] h-[30px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
+                    <TickIcon />
+                  </div>
+                </div>
+                <p className={`text-[14px]`}>{i.para2}</p>
               </div>
             </div>
           </div>

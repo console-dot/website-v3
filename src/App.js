@@ -47,7 +47,7 @@ function App() {
           <Route path="/Services" element={<Services item={section} />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );

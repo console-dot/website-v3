@@ -13,7 +13,7 @@ export const ContactForm = () => {
   };
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex gap-8">
+      <div className="flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-8">
         <input
           type="text"
           id="first_name"
@@ -38,8 +38,8 @@ export const ContactForm = () => {
           required
         />
       </div>
-      <div className="flex gap-8">
-        <div className="relative w-[48.5%]">
+      <div className="flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-8">
+        <div className="relative lg:w-[48.5%] xl:w-[48.5%] 2xl:w-[48.5%] md:w-[48.5%] sm:w-[48.5%] xs:w-[100%] xxs:w-[100%]">
           <div className="">
             <input
               type="text"
@@ -59,7 +59,7 @@ export const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="w-[48%]">
+        <div className="lg:w-[48%] xl:w-[48%] 2xl:w-[48%] md:w-[48%] sm:w-[48%] xs:w-[100%] xxs:w-[100%]">
           <input
             type="text"
             id="first_name"
@@ -69,7 +69,7 @@ export const ContactForm = () => {
           />
         </div>
       </div>
-      <div className="flex gap-8">
+      <div className="flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-8">
         <input
           type="text"
           id="first_name"
