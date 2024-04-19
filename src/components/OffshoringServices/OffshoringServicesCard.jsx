@@ -32,7 +32,7 @@ const Card = ({ heading, description }) => {
       <div className="w-full flex justify-around mt-6">
         <button
           type="button"
-          className="font-Lato text-base font-medium  tracking-normal text-center xl:px-24  xl:py-2.5 lg:px-24  lg:py-1 md:px-24  md:py-2.5 sm:px-24  sm:py-2 xs:px-24  xs:py-2.5 bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-custom-purple hover:text-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+          className="font-Lato text-base font-medium  tracking-normal text-center xl:px-24  xl:py-2.5 lg:px-24  lg:py-1 md:px-24  md:py-2.5 sm:px-24  sm:py-2 xs:px-24  xs:py-2.5 bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
         >
           Avail Service
         </button>

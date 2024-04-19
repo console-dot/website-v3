@@ -25,7 +25,7 @@ export const AboutUs = () => {
         <button
           type="button"
           onClick=""
-          className="text-custom-purple just border-[0.5px] hover:bg-custom-purple hover:text-offwhite px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue rounded-full font-Lato font-medium"
+          className="text-custom-purple just border-[0.5px] hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-offwhite px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue rounded-full font-Lato font-medium"
         >
           View All
         </button>
