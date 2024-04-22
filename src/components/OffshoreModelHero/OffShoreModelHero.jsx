@@ -1,22 +1,21 @@
 import React from "react";
-import { StarEffect, offshorehero } from "../../assets/images";
+import { OffshoreBg, StarEffect, offshorehero } from "../../assets/images";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 export const OffShoreModelHero = () => {
   return (
-    <div
-      className="relative w-full overflow-hidden bg-gradient-to-r from-custom-blue to-custom-purple  md:h-[474px] h-[250px]"
-      style={{
-        position: "relative",
-        overflow: "hidden",
-        borderBottomLeftRadius: "35%",
-        borderBottomRightRadius: "35%",
-      }}
-    >
+    <div className="w-full h-[80vh]"
+    style={{
+      backgroundImage: `url(${OffshoreBg})`, // Using string interpolation for the URL
+      opacity: "2", // Set opacity to 40%
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      width:"100%"
+    }}>
       {/* Background images */}
       <div
-        className="absolute inset-0"
+        className=""
         style={{
           backgroundImage: `url(${StarEffect})`,
           opacity: "0.4",
@@ -25,7 +24,7 @@ export const OffShoreModelHero = () => {
         }}
       ></div>
       <div
-        className="absolute inset-0"
+        className=""
         style={{
           backgroundImage: `url(${offshorehero})`,
           opacity: "0.4",
@@ -33,7 +32,7 @@ export const OffShoreModelHero = () => {
           backgroundRepeat: "no-repeat",
         }}
       ></div>
-      <div className="absolute inset-0 flex justify-start items-start  md:pt-[110px] md:pl-[130px]  pt-[40px] pl-[40px]">
+      <div className=" flex justify-start items-start  md:pt-[110px] md:pl-[130px]  pt-[40px] pl-[40px]">
         <div className="text-left text-white">
           <p className="font-lato md:text-[16px] text-[12px]  leading-2 tracking-normal">
             Off Shoring Models

@@ -304,7 +304,7 @@ export const HomeTop = () => {
         />
         <mask
           id="mask0_96_1072"
-          style="mask-type:luminance"
+          style={{maskType:"luminance"}}
           maskUnits="userSpaceOnUse"
           x="202"
           y="108"
@@ -944,7 +944,7 @@ export const HomeTop = () => {
         />
         <mask
           id="mask1_96_1072"
-          style="mask-type:luminance"
+          style={{maskType:"luminance"}}
           maskUnits="userSpaceOnUse"
           x="310"
           y="169"

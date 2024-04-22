@@ -9,7 +9,7 @@ export default function LandingPage() {
   return (
     <>
       <div className="bg-offwhite w-[100%]">
-        <div className="w-[100%]">
+        <div className="w-[100%] ">
         <HomeLanding />
         </div>
         <AboutScreen />
