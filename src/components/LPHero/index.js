@@ -1,1 +1,2 @@
-export * from "./LPHero"
+export * from "./LPHero";
+export * from './HomeLanding';

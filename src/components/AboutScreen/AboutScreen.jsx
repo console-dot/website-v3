@@ -1,5 +1,6 @@
 import React from "react";
-import {aboutService } from "../../assets/images";
+import {HomeTop2, aboutService } from "../../assets/images";
+import { HomeTop } from "../../assets/icons";
 
 export const AboutScreen = () => {
   return (
@@ -31,7 +32,7 @@ export const AboutScreen = () => {
           <div className="w-[100%] relative justify-start">
             <img
               className="md:w-[528px] md:h-[408px] w-full h-auto"
-              src={aboutService}
+              src={HomeTop2}
               alt="Img not found"
               style={{ position: "relative" }}
             />

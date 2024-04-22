@@ -76,3 +76,6 @@ export * from "./MvpIcon";
 export * from "./ERPIcon";
 export * from "./CloudCompIcon";
 export * from "./CloudCompIcon1";
+export * from "./HomeTop";
+export * from "./OffShoreTop";
+export * from "./Offshore2";
