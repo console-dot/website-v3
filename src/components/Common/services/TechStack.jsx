@@ -4,10 +4,9 @@ import { FaAngleDown } from "react-icons/fa6";
 import { Divider } from "../../../constatnts/Divider";
 
 export const TechStack = ({ data, description }) => {
-  const [openedItem, setOpenedItem] = useState(null);
+  const isTechMob = useTechScreen();
+  const [openedItem, setOpenedItem] = useState(null); // Initialize with null
 
-  const data2 = ["Web dev", "Mob dev", "backend dev"];
-  
   const toggleItem = (id) => {
     if (openedItem === id) {
       setOpenedItem(null); // Close the currently opened item if clicked again
@@ -15,8 +14,6 @@ export const TechStack = ({ data, description }) => {
       setOpenedItem(id); // Open the clicked item
     }
   };
-
-  const isTechMob = useTechScreen();
 
   return (
     <div className="flex w-full mt-12">
@@ -49,7 +46,10 @@ export const TechStack = ({ data, description }) => {
                       <FaAngleDown
                         className="text[16px] text-custom-purple"
                         style={{
-                          transform: openedItem === i.id ? "rotate(180deg)" : "rotate(0deg)",
+                          transform:
+                            openedItem === i.id
+                              ? "rotate(180deg)"
+                              : "rotate(0deg)",
                         }}
                       />
                     </div>
@@ -57,7 +57,9 @@ export const TechStack = ({ data, description }) => {
                   {openedItem === i.id && (
                     <div className="grid h-full lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 xxs:grid-cols-2 mt-16 gap-8 items-center">
                       {i.icons.map((icon, index) => (
-                        <div key={index} className="flex w-full justify-center">{icon}</div>
+                        <div key={index} className="flex w-auto justify-center">
+                          {icon}
+                        </div>
                       ))}
                     </div>
                   )}
@@ -75,7 +77,7 @@ export const TechStack = ({ data, description }) => {
                 <button
                   key={i.id}
                   onClick={() => toggleItem(i.id)}
-                  className={`hover:bg-webdevHover whitespace-nowrap hover:text-white w-full text-[2vw] leading-6 p-2 px-4 text-center rounded-full ${
+                  className={`hover:bg-webdevHover whitespace-nowrap hover:text-white w-full 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[12px] sm:text-[12px] leading-6 p-2 px-4 text-center rounded-full ${
                     openedItem === i.id
                       ? "bg-gradient-to-r from-fromclr to-toclr text-white"
                       : "bg-none text-fromclr hover:bg-gradient-to-r"
@@ -85,6 +87,25 @@ export const TechStack = ({ data, description }) => {
                 </button>
               ))}
             </div>
+            {openedItem !== null ? (
+              <div className="grid h-full lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 xxs:grid-cols-2 mt-16 gap-8 items-center">
+                {data
+                  .find((item) => item.id === openedItem)
+                  .icons.map((icon, index) => (
+                    <div key={index} className="flex w-full justify-center">
+                      {icon}
+                    </div>
+                  ))}
+              </div>
+            ) : (
+              <div className="grid h-full lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 xxs:grid-cols-2 mt-16 gap-8 items-center">
+                {data[0].icons.map((i,index)=>(
+                    <div key={index} className="flex w-full justify-center">
+                      {i}
+                    </div>
+                  ))}
+              </div>
+            )}
           </div>
         )}
       </div>
