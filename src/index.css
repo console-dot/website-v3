@@ -591,6 +591,10 @@ video {
   pointer-events: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -625,10 +629,6 @@ video {
   inset-inline-end: 0px;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .left-4 {
   left: 1rem;
 }
@@ -643,6 +643,10 @@ video {
 
 .left-\[45\%\] {
   left: 45%;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-4 {
@@ -950,6 +954,10 @@ video {
   height: 2rem;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[162px\] {
   height: 162px;
 }
@@ -1126,6 +1134,10 @@ video {
   width: 5px;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .w-\[80px\] {
   width: 80px;
 }
@@ -1152,10 +1164,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .-translate-y-1\/2 {
@@ -1226,6 +1234,10 @@ video {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1487,10 +1499,20 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-custom-purple {
+  --tw-gradient-from: rgba(14, 119, 137, 1) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(14, 119, 137, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-fromclr {
   --tw-gradient-from: #0E7789 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(14 119 137 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-custom-blue {
+  --tw-gradient-to: rgba(25, 40, 78, 1) var(--tw-gradient-to-position);
 }
 
 .to-custom-purple {
