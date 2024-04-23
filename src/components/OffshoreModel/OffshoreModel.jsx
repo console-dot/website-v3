@@ -1,12 +1,14 @@
 import React from "react";
 import {
   DashedBg,
+  Offshore32,
   aboutService,
   circletickicon,
   offshoreimg1,
   offshoreimg2,
   offshoreimg3,
 } from "../../assets/images";
+import { OffShoreTop, Offshore2 } from "../../assets/icons";
 
 export const OffshoreModel = () => {
   return (
@@ -86,13 +88,8 @@ export const OffshoreModel = () => {
         </div>
         {/* Right side */}
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] flex justify-center relative md:order-1 order-2">
-          <div className="w-[100%]] relative justify-start">
-            <img
-              className="md:w-[528px] md:h-[408px] w-full h-auto"
-              src={offshoreimg1}
-              alt="Img not found"
-              style={{ position: "relative" }}
-            />
+          <div className="w-1/2 flex md:w-full md:justify-center md:items-center sm:w-full sm:justify-center sm:items-center xs:w-full xxs:w-full xs:justify-center xs:items-center xxs:justify-center xxs:items-center">
+            <OffShoreTop />
           </div>
         </div>
       </div>
@@ -156,14 +153,9 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Left side */}
-        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%]flex justify-center relative md:order-1 order-2">
-          <div className="w-[100%] relative justify-start">
-            <img
-              className="md:w-[528px] md:h-[408px] w-full h-auto"
-              src={offshoreimg2}
-              alt="Img not found"
-              style={{ position: "relative" }}
-            />
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] flex justify-center relative md:order-1 order-2">
+          <div className="w-1/2 flex md:w-full md:justify-center md:items-center sm:w-full sm:justify-center sm:items-center xs:w-full xxs:w-full xs:justify-center xs:items-center xxs:justify-center xxs:items-center">
+            <Offshore2 />
           </div>
         </div>
       </div>
@@ -231,7 +223,7 @@ export const OffshoreModel = () => {
           <div className="w-[100%] relative justify-start">
             <img
               className="md:w-[528px] md:h-[408px] w-full h-auto"
-              src={offshoreimg3}
+              src={Offshore32}
               alt="Img not found"
               style={{ position: "relative" }}
             />

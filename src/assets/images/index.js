@@ -66,7 +66,12 @@ import uiuxdev2 from "./uiuxdev2.png";
 import uiuxdev3 from "./uiuxdev3.png";
 import uiuxdev4 from "./uiuxdev4.png";
 import NotFoundImg from "./NotFoundImg.gif";
-
+import HomeImage from "./homeImage.svg";
+import HomeImage2 from "./homeimg2.png";
+import HomeTop2 from "./hometop.svg";
+import Offshore32 from './offshore3-2.svg';
+import OffshoreBg from './offshorebg.svg';
+import Test from './test.png';
 export {NotFoundImg};
 export {uiuxdev1};
 export {uiuxdev2};
@@ -135,5 +140,5 @@ export {
   CsBottomBorder,
   FaqBg,
   CustomSoftBg,
-  ContactBg
+  ContactBg,HomeImage, HomeImage2, HomeTop2 ,Offshore32, Test,OffshoreBg
 };

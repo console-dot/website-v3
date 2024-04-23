@@ -63,7 +63,7 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col justify-center md:w-full sm:w-[100%] items-center bg-offwhite ">
-      <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center px-28 py-[3rem] relative">
+      <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center 2xl:px-28 xl:px-28 lg:px-28 md:px-28 sm:px-12 xs:px-8 xxs:px-4 py-[3rem] relative">
         <div className="flex justify-center items-center text-center">
           <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
           <img
@@ -81,7 +81,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+              className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[2vw] xxs:text-[2vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
             >
               {data?.btnText}
             </button>
