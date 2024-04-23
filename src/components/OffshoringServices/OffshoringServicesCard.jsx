@@ -4,7 +4,7 @@ import { circletickicon } from "../../assets/images";
 
 const Card = ({ heading, description }) => {
   return (
-    <div className="bg-white  shadow-lg xl:w-full lg:w-full md:w-full xl:h-[460px] lg:h-[460px] md:h-[600px] w-[350px] h-[450px] rounded-lg xl:p-6 lg:pl-1 lg:pb-6  md:pl-6 md:pb-6 sm:pl-6 sm:pb-6 xs:pl-6 xs:pb-6 flex flex-col justify-between hover:-translate-y-8 hover:border-dashed hover:border-2 hover:border-custom-blue1  transition duration-300 ease-in-out mt-6 md:mb-0">
+    <div className="bg-white  shadow-lg xl:w-full lg:w-full md:w-full xl:h-[460px] lg:h-[460px] md:h-[600px]  h-[450px] rounded-lg xl:p-6 lg:pl-1 lg:pb-6  md:pl-6 md:pb-6 sm:pl-6 sm:pb-6 xs:pl-6 xs:pb-6  flex-col  hover:-translate-y-8 hover:border-dashed hover:border-2 hover:border-custom-blue1 w-full flex justify-center  transition duration-300 ease-in-out mt-6 md:mb-0">
       {/* Header Section */}
       <div className="text-center mb-4 mt-8 text-custom-purple">
         <h2 className="text-[24px] font-bold mb-2">{heading}</h2>
@@ -78,7 +78,7 @@ export const CardArray = () => {
   ];
 
   return (
-    <div className="flex md:flex-row flex-col items-center mb-8 gap-6">
+    <div className="grid lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 w-full justify-center items-center mb-8 gap-6">
       {cards.map((card, index) => (
         <Card
           key={index}
