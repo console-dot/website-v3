@@ -188,7 +188,7 @@ export const NavBar = ({ section, setSection }) => {
         <div
           className={`${
             showNav ? "block" : "hidden"
-          } lg:hidden fixed bg-gradient-to-r  from-custom-purple to-custom-blue top-[60px] right-0 w-[70%] h-[100vh] z-50`}
+          } lg:hidden fixed bg-[#010C29] top-[60px] right-0 w-[70%] h-[100vh] z-50`}
         >
           <ul
             className="flex flex-col text-white font-bold gap-2 justify-start items-start p-8"
