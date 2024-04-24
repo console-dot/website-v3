@@ -129,7 +129,7 @@ export const NavBar = ({ section, setSection }) => {
           {navBar?.map((item, index) => (
             <li
               key={index}
-              className="hover:bg-[rgb(60,90,133,0.5)]  hover:text-[rgb(98,192,209)]"
+              className="hover:bg-[rgb(60,90,133,0.5)]   hover:text-[rgb(98,192,209)]"
             >
               {item.dropdown ? (
                 <div className="m-2" ref={dropdownRefs.current[index]}>
@@ -148,7 +148,7 @@ export const NavBar = ({ section, setSection }) => {
                   </span>
                   {dropdownStates[index] && (
                     <ul
-                      className="absolute bg-custom-purple shadow-md mt-[18px]"
+                      className="absolute bg-[#010C29] shadow-md mt-[18px]"
                       onMouseLeave={() => handleMouseLeave(index)}
                     >
                       {item.dropdown.map((subitem, subindex) => (
@@ -158,8 +158,8 @@ export const NavBar = ({ section, setSection }) => {
                             onClick={() => setSection(subitem?.name)}
                             className={`${
                               location.pathname === subitem.link
-                                ? "text-white"
-                                : "text-custom-blue hover:text-white"
+                                ? "text-custom-blue"
+                                : "text-white hover:text-custom-blue"
                             } cursor-pointer`}
                           >
                             {subitem.name}
