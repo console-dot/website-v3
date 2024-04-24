@@ -60,12 +60,12 @@ export const checksCategories =[
     {
         title:'Software Engineering',
         numbers:24,
-        check:true
+        check:false
     },
     {
         title:'Technology',
         numbers:3,
-        check:true
+        check:false
     }
 ]
 

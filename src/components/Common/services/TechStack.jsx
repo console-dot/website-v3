@@ -99,11 +99,11 @@ export const TechStack = ({ data, description }) => {
               </div>
             ) : (
               <div className="grid h-full lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 xxs:grid-cols-2 mt-16 gap-8 items-center">
-                {data[0].icons.map((i,index)=>(
-                    <div key={index} className="flex w-full justify-center">
-                      {i}
-                    </div>
-                  ))}
+                {data[0].icons.map((i, index) => (
+                  <div key={index} className="flex w-full justify-center">
+                    {i}
+                  </div>
+                ))}
               </div>
             )}
           </div>

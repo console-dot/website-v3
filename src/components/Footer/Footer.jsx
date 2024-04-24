@@ -9,11 +9,11 @@ import TwitterIcon from "../../assets/icons/TwitterIcon";
 import CIcon from "../../assets/icons/CIcon";
 import AIcon from "../../assets/icons/AIcon";
 import OIcon from "../../assets/icons/OIcon";
-
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const [page, setPage] = useState("");
   const [data, setData] = useState({});
-
+  const navigate = useNavigate();
   useEffect(() => {
     let url = window.location.pathname;
     setPage(url.substring(url.lastIndexOf("/") + 1));
@@ -80,6 +80,7 @@ const Footer = () => {
               {data?.subHeading}
             </p>
             <button
+            onClick={() => navigate("/contact")}
               type="button"
               className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[2vw] xxs:text-[2vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
             >
