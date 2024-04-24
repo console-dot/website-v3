@@ -63,7 +63,7 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col justify-center md:w-full sm:w-[100%] items-center bg-offwhite ">
-      <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center 2xl:px-28 xl:px-28 lg:px-28 md:px-28 sm:px-12 xs:px-8 xxs:px-4 py-[3rem] relative">
+      {page != 'contact' && <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center 2xl:px-28 xl:px-28 lg:px-28 md:px-28 sm:px-12 xs:px-8 xxs:px-4 py-[3rem] relative">
         <div className="flex justify-center items-center text-center">
           <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
           <img
@@ -88,7 +88,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div>}
 
       <footer className="w-full bg-footerBg text-white py-10 lg:px-20 md:px-10 px-16 mt-[-50px]">
         <div className="container mx-auto flex flex-wrap justify-between items-start mt-20">
