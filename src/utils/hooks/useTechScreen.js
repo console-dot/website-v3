@@ -5,7 +5,7 @@ const useTechScreen = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 695);
+      setIsMobile(window.innerWidth < 767);
     };
 
     handleResize(); // Check on mount
