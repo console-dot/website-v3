@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 
-export const Checks = ({ data, heading }) => {
+export const Checks = ({ data, heading , setCheckedTypeItems, setCheckedCategoryItems, checkedTypeItems, checkedCategoryItems}) => {
   const [rotated, setRotated] = useState(false);
 
   const handleClick = () => {
     setRotated(!rotated);
   };
+
+  const handleCheckboxTypeChange = (value) => {
+    setCheckedTypeItems((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [value]: !prevCheckedItems[value],
+    }));
+  };
+  const handleCheckboxCategoryChange = (value) => {
+    setCheckedCategoryItems((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [value]: !prevCheckedItems[value],
+    }));
+  };
+
+
   return (
     <div className="shadow-md p-2">
       <div className="flex items-center justify-between">
@@ -23,18 +38,20 @@ export const Checks = ({ data, heading }) => {
       {rotated && (
         <>
           {data?.map((i) => (
-            <div>
-              <div class="flex items-center gap-2">
+            <div key={i.value}>
+              <div className="flex items-center gap-2">
                 <input
-                  id="bordered-checkbox-1"
+                  id={`bordered-checkbox-${i.value}`}
                   type="checkbox"
-                  value=""
+                  value={i.value}
                   name="bordered-checkbox"
-                  class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  checked={heading === 'Categories' ? checkedCategoryItems[i.value] : checkedTypeItems[i.value]}
+                  onChange={() => heading === 'Categories' ? handleCheckboxCategoryChange(i.value) : handleCheckboxTypeChange(i.value)}
                 />
                 <label
-                  for="bordered-checkbox-1"
-                  class="w-full py-4 ms-2 text-[16px] font-medium text-webDescrip"
+                  htmlFor={`bordered-checkbox-${i.value}`}
+                  className="w-full py-4 ms-2 text-[16px] font-medium text-webDescrip"
                 >
                   {i.title}
                   <span className="pl-2">{`(${i.numbers})`}</span>

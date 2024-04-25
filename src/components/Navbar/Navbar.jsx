@@ -159,7 +159,7 @@ export const NavBar = ({ section, setSection }) => {
                             className={`${
                               location.pathname === subitem.link
                                 ? "text-custom-blue"
-                                : "text-white hover:text-custom-blue"
+                                : "text-white hover:text-custom-purple"
                             } cursor-pointer`}
                           >
                             {subitem.name}
@@ -175,7 +175,7 @@ export const NavBar = ({ section, setSection }) => {
                   className={`cursor-pointer px-2 py-2 text-white ${
                     location.pathname === item.link
                       ? "bg-[rgb(60,90,133,0.5)] text-[rgb(98,192,209)]"
-                      : "hover:bg-[rgb(60,90,133,0.5)] "
+                      : "hover:bg-[rgb(60,90,133,0.5)] hover:text-[rgb(98,192,209)]"
                   } flex items-center`}
                 >
                   {item.name}
