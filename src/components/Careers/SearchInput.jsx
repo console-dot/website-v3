@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { openPositionData } from "../../constatnts/career";
 import useIsXs from "../../utils/hooks/useIsXs";
 
-export const SearchInput = ({setFilterData}) => {
+export const SearchInput = ({setFilterData,checkedTypeItems, checkedCategoryItems}) => {
   const [searchInput, setSearchInput] = useState("");
 
   const handleInputChange = (event) => {
@@ -27,6 +27,7 @@ export const SearchInput = ({setFilterData}) => {
     setSearchInput("");
     setFilterData([]);
   };
+  console.log(checkedCategoryItems,checkedTypeItems,'asd')
 
 const isXsView = useIsXs();
   return (

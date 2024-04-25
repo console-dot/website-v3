@@ -6,16 +6,14 @@ export const OpenPositions = ({ data, filterData }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
   const newData = filterData ? filterData : data;
-  // Calculate the index of the first and last item of the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = newData?.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Logic to handle pagination click
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-  console.log(currentItems);
+  
   return (
     <div className="flex flex-col gap-8">
       {currentItems.map((i, index) => (

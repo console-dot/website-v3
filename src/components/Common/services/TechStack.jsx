@@ -17,7 +17,7 @@ export const TechStack = ({ data, description }) => {
 
   return (
     <div className="flex w-full mt-12">
-      <div className="bg-white w-full xl:p-12 2xl:p-12 lg:p-12 md:p-4 ">
+      <div className="bg-white w-full xl:p-12 2xl:p-12 lg:p-12 md:p-4 sm:p-4 xs:p-4 xxs:p-2">
         <div className="flex flex-col gap-2 items-center justify-center w-full">
           <h1 className="text-[14px] leading-5 text-custom-purple">
             Tech Stack We Use
