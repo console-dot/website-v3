@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { HomeImage, Test } from "../../assets/images";
+import { LandingBg } from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
-import { StarEffect } from "../../assets/images";
 export const HomeLanding = () => {
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(true); // Set to true by default
@@ -25,14 +24,14 @@ export const HomeLanding = () => {
 
   return (
     <div
-    className="w-full h-full mb-8"
-        style={{
-          backgroundImage: `url(${Test})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className=" flex justify-center items-center pt-4">
+      className="w-full h-full mb-8"
+      style={{
+        backgroundImage: `url(${LandingBg})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "round",
+      }}
+    >
+      <div className=" flex justify-center items-center pt-4">
         <div className="text-center text-white w-[95%] md:w-[50%]">
           <p className="font-poppins text-[20px] md:text-[37px] font-normal leading-none tracking-normal md:mt-12 ">
             WELCOME TO
@@ -107,6 +106,6 @@ export const HomeLanding = () => {
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 };

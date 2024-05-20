@@ -5,9 +5,7 @@ import { TechStack } from "../components/Common/services/TechStack";
 import { WhyChoose } from "../components/Common/services/WhyChoose";
 import LandingPage from "../components/Common/services/LandingPage";
 import { processCardsUiUx } from "../constatnts/ProcessCardsData";
-import {
-  techStackDataUiUx,
-} from "../constatnts/techStackData";
+import { techStackDataUiUx } from "../constatnts/techStackData";
 import { whyChooseDataUiUx } from "../constatnts/whyChooseData";
 import { landingPageDataUiUx } from "../constatnts/landingPageData";
 
@@ -20,7 +18,9 @@ export const UiUxDevelopment = () => {
           {" "}
           <TopComponent
             title={"Services"}
-            heading={"Crafting Experiences, Inspiring Engagement: ConsoleDot's UI/UX Solutions"}
+            heading={
+              "Crafting Experiences, Inspiring Engagement: ConsoleDot's UI/UX Solutions"
+            }
             description={
               "Welcome to ConsoleDot's UI/UX design studio, where every pixel tells a story. Elevate your digital presence with user-centric designs that not only captivate your audience but also drive meaningful engagement. Choose ConsoleDot for UI/UX solutions that blend aesthetics with functionality, creating seamless and delightful user experiences."
             }
@@ -36,7 +36,9 @@ export const UiUxDevelopment = () => {
         <WhyChoose
           heading={"Why Choose ConsoleDot for UI/UX Design?"}
           data={whyChooseDataUiUx}
-          cardsInRow={"lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"}
+          cardsInRow={
+            "lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"
+          }
         />
 
         <TechStack

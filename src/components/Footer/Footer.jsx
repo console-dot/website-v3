@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { imageGit, logowhite } from "../../assets/images";
+import { footerImg, imageGit, logowhite } from "../../assets/images";
 import { Contact } from "../../assets/images";
 import { Mail } from "../../assets/images";
 import { Address } from "../../assets/images";
@@ -62,14 +62,14 @@ const Footer = () => {
   }, [page]);
 
   return (
-    <div className="flex flex-col justify-center md:w-full sm:w-[100%] items-center bg-offwhite ">
+    <div className="flex flex-col justify-center md:w-full sm:w-[100%] items-center bg-backgroundColor">
       {page != 'contact' && <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center 2xl:px-28 xl:px-28 lg:px-28 md:px-28 sm:px-12 xs:px-8 xxs:px-4 py-[3rem] relative">
         <div className="flex justify-center items-center text-center">
           <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
           <img
-            src={imageGit}
+            src={footerImg}
             alt="Background Image"
-            className="absolute inset-0 object-cover w-full h-full opacity-20"
+            className="absolute inset-0 object-cover w-full h-full opacity-[81%]"
           />
 
           <div className="relative z-10 flex flex-col items-center xs:w-full xs:justify-center gap-4">

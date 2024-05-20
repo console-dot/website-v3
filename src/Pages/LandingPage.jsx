@@ -8,7 +8,7 @@ import { OSC } from "../components/OurServicesCard/OSC";
 export default function LandingPage() {
   return (
     <>
-      <div className="bg-offwhite w-[100%]">
+      <div className="bg-backgroundColor w-[100%]">
         <div className="w-[100%] ">
         <HomeLanding />
         </div>

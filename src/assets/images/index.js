@@ -45,7 +45,7 @@ import CsBottomBorder from "./CsBottomBorder.png";
 import FaqBg from "./FaqBg.png";
 import CustomSoftBg from "./customeSoftBg.png";
 import DashedBg from "./DashedBg.png";
-import LPheroimgbg from "./LPheroimgbg.png"
+import LPheroimgbg from "./LPheroimgbg.png";
 import ourserviceshover from "./ourserviceshover.png";
 import BlockChainDev1 from "./BlockChainDev1.png";
 import BlockChainDev2 from "./BlockChainDev2.png";
@@ -69,31 +69,34 @@ import NotFoundImg from "./NotFoundImg.gif";
 import HomeImage from "./homeImage.svg";
 import HomeImage2 from "./homeimg2.png";
 import HomeTop2 from "./hometop.svg";
-import Offshore32 from './offshore3-2.svg';
-import OffshoreBg from './offshorebg.svg';
-import Test from './test.png';
-export {NotFoundImg};
-export {uiuxdev1};
-export {uiuxdev2};
-export {uiuxdev3};
-export {uiuxdev4};
-export {aidev1};
-export {aidev2};
-export {aidev3};
-export {aidev4};
-export {mobdev1};
-export {mobdev2};
-export {mobdev3};
-export {mobdev4};
-export {mobdev5};
-export {BlockChainDev1};
-export {BlockChainDev2};
-export {BlockChainDev3};
-export {BlockChainDev4};
-export {BlockChainDev5};
+import Offshore32 from "./offshore3-2.svg";
+import OffshoreBg from "./offshorebg.svg";
+import Test from "./test.png";
+import LandingBg from "./LandingBg.png";
+import footerImg from "./footerImage.png";
+
+export { NotFoundImg };
+export { uiuxdev1 };
+export { uiuxdev2 };
+export { uiuxdev3 };
+export { uiuxdev4 };
+export { aidev1 };
+export { aidev2 };
+export { aidev3 };
+export { aidev4 };
+export { mobdev1 };
+export { mobdev2 };
+export { mobdev3 };
+export { mobdev4 };
+export { mobdev5 };
+export { BlockChainDev1 };
+export { BlockChainDev2 };
+export { BlockChainDev3 };
+export { BlockChainDev4 };
+export { BlockChainDev5 };
 export { DashedBg };
-export {LPheroimgbg}
-export {ourserviceshover} ;
+export { LPheroimgbg };
+export { ourserviceshover };
 export { offshoreimg2 };
 export { offshoreimg3 };
 export { offshoreimg1 };
@@ -140,5 +143,13 @@ export {
   CsBottomBorder,
   FaqBg,
   CustomSoftBg,
-  ContactBg,HomeImage, HomeImage2, HomeTop2 ,Offshore32, Test,OffshoreBg
+  ContactBg,
+  HomeImage,
+  HomeImage2,
+  HomeTop2,
+  Offshore32,
+  Test,
+  OffshoreBg,
+  LandingBg,
+  footerImg
 };

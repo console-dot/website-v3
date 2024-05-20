@@ -24,12 +24,12 @@ export const Preposition = ({ title, heading, proposition }) => {
           <div className="flex justify-start items-start transform rotate-180 lg:mt-12 xl:mt-12 2xl:mt-12 md:mt-0 sm:mt-0 xs:mt-0 xxs:mt-0">
             <Inverted2 />
           </div>
-          <div className="flex w-full h-full justify-center items-center">
+          <div className="flex w-[70%] h-full justify-center items-center">
             <p className="text-[16px] text-justify xxs:text-start leading-6 text-webDescrip sm:mt-4 xs:mt-4 xxs:mt-6">
               {proposition}
             </p>
           </div>
-          <div className=" absolute lg:left-[100%] xl:left-[100%] 2xl:left-[100%] md:left-[100%] sm:left-[100%] xs:left-[86%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
+          <div className=" absolute lg:left-[100%] xl:left-[90%] 2xl:left-[100%] md:left-[100%] sm:left-[100%] xs:left-[86%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
             <Inverted2 />
           </div>
         </div>

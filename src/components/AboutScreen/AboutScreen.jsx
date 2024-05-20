@@ -5,7 +5,7 @@ import { HomeTop } from "../../assets/icons";
 export const AboutScreen = () => {
   return (
     <div className="w-[100%] flex  mt-6 md:mt-16 ">
-      <div className="flex flex-wrap  bg-offwhite   ">
+      <div className="flex flex-wrap  bg-backgroundColor">
         <div className="w-full md:w-1/2 md:p-20 p-8">
           <p className="text-custom-blue font-poppins md:text-[16px] text-[12px] font-normal leading-none tracking-normal">
             About the company
@@ -34,7 +34,7 @@ export const AboutScreen = () => {
                 className=" w-full h-auto"
                 src={HomeTop2}
                 alt="Img not found"
-                style={{  }}
+                style={{}}
               />
             </div>
           </div>
