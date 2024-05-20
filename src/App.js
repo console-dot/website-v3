@@ -20,20 +20,25 @@ import { Contact } from "./Pages/Contact";
 import { Services } from "./Pages/Services";
 import { useEffect, useState } from "react";
 import { PageNotFound } from "./Pages/NotFound/PageNotFound";
+import ScrollToTop from "./Pages/ScrollToTop";
 
 function App() {
   const [section, setSection] = useState("");
   useEffect(() => console.log(section), [section]);
   return (
     <Router>
+      <ScrollToTop />
       <div className="bg-backgroundColor">
         <Header />
-        <NavBar setSection={setSection} /> 
+        <NavBar setSection={setSection} />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Offshoringmodels" element={<OffshoringModels />} />
           <Route path="/web-app-development" element={<WebDevelopment />} />
-          <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
+          <Route
+            path="/mobile-app-development"
+            element={<MobileAppDevelopment />}
+          />
           <Route path="/blockchain" element={<BlockchainDevelopment />} />
           <Route path="/ai" element={<AIDevelopment />} />
           <Route path="/arvr" element={<ArVrDevelopment />} />
