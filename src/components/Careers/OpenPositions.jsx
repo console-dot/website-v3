@@ -19,7 +19,7 @@ export const OpenPositions = ({ data, filterData }) => {
       {currentItems.map((i, index) => (
         <div
           key={index}
-          className="flex flex-col justify-between shadow-md lg:p-4 xl:p-4 2xl:p-4 md:p-2 sm:p-2 xs:p-2 xxs:p-2 w-full"
+          className="flex flex-col justify-between shadow-md lg:p-4 xl:p-4 2xl:p-4 md:p-2 sm:p-2 xs:p-2 xxs:p-2 w-full bg-white"
         >
           <div className="flex w-full lg:gap-16 xl:gap-16 2xl:gap-16 md:gap-16 sm:gap-16 xs:gap-4 xxs:gap-4 ">
             <div className="w-full">
