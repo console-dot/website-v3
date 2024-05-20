@@ -79,3 +79,4 @@ export * from "./CloudCompIcon1";
 export * from "./HomeTop";
 export * from "./OffShoreTop";
 export * from "./Offshore2";
+export * from './CheckIcon'

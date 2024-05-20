@@ -7,8 +7,12 @@ import {
   RoadmaoDevIcon,
   TickIcon,
 } from "../../assets/icons";
+import CheckIcon from "../../assets/icons/CheckIcon";
 
 export const ProductResearchKeyComp = () => {
+  const gradientStyle = {
+    background: 'linear-gradient(180deg, #0E7789 0%, #3C5A85 100%)'
+  };
   const data = [
     {
       id: 1,
@@ -66,7 +70,7 @@ export const ProductResearchKeyComp = () => {
             className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-4 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed bg-white`}
           >
             <div className="py-[40px] xs:py-4 xxs:py-4 xxs:flex p-4 lg-w-full xxs:justify-center  xs:justify-center">
-              <div className="w-[80px] h-[80px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
+              <div style={gradientStyle} className="w-[80px] h-[80px] border-[5px] border-fromclr bg-custom-purple flex items-center justify-center rounded-full">
                 {i.icon}
               </div>
             </div>
@@ -78,16 +82,16 @@ export const ProductResearchKeyComp = () => {
               </div>
               <div className={`flex gap-4 flex-row `}>
                 <div className=" ">
-                  <div className="w-[30px] h-[30px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
-                    <TickIcon />
+                  <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full">
+                    <CheckIcon />
                   </div>
                 </div>
                 <p className={`text-[14px]`}>{i.para1}</p>
               </div>
               <div className={`flex gap-4 flex-row`}>
                 <div className=" ">
-                  <div className="w-[30px] h-[30px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
-                    <TickIcon />
+                  <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full">
+                    <CheckIcon />
                   </div>
                 </div>
                 <p className={`text-[14px]`}>{i.para2}</p>
