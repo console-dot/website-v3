@@ -21,39 +21,56 @@ import { Services } from "./Pages/Services";
 import { useEffect, useState } from "react";
 import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 import ScrollToTop from "./Pages/ScrollToTop";
+import Loader from "./Pages/Loader/Loader";
 
 function App() {
   const [section, setSection] = useState("");
+  const [showLoader, setShowLoader] = useState(true);
+
   useEffect(() => console.log(section), [section]);
+
+  useEffect(() => {
+    // Hide the loader after 5 seconds
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 50000);
+
+    // Clear the timer on component unmount to prevent memory leaks
+    return () => clearTimeout(timer);
+  }, []); // Run only once on component mount
+
   return (
     <Router>
+      {showLoader && <Loader />}
       <ScrollToTop />
-      <div className="bg-backgroundColor">
-        <Header />
-        <NavBar setSection={setSection} />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/Offshoringmodels" element={<OffshoringModels />} />
-          <Route path="/web-app-development" element={<WebDevelopment />} />
-          <Route
-            path="/mobile-app-development"
-            element={<MobileAppDevelopment />}
-          />
-          <Route path="/blockchain" element={<BlockchainDevelopment />} />
-          <Route path="/ai" element={<AIDevelopment />} />
-          <Route path="/arvr" element={<ArVrDevelopment />} />
-          <Route path="/ui-ux" element={<UiUxDevelopment />} />
-          <Route path="/product-research" element={<ProductResearch />} />
-          <Route path="/case-study" element={<CaseStudy />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/faqs" element={<Faqs />} />
-          <Route path="/custom-software" element={<CustomSoftware />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/Services" element={<Services item={section} />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-        <Footer />
-      </div>
+      {!showLoader && (
+        <div className="bg-backgroundColor">
+          <Header />
+          <NavBar setSection={setSection} />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/Offshoringmodels" element={<OffshoringModels />} />
+            <Route path="/web-app-development" element={<WebDevelopment />} />
+            <Route
+              path="/mobile-app-development"
+              element={<MobileAppDevelopment />}
+            />
+            <Route path="/blockchain" element={<BlockchainDevelopment />} />
+            <Route path="/ai" element={<AIDevelopment />} />
+            <Route path="/arvr" element={<ArVrDevelopment />} />
+            <Route path="/ui-ux" element={<UiUxDevelopment />} />
+            <Route path="/product-research" element={<ProductResearch />} />
+            <Route path="/case-study" element={<CaseStudy />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/faqs" element={<Faqs />} />
+            <Route path="/custom-software" element={<CustomSoftware />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/Services" element={<Services item={section} />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <Footer />
+        </div>
+      )}
     </Router>
   );
 }
