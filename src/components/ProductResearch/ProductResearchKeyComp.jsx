@@ -63,7 +63,7 @@ export const ProductResearchKeyComp = () => {
       <div className="grid xl:grid-cols-2 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8 mt-8">
         {data?.map((i) => (
           <div
-            className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-4 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed`}
+            className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-4 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed bg-white`}
           >
             <div className="py-[40px] xs:py-4 xxs:py-4 xxs:flex p-4 lg-w-full xxs:justify-center  xs:justify-center">
               <div className="w-[80px] h-[80px] border-2 border-webDescrip bg-dottedBorder flex items-center justify-center rounded-full">
