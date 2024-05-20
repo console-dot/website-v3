@@ -3,6 +3,9 @@ import { Divider } from "../../../constatnts/Divider";
 import { UserCentricIcon } from "../../../assets/icons";
 
 export const WhyChoose = ({ heading, data, cardsInRow }) => {
+  const gradientStyle = {
+    background: "linear-gradient(180deg, #0E7789 0%, #3C5A85 100%)",
+  };
   return (
     <div className="w-full mt-12">
       <div className="flex flex-col text-center gap-2 items-center justify-center w-full">
@@ -20,7 +23,7 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
         {data?.map((i) => (
           <div className=" flex flex-col bg-white border-2 border-transparent  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4">
             <div className="flex flex-col items-center justify-center p-8 sm:p-4 xs:p-4 xxs:p-2 gap-4">
-              <div className="w-[80px] h-[80px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
+              <div style={gradientStyle} className="w-[80px] h-[80px] bg-dottedBorder rounded-full flex items-center justify-center mb-4">
                 {i?.icon}
               </div>
 

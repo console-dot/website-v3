@@ -9,6 +9,7 @@ import {
   offshoreimg3,
 } from "../../assets/images";
 import { OffShoreTop, Offshore2 } from "../../assets/icons";
+import CheckIcon from "../../assets/icons/CheckIcon";
 
 export const OffshoreModel = () => {
   return (
@@ -47,31 +48,25 @@ export const OffshoreModel = () => {
                 Advantages:
               </p>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Flexibility to adapt to changing project needs.
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Real-time tracking and reporting.
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Cost-effectiveness for short-term projects.
                 </span>
@@ -113,31 +108,25 @@ export const OffshoreModel = () => {
                 Advantages:
               </p>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Budget certainty with no surprises.
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Clear project milestones and deliverables.
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Suitable for projects with a stable and known scope.
                 </span>
@@ -179,31 +168,25 @@ export const OffshoreModel = () => {
                 Advantages:
               </p>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Gradual transition and knowledge transfer.
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Complete control and ownership over the project.
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <img
-                  src={circletickicon}
-                  alt="circletickicon"
-                  className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6"
-                />
+                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                  <CheckIcon />
+                </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
                   Risk mitigation through ConsoleDot's expertise.
                 </span>

@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { circletickicon } from "../../assets/images";
+import CheckIcon from "../../assets/icons/CheckIcon";
 
 const Card = ({ heading, description }) => {
   return (
@@ -17,11 +18,14 @@ const Card = ({ heading, description }) => {
             <li key={index} className="flex items-center mb-2 text-custom-grey">
               {" "}
               {/* Added text-custom-grey class */}
-              <img
+              {/* <img
                 src={circletickicon}
                 alt="circletickicon"
                 className="mr-4"
-              />{" "}
+              />{" "} */}
+              <div className="mr-4">
+                <CheckIcon />
+              </div>
               <span>{point}</span>
             </li>
           ))}
