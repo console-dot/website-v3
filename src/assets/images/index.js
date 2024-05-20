@@ -73,6 +73,7 @@ import Offshore32 from "./offshore3-2.svg";
 import OffshoreBg from "./offshorebg.svg";
 import Test from "./test.png";
 import LandingBg from "./LandingBg.png";
+import footerImg from "./footerImage.png";
 
 export { NotFoundImg };
 export { uiuxdev1 };
@@ -150,4 +151,5 @@ export {
   Test,
   OffshoreBg,
   LandingBg,
+  footerImg
 };
