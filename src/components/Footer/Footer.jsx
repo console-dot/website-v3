@@ -11,9 +11,11 @@ import AIcon from "../../assets/icons/AIcon";
 import OIcon from "../../assets/icons/OIcon";
 import { useNavigate } from "react-router-dom";
 import "./Footer.css";
+import useIsMobile from "../../utils/hooks/useIsMobile";
 const Footer = () => {
   const [page, setPage] = useState("");
   const [data, setData] = useState({});
+  const isMobile = useIsMobile();
   const navigate = useNavigate();
   useEffect(() => {
     let url = window.location.pathname;
@@ -52,6 +54,9 @@ const Footer = () => {
       case "Offshoringmodels":
         setData(footerData.offshoringModels);
         break;
+      case "careers":
+        setData(footerData.careers);
+        break;
       default:
         setData({
           heading: "Inquire Now",
@@ -84,9 +89,9 @@ const Footer = () => {
               <button
                 onClick={() => navigate("/contact")}
                 type="button"
-                className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[2vw] xxs:text-[2vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+                className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[3vw] xs:text-[3vw] xss:text-[3vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-webdevHover xs:bg-webdevHover xss:bg-webdevHover border xl:border-white lg:border-white md:border-white sm:border-webdevHover xs:border-webdevHover xss:border-webdevHover hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
               >
-                {data?.btnText}
+                {isMobile ? "Let's Talk ConsoleDot!" : data?.btnText}
               </button>
             </div>
           </div>
