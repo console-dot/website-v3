@@ -25,6 +25,8 @@ import Loader from "./Pages/Loader/Loader";
 import { PreLoader } from "./assets/images";
 import Preloader from "./Pages/PreLoader/PreLoader";
 import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
+import { CaseStudies } from "./Pages";
+import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 
 function App() {
   const [section, setSection] = useState("");
@@ -71,6 +73,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/Services" element={<Services item={section} />} />
             <Route path="/Testimonials" element={<TestimonialsAll />} />
+            <Route path="/CaseStudies" element={<CaseStudies />} />
+            <Route path="/CaseStudies/:title" element={<CardCaseStudy />} />
+            
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />

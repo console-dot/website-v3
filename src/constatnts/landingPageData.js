@@ -13,3 +13,4 @@ export   const landingPageDataFaqs={topHeading:'FAQs',midHeading:"Frequently ask
 export   const landingPageDataCustomSoft={topHeading:'Our Services',midHeading:"Custom Software Development", bottomHeading:"Home > Services > Custom Software Development",backgroundImage: CustomSoftBg}
 export   const landingPageDataContact={topHeading:'Contact',midHeading:"Contact us", bottomHeading:"",backgroundImage: ContactBg}
 export   const landingPageDataTestimonials={topHeading:'Testimonials',midHeading:"What they say", bottomHeading:"Home > Testimonials",backgroundImage: TestimonialsBG}
+export   const landingPageDataCaseStudies={topHeading:'Join Us',midHeading:"Case Studies", bottomHeading:"Home > Home > Case-Studies",backgroundImage: CaseStudyBg}

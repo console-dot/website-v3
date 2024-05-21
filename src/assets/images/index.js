@@ -76,8 +76,21 @@ import LandingBg from "./LandingBg.png";
 import footerImg from "./footerImage.png";
 import PreLoader from "./PreLoader.png";
 import TestimonialsBG from "./TestimonialsBG.png";
+import execSummaryImage from "./execSummaryImage.png";
+import projectOverviewImage from "./projectOverviewImage.png";
+import problemStatementImage from "./problemStatementImage.png";
+import solutionImage from "./solutionImage.png";
+import developmentProcessImage from "./developmentProcessImage.png";
+import challengesFacedImage from "./challengesFacedImage.png";
 
 
+
+export {developmentProcessImage };
+export {challengesFacedImage };
+export {solutionImage };
+export {problemStatementImage};
+export {projectOverviewImage};
+export { execSummaryImage };
 export {TestimonialsBG};
 export { PreLoader };
 export { NotFoundImg };
