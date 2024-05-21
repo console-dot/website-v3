@@ -36,13 +36,16 @@ module.exports = {
       ],
       screens: {
         xxs: "2px",
+        xss: "375px", // Correct
         xs: "320px",
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        tech: "540px",
-        xl: "1280px",
-        "2xl": "1536px",
+        sm: "640px", // Correct
+        md: "768px", // Correct
+        lg: "1024px", // Correct
+        "2lg": "1163px", // Correct
+        // tech: "540px",
+        xl: "1280px", // Correct
+        "2xl": "1536px", // Correct
+        "3xl": "1868px", // Correct
       },
       borderWidth: {
         "custom-border-w-3": "8px", // Add custom border width here, adjust as needed
