@@ -10,9 +10,11 @@ import CIcon from "../../assets/icons/CIcon";
 import AIcon from "../../assets/icons/AIcon";
 import OIcon from "../../assets/icons/OIcon";
 import { useNavigate } from "react-router-dom";
+import useIsMobile from "../../utils/hooks/useIsMobile";
 const Footer = () => {
   const [page, setPage] = useState("");
   const [data, setData] = useState({});
+  const isMobile = useIsMobile();
   const navigate = useNavigate();
   useEffect(() => {
     let url = window.location.pathname;
@@ -51,6 +53,9 @@ const Footer = () => {
       case "Offshoringmodels":
         setData(footerData.offshoringModels);
         break;
+      case "careers":
+        setData(footerData.careers);
+        break;
       default:
         setData({
           heading: "Inquire Now",
@@ -63,32 +68,34 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col justify-center md:w-full sm:w-[100%] items-center bg-backgroundColor">
-      {page != 'contact' && <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center 2xl:px-28 xl:px-28 lg:px-28 md:px-28 sm:px-12 xs:px-8 xxs:px-4 py-[3rem] relative">
-        <div className="flex justify-center items-center text-center">
-          <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
-          <img
-            src={footerImg}
-            alt="Background Image"
-            className="absolute inset-0 object-cover w-full h-full opacity-[81%]"
-          />
+      {page != "contact" && (
+        <div className="bg-gradient-to-r from-custom-blue to-custom-purple w-[90%] flex flex-col justify-center items-center 2xl:px-28 xl:px-28 lg:px-28 md:px-28 sm:px-12 xs:px-8 xxs:px-4 py-[3rem] relative">
+          <div className="flex justify-center items-center text-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-custom-blue to-custom-purple"></div>
+            <img
+              src={footerImg}
+              alt="Background Image"
+              className="absolute inset-0 object-cover w-full h-full opacity-[81%]"
+            />
 
-          <div className="relative z-10 flex flex-col items-center xs:w-full xs:justify-center gap-4">
-            <h2 className="font-bold lg:text-[28px] md:text-[28px] sm:text-[16px] text-center xs:text-[16px] sm:text-center text-white xs:w-full font-poppins">
-              {data?.heading?.toUpperCase()}
-            </h2>
-            <p className="text-white text-center lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-poppins ">
-              {data?.subHeading}
-            </p>
-            <button
-            onClick={() => navigate("/contact")}
-              type="button"
-              className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[2vw] xxs:text-[2vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center bg-transparent border border-white hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
-            >
-              {data?.btnText}
-            </button>
+            <div className="relative z-10 flex flex-col items-center xs:w-full xs:justify-center gap-4">
+              <h2 className="font-bold lg:text-[28px] md:text-[28px] sm:text-[16px] text-center xs:text-[16px] sm:text-center text-white xs:w-full font-poppins">
+                {data?.heading?.toUpperCase()}
+              </h2>
+              <p className="text-white text-center lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-poppins ">
+                {data?.subHeading}
+              </p>
+              <button
+                onClick={() => navigate("/contact")}
+                type="button"
+                className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[3vw] xs:text-[3vw] xss:text-[3vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-webdevHover xs:bg-webdevHover xss:bg-webdevHover border xl:border-white lg:border-white md:border-white sm:border-webdevHover xs:border-webdevHover xss:border-webdevHover hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+              >
+                {isMobile ? "Let's Talk ConsoleDot!" : data?.btnText}
+              </button>
+            </div>
           </div>
         </div>
-      </div>}
+      )}
 
       <footer className="w-full bg-footerBg text-white py-10 lg:px-20 md:px-10 px-16 mt-[-50px]">
         <div className="container mx-auto flex flex-wrap justify-between items-start mt-20">
