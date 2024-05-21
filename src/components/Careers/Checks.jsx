@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 
-export const Checks = ({ data, heading , setCheckedTypeItems, setCheckedCategoryItems, checkedTypeItems, checkedCategoryItems}) => {
-  const [rotated, setRotated] = useState(false);
+export const Checks = ({
+  data,
+  heading,
+  setCheckedTypeItems,
+  setCheckedCategoryItems,
+  checkedTypeItems,
+  checkedCategoryItems,
+}) => {
+  const [rotated, setRotated] = useState(true);
 
   const handleClick = () => {
     setRotated(!rotated);
@@ -21,11 +28,10 @@ export const Checks = ({ data, heading , setCheckedTypeItems, setCheckedCategory
     }));
   };
 
-
   return (
-    <div className="shadow-md p-2">
+    <div className="xl:shadow-md lg:shadow-md md:shadow-md p-2">
       <div className="flex items-center justify-between">
-        <h2 className="text-[16px] font-poppins leading-6 text-checks font-bold">
+        <h2 className="xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] font-poppins leading-6 text-checks font-bold">
           {heading}
         </h2>
         <div onClick={handleClick} className="cursor-pointer">
@@ -46,12 +52,20 @@ export const Checks = ({ data, heading , setCheckedTypeItems, setCheckedCategory
                   value={i.value}
                   name="bordered-checkbox"
                   className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  checked={heading === 'Categories' ? checkedCategoryItems[i.value] : checkedTypeItems[i.value]}
-                  onChange={() => heading === 'Categories' ? handleCheckboxCategoryChange(i.value) : handleCheckboxTypeChange(i.value)}
+                  checked={
+                    heading === "Categories"
+                      ? checkedCategoryItems[i.value]
+                      : checkedTypeItems[i.value]
+                  }
+                  onChange={() =>
+                    heading === "Categories"
+                      ? handleCheckboxCategoryChange(i.value)
+                      : handleCheckboxTypeChange(i.value)
+                  }
                 />
                 <label
                   htmlFor={`bordered-checkbox-${i.value}`}
-                  className="w-full py-4 ms-2 text-[16px] font-medium text-webDescrip"
+                  className="w-full py-4 ms-2 xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] font-medium text-webDescrip"
                 >
                   {i.title}
                   <span className="pl-2">{`(${i.numbers})`}</span>
