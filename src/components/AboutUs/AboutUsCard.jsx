@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Inverted2 } from "../../assets/icons";
 
 const settings = {
   dots: true,
@@ -81,12 +82,8 @@ const Card = () => {
             onMouseOut={() => setHovered(false)}
             // Adjusting card width and height with margin
           >
-            <div className="flex items-center justify-center h-full">
-              <img
-                src={cardsymbol}
-                alt="profile"
-                className="h-[20%] w-[20%] object-cover"
-              />
+            <div className="flex  justify-center  mb-4">
+              <Inverted2  className="h-[20%] w-[20%] object-cover "/>
             </div>
             <p className="text-custom-grey text-center my-2">{d.text}</p>{" "}
             {/* Adjusting text size */}

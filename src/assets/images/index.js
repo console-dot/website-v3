@@ -74,7 +74,12 @@ import OffshoreBg from "./offshorebg.svg";
 import Test from "./test.png";
 import LandingBg from "./LandingBg.png";
 import footerImg from "./footerImage.png";
+import PreLoader from "./PreLoader.png";
+import TestimonialsBG from "./TestimonialsBG.png";
 
+
+export {TestimonialsBG};
+export { PreLoader };
 export { NotFoundImg };
 export { uiuxdev1 };
 export { uiuxdev2 };

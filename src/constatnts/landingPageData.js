@@ -1,4 +1,4 @@
-import { AIBg, ArVrBg, BlockchainBG, CaseStudyBg, ContactBg, CustomSoftBg, FaqBg, MobdevBg, PrductResearchBg, UiUxBg, WebBg } from "../assets/images"
+import { AIBg, ArVrBg, BlockchainBG, CaseStudyBg, ContactBg, CustomSoftBg, FaqBg, MobdevBg, PrductResearchBg, UiUxBg, WebBg,TestimonialsBG } from "../assets/images"
 
 export   const landingPageDataMob={topHeading:'Our Services', midHeading:"MOBILE APP DEVELOPMENT",bottomHeading:"Home > Services > Mobile App Development",backgroundImage: MobdevBg}
 export   const landingPageDataWeb={topHeading:'Our Services', midHeading:"WEB DEVELOPMENT",bottomHeading:"Home > Services > Web Development",backgroundImage: WebBg}
@@ -12,3 +12,4 @@ export   const landingPageDataCareers={topHeading:'Join Us',midHeading:"Careers"
 export   const landingPageDataFaqs={topHeading:'FAQs',midHeading:"Frequently asked questions", bottomHeading:"Home > FAQs",backgroundImage: FaqBg}
 export   const landingPageDataCustomSoft={topHeading:'Our Services',midHeading:"Custom Software Development", bottomHeading:"Home > Services > Custom Software Development",backgroundImage: CustomSoftBg}
 export   const landingPageDataContact={topHeading:'Contact',midHeading:"Contact us", bottomHeading:"Home > Contact us",backgroundImage: ContactBg}
+export   const landingPageDataTestimonials={topHeading:'Testimonials',midHeading:"What they say", bottomHeading:"Home > Testimonials",backgroundImage: TestimonialsBG}

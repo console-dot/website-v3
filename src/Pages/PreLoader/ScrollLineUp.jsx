@@ -1,5 +1,5 @@
 import React from "react";
-import "./ScrollLine.css";
+import "./Preloader.css";
 
 const ScrollLineUp = () => {
   return (

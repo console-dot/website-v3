@@ -1,9 +1,9 @@
 import React from "react";
-import "./ScrollLine.css";
+import "./Preloader.css";
 
 const ScrollLine = () => {
   return (
-    <div className="flex justify-center items-center mx-auto h-[12rem] relative p-0">
+    <div className="flex justify-center items-center mx-auto h-[12rem] mt-2 relative p-0">
       <span className="hscroll-line"></span>
     </div>
   );
