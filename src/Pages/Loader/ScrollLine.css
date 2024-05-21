@@ -23,8 +23,9 @@
 }
 
 .hscroll-line::after {
-  background: black;
-  animation: move 3s infinite;
+  background: rgb(27, 111, 136);
+  animation: move 4s infinite;
+  z-index: -2;
 }
 
 @keyframes move {
@@ -65,7 +66,8 @@
 
 .upscroll-line::after {
   background: rgb(27, 111, 136);
-  animation: moveReverse 3s infinite;
+  animation: moveReverse 4s infinite;
+  z-index: -2;
 }
 
 @keyframes moveReverse {

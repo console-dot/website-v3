@@ -1,7 +1,9 @@
 import React from "react";
 import Card, { CardArray} from "./AboutUsCard"; // Import the CardArray component
+import { useNavigate } from "react-router-dom";
 
 export const AboutUs = () => {
+  const navigate = useNavigate();
   return (
     <div className="">
       <div className="flex flex-col items-center  w-[100%]  mt-6 md:mt-16 h-auto">
@@ -24,6 +26,7 @@ export const AboutUs = () => {
         <div className="flex md:justify-end justify-center md:pt-3 pt-10 ">
         <button
           type="button"
+          onClick={() =>navigate("/testimonials")} 
           className="text-custom-purple just border-[0.5px]bg-custom-lightBlue  rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue  font-Lato font-medium"
         >
           View All

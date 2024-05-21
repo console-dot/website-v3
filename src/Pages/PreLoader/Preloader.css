@@ -1,0 +1,192 @@
+/* Basic styles for the preloader */
+.preloader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 50;
+  }
+  
+  .preloader-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .vertical-line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(27, 111, 136);
+    animation: breathing 2s infinite;
+  }
+   */
+  .logo {
+    width: 100px;
+    animation: breathing 2s infinite;
+  }
+  
+  .fade-out .vertical-line {
+    animation: slideOutLeft 1s forwards;
+  }
+  
+  .fade-out .logo {
+    animation: zoomIn 1s forwards;
+  }
+  
+  /* .fade-out::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(27, 111, 136);
+    animation: slideOutRight 1s forwards;
+  }
+   */
+  /* Keyframes for animations */
+  @keyframes breathing {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    to {
+      transform: translateX(-50vw);
+    }
+  }
+  
+  @keyframes slideOutRight {
+    to {
+      transform: translateX(50vw);
+    }
+  }
+  
+  @keyframes zoomIn {
+    to {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
+  .hscroll-line {
+    position: absolute;
+    top: 100px;
+    height: 2px;
+    width: 200px;
+    overflow: hidden;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+  }
+  
+  .hscroll-line::before,
+  .hscroll-line::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+  }
+  
+  .hscroll-line:before {
+    background: #ffffff3b;
+  }
+  
+  .hscroll-line::after {
+    background: rgb(27, 111, 136);
+    animation: move 4s infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate3d(-200%, 0, 0);
+    }
+    60% {
+      transform: translate3d(100%, 0, 0);
+    }
+    100% {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  
+  /* scroll Up */
+  .upscroll-line {
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    overflow: hidden;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+  }
+  
+  .upscroll-line::before,
+  .upscroll-line::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+  }
+  
+  .upscroll-line:before {
+    background: #ffffff3b;
+  }
+  
+  .upscroll-line::after {
+    background: rgb(27, 111, 136);
+    animation: moveReverse 4s infinite;
+    z-index: -2;
+  }
+  
+  @keyframes moveReverse {
+    0% {
+      transform: translate3d(100%, 0, 0);
+    }
+    60% {
+      transform: translate3d(-200%, 0, 0);
+    }
+    100% {
+      transform: translate3d(-200%, 0, 0);
+    }
+  }
+  
+  /* Loading */
+  /* Breathing effect animation */
+  @keyframes breathing {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply breathing animation to .breathing-text */
+  .breathing-text {
+    animation: breathing 3s infinite;
+  }
+  
+  /* Additional styles for loader container */
+  .loader-container {
+    position: relative;
+    height: 100vh; /* Adjust as needed */
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  

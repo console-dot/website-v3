@@ -8,7 +8,7 @@ export default function LandingPage({data}) {
       backgroundImage: `url(${data?.backgroundImage})`, // Using string interpolation for the URL
       opacity: "2", // Set opacity to 40%
       backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
+      backgroundRepeat: "round",
       width:"100%"
     }} >
       {/* <div

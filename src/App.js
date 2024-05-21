@@ -22,18 +22,21 @@ import { useEffect, useState } from "react";
 import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 import ScrollToTop from "./Pages/ScrollToTop";
 import Loader from "./Pages/Loader/Loader";
+import { PreLoader } from "./assets/images";
+import Preloader from "./Pages/PreLoader/PreLoader";
+import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
 
 function App() {
   const [section, setSection] = useState("");
   const [showLoader, setShowLoader] = useState(true);
 
-  useEffect(() => console.log(section), [section]);
+  // useEffect(() => console.log(section), [section]);
 
   useEffect(() => {
     // Hide the loader after 5 seconds
     const timer = setTimeout(() => {
       setShowLoader(false);
-    }, 50000);
+    }, 3000);
 
     // Clear the timer on component unmount to prevent memory leaks
     return () => clearTimeout(timer);
@@ -41,7 +44,8 @@ function App() {
 
   return (
     <Router>
-      {showLoader && <Loader />}
+      {showLoader && <Preloader />}
+      {/* {showLoader && <Loader />} */}
       <ScrollToTop />
       {!showLoader && (
         <div className="bg-backgroundColor">
@@ -66,6 +70,7 @@ function App() {
             <Route path="/custom-software" element={<CustomSoftware />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/Services" element={<Services item={section} />} />
+            <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />
