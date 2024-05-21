@@ -27,11 +27,11 @@ export const AboutScreen = () => {
             and society to rise.
           </p>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center pl-0">
+        <div className="w-full md:w-1/2 flex justify-center md:pl-6 lg:pl-8">
           <div className="xl:w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] xs:w-[100%]flex justify-center md:order-1 order-2">
             <div className="w-[100%] justify-center">
               <img
-                className=" w-full h-auto"
+                className=" lg:w-[519px] lg:h-[423px] md:w-[519px] md:h-[423px] w-[300px] h-[250px]"
                 src={HomeTop2}
                 alt="Img not found"
                 style={{}}

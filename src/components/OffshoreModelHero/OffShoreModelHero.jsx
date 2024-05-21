@@ -5,12 +5,12 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 export const OffShoreModelHero = () => {
   return (
-    <div className="w-full h-[80vh]"
+    <div className="w-full md:h-[90vh] lg:h-[90vh] h-[30vh]"
     style={{
       backgroundImage: `url(${OffshoreBg})`, // Using string interpolation for the URL
       opacity: "2", // Set opacity to 40%
       backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
+      backgroundRepeat: "round",
       width:"100%"
     }}>
       {/* Background images */}
@@ -18,21 +18,19 @@ export const OffShoreModelHero = () => {
         className=""
         style={{
           backgroundImage: `url(${StarEffect})`,
-          opacity: "0.4",
           backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "round",
         }}
       ></div>
       <div
         className=""
         style={{
           backgroundImage: `url(${offshorehero})`,
-          opacity: "0.4",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       ></div>
-      <div className=" flex justify-start items-start  md:pt-[110px] md:pl-[130px]  pt-[40px] pl-[40px]">
+      <div className=" flex lg:justify-start md:justify-start justify-center items-start md:pl-16 md:pt-36 lg:pl-16 lg:pt-36  pl-8 pt-6">
         <div className="text-left text-white">
           <p className="font-lato md:text-[16px] text-[12px]  leading-2 tracking-normal">
             Off Shoring Models

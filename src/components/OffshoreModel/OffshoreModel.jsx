@@ -48,7 +48,7 @@ export const OffshoreModel = () => {
                 Advantages:
               </p>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -56,7 +56,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -64,7 +64,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -108,7 +108,7 @@ export const OffshoreModel = () => {
                 Advantages:
               </p>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -116,7 +116,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -124,7 +124,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -143,10 +143,11 @@ export const OffshoreModel = () => {
         </div>
         {/* Left side */}
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] xxs:w-[100%] flex justify-center relative md:order-1 order-2">
-          <div className="w-1/2 flex md:w-full md:justify-center md:items-center sm:w-full sm:justify-center sm:items-center xs:w-full xxs:w-full xs:justify-center xs:items-center xxs:justify-center xxs:items-center">
+          <div className="w-1/2 flex md:w-full md:justify-start md:items-center sm:w-full sm:justify-center sm:items-center xs:w-full xxs:w-full xs:justify-center xs:items-center xxs:justify-center xxs:items-center">
             <Offshore2 />
           </div>
         </div>
+        
       </div>
       {/* Fixed-price End */}
 
@@ -168,7 +169,7 @@ export const OffshoreModel = () => {
                 Advantages:
               </p>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -176,7 +177,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -184,7 +185,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex items-start mt-4">
-                <div className="mr-2 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
+                <div className="mr-4 lg:mr-4 w-4 h-4 lg:w-6 lg:h-6">
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
@@ -202,8 +203,8 @@ export const OffshoreModel = () => {
           </div>
         </div>
         {/* Right side */}
-        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] flex justify-center relative md:order-1 order-2">
-          <div className="w-[100%] relative justify-start">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xxs:w-[100%] xs:w-[100%] flex justify-center relative md:order-1 order-2">
+          <div className="w-1/2 flex md:w-full md:justify-center md:items-center sm:w-full sm:justify-center sm:items-center xs:w-full xxs:w-full xs:justify-center xs:items-center xxs:justify-center xxs:items-center">
             <img
               className="md:w-[528px] md:h-[408px] w-full h-auto"
               src={Offshore32}

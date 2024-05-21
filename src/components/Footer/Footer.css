@@ -1,0 +1,11 @@
+.address-icon {
+    width: 25px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .address-icon {
+        width: 70px;  /* Adjust the width as needed for mobile */
+        height: 20px; /* Adjust the height as needed for mobile */
+    }
+}
