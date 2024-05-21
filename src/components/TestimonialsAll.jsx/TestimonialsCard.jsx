@@ -1,52 +1,73 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import user from "../../assets/images/user.png";
 import cardsymbol from "../../assets/images/cardsymbol.png";
 import { Inverted2 } from "../../assets/icons";
+import useIsMobile from "../../utils/hooks/useIsMobile";
+const cards = [
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
+    name: "Full Name",
+    designation: "Designation",
+  },
+];
 
 export const TestimonialsCard = () => {
-  const [hovered, setHovered] = useState(false);
-  const [visibleCards, setVisibleCards] = useState(5);
+  const isMobile = useIsMobile();
+  const [visibleCards, setVisibleCards] = useState(isMobile ? 5 : cards.length);
 
-  const cards = [
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Designation",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Designation",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Designation",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Designation",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Designation",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Designation",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Designation",
-    },
-  ];
+  useEffect(() => {
+    setVisibleCards(isMobile ? 5 : cards.length);
+  }, [isMobile]);
 
   const loadMore = () => {
-    setVisibleCards(cards.length);
+    setVisibleCards((prevVisibleCards) =>
+      Math.min(prevVisibleCards + 5, cards.length)
+    );
   };
 
   return (
@@ -56,8 +77,6 @@ export const TestimonialsCard = () => {
           <div
             key={index}
             className={`bg-white flex flex-col items-center justify-between transition-transform duration-300 rounded-xl p-6 w-full sm:w-[48%] md:w-[30%] shadow-md hover:shadow-xl hover:border-2 hover:border-dashed hover:border-custom-purple `}
-            onMouseOver={() => setHovered(true)}
-            onMouseOut={() => setHovered(false)}
           >
             <div className="flex items-center justify-center mb-4 h-24">
               <Inverted2 className="h-12 w-12" />
@@ -79,14 +98,15 @@ export const TestimonialsCard = () => {
           </div>
         ))}
       </div>
-      {visibleCards < cards.length && (
+      {isMobile && visibleCards < cards.length && (
         <div className="w-full flex justify-center mt-4">
           <button
-            className="bg-custom-purple text-white px-4 py-2 rounded-md"
+            className="text-custom-purple just border-[0.5px]bg-custom-lightBlue  rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue  font-Lato font-medium"
             onClick={loadMore}
           >
             Load More
           </button>
+          
         </div>
       )}
     </div>
