@@ -13,13 +13,15 @@ import {
 } from "../../assets/icons";
 import { CircleLarge } from "./CircleLarge";
 import { CircleSmall } from "./CircleSmall";
+import { useNavigate } from "react-router-dom";
 
 export const CaseStudyMob = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className=" grid grid-cols-2 sm-gap-4 xs:gap-2 xxs:gap-1  sm:p-4 xs:p-2 xxs:p-1 items-start border-t-2 border-r-2 border-b-2 border-fromclr border-dashed">
         <div className="relative p-4 flex flex-col gap-4">
-        <div className="absolute md:top-[-16%] lg:top-[-16%] sm:top-[-16%] xs:top-[-10%] xxs:top-[-5%] left-[45%] ">
+          <div className="absolute md:top-[-16%] lg:top-[-16%] sm:top-[-16%] xs:top-[-10%] xxs:top-[-5%] left-[45%] ">
             <CircleLarge text={1} />
           </div>
           <div className="flex w-full justify-center">
@@ -229,6 +231,15 @@ export const CaseStudyMob = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center ">
+        <button
+          type="button"
+          onClick={() => navigate("/CaseStudies")}
+          className="text-custom-purple just border-[0.5px]bg-custom-lightBlue  rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue  font-Lato font-medium"
+        >
+          Go To Case Studies
+        </button>
       </div>
     </div>
   );

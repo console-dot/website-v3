@@ -366,3 +366,55 @@ export const processCardsUiUx = [
       "We believe in collaboration. Through iterative design cycles, we refine and enhance our concepts based on your feedback, ensuring a design that exceeds expectations.",
   }
 ];
+export const processCardsWeb = [
+  {
+    heading: "01",
+    flexDirection: "flex-col",
+    borders: "border-l-2 border-b-2",
+    dotDirection: "bottom-right",
+    icon: Vector,
+    title: "Requirement Analysis",
+    desccription:
+      "Understand client requirements, business goals, and target audience.",
+  },
+  {
+    heading: "02",
+    flexDirection: "flex-col-reverse",
+    borders: "border-t-2 border-l-2",
+    dotDirection: "top-right",
+    icon: Vector2,
+    title: "Impact Analysis:(in case of adding new feature in existing system)",
+    desccription:
+      "Our design process focuses on creating intuitive and visually stunning interfaces that captivate your users from the first touch.",
+  },
+  {
+    heading: "03",
+    flexDirection: "flex-col",
+    borders: "border-l-2 border-b-2",
+    dotDirection: "bottom-right",
+    icon: Vector3,
+    title: "Planning",
+    desccription:
+      "Develop a roadmap, define features, and choose the appropriate technology stack.",
+  },
+  {
+    heading: "04",
+    flexDirection: "flex-col-reverse",
+    borders: "border-t-2 border-l-2",
+    dotDirection: "top-right",
+    icon: Vector4,
+    title: "Design",
+    desccription:
+      "Create wireframes and design user interfaces with a focus on user-centric principles.",
+  },
+  {
+    heading: "05",
+    flexDirection: "flex-col",
+    borders: "border-l-2 border-b-2",
+    dotDirection: "bottom-right",
+    icon: Vector5,
+    title: "Development",
+    desccription:
+      "Implement frontend and backend logic, ensuring cross-platform compatibility.",
+  },
+];

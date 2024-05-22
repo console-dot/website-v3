@@ -13,7 +13,7 @@ export const MobileAppDevelopment = () => {
   return (
     <div className="w-full mb-8">
       <LandingPage data={landingPageDataMob} />
-      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xxs:p-2">
+      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-8 xss:p-8">
         <div className="pb-4">
           {" "}
           <TopComponent
@@ -23,10 +23,9 @@ export const MobileAppDevelopment = () => {
               "Consoledot's Mobile App Development services bring your business to the forefront of users' daily lives. Whether you're targeting iOS, Android, or both, our expert team crafts mobile solutions that drive engagement and elevate user satisfaction."
             }
             image={<ArVrTop />}
-            
           />
         </div>
-        
+
         <Preposition
           title={"Proposition"}
           heading={"our Proposition"}
@@ -36,14 +35,19 @@ export const MobileAppDevelopment = () => {
         />
         <Process
           data={processCardsMobDev}
-          heading={"Mobile Development Process/Adding new Feature in existing App"}
+          heading={
+            "Mobile Development Process/Adding new Feature in existing App"
+          }
           title={"Mobile Development Process"}
           maxRow={5}
         />
+
         <WhyChoose
           heading={"Why Choose Consoledot for App Development?"}
           data={whyChooseDataMob}
-          cardsInRow={"lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"}
+          cardsInRow={
+            "lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"
+          }
         />
 
         <TechStack
@@ -52,7 +56,6 @@ export const MobileAppDevelopment = () => {
             "Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof"
           }
         />
-        
       </div>
     </div>
   );

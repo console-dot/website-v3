@@ -15,7 +15,7 @@ export const CustomSoftware = () => {
   return (
     <div className="w-full mb-8">
       <LandingPage data={landingPageDataCustomSoft} />
-      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xxs:p-2">
+      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-8 xss:p-8">
         <div className="pb-4">
           {" "}
           <TopComponent
