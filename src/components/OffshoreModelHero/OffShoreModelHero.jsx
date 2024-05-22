@@ -41,7 +41,7 @@ export const OffShoreModelHero = () => {
             EXCEPTIONAL DEVELOPMENT SOLUTIONS
           </p>
           <span className="md:block md:mt-1"></span>
-          <p className="md:mt-4 mt-2 md:text-[16px] text-[12px] font-poppins flex-row">
+          {/* <p className="md:mt-4 mt-2 md:text-[16px] text-[12px] font-poppins flex-row">
             <a href="/" className="text-white hover:text-custom-purple">
               Home
             </a>{" "}
@@ -52,7 +52,7 @@ export const OffShoreModelHero = () => {
             >
               Offshoring Models
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

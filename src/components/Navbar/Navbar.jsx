@@ -11,27 +11,20 @@ export const NavBar = ({ section, setSection }) => {
     {
       name: "Services",
       dropdown: [
-        {
-          name: "Custom Software",
-          link: "custom-software",
-        },
-        { name: "UI/UX Design", link: "ui-ux" },
+        { name: "Custom Software", link: "custom-software" },
         { name: "Product Research", link: "product-research" },
-        { name: "AI/ML Development", link: "ai" },
-        {
-          name: "Mobile App Development",
-          link: "mobile-app-development",
-        },
         { name: "Web Development", link: "web-app-development" },
+        { name: "Mobile App Development", link: "mobile-app-development" },
         { name: "Blockchain", link: "blockchain" },
-        { name: "Quality Assurance", link: "services/quality-assurance" },
-        { name: "Digital Marketing", link: "services/digital-marketing" },
+        { name: "Artificial Intelligence", link: "ai" },
+        { name: "Ar/VR", link: "arvr" },
+        { name: "UI/UX Design", link: "ui-ux" },
+        { name: "Digital Marketing", link: "digital-marketing" },
       ],
     },
     { name: "Case Studies", link: "/case-study" },
     { name: "Careers", link: "/careers" },
   ];
- 
 
   const [showNav, setShowNav] = useState(false);
   const [rotated, setRotated] = useState(false);
@@ -106,22 +99,32 @@ export const NavBar = ({ section, setSection }) => {
         ></div>
       </div>
       <div className="w-2/3 items-center justify-center flex">
-        {showNav ? <div className="w-full flex justify-end mr-4 "> <IoCloseOutline onClick={toggleNav} className="text-white text-[28px]"/> </div> :<div className="lg:hidden ml-auto" onClick={toggleNav}>
-          <svg
-            className="w-6 h-6 text-white mr-4 cursor-pointer"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </div>}
+        {showNav ? (
+          <div className="w-full flex justify-end mr-4 ">
+            {" "}
+            <IoCloseOutline
+              onClick={toggleNav}
+              className="text-white text-[28px]"
+            />{" "}
+          </div>
+        ) : (
+          <div className="lg:hidden ml-auto" onClick={toggleNav}>
+            <svg
+              className="w-6 h-6 text-white mr-4 cursor-pointer"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </div>
+        )}
         {/* Navigation items for desktop */}
         <ul
           className={`lg:flex items-center lg:flex-row lg:text-white text-white lg:justify-around lg:font-sans lg:gap-8 hidden`}
@@ -190,15 +193,15 @@ export const NavBar = ({ section, setSection }) => {
             showNav ? "block" : "hidden"
           } lg:hidden fixed bg-[#010C29] top-[60px] right-0 w-[70%] h-[100vh] z-50`}
         >
-          <ul
-            className="flex flex-col text-white font-bold gap-2 justify-start items-start p-8"
-          >
+          <ul className="flex flex-col text-white font-bold gap-2 justify-start items-start p-8">
             {navBar.map((item, index) => (
               <li
                 key={index}
-                className={`cursor-pointer ${ item.name != "Services"  ?'hover:bg-gradient-to-r from-custom-blue to-custom-purple' :''} ${
-                  location.pathname === item.link ? "text-white" : ""
-                }`}
+                className={`cursor-pointer ${
+                  item.name != "Services"
+                    ? "hover:bg-gradient-to-r from-custom-blue to-custom-purple"
+                    : ""
+                } ${location.pathname === item.link ? "text-white" : ""}`}
               >
                 {item.name === "Services" ? (
                   <>
@@ -221,7 +224,11 @@ export const NavBar = ({ section, setSection }) => {
                       <div className="w-full px-8 bg-none flex flex-col justify-end gap-2">
                         {" "}
                         {navBar[2].dropdown?.map((i) => (
-                          <Link onClick={toggleNav} to={i.link} className="text-sm p-2 font-normal">
+                          <Link
+                            onClick={toggleNav}
+                            to={i.link}
+                            className="text-sm p-2 font-normal"
+                          >
                             {i.name}
                           </Link>
                         ))}
@@ -229,7 +236,9 @@ export const NavBar = ({ section, setSection }) => {
                     )}
                   </>
                 ) : (
-                  <Link onClick={toggleNav} to={item.link} className="p-2">{item.name}</Link>
+                  <Link onClick={toggleNav} to={item.link} className="p-2">
+                    {item.name}
+                  </Link>
                 )}
               </li>
             ))}
