@@ -99,7 +99,7 @@ const Footer = () => {
       )}
 
       <footer className="w-full bg-footerBg text-white pt-10 lg:px-20 md:px-10 px-8 mt-[-50px]">
-        <div className="container mx-auto flex flex-wrap justify-start items-start mt-20 md:gap-14 lg:gap-14 gap-2">
+        <div className="container mx-auto flex xss:flex-wrap xs:flex-wrap sm:flex-wrap xl:flex-nowrap lg:flex-nowrap md:flex-nowrap justify-start items-start mt-20 md:gap-14 lg:gap-14 gap-2">
           {/* First Column */}
           <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full ">
             {/* Company Logo */}
