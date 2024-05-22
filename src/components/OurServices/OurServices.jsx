@@ -19,9 +19,9 @@ const OurServices = () => {
       </div>
       <div className=" font-normal leading-10 mt-4">
         <div className="flex items-center">
-          <div class="h-0.5 bg-custom-purple md:w-20 w-12"></div>
-          <div class="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
-          <div class="h-0.5 bg-custom-purple md:w-20 w-12"></div>
+          <div className="h-0.5 bg-custom-purple md:w-20 w-12"></div>
+          <div className="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
+          <div className="h-0.5 bg-custom-purple md:w-20 w-12"></div>
         </div>
       </div>
       </div>
@@ -31,7 +31,7 @@ const OurServices = () => {
         <div className="flex md:justify-end justify-center md:pt-3 pt-10 ">
         <button
           type="button"
-          onClick=""
+          onClick={() => {}}
           className="text-custom-purple just border-[0.5px]bg-custom-lightBlue  rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue  font-Lato font-medium"
         >
           View All

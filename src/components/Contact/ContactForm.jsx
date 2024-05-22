@@ -76,17 +76,6 @@ export const ContactForm = () => {
           required
         />
       </div>
-      {/* <div className="flex w-full">
-        <div class="px-4 w-full py-2 bg-white rounded-t-lg dark:bg-gray-800">
-          <textarea
-            id="comment"
-            rows="2"
-            class="bg-white shadow-lg text-webDescrip px-8 text-[16px] border focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Message (optional)"
-            required
-          ></textarea>
-        </div>
-      </div> */}
       <div className="w-full flex justify-center items-center">
         <button className="text-white text-[16px] w-[300px] px-5 py-2.5 bg-gradient-to-r from-fromclr to-toclr hover:bg-gradient-to-r hover:from-toclr hover:to-fromclr rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
           <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">

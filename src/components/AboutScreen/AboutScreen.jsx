@@ -13,10 +13,10 @@ export const AboutScreen = () => {
           <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold  tracking-normal md:mt-3 mt-1 ">
             ABOUT CONSOLEDOT
           </p>
-          <div class="flex items-center    md:mt-3 mt-1">
-            <div class="h-0.5 bg-custom-purple md:w-24 w-16"></div>
-            <div class="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
-            <div class="h-0.5 bg-custom-purple md:w-24 w-16"></div>
+          <div className="flex items-center    md:mt-3 mt-1">
+            <div className="h-0.5 bg-custom-purple md:w-24 w-16"></div>
+            <div className="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
+            <div className="h-0.5 bg-custom-purple md:w-24 w-16"></div>
           </div>
 
           <p className="text-aboutustext text-justify  font-lato  md:text-[16px] text-[12px] font-normal md:leading-10 leading-[28px] mt-4">

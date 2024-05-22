@@ -94,7 +94,7 @@ export const OpenPositions = ({ data, filterData }) => {
                 Apply
               </button>
               <div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-2 xs:mb-2 xss:mb-2">
+                <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-2 xs:mb-2 xss:mb-2">
                   <div
                     className="bg-gradient-to-r from-fromclr to-toclr h-2.5 rounded-full"
                     style={{ width: "45%" }}

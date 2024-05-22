@@ -32,8 +32,6 @@ function App() {
   const [section, setSection] = useState("");
   const [showLoader, setShowLoader] = useState(true);
 
-  // useEffect(() => console.log(section), [section]);
-
   useEffect(() => {
     // Hide the loader after 5 seconds
     const timer = setTimeout(() => {
@@ -47,7 +45,6 @@ function App() {
   return (
     <Router>
       {showLoader && <Preloader />}
-      {/* {showLoader && <Loader />} */}
       <ScrollToTop />
       {!showLoader && (
         <div className="bg-backgroundColor">
@@ -57,18 +54,20 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/Offshoringmodels" element={<OffshoringModels />} />
             <Route path="/web-app-development" element={<WebDevelopment />} />
-            <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
+            <Route
+              path="/mobile-app-development"
+              element={<MobileAppDevelopment />}
+            />
             <Route path="/blockchain" element={<BlockchainDevelopment />} />
             <Route path="/ai" element={<AIDevelopment />} />
             <Route path="/arvr" element={<ArVrDevelopment />} />
             <Route path="/ui-ux" element={<UiUxDevelopment />} />
             <Route path="/product-research" element={<ProductResearch />} />
-            <Route path="/case-study" element={<CaseStudy />} />
+            <Route path="/case-study" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/custom-software" element={<CustomSoftware />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/Services" element={<Services item={section} />} />
             <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />
             <Route path="/CaseStudies/:title" element={<CardCaseStudy />} />

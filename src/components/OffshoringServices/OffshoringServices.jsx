@@ -14,9 +14,9 @@ const OffshoringServices = ({title,heading}) => {
       </div>
       <div className="  leading-10 text-center mt-4">
         <div className="flex items-center ">
-          <div class="h-0.5 bg-custom-purple md:w-24 w-12"></div>
-          <div class="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
-          <div class="h-0.5 bg-custom-purple md:w-24 w-12"></div>
+          <div className="h-0.5 bg-custom-purple md:w-24 w-12"></div>
+          <div className="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
+          <div className="h-0.5 bg-custom-purple md:w-24 w-12"></div>
         </div>
       </div>
       <div className="mt-4 w-full xl:px-20  lg:px-8  md:px-6 sm:px-4 xs:px-4 xss:px-4  ">

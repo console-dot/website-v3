@@ -25,8 +25,8 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
       </div>
       {!isMobile ? (
         <div className={`w-full grid ${cardsInRow} gap-8 mt-8`}>
-          {data?.map((i) => (
-            <div className=" flex flex-col bg-white border-2 border-transparent  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4">
+          {data?.map((i, index) => (
+            <div key={index} className=" flex flex-col bg-white border-2 border-transparent  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4">
               <div className="flex flex-col items-center justify-center p-8 sm:p-4 xs:p-4 xxs:p-2 gap-4">
                 <div
                   style={gradientStyle}
@@ -54,8 +54,8 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
       ) : (
         <div className="w-full overflow-x-auto flex sm:hidden">
           <div className="flex gap-8">
-            {data?.map((i) => (
-              <div className="flex flex-col bg-white border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4 min-w-[300px]">
+            {data?.map((i, index) => (
+              <div key={index} className="flex flex-col bg-white border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4 min-w-[300px]">
                 <div className="flex flex-col items-center justify-center p-8 sm:p-4 xs:p-4 xxs:p-2 gap-4">
                   <div
                     style={gradientStyle}

@@ -15,9 +15,9 @@ export const AboutUs = () => {
         </div>
         <div className="font-Rubik text-4xl leading-none md:mt-3 mt-1">
           <div className="flex items-center">
-            <div class="h-0.5 bg-custom-purple md:w-24 w-16"></div>
-            <div class="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
-            <div class="h-0.5 bg-custom-purple md:w-24 w-16"></div>
+            <div className="h-0.5 bg-custom-purple md:w-24 w-16"></div>
+            <div className="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
+            <div className="h-0.5 bg-custom-purple md:w-24 w-16"></div>
           </div>
         </div>
       </div>
