@@ -81,3 +81,5 @@ export * from "./OffShoreTop";
 export * from "./Offshore2";
 export * from './CheckIcon'
 export * from './FilterIcon'
+export * from './CustomExpertise'
+export * from './CustomCollab'
