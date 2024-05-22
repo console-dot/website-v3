@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import {
   execSummaryImage,
   problemStatementImage,
@@ -9,7 +8,6 @@ import {
   challengesFacedImage,
   projectOverviewImage,
 } from "../../assets/images";
-
 import useIsMobile from "../../utils/hooks/useIsMobile";
 
 const cards = [
@@ -22,14 +20,8 @@ const cards = [
   {
     title: "Project Overview",
     image: projectOverviewImage,
-    description: (
-      <>
-        <strong>Introduction:</strong> Provide an overview of the client or
-        project context. <br />
-        <strong>Objectives:</strong> Outline the goals and objectives of the
-        software development project.
-      </>
-    ),
+    description:
+      "Introduction: Provide an overview of the client or project context.\nObjectives: Outline the goals and objectives of the software development project.",
   },
   {
     title: "Problem Statement",
@@ -40,28 +32,14 @@ const cards = [
   {
     title: "Solution",
     image: solutionImage,
-    description: (
-      <>
-        <strong>Approach:</strong> Explain the methodology and approach taken to
-        address the client’s challenges. <br />
-        <strong>Technologies Used:</strong> List the technologies, tools, and
-        frameworks employed in the software development. <br />
-        <strong>Key Features:</strong> Highlight the main features and
-        functionalities of the software solution.
-      </>
-    ),
+    description:
+      "Approach: Explain the methodology and approach taken to address the client’s challenges.\nTechnologies Used: List the technologies, tools, and frameworks employed in the software development.\nKey Features: Highlight the main features and functionalities of the software solution.",
   },
   {
     title: "Development Process",
     image: developmentProcessImage,
-    description: (
-      <>
-        <strong>Planning:</strong> Detail the planning phase, including
-        requirements gathering, scope definition, and timeline. <br />
-        <strong>Execution:</strong> Describe the development process, including
-        coding, testing, and iteration.
-      </>
-    ),
+    description:
+      "Planning: Detail the planning phase, including requirements gathering, scope definition, and timeline.\nExecution: Describe the development process, including coding, testing, and iteration.",
   },
   {
     title: "Challenges Faced",
@@ -70,6 +48,7 @@ const cards = [
       "Discuss any challenges or obstacles encountered during the project and how they were overcome.",
   },
 ];
+
 
 export const CaseStudiesCard = () => {
   const isMobile = useIsMobile();
@@ -107,7 +86,9 @@ export const CaseStudiesCard = () => {
             <div className="bg-white flex flex-col items-start p-6 shadow-md hover:shadow-xl">
               <h3 className="text-xl font-bold mb-2 h-10">{card.title}</h3>
               <p className="text-custom-grey mb-4 h-20 overflow-hidden">
-                {card.description}
+                {card.description.split("\n").map((line, i) => (
+                  <span key={i}>{line}<br/></span>
+                ))}
               </p>
             </div>
           </div>
