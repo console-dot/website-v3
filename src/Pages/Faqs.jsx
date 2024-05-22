@@ -6,7 +6,7 @@ import { questionsData } from "../constatnts/questions";
 
 export const Faqs = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <LandingPage data={landingPageDataFaqs} />
       <div className="2xl:p-16 xl:p-16 lg:p-16 sm:p-8 xs:p-8 xss:p-8 w-full flex flex-col gap-16">
         <QuestionCard data={questionsData} />

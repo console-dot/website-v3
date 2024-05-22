@@ -8,7 +8,7 @@ import { ContactSection1 } from "../components/OffshoringServices/ContactSection
 
 export const OffshoringModels = () => {
   return (
-    <div className="bg-offwhite w-full flex flex-col justify-center items-center">
+    <div className="bg-offwhite w-full flex flex-col justify-center items-center overflow-hidden">
       <OffShoreModelHero />
 
       <div className="w-full flex flex-col justify-start items-center">

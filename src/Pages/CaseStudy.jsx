@@ -15,7 +15,7 @@ export const CaseStudy = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full mb-8">
+    <div className="w-full mb-8 overflow-hidden">
       <LandingPage data={landingPageDataCaseStudy} />
       {screenSize ? (
         <div className="lg:p-16 xl:p-16 2xl:p-16 md:p-8 sm:p-8 xs:p-4 xxs:p-2 flex flex-col gap-12 ">

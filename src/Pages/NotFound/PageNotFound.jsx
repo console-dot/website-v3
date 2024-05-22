@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const PageNotFound = () => {
   return (
-    <section className="page_404  bg-white  ">
+    <section className="page_404  bg-white  overflow-hidden">
       <div className="row ">
         <div className="col-sm-12">
           <p className="text-center  text-7xl sm:text-3xl xs:text-3xl font-popins text-custom-purple  ">
