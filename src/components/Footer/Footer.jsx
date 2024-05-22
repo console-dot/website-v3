@@ -338,12 +338,13 @@ const Footer = () => {
         <hr className="border-white opacity-35 w-[90%] m-auto" />
 
         {/* Copyright */}
+        {/* Copyright */}
         <div className="text-center text-white mb-10 mt-4 font-italic opacity-35 text-[10px] md:text-[12px] ">
           Copyright © 2024 ConsoleDot. All rights reserved.
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default Footer;
