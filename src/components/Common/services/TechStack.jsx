@@ -55,7 +55,7 @@ export const TechStack = ({ data, description }) => {
             <></>
           )}
 
-          {isTechMob ? (
+          {isMobile ? (
             <div className="w-full h-full">
               <div className="p-2 flex gap-6 flex-col">
                 {data.map((i) => (
@@ -80,7 +80,7 @@ export const TechStack = ({ data, description }) => {
                       </div>
                     </div>
                     {openedItem === i.id && (
-                      <div className="grid h-full lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-3 xss:grid-cols-3 mt-16 gap-8 items-center">
+                      <div className="grid h-full lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-3 xss:grid-cols-3 mt-4 gap-8 items-center">
                         {i.icons.map((icon, index) => (
                           <div
                             key={index}
