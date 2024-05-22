@@ -130,7 +130,7 @@ const Footer = () => {
           {/* main div */}
           <div className="flex md:gap-10 lg:gap-28 gap-0">
             {/* child 1 */}
-            <div className=" w-1/2 flex md:flex-row lg:flex-row sm:flex-col xs:flex-col md:ml-8 lg:ml-8 ml-0 gap-10 ">
+            <div className=" w-1/2 flex md:flex-row lg:flex-row sm:flex-col xs:flex-col xss:flex-col md:ml-8 lg:ml-8 ml-0 gap-10 ">
               <div className="w-full  sm:w-full xs:w-full md:mb-10 lg:mb-10 mb-2">
                 {/* Navigation */}
                 <div className="w-auto  sm:w-full xs:w-auto flex md:justify-center">
@@ -216,7 +216,7 @@ const Footer = () => {
 
                 {/* social icon section start */}
                 <div className="w-full  sm:w-full xs:w-full   md:mt-10  mt-16   flex justify-center md:flex md:justify-start   md:items-end opacity-25">
-                  <div className="lg:flex md:flex sm:hidden xs:hidden gap-3 ">
+                  <div className="lg:flex md:flex sm:hidden xs:hidden xss:hidden gap-3 ">
                     <div
                       style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
                       className="w-8 h-8 flex justify-center items-center rounded-lg"
@@ -285,8 +285,9 @@ const Footer = () => {
                       />
                     </div>
                   </div>
+
                   <div
-                    className="lg:hidden md:hidden sm:flex xs:flex flex justify-center items-center "
+                    className="xl:hidden lg:hidden md:hidden sm:flex xs:flex xss:flex flex justify-center items-center "
                     style={{ gap: "6px" }}
                   >
                     <div
@@ -344,7 +345,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Footer;
