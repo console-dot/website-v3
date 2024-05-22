@@ -13,15 +13,6 @@ export default function LandingPage({ data }) {
         width: "100%",
       }}
     >
-      {/* <div
-        className="relative w-full overflow-hidden bg-gradient-to-r from-custom-blue to-custom-purple"
-        style={{
-          height: "650px",
-          borderBottomLeftRadius: "25%",
-          borderBottomRightRadius: "25%",
-          height:"78vh"
-        }}
-      > */}
       {/* Add the opacity layer */}
       <div>
         <div className="flex justify-center items-center w-full xl:h-[60vh] lg:h-[60vh] md:h-[60vh] sm:h-[35vh] xs:h-[35vh] xss:h-[35vh]">
@@ -34,7 +25,6 @@ export default function LandingPage({ data }) {
               <h1 className="text-[16px] text-white">{data.bottomHeading}</h1>
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </div>

@@ -22,6 +22,7 @@ export const ServicesProcessCard = ({ data, maxRow }) => {
         >
           {data?.map((i, index) => (
             <div
+            key={index}
               className={`flex flex-col w-full gap-4 ${
                 parseInt(i?.heading) % 2 != 0
                   ? "flex-col-reverse"
@@ -29,7 +30,6 @@ export const ServicesProcessCard = ({ data, maxRow }) => {
               }`}
             >
               <div
-                key={index}
                 className={`w-full h-[162px] relative px-2 flex  ${
                   i?.flexDirection ? i?.flexDirection : "flex-col"
                 } gap-4 justify-center items-center ${

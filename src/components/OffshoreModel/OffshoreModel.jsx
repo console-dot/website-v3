@@ -23,9 +23,9 @@ export const OffshoreModel = () => {
         </div>
         <div className="leading-10 md:mt-2 mt-1">
           <div className="flex items-center">
-            <div class="h-0.5 bg-custom-purple md:w-[100px] w-12"></div>
-            <div class="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
-            <div class="h-0.5 bg-custom-purple md:w-[100px] w-12"></div>
+            <div className="h-0.5 bg-custom-purple md:w-[100px] w-12"></div>
+            <div className="w-2 h-2 bg-gradient-to-tl from-custom-blue to-custom-purple rounded-full"></div>
+            <div className="h-0.5 bg-custom-purple md:w-[100px] w-12"></div>
           </div>
         </div>
       </div>

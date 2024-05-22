@@ -18,7 +18,6 @@ export const Careers = () => {
   const [checkedCategoryItems, setCheckedCategoryItems] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
   const isMobile = useIsMobile();
-  console.log(filterData, "asd");
   return (
     <div className="w-full mb-8 relative overflow-hidden">
       <LandingPage data={landingPageDataCareers} />

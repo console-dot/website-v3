@@ -29,7 +29,6 @@ export const SearchInput = ({
     setSearchInput("");
     setFilterData([]);
   };
-  console.log(checkedCategoryItems, checkedTypeItems, "asd");
 
   const isXsView = useIsXs();
   return (

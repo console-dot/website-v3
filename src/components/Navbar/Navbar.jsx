@@ -223,8 +223,9 @@ export const NavBar = ({ section, setSection }) => {
                     {rotated && (
                       <div className="w-full px-8 bg-none flex flex-col justify-end gap-2">
                         {" "}
-                        {navBar[2].dropdown?.map((i) => (
+                        {navBar[2].dropdown?.map((i, index) => (
                           <Link
+                            key={index}
                             onClick={toggleNav}
                             to={i.link}
                             className="text-sm p-2 font-normal"
