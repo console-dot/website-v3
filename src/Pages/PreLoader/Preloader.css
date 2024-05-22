@@ -1,4 +1,4 @@
-/* Basic styles for the preloader */
+
 .preloader {
     position: fixed;
     inset: 0;
@@ -16,14 +16,7 @@
     align-items: center;
   }
   
-  /* .vertical-line {
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background-color: rgb(27, 111, 136);
-    animation: breathing 2s infinite;
-  }
-   */
+ 
   .logo {
     width: 100px;
     animation: breathing 2s infinite;
@@ -37,18 +30,7 @@
     animation: zoomIn 1s forwards;
   }
   
-  /* .fade-out::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background-color: rgb(27, 111, 136);
-    animation: slideOutRight 1s forwards;
-  }
-   */
-  /* Keyframes for animations */
+ 
   @keyframes breathing {
     0%, 100% {
       transform: scale(1);
@@ -117,8 +99,6 @@
       transform: translate3d(100%, 0, 0);
     }
   }
-  
-  /* scroll Up */
   .upscroll-line {
     position: absolute;
     height: 2px;
@@ -159,9 +139,6 @@
       transform: translate3d(-200%, 0, 0);
     }
   }
-  
-  /* Loading */
-  /* Breathing effect animation */
   @keyframes breathing {
     0% {
       transform: scale(1);
@@ -173,16 +150,12 @@
       transform: scale(1);
     }
   }
-  
-  /* Apply breathing animation to .breathing-text */
   .breathing-text {
     animation: breathing 3s infinite;
   }
-  
-  /* Additional styles for loader container */
   .loader-container {
     position: relative;
-    height: 100vh; /* Adjust as needed */
+    height: 100vh;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
