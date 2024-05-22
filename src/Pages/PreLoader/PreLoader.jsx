@@ -8,8 +8,8 @@ const Preloader = ({ onLoad }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       document.getElementById('preloader').classList.add('fade-out');
-      setTimeout(onLoad, 1000); // Delay to let the animation finish
-    }, 2000); // 5-second delay
+      setTimeout(onLoad, 1000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, [onLoad]);
@@ -17,7 +17,6 @@ const Preloader = ({ onLoad }) => {
   return (
     <div id="preloader" className="preloader">
       <div className="preloader-content">
-        {/* <div className="vertical-line"></div> */}
         <div className='flex flex-col justify-center items-center'>
         <ScrollLineUp />
         <img src={PreLoader} alt="Consoledot Logo" className="logo" />

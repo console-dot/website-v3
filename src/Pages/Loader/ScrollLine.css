@@ -40,7 +40,6 @@
   }
 }
 
-/* scroll Up */
 .upscroll-line {
   position: absolute;
   height: 2px;
@@ -82,8 +81,6 @@
   }
 }
 
-/* Loading */
-/* Breathing effect animation */
 @keyframes breathing {
   0% {
     transform: scale(1);
@@ -96,15 +93,13 @@
   }
 }
 
-/* Apply breathing animation to .breathing-text */
 .breathing-text {
   animation: breathing 3s infinite;
 }
 
-/* Additional styles for loader container */
 .loader-container {
   position: relative;
-  height: 100vh; /* Adjust as needed */
+  height: 100vh; 
   overflow-x: hidden;
   display: flex;
   justify-content: center;

@@ -22,11 +22,7 @@ export default function Header() {
         className="w-full h-[50px] flex flex-row justify-between items-center"
       >
         {/* Left */}
-        <div
-          //   style={{ width: "30%" }}
-          className="h-8 flex items-center justify-between ml-[5%] xl:w-[30%] lg:w-[30%] md:w-[80%] sm:w-[100%] xs:w-[100%]"
-        >
-          {/*  */}
+        <div className="h-8 flex items-center justify-between ml-[5%] xl:w-[30%] lg:w-[30%] md:w-[80%] sm:w-[100%] xs:w-[100%]">
           <div
             style={{ width: "50%", gap: "5px" }}
             className="flex items-center"
@@ -41,8 +37,6 @@ export default function Header() {
               +92 327 4067337
             </p>
           </div>
-
-          {/*  */}
           <div
             style={{ width: "50%", gap: "5px" }}
             className="flex items-center"
@@ -67,7 +61,6 @@ export default function Header() {
           }}
           className="h-8 flex items-center xl:flex lg:flex md:flex sm:hidden xs:hidden xxs:hidden"
         >
-          {/*  */}
           <div
             style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
             className="w-8 h-8 flex justify-center items-center"

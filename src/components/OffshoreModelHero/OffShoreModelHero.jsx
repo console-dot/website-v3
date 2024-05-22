@@ -5,14 +5,16 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 export const OffShoreModelHero = () => {
   return (
-    <div className="w-full md:h-[90vh] lg:h-[90vh] h-[30vh]"
-    style={{
-      backgroundImage: `url(${OffshoreBg})`, // Using string interpolation for the URL
-      opacity: "2", // Set opacity to 40%
-      backgroundSize: "cover",
-      backgroundRepeat: "round",
-      width:"100%"
-    }}>
+    <div
+      className="w-full md:h-[90vh] lg:h-[90vh] h-[30vh]"
+      style={{
+        backgroundImage: `url(${OffshoreBg})`,
+        opacity: "2",
+        backgroundSize: "cover",
+        backgroundRepeat: "round",
+        width: "100%",
+      }}
+    >
       {/* Background images */}
       <div
         className=""
@@ -41,18 +43,6 @@ export const OffShoreModelHero = () => {
             EXCEPTIONAL DEVELOPMENT SOLUTIONS
           </p>
           <span className="md:block md:mt-1"></span>
-          {/* <p className="md:mt-4 mt-2 md:text-[16px] text-[12px] font-poppins flex-row">
-            <a href="/" className="text-white hover:text-custom-purple">
-              Home
-            </a>{" "}
-            <MdKeyboardArrowRight className="inline" />{" "}
-            <a
-              href="/Offshoringmodels"
-              className="text-white hover:text-custom-purple"
-            >
-              Offshoring Models
-            </a>
-          </p> */}
         </div>
       </div>
     </div>
