@@ -19,7 +19,7 @@ const OffshoringServices = ({title,heading}) => {
           <div class="h-0.5 bg-custom-purple md:w-24 w-12"></div>
         </div>
       </div>
-      <div className="mt-4 w-full xl:pl-20 xl:pr-20 lg:pl-8 lg:pr-8 md:pl-6 md:pr-6">
+      <div className="mt-4 w-full xl:px-20  lg:px-8  md:px-6 sm:px-4 xs:px-4 xss:px-4  ">
         <CardArray />
       </div>
     </div>
