@@ -57,10 +57,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/Offshoringmodels" element={<OffshoringModels />} />
             <Route path="/web-app-development" element={<WebDevelopment />} />
-            <Route
-              path="/mobile-app-development"
-              element={<MobileAppDevelopment />}
-            />
+            <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
             <Route path="/blockchain" element={<BlockchainDevelopment />} />
             <Route path="/ai" element={<AIDevelopment />} />
             <Route path="/arvr" element={<ArVrDevelopment />} />
@@ -75,7 +72,7 @@ function App() {
             <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />
             <Route path="/CaseStudies/:title" element={<CardCaseStudy />} />
-            
+
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />

@@ -11,7 +11,7 @@ export const CardCaseStudy = () => {
   }
 
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <button onClick={() => navigate(-1)}>Back</button>
       <h1>{card.title}</h1>
       <img src={card.image} alt={card.title} />
