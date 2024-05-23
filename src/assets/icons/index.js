@@ -1,5 +1,6 @@
 import { ArIcon } from "./ArIcon";
 
+export * from "./S2Icon";
 export * from "./LinkedinIcon";
 export * from "./TwitterIcon";
 export * from "./CIcon";

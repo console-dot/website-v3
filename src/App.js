@@ -27,6 +27,7 @@ import Preloader from "./Pages/PreLoader/PreLoader";
 import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
 import { CaseStudies } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
+import { ServicesAll } from "./components/ServicesAll/ServicesAll";
 
 function App() {
   const [section, setSection] = useState("");
@@ -71,6 +72,7 @@ function App() {
             <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />
             <Route path="/CaseStudies/:title" element={<CardCaseStudy />} />
+            <Route path="/services" element={<ServicesAll />} />
 
             <Route path="*" element={<PageNotFound />} />
           </Routes>
