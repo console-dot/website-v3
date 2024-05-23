@@ -149,10 +149,10 @@ const Footer = () => {
                         <a href="#">Technologies</a>
                       </div>
                       <div className="md:leading-10 leading-6 opacity-[85%]">
-                        <a href="careers">Career</a>
+                        <button onClick={() =>navigate("/careers")} >Career</button>
                       </div>
                       <div className="md:leading-10 leading-6 opacity-[85%]">
-                        <a href="contact">Contact Us</a>
+                        <button onClick={() =>navigate("/contact")}>Contact Us</button>
                       </div>
                     </div>
                   </div>
@@ -164,14 +164,19 @@ const Footer = () => {
                 {/* Privacy Policy & Terms */}
                 <ul className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs opacity-[85%] ">
                   <li className="md:leading-10 leading-8">
-                    <a href="#" className="underline">
-                      Privacy Policy
-                    </a>
+                    <button onClick={() =>navigate("/faqs")}  className="underline">
+                      FAQS
+                    </button>
                   </li>
                   <li className="md:leading-10 leading-8">
-                    <a href="#" className="underline">
+                    <button onClick={() =>navigate("/PrivacyPolicy")}  className="underline">
+                      Privacy Policy
+                    </button>
+                  </li>
+                  <li className="md:leading-10 leading-8">
+                    <button onClick={() =>navigate("/termsandcondition")}  className="underline">
                       Terms and Conditions
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -188,7 +193,7 @@ const Footer = () => {
                       style={{ width: "20px", height: "20px" }}
                     />
                   </div>
-                  <p className="text-xs">+92-327-406-7437</p>
+                  <a href="tel:+923274067437" className="text-xs">+92-327-406-7437</a>
                 </div>
                 <div className="flex items-start mb-4">
                   <div className="mr-3">
@@ -198,7 +203,7 @@ const Footer = () => {
                       style={{ width: "20px", height: "20px" }}
                     />
                   </div>
-                  <p className="text-xs">info@consoledot.com</p>
+                  <a href="mailto:info@consoledot.com" className="text-xs">info@consoledot.com</a>
                 </div>
                 <div className="flex items-start mb-4">
                   <div className="mr-3">
@@ -208,10 +213,10 @@ const Footer = () => {
                       className="address-icon"
                     />
                   </div>
-                  <p className="text-xs">
+                  <a href="https://www.google.com/maps/dir//Ahmed+Arcade,+Suite+9,+1st+Floor,+Ferozpur+Rd,+Muslim+Town+Mor+Flyover,+Lahore,+54600/@31.5203068,74.2438174,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x391905dd1eb96015:0x54e3692fa54a7eba!2m2!1d74.3262187!2d31.5203332?entry=ttu" target="_blank" className="text-xs">
                     Ahmed Arcade, Suite 9, 1st Floor, Ferozpur Rd, Muslim Town
                     Mor Flyover, Lahore, 54600
-                  </p>
+                  </a>
                 </div>
 
                 {/* social icon section start */}

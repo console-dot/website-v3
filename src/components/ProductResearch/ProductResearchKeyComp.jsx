@@ -95,10 +95,10 @@ export const ProductResearchKeyComp = () => {
             key={i.id}
             className="flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col gap-4 p-4 border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed bg-white"
           >
-            <div className="py-[40px] xs:py-4 xxs:py-4 xxs:flex p-4 lg-w-full xxs:justify-center xs:justify-center">
+            <div className="py-[40px] xs:py-4 xxs:py-4 xxs:flex p-4 lg-w-full xxs:justify-center xs:justify-center justify-center items-center">
               <div
                 style={gradientStyle}
-                className="w-[80px] h-[80px] border-[5px] border-fromclr bg-custom-purple flex items-center justify-center rounded-full"
+                className="w-[80px] h-[80px] border-[5px] border-fromclr bg-custom-purple flex items-center  justify-center rounded-full"
               >
                 {i.icon}
               </div>

@@ -14,3 +14,4 @@ export   const landingPageDataCustomSoft={topHeading:'Our Services',midHeading:"
 export   const landingPageDataContact={topHeading:'Contact',midHeading:"Contact us", bottomHeading:"",backgroundImage: ContactBg}
 export   const landingPageDataTestimonials={topHeading:'Testimonials',midHeading:"What they say", bottomHeading:"",backgroundImage: TestimonialsBG}
 export   const landingPageDataCaseStudies={topHeading:'Join Us',midHeading:"Case Studies", bottomHeading:"",backgroundImage: CaseStudyBg}
+export   const landingPageDataServices={topHeading:'Our Expertise',midHeading:"Our Services", bottomHeading:"",backgroundImage: MobdevBg}

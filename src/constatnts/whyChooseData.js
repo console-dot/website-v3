@@ -10,6 +10,11 @@ import {
   OptimizationIcon,
   UserCentricIcon,
 } from "../assets/icons";
+import { HolisticApprochPR } from "../assets/icons/HolisticApprochPR";
+import { ProvenSuccessPR } from "../assets/icons/ProvenSuccessPR";
+import { UIUXService } from "../assets/icons/UIUXService";
+import { UiUxService2 } from "../assets/icons/UiUxService2";
+import { UiUxService4 } from "../assets/icons/UiUxService4";
 
 export const whyChooseDataWeb = [
   {
@@ -162,28 +167,28 @@ export const whyChooseDataUiUx = [
   {
     id: 1,
     title: "Expert UI/UX Designers",
-    icon: <MobExpertise />,
+    icon: <UiUxService2 />,
     description:
       "ConsoleDot boasts a team of skilled UI/UX designers with a passion for creating visually appealing and user-friendly interfaces.",
   },
   {
     id: 2,
     title: "Innovative Design Solutions",
-    icon: <MonInnovatIcon />,
+    icon: <UIUXService />,
     description:
       "We stay ahead of design trends. ConsoleDot brings innovative design solutions to the table, ensuring your digital presence is both contemporary and timeless.",
   },
   {
     id: 3,
     title: "Client-Centric Approach",
-    icon: <MobileCollabIcon />,
+    icon: <UserCentricIcon />,
     description:
       "Your vision guides our design process. ConsoleDot collaborates closely with you to understand your brand identity, ensuring our designs align seamlessly with your business objectives.",
   },
   {
     id: 4,
     title: "Holistic User Experience",
-    icon: <MobCustomizationIcon />,
+    icon: <UiUxService4 />,
     description:
       "ConsoleDot takes a holistic approach to user experience, ensuring that every interaction with your product or application is memorable, delightful, and user-friendly.",
   },
@@ -193,14 +198,14 @@ export const whyChooseDataProductResearch = [
   {
     id: 1,
     title: "Holistic Approach",
-    icon: <MobExpertise />,
+    icon: <HolisticApprochPR />,
     description:
       "Our product research services take a holistic approach, considering market dynamics, client needs, and a strategic road map for development.",
   },
   {
     id: 2,
     title: "Proven Success",
-    icon: <MonInnovatIcon />,
+    icon: <ProvenSuccessPR />,
     description:
       "Consoledot has a track record of successfully guiding businesses through informed product development, leading to market success.",
   },
