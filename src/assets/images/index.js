@@ -83,9 +83,11 @@ import solutionImage from "./solutionImage.png";
 import developmentProcessImage from "./developmentProcessImage.png";
 import challengesFacedImage from "./challengesFacedImage.png";
 import whywework from "./whywework.png";
+import herobgmobile from "./herobgmobile.png"
 
 
 
+export {herobgmobile };
 export {whywework };
 export {developmentProcessImage };
 export {challengesFacedImage };

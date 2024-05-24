@@ -45,7 +45,7 @@ const Footer = () => {
       case "product-research":
         setData(footerData.productResearch);
         break;
-      case "custome-software":
+      case "custom-software":
         setData(footerData.customSoftDevelopment);
         break;
       case "":
@@ -89,7 +89,7 @@ const Footer = () => {
               <button
                 onClick={() => navigate("/contact")}
                 type="button"
-                className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[3vw] xs:text-[3vw] xss:text-[3vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-webdevHover xs:bg-webdevHover xss:bg-webdevHover border xl:border-white lg:border-white md:border-white sm:border-webdevHover xs:border-webdevHover xss:border-webdevHover hover:border-custom-blue text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+                className="font-Lato  text-base  lg:text-[16px] md:text-[16px] sm:text-[3vw] xs:text-[3vw] xss:text-[3vw] font-medium leading-[28px] tracking-normal text-center relative w-auto flex items-center justify-center xl:bg-webdevHover lg:bg-webdevHover md:bg-webdevHover sm:bg-webdevHover xs:bg-webdevHover xss:bg-webdevHover border  sm:border-webdevHover xs:border-webdevHover xss:border-webdevHover  text-white px-20 xs:px-4 py-2.5 rounded-full focus:outline-none active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
               >
                 {isMobile ? "Let's Talk ConsoleDot!" : data?.btnText}
               </button>
@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
       )}
 
-      <footer className="w-full bg-footerBg text-white pt-10 lg:px-20 md:px-10 px-8 mt-[-50px]">
+      <footer className="w-full bg-footer-color text-white pt-10 lg:px-20 md:px-10 px-8 mt-[-50px]">
         <div className="container mx-auto flex xss:flex-wrap xs:flex-wrap sm:flex-wrap xl:flex-nowrap lg:flex-nowrap md:flex-nowrap justify-start items-start mt-20 md:gap-14 lg:gap-14 gap-2">
           {/* First Column */}
           <div className="w-full lg:w-1/4 md:w-1/2 sm:w-full xs:w-full ">
@@ -109,16 +109,16 @@ const Footer = () => {
               </div>
               <div>
                 {/* Company Name */}
-                <span className="font-poppins text-xl font-semibold leading-[46px] tracking-normal text-left text-backgroundColor">
+                <span className="font-poppins font-bold text-xl  leading-[46px] tracking-normal text-left text-backgroundColor">
                   Console
                 </span>
-                <span className="font-poppins text-xl font-semibold leading-[46px] tracking-normal text-left text-custom-purple">
+                <span className="font-poppins text-xl font-bold leading-[46px] tracking-normal text-left text-custom-purple">
                   Dot
                 </span>
               </div>
             </div>
             {/* Company Description */}
-            <p className="text-sm lg:text-base  md:text-sm sm:text-xs xs:text-xs text-justify opacity-[85%]">
+            <p className="text-sm lg:text-[14px]  md:lg:text-[14px] sm:text-xs xs:text-xs text-justify lg:leading-[1.3rem] md:leading-[1.3rem] xl:leading-[1.5rem] opacity-[85%]">
               ConsoleDot is a leading software solutions provider dedicated to
               delivering innovative and customer-centric experiences. Our
               comprehensive range of services combines technical expertise with
@@ -130,7 +130,7 @@ const Footer = () => {
           {/* main div */}
           <div className="flex md:gap-10 lg:gap-28 gap-0">
             {/* child 1 */}
-            <div className=" w-1/2 flex md:flex-row lg:flex-row sm:flex-col xs:flex-col xss:flex-col md:ml-8 lg:ml-8 ml-0 gap-10 ">
+            <div className=" w-full flex md:flex-row lg:flex-row sm:flex-col xs:flex-col xss:flex-col md:ml-8 lg:ml-8 ml-0 gap-10 ">
               <div className="w-full  sm:w-full xs:w-full md:mb-10 lg:mb-10 mb-2">
                 {/* Navigation */}
                 <div className="w-auto  sm:w-full xs:w-auto flex md:justify-center">
@@ -164,17 +164,17 @@ const Footer = () => {
                 {/* Privacy Policy & Terms */}
                 <ul className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs opacity-[85%] ">
                   <li className="md:leading-10 leading-8">
-                    <button onClick={() =>navigate("/faqs")}  className="underline">
+                    <button onClick={() =>navigate("/faqs")}  className="underline opacity-[85%]">
                       FAQS
                     </button>
                   </li>
                   <li className="md:leading-10 leading-8">
-                    <button onClick={() =>navigate("/PrivacyPolicy")}  className="underline">
+                    <button onClick={() =>navigate("/PrivacyPolicy")}  className="underline opacity-[85%]">
                       Privacy Policy
                     </button>
                   </li>
                   <li className="md:leading-10 leading-8">
-                    <button onClick={() =>navigate("/termsandcondition")}  className="underline">
+                    <button onClick={() =>navigate("/termsandcondition")}  className="underline opacity-[85%]">
                       Terms and Conditions
                     </button>
                   </li>
@@ -340,13 +340,13 @@ const Footer = () => {
 
         {/* Horizontal Line */}
       </footer>
-      <div className="bg-footerBg w-full">
+      <div className="bg-footer-color w-full">
         <hr className="border-white opacity-35 w-[90%] m-auto" />
 
         {/* Copyright */}
         {/* Copyright */}
         <div className="text-center text-white mb-10 mt-4 font-italic opacity-35 text-[10px] md:text-[12px] ">
-          Copyright © 2024 ConsoleDot. All rights reserved.
+          <i>Copyright</i> © 2024 ConsoleDot. All rights reserved.
         </div>
       </div>
     </div>

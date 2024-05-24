@@ -6,7 +6,7 @@ import CheckIcon from "../../assets/icons/CheckIcon";
 
 const Card = ({ heading, description }) => {
   return (
-    <div className="bg-white shadow-lg xl:w-full lg:w-full md:w-full xl:h-[460px] lg:h-[460px] md:h-[600px] h-[450px] rounded-lg xl:p-6 lg:px-1  lg:pb-6 md:px-6 md:pb-6 sm:px-6 sm:pb-6 xs:px-6 xs:pb-6 xss:px-6 xss:pb-6  flex-col hover:-translate-y-8 hover:border-dashed hover:border-2 hover:border-custom-blue1 w-full flex justify-center transition duration-300 ease-in-out mt-6 md:mb-0">
+    <div className="bg-white shadow-lg xl:w-full lg:w-full md:w-full xl:h-[420px] lg:h-[420px] md:h-[420px] h-[400px] rounded-lg xl:p-6 lg:px-1  lg:pb-6 md:px-6 md:pb-6 sm:px-6 sm:pb-6 xs:px-6 xs:pb-6 xss:px-6 xss:pb-6  flex-col hover:-translate-y-8 hover:border-dashed hover:border-2 hover:border-custom-purple w-full flex justify-center transition duration-300 ease-in-out mt-6 md:mb-0">
       {/* Header Section */}
       <div className="text-center mb-4 mt-8 text-custom-purple">
         <h2 className="text-[24px] font-bold mb-2">{heading}</h2>
@@ -17,7 +17,7 @@ const Card = ({ heading, description }) => {
         <ul className="list-disc list-inside">
           {description.map((point, index) => (
             <li key={index} className="flex items-center mb-2 text-custom-grey">
-              <div className="mr-4">
+              <div className="mr-4 bg-custom-pruple">
                 <CheckIcon />
               </div>
               <span>{point}</span>

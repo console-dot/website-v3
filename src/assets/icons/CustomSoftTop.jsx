@@ -3,11 +3,11 @@ import React from "react";
 export const CustomSoftTop = () => {
   return (
     <svg
-      width="531"
-      height="409"
+ 
       viewBox="0 0 531 409"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-[500px] h-[200px] md:w-[531px] md:h-[400px] sm:mt-3 xs:mt-3 xss:mt-3 mt-0 "
     >
       <rect
         x="29.2168"

@@ -11,12 +11,12 @@ export const OSC = ({ isMobile }) => {
           className={"flex items-center flex-row md:w-[25%] md:pb-0 pb-[15px] xs:pb-[25px]" }
          
         >
-          <div className="md:w-24 md:h-24 w-24 h-24 rounded-full border-2 border-white relative" >
+          <div className=" flex justify-center items-center xl:w-24 xl:h-24 lg:w-24 lg:h-24 md:w-24 md:h-24 w-12 h-12 rounded-full border-2 border-white relative" >
             
             <img
               src={service.image}
               alt={service.title}
-              className="object-cover md:ml-5 md:mt-5 mt-5 ml-[25%]  "
+              className="object-cover  xl:w-12 xl:h-12 lg:w-12 lg:h-12 md:w-12 md:h-12 w-6 h-6  "
               
             />
           </div>

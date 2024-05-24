@@ -19,7 +19,7 @@ export const AboutScreen = () => {
             <div className="h-0.5 bg-custom-purple md:w-24 w-16"></div>
           </div>
 
-          <p className="text-aboutustext text-justify  font-lato  md:text-[16px] text-[12px] font-normal md:leading-10 leading-[28px] mt-4">
+          <p className="text-aboutustext text-justify  font-lato  md:text-[16px] text-[12px] font-normal leading-8  mt-4">
             At ConsoleDot, we believe in the power of technology to transform
             businesses and drive societal progress. As a leading software
             solutions provider, we are dedicated to delivering high-quality and

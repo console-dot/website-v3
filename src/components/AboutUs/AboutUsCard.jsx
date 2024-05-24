@@ -77,17 +77,17 @@ const Card = () => {
         {cards.map((d, index) => (
           <div
             key={index} // Using index as key
-            className={`bg-white flex items-center justify-center transition-transform duration-300 rounded-xl p-3 py-20 ${index % 2 !== 0 ? "odd-border1" : ""}`}
+            className={`bg-white flex items-center justify-center transition-transform duration-300 rounded-xl p-3 py-10 ${index % 2 !== 0 ? "odd-border1" : ""}`}
             onMouseOver={() => setHovered(true)}
             onMouseOut={() => setHovered(false)}
             // Adjusting card width and height with margin
           >
             <div className="flex  justify-center  mb-4">
-              <Inverted2  className="h-[20%] w-[20%] object-cover "/>
+              <Inverted2  className="h-[20%] w-[20%] object-cover mb-6 "/>
             </div>
             <p className="text-custom-grey text-center my-2">{d.text}</p>{" "}
             {/* Adjusting text size */}
-            <div className="flex items-center justify-center rounded-full overflow-hidden  mb-2">
+            <div className="flex items-center justify-center rounded-full overflow-hidden  mt-10 mb-2">
               {" "}
               {/* Adjusting image size */}
               <img

@@ -36,8 +36,8 @@ export const OffshoreModel = () => {
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
           <div className="w-full flex flex-col">
             <div className="w-[100%]">
-              <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold leading-8 tracking-normal md:mt-4 mt-2">
-                Hourly <small>(Time & Material)</small>
+              <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
+                HOURLY <small>(TIME & MATERIAL)</small>
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
                 In this model, you pay for the actual time and resources
@@ -72,7 +72,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
-                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>
@@ -96,8 +96,8 @@ export const OffshoreModel = () => {
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3 md:pl-5 md:order-2 order-1">
           <div className="w-full flex flex-col pl-0">
             <div className="w-[100%]">
-              <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold leading-8 tracking-normal md:mt-4 mt-2">
-                Fixed Price
+              <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
+                FIXED PRICE
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
                 For projects with well-defined scopes, our fixed-price model
@@ -132,7 +132,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
-                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>
@@ -155,8 +155,8 @@ export const OffshoreModel = () => {
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
           <div className="w-full flex flex-col">
             <div className="w-[100%]">
-              <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold leading-8 tracking-normal md:mt-4 mt-2">
-                BOT<small>(Build-Operate-Transfer)</small>Model
+              <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
+                BOT<small>(BUILD-OPERATE-TRANSFER)</small>MODEL
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
                 ConsoleDot's BOT model offers a strategic partnership that
@@ -192,7 +192,7 @@ export const OffshoreModel = () => {
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2 ">
-                <button className="md:px-24 md:py-4 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>

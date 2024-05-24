@@ -74,17 +74,14 @@ export const NavBar = ({ section, setSection }) => {
             <div className="w-[37px] h-[37px]">
               <img src={logo} alt="" style={{ marginLeft: "4px" }} />
             </div>
-            <div className="z-10">
+            <div className="z-10 ">
               <span
                 style={{ color: "rgb(60, 90, 133)" }}
-                className="font-poppins text-xl font-semibold leading-[46px] tracking-normal text-left"
+                className="font-poppins text-xl font-bold leading-[46px] tracking-normal text-left"
               >
                 Console
               </span>
-              <span
-                style={{ color: "rgb(140, 202, 212)" }}
-                className="font-poppins text-xl font-semibold leading-[46px] tracking-normal text-left"
-              >
+              <span className="font-poppins text-xl font-bold leading-[46px] tracking-normal text-left text-custom-purple">
                 Dot
               </span>
             </div>
@@ -175,9 +172,9 @@ export const NavBar = ({ section, setSection }) => {
               ) : (
                 <Link
                   to={item.link}
-                  className={`cursor-pointer px-2 py-2 text-white ${
+                  className={`cursor-pointer px-2 py-2 text-white active:text-custom-purple ${
                     location.pathname === item.link
-                      ? "bg-[rgb(60,90,133,0.5)] text-[rgb(98,192,209)]"
+                      ? "visited:text-custom-purple" 
                       : "hover:bg-[rgb(60,90,133,0.5)] hover:text-[rgb(98,192,209)]"
                   } flex items-center`}
                 >

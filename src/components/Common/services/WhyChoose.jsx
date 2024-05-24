@@ -24,10 +24,10 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
         </div>
       </div>
       {!isMobile ? (
-        <div className={`w-full grid ${cardsInRow} gap-8 mt-8`}>
+        <div className={`w-full grid ${cardsInRow} gap-8 mt-8 `}>
           {data?.map((i, index) => (
             <div key={index} className=" flex flex-col bg-white border-2 border-transparent  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4">
-              <div className="flex flex-col items-center justify-center p-8 sm:p-4 xs:p-4 xxs:p-2 gap-4">
+              <div className="flex flex-col items-center justify-center p-8 my-6 sm:p-4 xs:p-4 xxs:p-2 gap-4">
                 <div
                   style={gradientStyle}
                   className="w-[80px] h-[80px] bg-dottedBorder rounded-full flex items-center justify-center mb-4"
@@ -43,7 +43,7 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
                     {i.subHeading}
                   </h1>
                 )}
-                <span className="text-[16px] text-webHeading leading-6 text-justify ">
+                <span className="text-[14px] text-webDescrip leading-6 text-justify ">
                   {i.description}
                 </span>
               </div>
