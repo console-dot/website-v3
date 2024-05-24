@@ -31,7 +31,7 @@ export const OffshoreModel = () => {
       </div>
 
       {/* Hourly (Time & Material) start */}
-      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-between items-center md:flex-row  bg-offwhite md:mt-9 mt-5">
+      <div className="w-full md:pl-20 md:pr-20 flex flex-wrap justify-between items-center md:flex-row  bg-offwhite md:mt-9 mt-5">
         {/* Left side */}
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
           <div className="w-full flex flex-col">
@@ -91,7 +91,7 @@ export const OffshoreModel = () => {
       {/* Hourly (Time & Material) End */}
 
       {/* Fixed-price start */}
-      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
         {/* Right side */}
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3 md:pl-5 md:order-2 order-1">
           <div className="w-full flex flex-col pl-0">
@@ -147,11 +147,10 @@ export const OffshoreModel = () => {
             <Offshore2 />
           </div>
         </div>
-        
       </div>
       {/* Fixed-price End */}
 
-      <div className="w-full pl-5 pr-5 md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
+      <div className="w-full md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
         {/* Left side */}
         <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
           <div className="w-full flex flex-col">
