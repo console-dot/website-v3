@@ -1,58 +1,63 @@
 import React, { useState, useEffect } from "react";
 import {
   IconBg,
-  S1Icon,
-  S2Icon,
-  S3Icon,
   ourserviceshover,
 } from "../../assets/images";
 import useIsMobile from "../../utils/hooks/useIsMobile";
+import { SiBlockchaindotcom } from "react-icons/si";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { TbAugmentedReality2 } from "react-icons/tb";
+import { PiFigmaLogoDuotone } from "react-icons/pi";
+import { VscGraph } from "react-icons/vsc";
+import { MdOutlineDeveloperMode, MdOutlineIntegrationInstructions } from "react-icons/md";
+import { CgWebsite } from "react-icons/cg";
+import { LuPackageSearch } from "react-icons/lu";
 
 const cards = [
   {
     text: "Discover the essence of customization with Consoledot's Custom Software Development services. Our seasoned developers collaborate closely with you, decoding the intricacies of your business requirements.",
     ServiceType: "Custom Software Development",
-    img: S1Icon,
+    img: <MdOutlineIntegrationInstructions className="text-white text-5xl justify-center items-center" />,
   },
   {
     text: "In the fast-paced digital landscape, staying ahead requires not just innovation but strategic insight. Consoledot introduces a unique service - Product Research. We delve deep into markets, understand your client base, and pave the road map for software development that guarantees success.",
     ServiceType: "Product Research Services",
-    img: S2Icon,
+    img: <LuPackageSearch className="text-white text-5xl justify-center items-center" />,
   },
   {
     text: "Our Web Development services go beyond mere website creation; we embark on a journey to craft immersive digital experiences. From responsive designs to seamless user interfaces, our team ensures that your online presence captivates and engages, leaving a lasting impression on your audience.",
     ServiceType: "Web App Development",
-    img: S3Icon,
+    img: <CgWebsite className="text-white text-5xl justify-center items-center" />,
   },
   {
     text: "Consoledot's Mobile App Development services bring your business to the forefront of users' daily lives. Whether you're targeting iOS, Android, or both, our expert team crafts mobile solutions that drive engagement and elevate user satisfaction.",
     ServiceType: "Mobile App development",
-    img: S1Icon,
+    img: <MdOutlineDeveloperMode  className="text-white text-5xl justify-center items-center" />,
   },
   {
     text: "At ConsoleDot, we believe in the transformative power of blockchain. Our Blockchain Development services aren't just about technology; they're about reshaping industries, enhancing security, and providing unparalleled transparency. Choose ConsoleDot for innovative solutions that redefine the way you do business.",
     ServiceType: "Blockchain Development Solutions",
-    img: S1Icon,
+    img: <SiBlockchaindotcom className="text-white text-5xl justify-center items-center"/>,
   },
   {
     text: "Welcome to GenAi by ConsoleDot, where artificial intelligence meets innovation. We offer more than just AI development; we provide transformative solutions that harness the power of machine learning, natural language processing, and computer vision to propel your business into the future.",
     ServiceType: "Artificial Intelligence",
-    img: S1Icon,
+    img: <GiArtificialIntelligence className="text-white text-6xl justify-center items-center" />,
   },
   {
     text: "Welcome to the future of immersive technology with ConsoleDot's AR/VR solutions. We don't just develop applications; we create experiences that transcend reality. Elevate your business with augmented and virtual reality that captivates your audience, enhances engagement, and sets you apart from the competition.",
     ServiceType: "AR/VR service",
-    img: S1Icon,
+    img: <TbAugmentedReality2 className="text-white text-5xl justify-center items-center" />,
   },
   {
     text: "Welcome to ConsoleDot's UI/UX design studio, where every pixel tells a story. Elevate your digital presence with user-centric designs that not only captivate your audience but also drive meaningful engagement. Choose ConsoleDot for UI/UX solutions that blend aesthetics with functionality, creating seamless and delightful user experiences",
     ServiceType: "Ui/UX service",
-    img: S1Icon,
+    img: <PiFigmaLogoDuotone  className="text-white text-5xl justify-center items-center" />,
   },
   {
     text: "Welcome to ConsoleDot! Supercharge your online presence with our top-tier digital marketing services. We specialize in SEO, social media marketing, content creation, and PPC campaigns. Our innovative strategies are designed to drive traffic, increase engagement, and boost conversions. Take your business to the next level with ConsoleDot.",
     ServiceType: "Digital Markiting",
-    img: S1Icon,
+    img: <VscGraph className="text-white text-4xl justify-center items-center" />,
   },
 ];
 
@@ -98,11 +103,9 @@ export const ServicesAllCard = () => {
                 alt="background"
                 className="absolute w-full h-full object-cover"
               />
-              <img
-                src={d.img}
-                alt="icon"
-                className="relative w-1/2 h-1/2 object-cover"
-              />
+              <div
+                className="relative  object-cover"
+              >{d.img}</div>
             </div>
 
             {/* Service type */}
