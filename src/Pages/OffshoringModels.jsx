@@ -19,7 +19,7 @@ export const OffshoringModels = () => {
         title={"Model Comparison"}
         heading={"OFFSHORING MODELS COMPARISON"}
       />
-      <div className="w-full flex flex-col justify-start items-center xss:p-5 xl:p-0 lg:p-0 md:p-0 sm:p-4 xs:p-5 lg:mt-4 lg:mb-3 xl:mt-4 xl:mb-3 md:mt-4 md:mb-3 sm:mt-3 sm:mb-2 xs:mt-3 xs:mb-2 xss:mt-1 xss:mb-1">
+      <div className="w-full flex flex-col justify-start items-center xss:p-5 xl:p-0 lg:p-0 md:p-0 sm:p-4 xs:p-5 lg:mt-4 lg:mb-4 xl:mt-4 xl:mb-4 md:mt-4 md:mb-4 sm:mt-3 sm:mb-3 xs:mt-3 xs:mb-3 xss:mt-0 xss:mb-2">
          <OffShoreModelText />
       </div>
     </div>

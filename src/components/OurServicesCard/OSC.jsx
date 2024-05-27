@@ -4,7 +4,7 @@ import { image1, image2, image3, image4 } from "../../assets/images";
 export const OSC = ({ isMobile }) => {
   return (
     <div className="pt-6">
-    <div className="bg-gradient-to-t from-custom-blue xs:pl-10  to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 px-4 md:px-28 p-[3rem] ">
+    <div className="bg-gradient-to-t from-custom-blue xs:pl-10  to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 lg:px-4 xl:px-4 md:px-4 sm:px-10 xs:px-10 xss:px-10  p-[3rem] ">
       {servicesData.map((service, index) => (
         <div
           key={index}

@@ -21,7 +21,7 @@ export const OffShoreModelText = () => {
   return (
     <div className="w-full  flex justify-center items-center xl:pl-[5%] xl:pr-[5%] lg:pl-[7%] lg:pr-[7%] md:pl-18 md:pr-18 sm:pl-8 sm:pr-8 xs:pl-8 xs:pr-8">
       <div>
-        <p className="text-aboutustext text-justify font-lato justify-center md:text-[16px] text-[12px] mt-2 mb-8 ">
+        <p className="text-aboutustext text-justify font-lato justify-center md:text-[16px] text-[12px]  mb-8 ">
           Choose the offshoring model that best aligns with your project's
           specific needs and objectives. ConsoleDot is committed to providing
           tailored solutions, ensuring the success of your projects in today's

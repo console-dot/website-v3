@@ -101,8 +101,8 @@ export const CaseStudiesCard = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {cards.slice(0, visibleCards).map((card, index) => (
           <div
             key={index}
