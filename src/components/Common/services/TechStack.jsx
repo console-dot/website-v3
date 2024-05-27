@@ -97,7 +97,7 @@ export const TechStack = ({ data, description }) => {
             </div>
           ) : (
             <div className="flex flex-col gap-4 justify-center">
-              <h2 className="text-[14px] leading-5 text-dottedBorder">
+              <h2 className="text-[14px] leading-5 text-webDescrip">
                 {description}
               </h2>
               <div className="flex w-full gap-2 bg-btnGroup p-0 px-0 rounded-full">

@@ -6,7 +6,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 export const OffShoreModelHero = () => {
   return (
     <div
-      className="w-full md:h-[90vh] lg:h-[90vh] h-[30vh]"
+      className="w-full md:h-[70vh] lg:h-[70vh] h-[30vh]"
       style={{
         backgroundImage: `url(${OffshoreBg})`,
         opacity: "2",

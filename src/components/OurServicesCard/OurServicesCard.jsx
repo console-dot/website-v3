@@ -73,19 +73,19 @@ export const Card = () => {
       <Slider {...settings}>
         {cards.map((d, index) => (
           <div key={index} className={index % 2 != 0 ? "odd-border " : ""}  >
-            <div className="bg-white h-[400px] shadow-lg rounded-lg p-9 flex flex-col items-center justify-center relative group border-b-4  border-custom-purple ">
+            <div className="bg-white lg:h-[400px] xl:h-[400px] md:h-[400px] sm:h-[530px] xs:h-[530px] xss:h-[530px] shadow-lg rounded-lg p-9 flex flex-col items-center justify-center relative group border-b-4  border-custom-purple ">
               {/* Hover image */}
               <div className="absolute  w-full h-[400px] rounded-lg bg-custom-blue opacity-0 transition-opacity duration-300 group-hover:opacity-90">
                 <img
                   src={ourserviceshover}
                   alt="hover image"
-                  className="absolute rounded-lg  h-[400px] w-full opacity-0 group-hover:opacity-100"
+                  className="absolute rounded-lg  lg:h-[400px] xl:h-[400px] md:h-[400px] sm:h-[530px] xs:h-[530px] xss:h-[530px] w-full opacity-0 group-hover:opacity-100"
                 />
               </div>
 
               <div
                 className="mb-4 relative group"
-                style={{ width: "100px", height: "100px" }}
+                style={{ width: "100px", height: "30%" }}
               >
                 {/* Outer div with background image */}
                 <img
@@ -104,10 +104,10 @@ export const Card = () => {
                 </div>
               </div>
 
-              <p className="text-gray-800 font-bold z-10 group-hover:text-white ">
+              <p className="text-gray-800 font-bold z-10 group-hover:text-white  "style={{  height: "10%" }}>
                 {d.ServiceType}
               </p>
-              <p className="text-custom-grey text-justify mb-4 text-8px z-10 group-hover:text-white">
+              <p className="text-custom-grey text-justify mb-4 text-8px z-10 group-hover:text-white" style={{ height: "40%" }}>
                 {d.text}
               </p>
             </div>
