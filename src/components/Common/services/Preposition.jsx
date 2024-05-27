@@ -21,7 +21,7 @@ export const Preposition = ({ title, heading, proposition }) => {
           </div>
         </div>
         <div className="flex flex-row lg:gap-8 xl:gap-8 2xl:gap-8 md:gap-4 sm:gap-2 xs:gap-1  items-start h-full 2xl:w-[70%] xl:w-[70%] lg:w-[70%] md:w-full sm:w-full xs:w-full relative">
-          <div className="flex justify-start items-start transform rotate-180 lg:mt-12 xl:mt-12 2xl:mt-12 md:mt-0 sm:mt-0 xs:mt-0 xxs:mt-0">
+          <div className="flex justify- items-start transform rotate-180 lg:mt-12 xl:mt-12 2xl:mt-12 md:mt-[-14px] sm:mt-[-14px] xs:mt-[-14px] xxs:mt-[-14px] ">
             <Inverted2 />
           </div>
           <div className="flex w-[70%] h-full justify-center items-center">
@@ -29,7 +29,7 @@ export const Preposition = ({ title, heading, proposition }) => {
               {proposition}
             </p>
           </div>
-          <div className=" absolute lg:left-[100%] xl:left-[90%] 2xl:left-[100%] md:left-[100%] sm:left-[100%] xs:left-[86%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
+          <div className=" absolute lg:left-[80%] xl:left-[80%] 2xl:left-[80%] md:left-[80%] sm:left-[100%] xs:left-[86%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
             <Inverted2 />
           </div>
         </div>
