@@ -15,9 +15,78 @@ export const SearchInput = ({
   };
 
   const filterData = () => {
-    const filteredPositions = openPositionData.filter((position) =>
+    let filteredPositions = openPositionData.filter((position) =>
       position.title.toLowerCase().includes(searchInput.toLowerCase())
     );
+
+    // Apply type filters
+    if (checkedTypeItems.partTime) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.type === "Part-Time"
+      );
+    }
+    if (checkedTypeItems.fullTime) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.type === "Full-Time"
+      );
+    }
+    if (checkedTypeItems.internship) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.type === "Internship"
+      );
+    }
+    if (checkedTypeItems.remote) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.type === "Remote"
+      );
+    }
+    if (checkedTypeItems.contact) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.type === "Contact"
+      );
+    }
+
+    // Apply category filters
+    if (checkedCategoryItems.design) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Design"
+      );
+    }
+    if (checkedCategoryItems.business) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Business"
+      );
+    }
+    if (checkedCategoryItems.finance) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Finance"
+      );
+    }
+    if (checkedCategoryItems.hr) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Human Resource"
+      );
+    }
+    if (checkedCategoryItems.sales) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Sales"
+      );
+    }
+    if (checkedCategoryItems.marketing) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Marketing"
+      );
+    }
+    if (checkedCategoryItems.softwareEngineering) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Software Engineering"
+      );
+    }
+    if (checkedCategoryItems.tech) {
+      filteredPositions = filteredPositions.filter(
+        (position) => position.depatrment === "Technology"
+      );
+    }
     console.log(filteredPositions);
     setFilterData(filteredPositions);
   };

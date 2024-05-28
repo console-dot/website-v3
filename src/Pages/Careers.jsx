@@ -74,7 +74,12 @@ export const Careers = () => {
             <></>
           )}
           <div className="w-full">
-            <OpenPositions data={openPositionData} filterData={filterData} />
+            <OpenPositions
+              checkedTypeItems={checkedTypeItems}
+              checkedCategoryItems={checkedCategoryItems}
+              data={openPositionData}
+              filterData={filterData}
+            />
           </div>
         </div>
       </div>
