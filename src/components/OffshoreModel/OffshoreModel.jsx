@@ -33,7 +33,7 @@ export const OffshoreModel = () => {
       {/* Hourly (Time & Material) start */}
       <div className="w-full md:pl-20 md:pr-20 flex flex-wrap justify-between items-center md:flex-row  bg-offwhite md:mt-9 mt-5">
         {/* Left side */}
-        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 sm:p-0 xss:p-0">
           <div className="w-full flex flex-col">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
@@ -71,7 +71,7 @@ export const OffshoreModel = () => {
                   Cost-effectiveness for short-term projects.
                 </span>
               </div>
-              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
+              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
                 <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
@@ -93,7 +93,7 @@ export const OffshoreModel = () => {
       {/* Fixed-price start */}
       <div className="w-full md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
         {/* Right side */}
-        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3 md:pl-5 md:order-2 order-1">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 sm:p-0 xss:p-0 md:order-2 order-1">
           <div className="w-full flex flex-col pl-0">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
@@ -131,7 +131,7 @@ export const OffshoreModel = () => {
                   Suitable for projects with a stable and known scope.
                 </span>
               </div>
-              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
+              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
                 <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
@@ -152,7 +152,7 @@ export const OffshoreModel = () => {
 
       <div className="w-full md:pl-20 md:pr-20 flex flex-wrap justify-between items-center bg-offwhite md:mt-9 mt-5">
         {/* Left side */}
-        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 p-3">
+        <div className="xl:w-[48%] lg:w-[48%] md:w-[48%] sm:w-[100%] xs:w-[100%] md:p-0 sm:p-0 xss:p-0">
           <div className="w-full flex flex-col">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
@@ -191,7 +191,7 @@ export const OffshoreModel = () => {
                   Risk mitigation through ConsoleDot's expertise.
                 </span>
               </div>
-              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 md:mt-7 md:mb-6 mt-2 mb-2 ">
+              <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2 ">
                 <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service

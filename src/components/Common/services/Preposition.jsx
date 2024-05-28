@@ -29,7 +29,7 @@ export const Preposition = ({ title, heading, proposition }) => {
               {proposition}
             </p>
           </div>
-          <div className=" absolute lg:left-[80%] xl:left-[80%] 2xl:left-[80%] md:left-[80%] sm:left-[100%] xs:left-[86%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
+          <div className=" absolute lg:left-[85%] xl:left-[85%] 2xl:left-[85%] md:left-[80%] sm:left-[100%] xs:left-[86%] xxs:left-[80%] lg:top-[60%] xl:top-[60%] md:top-[60%] sm:top-[60%] xs:top-[70%] xxs:top-[85%]  2xl:top-[60%] ">
             <Inverted2 />
           </div>
         </div>
