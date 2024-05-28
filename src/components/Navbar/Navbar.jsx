@@ -174,7 +174,7 @@ export const NavBar = ({ section, setSection }) => {
                   to={item.link}
                   className={`cursor-pointer px-2 py-2 text-white active:text-custom-purple ${
                     location.pathname === item.link
-                      ? "visited:text-custom-purple visited:font-extrabold" 
+                      ? "visited:text-custom-purple" 
                       : "hover:bg-[rgb(60,90,133,0.5)] hover:text-[rgb(98,192,209)]"
                   } flex items-center`}
                 >

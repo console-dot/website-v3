@@ -20,17 +20,8 @@ const cards = [
   {
     title: "Project Overview",
     image: projectOverviewImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">Introduction:</strong>{" "}
-        Provide an overview of the client or project context.
-        <br />
-        <strong className="font-semibold text-webHeading">
-          Objectives:
-        </strong>{" "}
-        Outline the goals and objectives of the software development project.
-      </>
-    ),
+    description:
+      "Introduction: Provide an overview of the client or project context.\nObjectives: Outline the goals and objectives of the software development project.",
   },
   {
     title: "Problem Statement",
@@ -41,37 +32,14 @@ const cards = [
   {
     title: "Solution",
     image: solutionImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">Approach:</strong>{" "}
-        Explain the methodology and approach taken to address the client's
-        challenges.
-        <br />
-        <strong className="font-semibold text-webHeading">
-          Technologies Used:
-        </strong>{" "}
-        List the technologies, tools, and frameworks employed in the software
-        development.\nKey Features: Highlight the main features and
-        functionalities of the software solution.,
-      </>
-    ),
+    description:
+      "Approach: Explain the methodology and approach taken to address the client’s challenges.\nTechnologies Used: List the technologies, tools, and frameworks employed in the software development.\nKey Features: Highlight the main features and functionalities of the software solution.",
   },
   {
     title: "Development Process",
     image: developmentProcessImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">Planning:</strong>{" "}
-        Detail the planning phase, including requirements gathering, scope
-        definition, and timeline.
-        <br />
-        <strong className="font-semibold text-webHeading">
-          Execution:
-        </strong>{" "}
-        Describe the development process, including coding, testing, and
-        iteration.,
-      </>
-    ),
+    description:
+      "Planning: Detail the planning phase, including requirements gathering, scope definition, and timeline.\nExecution: Describe the development process, including coding, testing, and iteration.",
   },
   {
     title: "Challenges Faced",
@@ -80,6 +48,7 @@ const cards = [
       "Discuss any challenges or obstacles encountered during the project and how they were overcome.",
   },
 ];
+
 
 export const CaseStudiesCard = () => {
   const isMobile = useIsMobile();
@@ -101,8 +70,8 @@ export const CaseStudiesCard = () => {
   };
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div className="flex flex-col justify-start items-center mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
         {cards.slice(0, visibleCards).map((card, index) => (
           <div
             key={index}
@@ -115,19 +84,12 @@ export const CaseStudiesCard = () => {
               className="w-full h-40 object-cover"
             />
             <div className="bg-white flex flex-col items-start p-6 shadow-md hover:shadow-xl">
-              <h3 className="text-lg text-webHeading font-bold mb-2 h-10">
-                {card.title}
-              </h3>
-              <div className="text-webDescrip mb-4 h-20 overflow-hidden">
-                {typeof card.description === "string"
-                  ? card.description.split("\n").map((line, i) => (
-                      <span key={i}>
-                        {line}
-                        <br />
-                      </span>
-                    ))
-                  : card.description}
-              </div>
+              <h3 className="text-xl font-bold mb-2 h-10">{card.title}</h3>
+              <p className="text-custom-grey mb-4 h-20 overflow-hidden">
+                {card.description.split("\n").map((line, i) => (
+                  <span key={i}>{line}<br/></span>
+                ))}
+              </p>
             </div>
           </div>
         ))}

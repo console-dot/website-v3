@@ -18,18 +18,10 @@ export const Careers = () => {
   const [checkedCategoryItems, setCheckedCategoryItems] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
   const isMobile = useIsMobile();
-
-  const closeModal = () => setModalOpen(false);
-
-  const applyFilters = () => {
-    // Logic for applying filters can go here
-    closeModal();
-  };
-
   return (
     <div className="w-full mb-8 relative overflow-hidden">
       <LandingPage data={landingPageDataCareers} />
-      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xss:px-8 w-full flex flex-col xl:gap-16 lg:gap-16 md:gap-16 sm:gap-4 xs:gap-4 xss:gap-4 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-[-2.5rem] xs:mt-[-2.5rem] xss:mt-[-2.5rem]">
+      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xss:px-8 w-full flex flex-col xl:gap-16 lg:gap-16 md:gap-16 sm:gap-4 xs:gap-4 xss:gap-4 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-8 xs:mt-8 xss:mt-8">
         <div className="xl:block lg:block md:block sm:flex xs:flex xss:flex xl:justify-start sm:justify-between xs:justify-between xss:justify-between">
           <SearchInput
             setFilterData={setFilterData}
@@ -79,7 +71,7 @@ export const Careers = () => {
         </div>
       </div>
       {isMobile && modalOpen && (
-        <div className="w-[75%] m-auto absolute top-[27%] left-[12%] h-auto flex flex-col bg-white shadow-md p-4">
+        <div className="w-[75%] m-auto absolute top-[27%] left-[12%] h-auto flex bg-white shadow-md">
           <div className="w-full pt-2">
             <Checks
               data={checksTypeOfEmployement}
@@ -97,22 +89,6 @@ export const Careers = () => {
               checkedTypeItems={checkedTypeItems}
               checkedCategoryItems={checkedCategoryItems}
             />
-          </div>
-          <div className="flex justify-around items-center">
-            <button
-              type="button"
-              className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
-              onClick={closeModal}
-            >
-              Close
-            </button>
-            <button
-              type="button"
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-              onClick={applyFilters}
-            >
-              Apply
-            </button>
           </div>
         </div>
       )}

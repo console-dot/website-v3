@@ -8,7 +8,6 @@ export const ProductResearchTop = () => {
       viewBox="0 0 531 409"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xl:h-[409px] lg:h-[409px] md:h-[409px] sm:h-[300px] xs:h-[280px] xss:h-[280px]"
     >
       <rect
         x="29.2168"

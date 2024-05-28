@@ -85,11 +85,11 @@ export const ProductResearchKeyComp = () => {
         <h1 className="text-[28px] w-full leading-10 text-custom-purple font-bold text-center">
           KEY COMPONENTS OF CONSOLEDOT'S PRODUCT RESEARCH SERVICES:
         </h1>
-        <div className="xl:mb-0 lg:mb-0 md:mb-0 sm:mb-4 xs:mb-8 xss:mb-8">
+        <div className="">
           <Divider />
         </div>
       </div>
-      <div className="hidden lg:grid xl:grid-cols-2 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8 xl:mt-8 lg:mt-8 md:mt-8 sm:mt-12 xs:mt-12 xss:mt-12">
+      <div className="hidden lg:grid xl:grid-cols-2 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8 mt-8">
         {data.map((i) => (
           <div
             key={i.id}
