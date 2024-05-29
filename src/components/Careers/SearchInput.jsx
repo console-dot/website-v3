@@ -77,7 +77,7 @@ export const SearchInput = ({
         (position) => position.jobCategory === "Marketing"
       );
     }
-    if (checkedCategoryItems.softwareEngineering) {
+    if (checkedCategoryItems.softwareEngineer) {
       filteredPositions = filteredPositions.filter(
         (position) => position.jobCategory === "Software Engineer"
       );

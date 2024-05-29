@@ -6,7 +6,6 @@ import { Checks } from "../components/Careers/Checks";
 import {
   checksCategories,
   checksTypeOfEmployement,
-  // openPositionData,
 } from "../constatnts/career";
 import { OpenPositions } from "../components/Careers/OpenPositions";
 import useIsMobile from "../utils/hooks/useIsMobile";
@@ -68,6 +67,7 @@ export const Careers = () => {
           {!isMobile ? (
             <div className="lg:w-2/5 xl:w-2/5 2xl:w-2/5  pt-2">
               <Checks
+                openPositionData={openPositionData}
                 data={checksTypeOfEmployement}
                 heading={"Type of Employment"}
                 setCheckedTypeItems={setCheckedTypeItems}
@@ -76,6 +76,7 @@ export const Careers = () => {
                 checkedCategoryItems={checkedCategoryItems}
               />
               <Checks
+                openPositionData={openPositionData}
                 data={checksCategories}
                 heading={"Categories"}
                 setCheckedTypeItems={setCheckedTypeItems}
