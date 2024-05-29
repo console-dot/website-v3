@@ -28,10 +28,25 @@ import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAl
 import { CaseStudies } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 import { ServicesAll } from "./components/ServicesAll/ServicesAll";
+import { getLandingPage } from "./api";
+import { useDispatch } from "react-redux";
+import { setLandingPageData } from "./redux";
 
 function App() {
   const [section, setSection] = useState("");
   const [showLoader, setShowLoader] = useState(true);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    getLandingPage()
+      .then((res) => {
+        dispatch(setLandingPageData(res?.data));
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+  }, []);
 
   useEffect(() => {
     // Hide the loader after 5 seconds

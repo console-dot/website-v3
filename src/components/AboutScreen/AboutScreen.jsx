@@ -2,7 +2,7 @@ import React from "react";
 import { HomeTop2, aboutService } from "../../assets/images";
 import { HomeTop } from "../../assets/icons";
 
-export const AboutScreen = () => {
+export const AboutScreen = ({description}) => {
   return (
     <div className="w-[100%] flex  mt-6 md:mt-16 ">
       <div className="flex flex-wrap  bg-backgroundColor">
@@ -20,11 +20,7 @@ export const AboutScreen = () => {
           </div>
 
           <p className="text-aboutustext text-justify  font-lato  md:text-[16px] text-[12px] font-normal leading-8  mt-4">
-            At ConsoleDot, we believe in the power of technology to transform
-            businesses and drive societal progress. As a leading software
-            solutions provider, we are dedicated to delivering high-quality and
-            customer-centric experiences that enable enterprises, associates,
-            and society to rise.
+          {description}
           </p>
         </div>
         <div className="w-full md:w-1/2 flex justify-center md:pl-6 lg:pl-8">
