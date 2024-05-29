@@ -28,9 +28,9 @@ import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAl
 import { CaseStudies } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 import { ServicesAll } from "./components/ServicesAll/ServicesAll";
-import { getLandingPage, getOpenPositions } from "./api";
+import { getFaqs, getLandingPage, getOpenPositions } from "./api";
 import { useDispatch } from "react-redux";
-import { setCareerPageData, setLandingPageData } from "./redux";
+import { setCareerPageData, setFaqPageData, setLandingPageData } from "./redux";
 
 function App() {
   const [section, setSection] = useState("");
@@ -49,6 +49,12 @@ function App() {
     getOpenPositions()
       .then((res) => {
         dispatch(setCareerPageData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    getFaqs()
+      .then((res) => {
+        dispatch(setFaqPageData(res?.data));
       })
       .catch((err) => console.log(err));
   }, []);
