@@ -3,7 +3,7 @@ import { LandingBg, herobgmobile } from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import useIsMobile from "../../utils/hooks/useIsMobile";
-export const HomeLanding = () => {
+export const HomeLanding = ({ heroDescription }) => {
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(true); // Set to true by default
 
@@ -23,17 +23,17 @@ export const HomeLanding = () => {
     });
   };
   const isMobile = useIsMobile();
-  const opacity = isMobile ? '80%' : '100%';
+  const opacity = isMobile ? "80%" : "100%";
   return (
     <div
-    className="w-full h-full mb-8"
-    style={{
-      backgroundImage: `url(${isMobile ? herobgmobile : LandingBg})`, // Conditional rendering of background image
-      backgroundSize: "cover",
-      backgroundRepeat: "round",
-      opacity: opacity,        
-    }}
-  >
+      className="w-full h-full mb-8"
+      style={{
+        backgroundImage: `url(${isMobile ? herobgmobile : LandingBg})`, // Conditional rendering of background image
+        backgroundSize: "cover",
+        backgroundRepeat: "round",
+        opacity: opacity,
+      }}
+    >
       {/* backgroundImage: `url(${herobgmobile.png})`, apply conditional rendring here using mobile */}
       <div className=" flex justify-center items-center pt-4">
         <div className="text-center text-white w-[95%] md:w-[50%]">
@@ -44,24 +44,14 @@ export const HomeLanding = () => {
             CONSOLEDOT
           </p>
           <p className="font-lato font-normal leading-[28px] text-[12px] md:text-[16px] mt-4 sm:p-4 xs:p-4 xss:p-4">
-            We represent the connected world, offering innovative and
-            customer-centric information technology experiences, enabling
-            Enterprises, Associates, and Society to Rise.
-            <br />
-            We are dedicated to providing high-quality software solutions to
-            meet the evolving needs of businesses across industries. As a
-            full-stack development company, we offer a comprehensive range of
-            services, combining technical expertise with a customer-centric
-            approach.
+            {heroDescription}
           </p>
           <div className="flex justify-center md:mt-14 m-8 ">
             <button
               onClick={() => navigate("/contact")}
               className="text-white h-[38px] w-[182px] border-1 border-white bg-gradient-to-tl  from-custom-blue1 to-custom-purple rounded-full active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue shadow-lg"
             >
-              <p
-                className="font-Lato text-base font-medium leading-[28px] tracking-normal"
-              >
+              <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                 Contact us
               </p>
             </button>

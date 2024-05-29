@@ -7,9 +7,9 @@ import { image4 } from "../../assets/images";
 import useIsMobile from "../../utils/hooks/useIsMobile";
 import { OSC } from "../OurServicesCard/OSC";
 import { useNavigate } from "react-router-dom";
-const OurServices = () => {
+const OurServices = ({ expertise }) => {
   const isMobile = useIsMobile();
-  const navigate =useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col items-center pt-6 ">
@@ -29,11 +29,11 @@ const OurServices = () => {
       </div>
 
       <div className="xl:pl-16 xl:pr-16 xl:pt-16 lg:pl-16 lg:pr-16 lg:pt-16 md:pl-16 md:pr-16 md:pt-16 pl-5 pr-5 pt-6">
-        <Card />
+        <Card expertise={expertise} />
         <div className="flex md:justify-end justify-center md:pt-3 pt-10 ">
           <button
             type="button"
-            onClick={() =>navigate("/services")} 
+            onClick={() => navigate("/services")}
             className="text-custom-purple just border-[0.5px]bg-custom-lightBlue  rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue px-5 py-2.5 w-[182px] h-[54px] mt-3 bg-custom-lightBlue  font-Lato font-medium"
           >
             View All

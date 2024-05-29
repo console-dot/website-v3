@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import user from "../../assets/images/user.png";
-import cardsymbol from "../../assets/images/cardsymbol.png"; 
+import cardsymbol from "../../assets/images/cardsymbol.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Inverted2 } from "../../assets/icons";
+import config from "../../api/config";
 
 const settings = {
   dots: true,
@@ -45,65 +46,33 @@ const settings = {
   ],
 };
 
-const Card = () => {
-  const [hovered, setHovered] = useState(false);
-
-  const cards = [
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh...",
-      name: "Full Name",
-      designation: "Desgination",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Full Name",
-      designation: "Desgination",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Full Name",
-      designation: "Desgination",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor lorem eros, in vulputate massa rhoncus quis. Ut aliquam varius risus id dignissim. Integer erat nibh",
-      name: "Full Name",
-      designation: "Desgination",
-    },
-     ];
-
+const Card = ({ testimonials }) => {
+  const BASE_URL = config.BASE_URL;
   return (
     <div className="">
       <Slider {...settings} style={{ gap: "10px" }}>
-        {cards.map((d, index) => (
+        {testimonials.map((testimonial) => (
           <div
-            key={index} // Using index as key
-            className={`bg-white flex items-center justify-center transition-transform duration-300 rounded-xl p-3 py-10 ${index % 2 !== 0 ? "odd-border1" : ""}`}
-            onMouseOver={() => setHovered(true)}
-            onMouseOut={() => setHovered(false)}
-            // Adjusting card width and height with margin
+            key={testimonial?._id}
+            className="bg-white flex items-center justify-center transition-transform duration-300 rounded-xl p-3 py-10"
           >
-            <div className="flex  justify-center  mb-4">
-              <Inverted2  className="h-[20%] w-[20%] object-cover mb-6 "/>
-            </div>
-            <p className="text-custom-grey text-center my-2">{d.text}</p>{" "}
-            {/* Adjusting text size */}
-            <div className="flex items-center justify-center rounded-full overflow-hidden  mt-10 mb-2">
-              {" "}
-              {/* Adjusting image size */}
+            <div className="flex justify-center mb-4 h-16">{<Inverted2 />}</div>
+            <p className="text-custom-grey text-center my-2 h-28">
+              {testimonial?.description}
+            </p>
+            <div className="flex items-center justify-center mt-10 mb-2">
               <img
-                src={user}
-                alt="Profile"
-                className="flex items-center justify-center "
+                src={`${BASE_URL}/file/${testimonial?.image}`}
+                alt={testimonial?.fullName}
+                className="flex items-center justify-center h-10 w-10 rounded-full"
               />
             </div>
-            <p className="flex items-center justify-center text-gray-800 font-bold text-xl">
-              {d.name}
-            </p>{" "}
-            {/* Adjusting text size */}
-            <p className="flex items-center justify-center text-custom-purple font-lato text-lg">
-              {d.designation}
-            </p>{" "}
-            {/* Adjusting text size */}
+            <p className="text-gray-800 font-bold text-xl text-center">
+              {testimonial?.fullName}
+            </p>
+            <p className="text-custom-purple font-lato text-lg text-center">
+              {testimonial?.designation}
+            </p>
           </div>
         ))}
       </Slider>

@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import config from "../../api/config";
 
 const settings = {
   dots: true,
@@ -44,35 +45,15 @@ const settings = {
   ],
 };
 
-const cards = [
-  {
-    text: "Discover the essence of customization with Consoledot's Custom Software Development services. Our seasoned developers collaborate closely with you, decoding the intricacies of your business requirements.",
-    ServiceType: "Custom Software Development",
-    img: S1Icon,
-  },
-  {
-    text: "In the fast-paced digital landscape, staying ahead requires not just innovation but strategic insight. Consoledot introduces a unique service - Product Research. We delve deep into markets, understand your client base, and pave the road map for software development that guarantees success.",
-    ServiceType: "Product Research Services",
-    img: S2Icon,
-  },
-  {
-    text: "our Web Development services go beyond mere website creation; we embark on a journey to craft immersive digital experiences. From responsive designs to seamless user interfaces, our team ensures that your online presence captivates and engages, leaving a lasting impression on your audience.",
-    ServiceType: "Web App Development",
-    img: S3Icon,
-  },
-  {
-    text: "our Web Development services go beyond mere website creation; we embark on a journey to craft immersive digital experiences. From responsive designs to seamless user interfaces, our team ensures that your online presence captivates and engages, leaving a lasting impression on your audience.",
-    ServiceType: "Artificial Intelligence",
-    img: S1Icon,
-  },
-];
 
-export const Card = () => {
+
+export const Card = ({ expertise }) => {
+  const BASE_URL = config.BASE_URL;
   return (
     <div className="">
       <Slider {...settings}>
-        {cards.map((d, index) => (
-          <div key={index} className={index % 2 != 0 ? "odd-border " : ""}  >
+        {expertise.map((expertise) => (
+          <div key={expertise?._id} className={expertise?._id % 2 != 0 ? "odd-border " : ""}>
             <div className="bg-white lg:h-[400px] xl:h-[400px] md:h-[400px] sm:h-[530px] xs:h-[530px] xss:h-[530px] shadow-lg rounded-lg p-9 flex flex-col items-center justify-center relative group border-b-4  border-custom-purple ">
               {/* Hover image */}
               <div className="absolute  w-full h-[400px] rounded-lg bg-custom-blue opacity-0 transition-opacity duration-300 group-hover:opacity-90">
@@ -97,18 +78,24 @@ export const Card = () => {
                 {/* Inner div */}
                 <div className="flex items-center justify-center w-24 h-24 absolute">
                   <img
-                    src={d.img}
+                    src={`${BASE_URL}/file/${expertise?.image}`}
                     alt="icon"
                     className="w-2/4 h-2/4 object-cover"
                   />
                 </div>
               </div>
 
-              <p className="text-gray-800 font-bold z-10 group-hover:text-white  "style={{  height: "10%" }}>
-                {d.ServiceType}
+              <p
+                className="text-gray-800 font-bold z-10 group-hover:text-white  "
+                style={{ height: "10%" }}
+              >
+                {expertise?.name}
               </p>
-              <p className="text-custom-grey text-justify mb-4 text-8px z-10 group-hover:text-white" style={{ height: "40%" }}>
-                {d.text}
+              <p
+                className="text-custom-grey text-justify mb-4 text-8px z-10 group-hover:text-white"
+                style={{ height: "40%" }}
+              >
+                {expertise?.description}
               </p>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Card, { CardArray} from "./AboutUsCard"; // Import the CardArray component
 import { useNavigate } from "react-router-dom";
 
-export const AboutUs = () => {
+export const AboutUs = ({ testimonials }) => {
   const navigate = useNavigate();
   return (
     <div className="">
@@ -22,7 +22,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="xl:pl-16 xl:pr-16 xl:pt-16 lg:pl-16 lg:pr-16 lg:pt-16 md:pl-16 md:pr-16 md:pt-16 pl-5 pr-5 pt-6  ">
-        <Card />
+        <Card testimonials={testimonials} />
         <div className="flex md:justify-end justify-center md:pt-3 pt-10 ">
         <button
           type="button"
