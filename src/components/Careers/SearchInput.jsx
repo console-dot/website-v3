@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { openPositionData } from "../../constatnts/career";
 import useIsXs from "../../utils/hooks/useIsXs";
 
 export const SearchInput = ({
+  openPositionData,
   setFilterData,
   checkedTypeItems,
   checkedCategoryItems,
@@ -16,75 +16,75 @@ export const SearchInput = ({
 
   const filterData = () => {
     let filteredPositions = openPositionData.filter((position) =>
-      position.title.toLowerCase().includes(searchInput.toLowerCase())
+      position.designation.toLowerCase().includes(searchInput.toLowerCase())
     );
 
     // Apply type filters
     if (checkedTypeItems.partTime) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.type === "Part-Time"
+        (position) => position.employmentType === "Part-Time"
       );
     }
     if (checkedTypeItems.fullTime) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.type === "Full-Time"
+        (position) => position.employmentType === "Full-Time"
       );
     }
     if (checkedTypeItems.internship) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.type === "Internship"
+        (position) => position.employmentType === "Internship"
       );
     }
     if (checkedTypeItems.remote) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.type === "Remote"
+        (position) => position.employmentType === "Remote"
       );
     }
     if (checkedTypeItems.contact) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.type === "Contact"
+        (position) => position.employmentType === "Contact"
       );
     }
 
     // Apply category filters
     if (checkedCategoryItems.design) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Design"
+        (position) => position.jobCategory === "Design"
       );
     }
     if (checkedCategoryItems.business) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Business"
+        (position) => position.jobCategory === "Business"
       );
     }
     if (checkedCategoryItems.finance) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Finance"
+        (position) => position.jobCategory === "Finance"
       );
     }
     if (checkedCategoryItems.hr) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Human Resource"
+        (position) => position.jobCategory === "Human Resource"
       );
     }
     if (checkedCategoryItems.sales) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Sales"
+        (position) => position.jobCategory === "Sales"
       );
     }
     if (checkedCategoryItems.marketing) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Marketing"
+        (position) => position.jobCategory === "Marketing"
       );
     }
-    if (checkedCategoryItems.softwareEngineering) {
+    if (checkedCategoryItems.softwareEngineer) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Software Engineering"
+        (position) => position.jobCategory === "Software Engineer"
       );
     }
     if (checkedCategoryItems.tech) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.depatrment === "Technology"
+        (position) => position.jobCategory === "Technology"
       );
     }
     console.log(filteredPositions);
