@@ -244,10 +244,10 @@ const CardModal = ({ card, onClose }) => {
   if (!card) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center mt-12 bg-black  z-[5000]">
+    <div className="fixed inset-0 flex items-center justify-center mt-12  bg-black opacity-99  z-10">
       <div
         ref={modalRef}
-        className="relative bg-white xl:w-4/5 xl:h-5/6 lg:w-4/5 lg:h-5/6 md:w-4/5 md:h-5/6 sm:w-[90%] sm:h-[90%] xs:w-[90%] xs:h-[90%] xss:w-[90%] xss:h-[90%] overflow-auto p-6"
+        className="relative bg-slate-100 xl:w-4/5 xl:h-5/6 lg:w-4/5 lg:h-5/6 md:w-4/5 md:h-5/6 sm:w-[90%] sm:h-[90%] xs:w-[90%] xs:h-[90%] xss:w-[90%] xss:h-[90%] overflow-auto p-6 z-16"
       >
         <div className="flex flex-row w-full">
           <div className="w-[50%]">
@@ -359,7 +359,7 @@ export const CaseStudiesCard = () => {
   return (
     <div
       className={`container mx-auto px-4 ${
-        selectedCard ? "opacity-70" : "opacity-100"
+        selectedCard ? "opacity-90" : "opacity-100"
       }`}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8">
