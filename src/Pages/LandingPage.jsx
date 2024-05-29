@@ -19,7 +19,7 @@ export default function LandingPage() {
         <AboutScreen description={data?.about?.description} />
         <AboutUs testimonials={data?.testimonial} />
         <OurServices expertise={data?.expertise} />
-        <OSC />
+        <OSC workExperience={data?.intro?.workExperience} />
         <OffshoringServices
           title={"Explore Our Offshoring Models"}
           heading={"OFFSHORING SERVICES AT CONSOLEDOT"}
