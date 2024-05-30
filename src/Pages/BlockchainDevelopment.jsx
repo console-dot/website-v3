@@ -2,7 +2,7 @@ import React from "react";
 import { BlockChainTop } from "../assets/icons";
 import { Process, TopComponent } from "../components/Common";
 import { TechStack } from "../components/Common/services/TechStack";
-import { WhyChoose } from "../components/Common/services/WhyChoose";
+import { WhyChoose } from "../components/Common/services/WhyChooseCustomSoft";
 import LandingPage from "../components/Common/services/LandingPage";
 import { processCardsBlockchainDev } from "../constatnts/ProcessCardsData";
 import { techStackDataBlockchain } from "../constatnts/techStackData";

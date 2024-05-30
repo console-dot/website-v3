@@ -9,7 +9,6 @@ import { selectLandingPageDetails } from "../redux";
 
 export default function LandingPage() {
   const data = useSelector(selectLandingPageDetails);
-  console.log("data", data);
   return (
     <>
       <div className="bg-backgroundColor w-[100%] overflow-hidden">
@@ -21,9 +20,10 @@ export default function LandingPage() {
         <OurServices expertise={data?.expertise} />
         <OSC workExperience={data?.intro?.workExperience} />
         <OffshoringServices
-          title={"Explore Our Offshoring Models"}
-          heading={"OFFSHORING SERVICES AT CONSOLEDOT"}
-        />
+        title="Explore Our Offshoring Models"
+        heading="OFFSHORING SERVICES AT CONSOLEDOT"
+        offshoreComparison={data?.offshoreComparison?.[0]?.offshoreType}
+      />
       </div>
     </>
   );

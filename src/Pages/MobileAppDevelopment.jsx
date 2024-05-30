@@ -2,7 +2,7 @@ import React from "react";
 import { ArVrTop, MobTop, MobTopcompImg } from "../assets/icons";
 import { Preposition, Process, TopComponent } from "../components/Common";
 import { TechStack } from "../components/Common/services/TechStack";
-import { WhyChoose } from "../components/Common/services/WhyChoose";
+import { WhyChoose } from "../components/Common/services/WhyChooseCustomSoft";
 import LandingPage from "../components/Common/services/LandingPage";
 import { processCardsMobDev } from "../constatnts/ProcessCardsData";
 import { techStackDataMobDev } from "../constatnts/techStackData";

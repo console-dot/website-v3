@@ -5,14 +5,14 @@ export const OSC = ({ workExperience }) => {
   const servicesData = [
     {
       image: image1,
-      title: workExperience?.countries,
+      title: workExperience?.countries.split(", ").length + "+" ,
       description: `Countries where
                       we have happy
                       clients`,
     },
     {
       image: image2,
-      title: workExperience?.expEmployes,
+      title: workExperience?.expEmployees,
       description: "Experienced Employees",
     },
     {
@@ -28,7 +28,7 @@ export const OSC = ({ workExperience }) => {
   ];
   return (
     <div className="pt-6">
-      <div className="bg-gradient-to-t from-custom-blue xs:pl-10  to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 lg:px-4 xl:px-4 md:px-4 sm:px-10 xs:px-10 xss:px-10  p-[3rem] ">
+      <div className="bg-gradient-to-t from-custom-blue xs:pl-10  to-custom-purple w-full flex md:flex-row flex-col justify-items-stretch gap-0 lg:px-6 xl:px-6 md:px-6 sm:px-10 xs:px-10 xss:px-10 lg:pl-16 xl:pl-16 md:pl-16 pl-0   p-[3rem] ">
         {servicesData.map((service, index) => (
           <div
             key={index}

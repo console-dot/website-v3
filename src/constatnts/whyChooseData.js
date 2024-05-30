@@ -219,7 +219,7 @@ export const whyChooseDataProductResearch = [
 ];
 
 
-export const whyChooseDataCustomSoft = [
+export const whyChooseDataCustomSoft  = [
   {
     id: 1,
     title: "ConsoleDot ERP:",
