@@ -50,7 +50,7 @@ export const WebDevelopment = () => {
           heading={"Why Choose Consoledot for Web Development?"}
           whyChooseUs={data?.whyChooseUs}
           cardsInRow={
-            "lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"
+            "lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"
           }
         />
         <TechStackWebDev

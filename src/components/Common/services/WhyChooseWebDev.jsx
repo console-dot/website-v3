@@ -22,12 +22,7 @@ export const WhyChooseWebDev = ({ heading, whyChooseUs, cardsInRow }) => {
       icon: <MobileCollabIcon />,
       description: whyChooseUs[2],
     },
-    {
-      id: 4,
-      title: "Customization",
-      icon: <MobCustomizationIcon />,
-      description: whyChooseUs[3],
-    },
+  
   ];
 
   const gradientStyle = {
