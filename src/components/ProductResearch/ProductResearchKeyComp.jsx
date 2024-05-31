@@ -106,13 +106,13 @@ export const ProductResearchKeyComp = ({ keyComponents }) => {
                 <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full">
                   <CheckIcon />
                 </div>
-                <p className="text-[14px]">{i.para1}</p>
+                <p className="text-[14px] text-webDescrip">{i.para1}</p>
               </div>
               <div className="flex gap-4 flex-row">
                 <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full">
                   <CheckIcon />
                 </div>
-                <p className="text-[14px]">{i.para2}</p>
+                <p className="text-[14px] text-webDescrip">{i.para2}</p>
               </div>
             </div>
           </div>

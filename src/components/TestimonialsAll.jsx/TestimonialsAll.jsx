@@ -4,8 +4,11 @@ import { TopComponent } from '../Common'
 import { AITop } from '../../assets/icons'
 import {landingPageDataTestimonials } from '../../constatnts/landingPageData'
 import { TestimonialsCard } from './TestimonialsCard'
+import { useSelector } from 'react-redux'
+import { selectLandingPageDetails } from '../../redux'
 
 export const TestimonialsAll = () => {
+  const data = useSelector(selectLandingPageDetails);
   return (
     <div className="w-full mb-8 overflow-hidden">
       <LandingPage data={landingPageDataTestimonials} />
@@ -13,7 +16,7 @@ export const TestimonialsAll = () => {
         <div className="pb-4">
           {" "}
           
-         <TestimonialsCard/>
+         <TestimonialsCard testimonials={data?.testimonial}/>
 
         </div>
         </div>
