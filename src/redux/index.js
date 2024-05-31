@@ -3,4 +3,9 @@ export * from "./landingPageSlice";
 export * from "./offShoreSlice";
 export * from "./customServiceSlice";
 export * from "./productresearchSlice";
-export * from "./webdevSlice"
+export * from "./webdevSlice";
+export * from "./blockChainSlice";
+export * from "./aiSlice";
+export * from "./arvrSlice";
+export * from "./uiuxSlice";
+export * from "./casestudySlice";

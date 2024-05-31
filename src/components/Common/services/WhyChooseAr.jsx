@@ -1,30 +1,35 @@
 import React from "react";
 import { Divider } from "../../../constatnts/Divider";
-import { MobCustomizationIcon, MobExpertise, MobileCollabIcon, MonInnovatIcon } from "../../../assets/icons";
+import {
+  MobCustomizationIcon,
+  MobExpertise,
+  MobileCollabIcon,
+  MonInnovatIcon,
+} from "../../../assets/icons";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
-export const WhyChooseWebDev = ({ heading, whyChooseUs, cardsInRow }) => {
+export const WhyChooseAr = ({ heading, whyChooseUs, cardsInRow }) => {
   const data = [
     {
       id: 1,
-      title: "Expertise",
+      title: "Expertise in Technology",
       icon: <MobExpertise />,
       description: whyChooseUs[0],
     },
     {
       id: 2,
-      title: "Innovative Solutions",
+      title: "Innovation-Driven Solutions",
       icon: <MonInnovatIcon />,
       description: whyChooseUs[1],
     },
     {
       id: 3,
-      title: "Client Collaboration",
+      title: "Client-Centric Collaboration",
       icon: <MobileCollabIcon />,
       description: whyChooseUs[2],
     },
     {
       id: 4,
-      title: "Customization",
+      title: "Tailored Experiences",
       icon: <MobCustomizationIcon />,
       description: whyChooseUs[3],
     },

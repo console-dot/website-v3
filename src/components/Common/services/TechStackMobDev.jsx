@@ -5,7 +5,7 @@ import { Divider } from "../../../constatnts/Divider";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
 import config from "../../../api/config";
 
-export const TechStackWebDev = ({ data, description }) => {
+export const TechStackMobDev = ({ data, description }) => {
   const BASE_URL = config.BASE_URL;
   const techStack = [
     {
@@ -49,9 +49,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 4,
-      title: "VCS",
+      title: "Cloud Services",
       icons: data
-        .filter((item) => item.type === "VCS")
+        .filter((item) => item.type === "Cloud Services")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -62,17 +62,30 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 5,
-      title: "Testing tools",
+      title: "Version Control System",
       icons: data
-        .filter((item) => item.type === "Testing")
+        .filter((item) => item.type === "VCS")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
             alt={item.name}
-            className="flex items-start justify-center h-20 w-20 rounded-lg"
+            className="flex items-start justify-center h-20 w-20 rounded-lg" 
           />
         )),
     },
+    {
+        id: 6,
+        title: "API",
+        icons: data
+          .filter((item) => item.type === "API")
+          .map((item) => (
+            <img
+              src={`${BASE_URL}/file/${item.image}`}
+              alt={item.name}
+              className="flex items-start justify-center h-20 w-20 rounded-lg"
+            />
+          )),
+      },
   ];
 
   const isTechMob = useTechScreen();

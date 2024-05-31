@@ -18,7 +18,6 @@ import { selectwebdevDetails } from "../redux";
 
 export const WebDevelopment = () => {
   const data = useSelector(selectwebdevDetails);
-  console.log("data", data);
   return (
     <div className="w-full mb-8 overflow-hidden">
       <LandingPage data={landingPageDataWeb} />
@@ -54,7 +53,12 @@ export const WebDevelopment = () => {
             "lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"
           }
         />
-        <TechStackWebDev data={data?.techStack} />
+        <TechStackWebDev
+          data={data?.techStack}
+          description={
+            "Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof"
+          }
+        />
       </div>
     </div>
   );

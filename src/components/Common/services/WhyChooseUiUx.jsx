@@ -1,31 +1,40 @@
 import React from "react";
 import { Divider } from "../../../constatnts/Divider";
-import { MobCustomizationIcon, MobExpertise, MobileCollabIcon, MonInnovatIcon } from "../../../assets/icons";
+import {
+  MobCustomizationIcon,
+  MobExpertise,
+  MobileCollabIcon,
+  MonInnovatIcon,
+  UserCentricIcon,
+} from "../../../assets/icons";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
-export const WhyChooseWebDev = ({ heading, whyChooseUs, cardsInRow }) => {
+import { UiUxService2 } from "../../../assets/icons/UiUxService2";
+import { UIUXService } from "../../../assets/icons/UIUXService";
+import { UiUxService4 } from "../../../assets/icons/UiUxService4";
+export const WhyChooseUiUx = ({ heading, whyChooseUs, cardsInRow }) => {
   const data = [
     {
       id: 1,
-      title: "Expertise",
-      icon: <MobExpertise />,
+      title: "Expert UI/UX Designers",
+      icon: <UiUxService2 />,
       description: whyChooseUs[0],
     },
     {
       id: 2,
-      title: "Innovative Solutions",
-      icon: <MonInnovatIcon />,
+      title: "Innovative Design Solutions",
+      icon: <UIUXService />,
       description: whyChooseUs[1],
     },
     {
       id: 3,
-      title: "Client Collaboration",
-      icon: <MobileCollabIcon />,
+      title: "Client-Centric Approach",
+      icon: <UserCentricIcon />,
       description: whyChooseUs[2],
     },
     {
       id: 4,
-      title: "Customization",
-      icon: <MobCustomizationIcon />,
+      title: "Holistic User Experience",
+      icon: <UiUxService4 />,
       description: whyChooseUs[3],
     },
   ];

@@ -5,14 +5,14 @@ import { Divider } from "../../../constatnts/Divider";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
 import config from "../../../api/config";
 
-export const TechStackWebDev = ({ data, description }) => {
+export const TechStackAr = ({ data, description }) => {
   const BASE_URL = config.BASE_URL;
   const techStack = [
     {
       id: 1,
-      title: "Frontend Technologies",
+      title: "3D Modeling",
       icons: data
-        .filter((item) => item.type === "Frontend")
+        .filter((item) => item.type === "3D Modeling")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -23,9 +23,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 2,
-      title: "Backend Technologies",
+      title: "AR Development",
       icons: data
-        .filter((item) => item.type === "Backend")
+        .filter((item) => item.type === "AR Development")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -36,9 +36,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 3,
-      title: "Database",
+      title: "VR Development",
       icons: data
-        .filter((item) => item.type === "Database")
+        .filter((item) => item.type === "VR Development")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -49,9 +49,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 4,
-      title: "VCS",
+      title: "Interaction Frameworks",
       icons: data
-        .filter((item) => item.type === "VCS")
+        .filter((item) => item.type === "Interaction Frameworks")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -62,17 +62,18 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 5,
-      title: "Testing tools",
+      title: "PlatformCompatibility",
       icons: data
-        .filter((item) => item.type === "Testing")
+        .filter((item) => item.type === "PlatformCompatibility")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
             alt={item.name}
-            className="flex items-start justify-center h-20 w-20 rounded-lg"
+            className="flex items-start justify-center h-20 w-20 rounded-lg" 
           />
         )),
     },
+   
   ];
 
   const isTechMob = useTechScreen();

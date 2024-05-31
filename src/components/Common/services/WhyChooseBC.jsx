@@ -1,8 +1,13 @@
 import React from "react";
 import { Divider } from "../../../constatnts/Divider";
-import { MobCustomizationIcon, MobExpertise, MobileCollabIcon, MonInnovatIcon } from "../../../assets/icons";
+import {
+  MobCustomizationIcon,
+  MobExpertise,
+  MobileCollabIcon,
+  MonInnovatIcon,
+} from "../../../assets/icons";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
-export const WhyChooseWebDev = ({ heading, whyChooseUs, cardsInRow }) => {
+export const WhyChooseBC = ({ heading, whyChooseUs, cardsInRow }) => {
   const data = [
     {
       id: 1,

@@ -5,14 +5,14 @@ import { Divider } from "../../../constatnts/Divider";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
 import config from "../../../api/config";
 
-export const TechStackWebDev = ({ data, description }) => {
+export const TechStackUiUx = ({ data, description }) => {
   const BASE_URL = config.BASE_URL;
   const techStack = [
     {
       id: 1,
-      title: "Frontend Technologies",
+      title: "Design Tools",
       icons: data
-        .filter((item) => item.type === "Frontend")
+        .filter((item) => item.type === "Design Tools")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -23,9 +23,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 2,
-      title: "Backend Technologies",
+      title: "Prototyping",
       icons: data
-        .filter((item) => item.type === "Backend")
+        .filter((item) => item.type === "Prototyping")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -36,40 +36,14 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 3,
-      title: "Database",
+      title: "Collaboration",
       icons: data
-        .filter((item) => item.type === "Database")
+        .filter((item) => item.type === "Collaboration")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
             alt={item.name}
             className="flex items-center justify-center h-20 w-20 rounded-lg"
-          />
-        )),
-    },
-    {
-      id: 4,
-      title: "VCS",
-      icons: data
-        .filter((item) => item.type === "VCS")
-        .map((item) => (
-          <img
-            src={`${BASE_URL}/file/${item.image}`}
-            alt={item.name}
-            className="flex items-center justify-center h-20 w-20 rounded-lg"
-          />
-        )),
-    },
-    {
-      id: 5,
-      title: "Testing tools",
-      icons: data
-        .filter((item) => item.type === "Testing")
-        .map((item) => (
-          <img
-            src={`${BASE_URL}/file/${item.image}`}
-            alt={item.name}
-            className="flex items-start justify-center h-20 w-20 rounded-lg"
           />
         )),
     },

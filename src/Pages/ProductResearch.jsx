@@ -10,7 +10,6 @@ import { selectproductresearchDetails } from "../redux";
 
 export const ProductResearch = () => {
   const data = useSelector(selectproductresearchDetails);
-  console.log("data", data);
   return (
     <div className="w-full mb-8 overflow-hidden">
       <LandingPage data={landingPageDataProductResearch} />

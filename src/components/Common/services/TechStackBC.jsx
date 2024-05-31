@@ -5,14 +5,14 @@ import { Divider } from "../../../constatnts/Divider";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
 import config from "../../../api/config";
 
-export const TechStackWebDev = ({ data, description }) => {
+export const TechStackBC = ({ data, description }) => {
   const BASE_URL = config.BASE_URL;
   const techStack = [
     {
       id: 1,
-      title: "Frontend Technologies",
+      title: "Blockchain Platforms",
       icons: data
-        .filter((item) => item.type === "Frontend")
+        .filter((item) => item.type === "Blockchain Platforms")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -23,9 +23,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 2,
-      title: "Backend Technologies",
+      title: "Smart Contract Languages",
       icons: data
-        .filter((item) => item.type === "Backend")
+        .filter((item) => item.type === "Smart Contract Languages")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -36,9 +36,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 3,
-      title: "Database",
+      title: "Development Tools",
       icons: data
-        .filter((item) => item.type === "Database")
+        .filter((item) => item.type === "Development Tools")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -49,9 +49,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 4,
-      title: "VCS",
+      title: "Decentralized Storage",
       icons: data
-        .filter((item) => item.type === "VCS")
+        .filter((item) => item.type === "Decentralized Storage")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}
@@ -62,9 +62,9 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 5,
-      title: "Testing tools",
+      title: "Security",
       icons: data
-        .filter((item) => item.type === "Testing")
+        .filter((item) => item.type === "Security")
         .map((item) => (
           <img
             src={`${BASE_URL}/file/${item.image}`}

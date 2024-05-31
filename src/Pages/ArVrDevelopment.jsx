@@ -1,18 +1,20 @@
 import React from "react";
 import { ArVrTop } from "../assets/icons";
-import { Process, TopComponent } from "../components/Common";
-import { TechStack } from "../components/Common/services/TechStack";
-import { WhyChoose } from "../components/Common/services/WhyChooseCustomSoft";
+import {
+  Process,
+  TechStackAr,
+  TopComponent,
+  WhyChooseAr,
+} from "../components/Common";
 import LandingPage from "../components/Common/services/LandingPage";
 import { processCardsArVr } from "../constatnts/ProcessCardsData";
-import {
-  techStackDataAI,
-  techStackDataArVr,
-} from "../constatnts/techStackData";
-import { whyChooseDataArVr } from "../constatnts/whyChooseData";
+
 import { landingPageDataArVr } from "../constatnts/landingPageData";
+import { selectARDetails } from "../redux";
+import { useSelector } from "react-redux";
 
 export const ArVrDevelopment = () => {
+  const data = useSelector(selectARDetails);
   return (
     <div className="w-full mb-8 overflow-hidden">
       <LandingPage data={landingPageDataArVr} />
@@ -22,9 +24,7 @@ export const ArVrDevelopment = () => {
           <TopComponent
             title={"Services"}
             heading={"Immerse and Innovate: ConsoleDot's AR/VR Solutions"}
-            description={
-              "Welcome to the future of immersive technology with ConsoleDot's AR/VR solutions. We don't just develop applications; we create experiences that transcend reality. Elevate your business with augmented and virtual reality that captivates your audience, enhances engagement, and sets you apart from the competition."
-            }
+            description={data?.description}
             image={<ArVrTop />}
           />
         </div>
@@ -34,16 +34,16 @@ export const ArVrDevelopment = () => {
           heading={"How ConsoleDot Executes the AR/VR Development Process"}
           title={"AR/VR Development Process"}
         />
-        <WhyChoose
+        <WhyChooseAr
           heading={"Why Choose ConsoleDot for AR/VR?"}
-          data={whyChooseDataArVr}
+          whyChooseUs={data?.whyChooseUs}
           cardsInRow={
             "lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"
           }
         />
 
-        <TechStack
-          data={techStackDataArVr}
+        <TechStackAr
+          data={data?.techStack}
           description={
             "Our technology stack is carefully curated to deliver AR/VR solutions that push the boundaries of immersive experiences:"
           }

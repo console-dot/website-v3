@@ -4,14 +4,12 @@ import { OffShoreModelHero } from "../components/OffshoreModelHero";
 import OffshoringServices from "../components/OffshoringServices/OffshoringServices";
 import { OffShoreModelText } from "../components/OffShoreModelText";
 import { OffShoreModelText1 } from "../components/OffShoreModelText";
-import { ContactSection1 } from "../components/OffshoringServices/ContactSection";
 import { useSelector } from "react-redux";
 import { selectLandingPageDetails, selectOffShoreDetails } from "../redux";
 
 export const OffshoringModels = () => {
   const data = useSelector(selectOffShoreDetails);
   const data1 = useSelector(selectLandingPageDetails);
-  console.log("data", data);
   return (
     <div className="bg-offwhite w-full flex flex-col justify-center items-center overflow-hidden">
       <OffShoreModelHero />

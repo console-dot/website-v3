@@ -12,7 +12,6 @@ import { AIDevelopment } from "./Pages/AIDevelopment";
 import { ArVrDevelopment } from "./Pages/ArVrDevelopment";
 import { UiUxDevelopment } from "./Pages/UiUxDevelopment";
 import { ProductResearch } from "./Pages/ProductResearch";
-import { CaseStudy } from "./Pages/CaseStudy";
 import { Careers } from "./Pages/Careers";
 import { Faqs } from "./Pages/Faqs";
 import { CustomSoftware } from "./Pages/CustomSoftware";
@@ -20,22 +19,38 @@ import { Contact } from "./Pages/Contact";
 import { useEffect, useState } from "react";
 import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 import ScrollToTop from "./Pages/ScrollToTop";
-import Loader from "./Pages/Loader/Loader";
-import { PreLoader } from "./assets/images";
 import Preloader from "./Pages/PreLoader/PreLoader";
 import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
 import { CaseStudies } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 import { ServicesAll } from "./components/ServicesAll/ServicesAll";
-import { getLandingPage, getOffShore, getWebDevelopment, getcustomservicepage, getproductresearchpage } from "./api";
+import {
+  getAR,
+  getArtificialIntelligence,
+  getBlockChain,
+  getLandingPage,
+  getMobDevelopment,
+  getOffShore,
+  getUI,
+  getWebDevelopment,
+  getcasestudy,
+  getcustomservicepage,
+  getproductresearchpage,
+} from "./api";
 import { useDispatch } from "react-redux";
 import {
+  setARData,
+  setAiData,
+  setBlockChainData,
   setCustomServiceData,
   setLandingPageData,
   setOffShoreData,
+  setUIData,
+  setcasestudyData,
   setproductresearchData,
   setwebdevData,
 } from "./redux";
+import { setmobdevData } from "./redux/mobdevSlice";
 
 function App() {
   const [section, setSection] = useState("");
@@ -64,7 +79,7 @@ function App() {
         dispatch(setCustomServiceData(res?.data));
       })
       .catch((err) => console.log(err));
-    
+
     //productResearch get call
     getproductresearchpage()
       .then((res) => {
@@ -77,7 +92,49 @@ function App() {
       .then((res) => {
         dispatch(setwebdevData(res?.data));
       })
-      .catch((err) => console.log(err));  
+      .catch((err) => console.log(err));
+
+    //mobdev get call
+    getMobDevelopment()
+      .then((res) => {
+        dispatch(setmobdevData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //BlockChain get call
+    getBlockChain()
+      .then((res) => {
+        dispatch(setBlockChainData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //Ai get call
+    getArtificialIntelligence()
+      .then((res) => {
+        dispatch(setAiData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //ArVr get call
+    getAR()
+      .then((res) => {
+        dispatch(setARData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //UIUx Get call
+    getUI()
+      .then((res) => {
+        dispatch(setUIData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //CaseStudies get call
+    getcasestudy()
+      .then((res) => {
+        dispatch(setcasestudyData(res?.data));
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
@@ -115,7 +172,6 @@ function App() {
             <Route path="/case-study" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/faqs" element={<Faqs />} />
-
             <Route path="/contact" element={<Contact />} />
             <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />
