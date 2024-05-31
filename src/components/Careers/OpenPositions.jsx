@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import { setOpenPosition } from "../../api";
+import { ToastContainer, toast, Slide } from "react-toastify";
 
 export const OpenPositions = ({ data, filterData }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -10,18 +11,15 @@ export const OpenPositions = ({ data, filterData }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    cnic: "",
     phone: "",
     city: "",
+    dob: "",
     gender: "",
     experience: "",
-    dob: "",
-    currentSalary: "",
-    expectedSalary: "",
     github: "",
-    linkedin: "",
-    address: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const itemsPerPage = 3;
   const newData = filterData ? filterData : data;
@@ -54,14 +52,62 @@ export const OpenPositions = ({ data, filterData }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
-    // Handle form submission logic here
-    console.log({
-      position: selectedPosition,
-      description,
-      resume,
-      formData,
-    });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const newForm = {
+      senderName: formData?.fullName || "no-name",
+      from: formData?.email || "no-mail",
+      city: formData?.city || "no-city",
+      senderExperience: formData?.experience || "0",
+      gender: formData?.gender || "",
+      github: formData?.github || "",
+      phone: formData?.phone || "",
+      attachment: resume,
+      designation: selectedPosition?.designation,
+    };
+
+    console.log("newForm", newForm);
+
+    const loadingToastId = toast.loading("Submitting...");
+
+    setOpenPosition(newForm)
+      .then((res) => {
+        if (res.status === 200) {
+          // Check if response status is 200 OK
+          toast.update(loadingToastId, {
+            render: "Form submitted successfully!",
+            type: "success",
+            isLoading: false,
+            autoClose: 3000,
+          });
+          // setFormData({
+          //   fullName: "",
+          //   email: "",
+          //   city: "",
+          //   experience: "",
+          //   gender: "",
+          //   github: "",
+          //   phone: "",
+          //   resume: "",
+          //   designation: "",
+          // });
+        } else {
+          throw new Error("Failed to submit the form"); // Throw error for non-200 responses
+        }
+      })
+      .catch((err) => {
+        toast.update(loadingToastId, {
+          render: "Failed to submit the form. Please try again.",
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
+        });
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
     closeModal();
   };
 
@@ -156,7 +202,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   </div>
                   <div className="flex">
                     <span className="font-lato text-[14px]  text-justify text-webHeading">
-                      {i?.noOfRequest} applied of {i?.capacity} capacity
+                      {i.applied} applied of {i.capacity} capacity
                     </span>
                   </div>
                 </div>
@@ -199,7 +245,11 @@ export const OpenPositions = ({ data, filterData }) => {
             <h2 className="text-2xl text-webHeading font-bold mb-4">
               Apply for {selectedPosition.title}
             </h2>
-            <form className="space-y-2">
+            <form
+              className="space-y-2"
+              method="POST"
+              enctype="multipart/form-data"
+            >
               <div>
                 <label className="block text-sm font-medium text-webDescrip">
                   Full Name
@@ -356,11 +406,24 @@ export const OpenPositions = ({ data, filterData }) => {
                   type="button"
                   className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-4 py-2 text-center"
                   onClick={handleSubmit}
+                  disabled={loading}
                 >
                   Apply
                 </button>
               </div>
             </form>
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              transition={Slide}
+            />
           </div>
         </div>
       )}
