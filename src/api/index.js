@@ -11,3 +11,5 @@ export * from "./uiux";
 export * from "./casestudy";
 export * from "./careersPage";
 export * from "./faqPage";
+export * from "./contactUs";
+export * from "./openPosition";
