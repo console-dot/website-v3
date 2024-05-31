@@ -12,25 +12,47 @@ import { AIDevelopment } from "./Pages/AIDevelopment";
 import { ArVrDevelopment } from "./Pages/ArVrDevelopment";
 import { UiUxDevelopment } from "./Pages/UiUxDevelopment";
 import { ProductResearch } from "./Pages/ProductResearch";
-import { CaseStudy } from "./Pages/CaseStudy";
 import { Careers } from "./Pages/Careers";
 import { Faqs } from "./Pages/Faqs";
 import { CustomSoftware } from "./Pages/CustomSoftware";
 import { Contact } from "./Pages/Contact";
-import { Services } from "./Pages/Services";
 import { useEffect, useState } from "react";
 import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 import ScrollToTop from "./Pages/ScrollToTop";
-import Loader from "./Pages/Loader/Loader";
-import { PreLoader } from "./assets/images";
 import Preloader from "./Pages/PreLoader/PreLoader";
 import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
 import { CaseStudies } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 import { ServicesAll } from "./components/ServicesAll/ServicesAll";
-import { getFaqs, getLandingPage, getOpenPositions } from "./api";
+import {
+  getAR,
+  getArtificialIntelligence,
+  getBlockChain,
+  getLandingPage,
+  getMobDevelopment,
+  getOffShore,
+  getUI,
+  getWebDevelopment,
+  getcasestudy,
+  getcustomservicepage,
+  getproductresearchpage,
+  getFaqs, 
+  getOpenPositions
+} from "./api";
 import { useDispatch } from "react-redux";
-import { setCareerPageData, setFaqPageData, setLandingPageData } from "./redux";
+import { setCareerPageData, setFaqPageData,
+  setARData,
+  setAiData,
+  setBlockChainData,
+  setCustomServiceData,
+  setLandingPageData,
+  setOffShoreData,
+  setUIData,
+  setcasestudyData,
+  setproductresearchData,
+  setwebdevData,
+} from "./redux";
+import { setmobdevData } from "./redux/mobdevSlice";
 
 function App() {
   const [section, setSection] = useState("");
@@ -46,6 +68,75 @@ function App() {
   }, []);
 
   useEffect(() => {
+    //offshore get call
+    getOffShore()
+      .then((res) => {
+        dispatch(setOffShoreData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //customservice get call
+    getcustomservicepage()
+      .then((res) => {
+        dispatch(setCustomServiceData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //productResearch get call
+    getproductresearchpage()
+      .then((res) => {
+        dispatch(setproductresearchData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //webdev get call
+    getWebDevelopment()
+      .then((res) => {
+        dispatch(setwebdevData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //mobdev get call
+    getMobDevelopment()
+      .then((res) => {
+        dispatch(setmobdevData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //BlockChain get call
+    getBlockChain()
+      .then((res) => {
+        dispatch(setBlockChainData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //Ai get call
+    getArtificialIntelligence()
+      .then((res) => {
+        dispatch(setAiData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //ArVr get call
+    getAR()
+      .then((res) => {
+        dispatch(setARData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //UIUx Get call
+    getUI()
+      .then((res) => {
+        dispatch(setUIData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //CaseStudies get call
+    getcasestudy()
+      .then((res) => {
+        dispatch(setcasestudyData(res?.data));
+      })
+      .catch((err) => console.log(err));
     getOpenPositions()
       .then((res) => {
         dispatch(setCareerPageData(res?.data));
@@ -80,6 +171,8 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/Offshoringmodels" element={<OffshoringModels />} />
+            <Route path="/custom-software" element={<CustomSoftware />} />
+            <Route path="/product-research" element={<ProductResearch />} />
             <Route path="/web-app-development" element={<WebDevelopment />} />
             <Route
               path="/mobile-app-development"
@@ -89,11 +182,9 @@ function App() {
             <Route path="/ai" element={<AIDevelopment />} />
             <Route path="/arvr" element={<ArVrDevelopment />} />
             <Route path="/ui-ux" element={<UiUxDevelopment />} />
-            <Route path="/product-research" element={<ProductResearch />} />
             <Route path="/case-study" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/faqs" element={<Faqs />} />
-            <Route path="/custom-software" element={<CustomSoftware />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />

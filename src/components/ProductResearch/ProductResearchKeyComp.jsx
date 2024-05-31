@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaCheck } from "react-icons/fa6";
 
-export const ProductResearchKeyComp = () => {
+export const ProductResearchKeyComp = ({ keyComponents }) => {
   const gradientStyle = {
     background: "linear-gradient(180deg, #0E7789 0%, #3C5A85 100%)",
   };
@@ -21,37 +21,30 @@ export const ProductResearchKeyComp = () => {
       id: 1,
       heading: "Market Analysis",
       icon: <MarketAnalysisIcon />,
-      para1:
-        "Thorough examination of market trends, identifying opportunities, and understanding potential challenges.",
-      para2:
-        "Analysis of competitors to determine unique selling points and market positioning.",
+      para1: keyComponents[0]?.marketAnalysis[0],
+
+      para2: keyComponents[0]?.marketAnalysis[1],
     },
     {
       id: 2,
       heading: "Client Understanding",
       icon: <ClientUnderstandingIcon />,
-      para1:
-        "In-depth exploration of your target audience, ensuring a comprehensive understanding of their needs, preferences, and pain points. ",
-      para2:
-        "Crafting user personas to guide software development that resonates with your clients.",
+      para1: keyComponents[0]?.client[0],
+      para2: keyComponents[0]?.client[1],
     },
     {
       id: 3,
       heading: "Feasibility Studies",
       icon: <FeasibilityStudiesIcon />,
-      para1:
-        "Assessing the viability of proposed software solutions, considering technical, financial, and operational aspects.",
-      para2:
-        "Providing insights into potential risks and mitigation strategies.",
+      para1: keyComponents[0]?.feasibility[0],
+      para2: keyComponents[0]?.feasibility[1],
     },
     {
       id: 4,
       heading: "Road Map Development",
       icon: <RoadmaoDevIcon />,
-      para1:
-        "Creating a strategic road map for software development, outlining key milestones, timelines, and deliverables.",
-      para2:
-        "Aligning the development process with business objectives for a cohesive and goal-oriented approach.",
+      para1: keyComponents[0]?.roadMap[0],
+      para2: keyComponents[0]?.roadMap[0],
     },
   ];
 

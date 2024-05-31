@@ -1,11 +1,40 @@
 import React from "react";
 import { Divider } from "../../../constatnts/Divider";
-import { UserCentricIcon } from "../../../assets/icons";
-import Swiper from "swiper";
-import { SwiperSlide } from "swiper/react";
+import {
+  MobCustomizationIcon,
+  MobExpertise,
+  MobileCollabIcon,
+  MonInnovatIcon,
+} from "../../../assets/icons";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
+export const WhyChooseAi = ({ heading, whyChooseUs, cardsInRow }) => {
+  const data = [
+    {
+      id: 1,
+      title: "Expertise",
+      icon: <MobExpertise />,
+      description: whyChooseUs[0],
+    },
+    {
+      id: 2,
+      title: "Innovation at the Core",
+      icon: <MonInnovatIcon />,
+      description: whyChooseUs[1],
+    },
+    {
+      id: 3,
+      title: "Collaboration for Success",
+      icon: <MobileCollabIcon />,
+      description: whyChooseUs[2],
+    },
+    {
+      id: 4,
+      title: "Tailored Solutions",
+      icon: <MobCustomizationIcon />, 
+      description: whyChooseUs[3],
+    },
+  ];
 
-export const WhyChoose = ({ heading, data, cardsInRow }) => {
   const gradientStyle = {
     background: "linear-gradient(180deg, #0E7789 0%, #3C5A85 100%)",
   };
@@ -26,7 +55,10 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
       {!isMobile ? (
         <div className={`w-full grid ${cardsInRow} gap-8 mt-8 `}>
           {data?.map((i, index) => (
-            <div key={index} className=" flex flex-col bg-white border-2 border-transparent  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4">
+            <div
+              key={index}
+              className=" flex flex-col bg-white border-2 border-transparent  hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4"
+            >
               <div className="flex flex-col items-center justify-center p-8 my-6 sm:p-4 xs:p-4 xxs:p-2 gap-4">
                 <div
                   style={gradientStyle}
@@ -55,7 +87,10 @@ export const WhyChoose = ({ heading, data, cardsInRow }) => {
         <div className="w-full overflow-x-auto flex sm:hidden">
           <div className="flex gap-8">
             {data?.map((i, index) => (
-              <div key={index} className="flex flex-col bg-white border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4 min-w-[300px]">
+              <div
+                key={index}
+                className="flex flex-col bg-white border-2 border-transparent hover:border-2 hover:border-primaryText hover:border-dashed justify-between px-4 min-w-[300px]"
+              >
                 <div className="flex flex-col items-center justify-center p-8 sm:p-4 xs:p-4 xxs:p-2 gap-4">
                   <div
                     style={gradientStyle}

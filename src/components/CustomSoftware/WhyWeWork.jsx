@@ -8,7 +8,7 @@ import {
 import { whywework } from "../../assets/images";
 import "./WhyChoose.css";
 
-export const WhyWeWork = () => {
+export const WhyWeWork = ({ delivers }) => {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef(null);
   const gradientStyle = {
@@ -76,9 +76,7 @@ export const WhyWeWork = () => {
                   Expertise in Action
                 </h1>
                 <h1 className="md:text-[16px] text-[14px] text-webDescrip leading-6 text-justify ">
-                  ConsoleDot brings a seasoned team of developers, designers,
-                  and project managers to the table. Expect nothing less than
-                  excellence in execution and meticulous attention to detail.
+                  {delivers?.actionDescription}
                 </h1>
               </div>
             </div>
@@ -97,9 +95,7 @@ export const WhyWeWork = () => {
                   Collaborative Ingenuity
                 </h1>
                 <h1 className="md:text-[16px] text-[14px] text-webDescrip leading-6 text-justify ">
-                  Your vision is our canvas. We work collaboratively with you,
-                  ensuring our solutions align perfectly with your unique
-                  business aspirations
+                  {delivers?.collabDescription}
                 </h1>
               </div>
             </div>

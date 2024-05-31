@@ -21,212 +21,10 @@ import {
   SvelteIcon,
   VueIcon,
 } from "../../assets/icons";
-
-
-const cards = [
-  {
-    title: "Project 1",
-    image: execSummaryImage,
-    client: "Envato Theme",
-    services: "Tips & Tricks, Design",
-    duration: "108 hrs",
-    image2: execSummaryImage,
-    image3: execSummaryImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">Introduction:</strong>
-        Patent authorities globally are grappling with the challenge of
-        redefining their approach to handling inventions generated not by human
-        ingenuity but by AI. This analysis initiates a three-part series that
-        delves into the influence of AI on intellectual property rights.
-        <br />
-        <strong className="font-semibold text-webHeading">Problem:</strong>
-        The increasing role of AI in innovation.
-        <br />
-        <strong className="font-semibold text-webHeading">Solution:</strong>
-        A comprehensive analysis and redefinition of intellectual property
-        rights.
-        <br />
-        <strong className="font-semibold text-webHeading">Outcomes:</strong>
-        Enhanced understanding and policy recommendations.
-      </>
-    ),
-    tech: [
-      <ReactIcon key="react" />,
-      <AngularIcon key="angular" />,
-      <VueIcon key="vue" />,
-      <SvelteIcon key="svelte" />,
-      <EmberIcon key="ember" />,
-      <BootstrapIcon key="bootstrap" />,
-      <MUIIcon key="mui" />,
-      <RepoIcon key="repo" />,
-      <BulmaIcon key="bulma" />,
-      <SIcon key="s" />,
-    ],
-  },
-  {
-    title: "Project 2",
-    image: projectOverviewImage,
-    client: "CLIENT",
-    services: "SERVICES",
-    duration: "DURATION",
-    image2: execSummaryImage,
-    image3: execSummaryImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">Introduction:</strong>
-        Provide an overview of the client or project context.
-        <br />
-        <strong className="font-semibold text-webHeading">Objectives:</strong>
-        Outline the goals and objectives of the software development project.
-      </>
-    ),
-    tech: [
-      <ReactIcon key="react" />,
-      <AngularIcon key="angular" />,
-      <VueIcon key="vue" />,
-      <SvelteIcon key="svelte" />,
-      <EmberIcon key="ember" />,
-      <BootstrapIcon key="bootstrap" />,
-      <MUIIcon key="mui" />,
-      <RepoIcon key="repo" />,
-      <BulmaIcon key="bulma" />,
-      <SIcon key="s" />,
-    ],
-  },
-  {
-    title: "Project 3",
-    image: problemStatementImage,
-    client: "CLIENT",
-    services: "SERVICES",
-    duration: "DURATION",
-    image2: execSummaryImage,
-    image3: execSummaryImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">
-          Problem Statement:
-        </strong>
-        Describe the challenges or issues the client was facing that led to the
-        need for the software solution.
-      </>
-    ),
-    tech: [
-      <ReactIcon key="react" />,
-      <AngularIcon key="angular" />,
-      <VueIcon key="vue" />,
-      <SvelteIcon key="svelte" />,
-      <EmberIcon key="ember" />,
-      <BootstrapIcon key="bootstrap" />,
-      <MUIIcon key="mui" />,
-      <RepoIcon key="repo" />,
-      <BulmaIcon key="bulma" />,
-      <SIcon key="s" />,
-    ],
-  },
-  {
-    title: "Project 4",
-    image: solutionImage,
-    client: "CLIENT",
-    services: "SERVICES",
-    duration: "DURATION",
-    image2: execSummaryImage,
-    image3: execSummaryImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">Approach:</strong>
-        Explain the methodology and approach taken to address the client's
-        challenges.
-        <br />
-        <strong className="font-semibold text-webHeading">
-          Technologies Used:
-        </strong>
-        List the technologies, tools, and frameworks employed in the software
-        development.
-        <br />
-        <strong className="font-semibold text-webHeading">Key Features:</strong>
-        Highlight the main features and functionalities of the software
-        solution.
-      </>
-    ),
-    tech: [
-      <ReactIcon key="react" />,
-      <AngularIcon key="angular" />,
-      <VueIcon key="vue" />,
-      <SvelteIcon key="svelte" />,
-      <EmberIcon key="ember" />,
-      <BootstrapIcon key="bootstrap" />,
-      <MUIIcon key="mui" />,
-      <RepoIcon key="repo" />,
-      <BulmaIcon key="bulma" />,
-      <SIcon key="s" />,
-    ],
-  },
-  {
-    title: "Project 5",
-    image: developmentProcessImage,
-    client: "CLIENT",
-    services: "SERVICES",
-    duration: "DURATION",
-    image2: execSummaryImage,
-    image3: execSummaryImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">Planning:</strong>
-        Detail the planning phase, including requirements gathering, scope
-        definition, and timeline.
-        <br />
-        <strong className="font-semibold text-webHeading">Execution:</strong>
-        Describe the development process, including coding, testing, and
-        iteration.
-      </>
-    ),
-    tech: [
-      <ReactIcon key="react" />,
-      <AngularIcon key="angular" />,
-      <VueIcon key="vue" />,
-      <SvelteIcon key="svelte" />,
-      <EmberIcon key="ember" />,
-      <BootstrapIcon key="bootstrap" />,
-      <MUIIcon key="mui" />,
-      <RepoIcon key="repo" />,
-      <BulmaIcon key="bulma" />,
-      <SIcon key="s" />,
-    ],
-  },
-  {
-    title: "Project 6",
-    image: challengesFacedImage,
-    client: "CLIENT",
-    services: "SERVICES",
-    duration: "DURATION",
-    image2: execSummaryImage,
-    image3: execSummaryImage,
-    description: (
-      <>
-        <strong className="font-semibold text-webHeading">
-          Challenges Faced:
-        </strong>
-        Discuss any challenges or obstacles encountered during the project and
-        how they were overcome.
-      </>
-    ),
-    tech: [
-      <ReactIcon key="react" />,
-      <AngularIcon key="angular" />,
-      <VueIcon key="vue" />,
-      <SvelteIcon key="svelte" />,
-      <EmberIcon key="ember" />,
-      <BootstrapIcon key="bootstrap" />,
-      <MUIIcon key="mui" />,
-      <RepoIcon key="repo" />,
-      <BulmaIcon key="bulma" />,
-      <SIcon key="s" />,
-    ],
-  },
-];
+import config from "../../api/config";
 
 const CardModal = ({ card, onClose }) => {
+  const BASE_URL = config.BASE_URL;
   const modalRef = useRef();
 
   useEffect(() => {
@@ -261,14 +59,14 @@ const CardModal = ({ card, onClose }) => {
         </div>
         <div className="mt-6">
           <img
-            src={card.image}
+            src={`${BASE_URL}/file/${card.projectImage}`}
             alt={card.title}
             className="w-full h-96 object-fill mb-4 rounded-3xl"
           />
           <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col justify-around gap-4">
             <div className="flex flex-col">
               <label className="text-webHeading font-semibold">CLIENT</label>
-              <div className="text-webDescrip">{card.client}</div>
+              <div className="text-webDescrip">{card.clientName}</div>
             </div>
             <div className="flex flex-col">
               <label className="text-webHeading font-semibold">SERVICES</label>
@@ -276,7 +74,7 @@ const CardModal = ({ card, onClose }) => {
             </div>
             <div className="flex flex-col">
               <label className="text-webHeading font-semibold">DURATION</label>
-              <div className="text-webDescrip">{card.duration}</div>
+              <div className="text-webDescrip">{card.projectDuration}</div>
             </div>
           </div>
           <div className="text-webDescrip mt-6">
@@ -292,12 +90,12 @@ const CardModal = ({ card, onClose }) => {
                 ))
               : card.description}
           </div>
-          <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col justify-between mt-8 gap-8 rounded-lg">
+          <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col justify-around mt-8 gap-8 rounded-lg">
             <div>
-              <img src={card.image2} alt="none" className="rounded-lg" />
+              <img src={`${BASE_URL}/file/${card?.images[0]}`} alt="none" className="rounded-lg" />
             </div>
             <div>
-              <img src={card.image3} alt="none" className="rounded-lg" />
+              <img src={`${BASE_URL}/file/${card?.images[1]}`} alt="none" className="rounded-lg" />
             </div>
           </div>
           <div className="flex flex-col mt-6">
@@ -322,14 +120,15 @@ const CardModal = ({ card, onClose }) => {
   );
 };
 
-export const CaseStudiesCard = () => {
+export const CaseStudiesCard = ({ data }) => {
+  const BASE_URL = config.BASE_URL;
   const isMobile = useIsMobile();
-  const [visibleCards, setVisibleCards] = useState(isMobile ? 5 : cards.length);
+  const [visibleCards, setVisibleCards] = useState(isMobile ? 5 : data.length);
   const [selectedCard, setSelectedCard] = useState(null);
 
   useEffect(() => {
-    setVisibleCards(isMobile ? 5 : cards.length);
-  }, [isMobile]);
+    setVisibleCards(isMobile ? 5 : data.length);
+  }, [isMobile, data.length]);
 
   useEffect(() => {
     if (selectedCard) {
@@ -344,7 +143,7 @@ export const CaseStudiesCard = () => {
 
   const loadMore = () => {
     setVisibleCards((prevVisibleCards) =>
-      Math.min(prevVisibleCards + 5, cards.length)
+      Math.min(prevVisibleCards + 5, data.length)
     );
   };
 
@@ -363,36 +162,29 @@ export const CaseStudiesCard = () => {
       }`}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {cards.slice(0, visibleCards).map((card, index) => (
+        {data.slice(0, visibleCards).map((caseStudy, index) => (
           <div
             key={index}
-            onClick={() => handleCardClick(card)}
+            onClick={() => handleCardClick(caseStudy)}
             className="cursor-pointer"
           >
             <img
-              src={card.image}
-              alt={card.title}
+              src={`${BASE_URL}/file/${caseStudy.projectImage}`}
+              alt={caseStudy.title}
               className="w-full h-40 object-cover"
             />
             <div className="bg-white flex flex-col items-start p-6 shadow-md hover:shadow-xl">
               <h3 className="text-lg text-webHeading font-bold mb-2 h-10">
-                {card.title}
+                {caseStudy.title}
               </h3>
               <div className="text-webDescrip mb-4 h-20 overflow-hidden">
-                {typeof card.description === "string"
-                  ? card.description.split("\n").map((line, i) => (
-                      <span key={i}>
-                        {line}
-                        <br />
-                      </span>
-                    ))
-                  : card.description}
+                {caseStudy.description}
               </div>
             </div>
           </div>
         ))}
       </div>
-      {isMobile && visibleCards < cards.length && (
+      {isMobile && visibleCards < data.length && (
         <div className="w-full flex justify-center mt-4">
           <button
             className="text-custom-purple border-[0.5px] bg-custom-lightBlue rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue px-5 py-2.5 w-[182px] h-[54px] mt-3 font-Lato font-medium"

@@ -12,7 +12,10 @@ import OIcon from "../../assets/icons/OIcon";
 import { useNavigate } from "react-router-dom";
 import "./Footer.css";
 import useIsMobile from "../../utils/hooks/useIsMobile";
+import { selectLandingPageDetails } from "../../redux";
+import { useSelector } from "react-redux";
 const Footer = () => {
+  const fd = useSelector(selectLandingPageDetails)
   const [page, setPage] = useState("");
   const [data, setData] = useState({});
   const isMobile = useIsMobile();
@@ -119,11 +122,7 @@ const Footer = () => {
             </div>
             {/* Company Description */}
             <p className="text-sm lg:text-[14px]  md:lg:text-[14px] sm:text-xs xs:text-xs text-justify lg:leading-[1.3rem] md:leading-[1.3rem] xl:leading-[1.5rem] opacity-[85%]">
-              ConsoleDot is a leading software solutions provider dedicated to
-              delivering innovative and customer-centric experiences. Our
-              comprehensive range of services combines technical expertise with
-              a customer-centric approach to meet the evolving needs of
-              businesses across industries.
+              {fd?.intro?.footerDescription}
             </p>
           </div>
           {/* Second Column */}
@@ -149,10 +148,14 @@ const Footer = () => {
                         <a href="#">Technologies</a>
                       </div>
                       <div className="md:leading-10 leading-6 opacity-[85%]">
-                        <button onClick={() =>navigate("/careers")} >Career</button>
+                        <button onClick={() => navigate("/careers")}>
+                          Career
+                        </button>
                       </div>
                       <div className="md:leading-10 leading-6 opacity-[85%]">
-                        <button onClick={() =>navigate("/contact")}>Contact Us</button>
+                        <button onClick={() => navigate("/contact")}>
+                          Contact Us
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -164,17 +167,26 @@ const Footer = () => {
                 {/* Privacy Policy & Terms */}
                 <ul className="text-sm lg:text-base md:text-sm sm:text-xs xs:text-xs opacity-[85%] ">
                   <li className="md:leading-10 leading-8">
-                    <button onClick={() =>navigate("/faqs")}  className="underline opacity-[85%]">
+                    <button
+                      onClick={() => navigate("/faqs")}
+                      className="underline opacity-[85%]"
+                    >
                       FAQS
                     </button>
                   </li>
                   <li className="md:leading-10 leading-8">
-                    <button onClick={() =>navigate("/PrivacyPolicy")}  className="underline opacity-[85%]">
+                    <button
+                      onClick={() => navigate("/PrivacyPolicy")}
+                      className="underline opacity-[85%]"
+                    >
                       Privacy Policy
                     </button>
                   </li>
                   <li className="md:leading-10 leading-8">
-                    <button onClick={() =>navigate("/termsandcondition")}  className="underline opacity-[85%]">
+                    <button
+                      onClick={() => navigate("/termsandcondition")}
+                      className="underline opacity-[85%]"
+                    >
                       Terms and Conditions
                     </button>
                   </li>
@@ -193,7 +205,9 @@ const Footer = () => {
                       style={{ width: "20px", height: "20px" }}
                     />
                   </div>
-                  <a href="tel:+923274067437" className="text-xs">+92-327-406-7437</a>
+                  <a href="tel:+923274067437" className="text-xs">
+                    {fd?.intro?.phone}
+                  </a>
                 </div>
                 <div className="flex items-start mb-4">
                   <div className="mr-3">
@@ -203,7 +217,9 @@ const Footer = () => {
                       style={{ width: "20px", height: "20px" }}
                     />
                   </div>
-                  <a href="mailto:info@consoledot.com" className="text-xs">info@consoledot.com</a>
+                  <a href="mailto:info@consoledot.com" className="text-xs">
+                    {fd?.intro?.email}
+                  </a>
                 </div>
                 <div className="flex items-start mb-4">
                   <div className="mr-3">
@@ -213,9 +229,12 @@ const Footer = () => {
                       className="address-icon"
                     />
                   </div>
-                  <a href="https://www.google.com/maps/dir//Ahmed+Arcade,+Suite+9,+1st+Floor,+Ferozpur+Rd,+Muslim+Town+Mor+Flyover,+Lahore,+54600/@31.5203068,74.2438174,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x391905dd1eb96015:0x54e3692fa54a7eba!2m2!1d74.3262187!2d31.5203332?entry=ttu" target="_blank" className="text-xs">
-                    Ahmed Arcade, Suite 9, 1st Floor, Ferozpur Rd, Muslim Town
-                    Mor Flyover, Lahore, 54600
+                  <a
+                    href="https://www.google.com/maps/dir//Ahmed+Arcade,+Suite+9,+1st+Floor,+Ferozpur+Rd,+Muslim+Town+Mor+Flyover,+Lahore,+54600/@31.5203068,74.2438174,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x391905dd1eb96015:0x54e3692fa54a7eba!2m2!1d74.3262187!2d31.5203332?entry=ttu"
+                    target="_blank"
+                    className="text-xs"
+                  >
+                    {fd?.intro?.address}
                   </a>
                 </div>
 
@@ -226,14 +245,23 @@ const Footer = () => {
                       style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
                       className="w-8 h-8 flex justify-center items-center rounded-lg"
                     >
-                      <LinkedinIcon
-                        color="#14213D"
-                        style={{
-                          height: "30px",
-                          width: "45px",
-                          opacity: "30% ",
+                      <button
+                        onClick={() => {
+                          const url = fd?.intro?.socialLinks[0]?.link;
+                          if (url) {
+                            window.open(url, "_blank");
+                          }
                         }}
-                      />
+                      >
+                        <LinkedinIcon
+                          color="#14213D"
+                          style={{
+                            height: "30px",
+                            width: "45px",
+                            opacity: 0.3,
+                          }}
+                        />
+                      </button>
                     </div>
                     <div
                       style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}

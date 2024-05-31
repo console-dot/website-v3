@@ -11,7 +11,7 @@ import {
 import { OffShoreTop, Offshore2 } from "../../assets/icons";
 import CheckIcon from "../../assets/icons/CheckIcon";
 
-export const OffshoreModel = () => {
+export const OffshoreModel = ({ offshoreType }) => {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center md:mt-16 mt-8">
@@ -37,12 +37,10 @@ export const OffshoreModel = () => {
           <div className="w-full flex flex-col">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
-                HOURLY <small>(TIME & MATERIAL)</small>
+                {offshoreType[0]?.type}
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
-                In this model, you pay for the actual time and resources
-                invested in your project. It's a flexible approach, ideal for
-                dynamic projects with evolving requirements.
+              {offshoreType[0]?.description}
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -52,7 +50,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Flexibility to adapt to changing project needs.
+                {offshoreType[0]?.advantages[0]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -60,7 +58,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Real-time tracking and reporting.
+                {offshoreType[0]?.advantages[1]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -68,7 +66,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Cost-effectiveness for short-term projects.
+                {offshoreType[0]?.advantages[2]}
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
@@ -97,12 +95,10 @@ export const OffshoreModel = () => {
           <div className="w-full flex flex-col pl-0">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
-                FIXED PRICE
+              {offshoreType[1]?.type}
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
-                For projects with well-defined scopes, our fixed-price model
-                ensures budget predictability. We provide a comprehensive
-                quote,and you pay a predetermined amount for the entire project.
+              {offshoreType[1]?.description}
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -112,7 +108,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Budget certainty with no surprises.
+                {offshoreType[1]?.advantages[0]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -120,7 +116,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Clear project milestones and deliverables.
+                {offshoreType[1]?.advantages[1]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -128,7 +124,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Suitable for projects with a stable and known scope.
+                {offshoreType[1]?.advantages[2]}
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
@@ -156,13 +152,10 @@ export const OffshoreModel = () => {
           <div className="w-full flex flex-col">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
-                BOT<small>(BUILD-OPERATE-TRANSFER)</small>MODEL
+              {offshoreType[2]?.type}
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
-                ConsoleDot's BOT model offers a strategic partnership that
-                combines the benefits of outsourcing and ownership. We build and
-                operate the project for an agreed-upon duration, and later, you
-                can seamlessly transfer the operations in-house.
+              {offshoreType[2]?.description}
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -172,7 +165,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Gradual transition and knowledge transfer.
+                {offshoreType[2]?.advantages[0]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -180,7 +173,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Complete control and ownership over the project.
+                {offshoreType[2]?.advantages[1]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -188,7 +181,7 @@ export const OffshoreModel = () => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                  Risk mitigation through ConsoleDot's expertise.
+                {offshoreType[2]?.advantages[2]}
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2 ">

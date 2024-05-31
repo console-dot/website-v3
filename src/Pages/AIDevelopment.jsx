@@ -1,8 +1,8 @@
 import React from "react";
 import { AITop } from "../assets/icons";
-import {  Process, TopComponent } from "../components/Common";
+import {  Process, TechStackAi, TopComponent, WhyChooseAi } from "../components/Common";
 import { TechStack } from "../components/Common/services/TechStack";
-import { WhyChoose } from "../components/Common/services/WhyChoose";
+import { WhyChoose } from "../components/Common/services/WhyChooseCustomSoft";
 import LandingPage from "../components/Common/services/LandingPage";
 import { processCardsAIDev } from "../constatnts/ProcessCardsData";
 import {
@@ -14,8 +14,11 @@ import {
   whyChooseDataBlockchain
 } from "../constatnts/whyChooseData";
 import { landingPageDataAI } from "../constatnts/landingPageData";
-
+import { selectAiDetails } from "../redux";
+import { useSelector } from "react-redux";
+ 
 export const AIDevelopment = () => {
+  const data = useSelector(selectAiDetails);
   return (
     <div className="w-full mb-8 overflow-hidden">
       <LandingPage data={landingPageDataAI} />
@@ -25,9 +28,7 @@ export const AIDevelopment = () => {
           <TopComponent
             title={"Services"}
             heading={"Revolutionize with GenAi: ConsoleDot's Cutting-Edge AI Solutions"}
-            description={
-              "Welcome to GenAi by ConsoleDot, where artificial intelligence meets innovation. We offer more than just AI development; we provide transformative solutions that harness the power of machine learning, natural language processing, and computer vision to propel your business into the future."
-            }
+            description={data?.description}
             image={<AITop />}
           />
         </div>
@@ -37,14 +38,15 @@ export const AIDevelopment = () => {
           heading={"How ConsoleDot Executes the GenAi Development Process"}
           title={"GenAi Development Process"}
         />
-        <WhyChoose
+        
+        <WhyChooseAi
           heading={"Why Choose Consoledot for GENAI?"}
-          data={whyChooseDataAI}
+          whyChooseUs={data?.whyChooseUs}
           cardsInRow={"lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1"}
         />
 
-        <TechStack
-          data={techStackDataAI}
+        <TechStackAi
+          data={data?.techStack}
           description={
             "Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof:"
           }

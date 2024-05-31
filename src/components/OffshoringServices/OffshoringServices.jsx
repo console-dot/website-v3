@@ -2,7 +2,7 @@ import React from "react";
 import { CardArray } from "./OffshoringServicesCard";
 import { imageGit } from "../../assets/images";
 import { ContactSection } from "./ContactSection";
-const OffshoringServices = ({title,heading}) => {
+const OffshoringServices = ({title,heading,offshoreComparison}) => {
   
   return (
     <div className="w-full flex flex-col items-center xl:mt-8 xl:mb-8 lg:mt-8 lg:mb-8 md:mt-6 md:mb-6 sm:mt-6 sm:mb-6 xs:mt-6 xs:mb-6 xss:mt-6 xss:mb-6 ">
@@ -20,7 +20,7 @@ const OffshoringServices = ({title,heading}) => {
         </div>
       </div>
       <div className="mt-4 xl:pl-[4.7rem] xl:pr-[4.7rem] lg:pl-[4.7rem] lg:pr-[4.7rem] md:pl-[4.5rem] md:pr-[4.5rem] sm:pl-[4.5rem] sm:pr-[4.5rem] xs:pl-[0.8rem] xs:pr-[0.8rem] xss:pl-[0.8rem] xss:pr-[0.8rem] w-full">
-        <CardArray />
+        <CardArray offshoreComparison={offshoreComparison} />
       </div>
     </div>
   );
