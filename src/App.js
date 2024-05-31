@@ -36,9 +36,11 @@ import {
   getcasestudy,
   getcustomservicepage,
   getproductresearchpage,
+  getFaqs, 
+  getOpenPositions
 } from "./api";
 import { useDispatch } from "react-redux";
-import {
+import { setCareerPageData, setFaqPageData,
   setARData,
   setAiData,
   setBlockChainData,
@@ -133,6 +135,17 @@ function App() {
     getcasestudy()
       .then((res) => {
         dispatch(setcasestudyData(res?.data));
+      })
+      .catch((err) => console.log(err));
+    getOpenPositions()
+      .then((res) => {
+        dispatch(setCareerPageData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    getFaqs()
+      .then((res) => {
+        dispatch(setFaqPageData(res?.data));
       })
       .catch((err) => console.log(err));
   }, []);

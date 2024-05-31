@@ -9,3 +9,5 @@ export * from "./ai";
 export * from "./arvr";
 export * from "./uiux";
 export * from "./casestudy";
+export * from "./careersPage";
+export * from "./faqPage";

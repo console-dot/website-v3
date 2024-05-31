@@ -1,5 +1,7 @@
 export * from "./counterSlice";
 export * from "./landingPageSlice";
+export * from "./careerSlice";
+export * from "./faqSlice";
 export * from "./offShoreSlice";
 export * from "./customServiceSlice";
 export * from "./productresearchSlice";

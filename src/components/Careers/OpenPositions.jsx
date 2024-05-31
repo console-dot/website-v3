@@ -79,7 +79,7 @@ export const OpenPositions = ({ data, filterData }) => {
                 {/* Info Container */}
                 <div className="w-full">
                   <h1 className="font-poppins mb-2 font-bold text-[16px] leading-5 text-webHeading">
-                    {i.title}
+                    {i.designation}
                   </h1>
                   <div className="flex w-[100%]">
                     {/* First */}
@@ -104,17 +104,17 @@ export const OpenPositions = ({ data, filterData }) => {
                     <div className="flex flex-col gap-1 xl:w-[70%] lg:w-[70%] md:w-[70%] sm:w-[50%] xs:w-[50%]">
                       <div className="flex lg:flex-row xl:flex-row 2xl:flex-row md:flex-row sm:flex-row xs:flex-col xss:flex-row w-full justify-between">
                         <h1 className="font-lato font-bold text-[14px] leading-5 text-end text-webHeading whitespace-nowrap">
-                          {i.minExp}
+                          {i?.experience}
                         </h1>
                       </div>
                       <div className="flex w-full justify-between">
                         <h1 className="font-lato font-bold text-[14px] leading-5 text-justify text-webHeading">
-                          {i.openPosition}
+                          {i?.noOfPositions}
                         </h1>
                       </div>
                       <div className="flex w-full gap-4 justify-between">
                         <h1 className="font-lato font-bold text-[14px] text-webHeading">
-                          {i.qualification}
+                          {i?.qualifications}
                         </h1>
                       </div>
                     </div>
@@ -126,13 +126,13 @@ export const OpenPositions = ({ data, filterData }) => {
                     type="button"
                     className="text-fromclr lg:text-[16px] xl:text-[16px] 2xl:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] xl:font-semibold lg:font-semibold md:font-semibold sm:font-bold xs:font-bold xss:font-bold whitespace-nowrap py-2 xl:px-8 lg:px-8 md:px-8 sm:px-4 xs:px-4 xss:px-4 bg-btnGroup rounded-full"
                   >
-                    {i.type}
+                    {i?.employmentType}
                   </button>
                   <button
                     type="button"
                     className="text-fromclr xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] whitespace-nowrap xl:font-semibold lg:font-semibold md:font-semibold sm:font-bold xs:font-bold xss:font-bold p-2 xl:px-8 lg:px-8 md:px-8 sm:px-4 xs:px-4 xss:px-4 bg-btnGroup rounded-full"
                   >
-                    {i.depatrment}
+                    {i?.jobCategory}
                   </button>
                 </div>
               </div>
@@ -149,12 +149,14 @@ export const OpenPositions = ({ data, filterData }) => {
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-2 xs:mb-2 xss:mb-2">
                     <div
                       className="bg-gradient-to-r from-fromclr to-toclr h-2.5 rounded-full"
-                      style={{ width: "45%" }}
+                      style={{
+                        width: `${(i?.noOfRequest / i?.capacity) * 100}%`,
+                      }}
                     ></div>
                   </div>
                   <div className="flex">
-                    <span className="font-lato text-[14px] text-justify text-webHeading">
-                      {i.applied} applied of {i.capacity} capacity
+                    <span className="font-lato text-[14px]  text-justify text-webHeading">
+                      {i?.noOfRequest} applied of {i?.capacity} capacity
                     </span>
                   </div>
                 </div>
