@@ -50,7 +50,7 @@ export default function Header() {
               </button>
             </div>
             <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
-              +92 327 4067337
+              {"+92 " + iconsData?.intro?.phone}
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function Header() {
               </button>
             </div>
             <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
-              info@consoledot.com
+              {iconsData?.intro?.email}
             </p>
           </div>
         </div>
