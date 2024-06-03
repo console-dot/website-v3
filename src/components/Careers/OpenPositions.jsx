@@ -7,6 +7,7 @@ import {
 import { ToastContainer, toast, Slide } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { setCareerPageData } from "../../redux";
+import { capitalizeFirstLetter } from "../../utils/helper";
 
 export const OpenPositions = ({ data, filterData }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -203,13 +204,13 @@ export const OpenPositions = ({ data, filterData }) => {
                     type="button"
                     className="text-fromclr lg:text-[16px] xl:text-[16px] 2xl:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] xl:font-semibold lg:font-semibold md:font-semibold sm:font-bold xs:font-bold xss:font-bold whitespace-nowrap py-2 xl:px-8 lg:px-8 md:px-8 sm:px-4 xs:px-4 xss:px-4 bg-btnGroup rounded-full"
                   >
-                    {i?.employmentType}
+                    {capitalizeFirstLetter(i?.employmentType)}
                   </button>
                   <button
                     type="button"
                     className="text-fromclr xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] whitespace-nowrap xl:font-semibold lg:font-semibold md:font-semibold sm:font-bold xs:font-bold xss:font-bold p-2 xl:px-8 lg:px-8 md:px-8 sm:px-4 xs:px-4 xss:px-4 bg-btnGroup rounded-full"
                   >
-                    {i?.jobCategory}
+                    {capitalizeFirstLetter(i?.jobCategory)}
                   </button>
                 </div>
               </div>
