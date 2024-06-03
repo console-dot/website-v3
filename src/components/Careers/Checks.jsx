@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
+import { capitalizeFirstLetter } from "../../utils/helper";
 
 export const Checks = ({
   openPositionData,
@@ -68,7 +69,7 @@ export const Checks = ({
                   htmlFor={`bordered-checkbox-${i.value}`}
                   className="w-full py-4 ms-2 xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] font-medium text-webDescrip"
                 >
-                  {i.title}
+                  {capitalizeFirstLetter(i?.title)}
                   {i?.type === "top" ? (
                     <span className="pl-2">{`(${
                       openPositionData.filter(

@@ -22,69 +22,69 @@ export const SearchInput = ({
     // Apply type filters
     if (checkedTypeItems.partTime) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.employmentType === "Part-Time"
+        (position) => position.employmentType === "part-time"
       );
     }
     if (checkedTypeItems.fullTime) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.employmentType === "Full-Time"
+        (position) => position.employmentType === "full-time"
       );
     }
     if (checkedTypeItems.internship) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.employmentType === "Internship"
+        (position) => position.employmentType === "internship"
       );
     }
     if (checkedTypeItems.remote) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.employmentType === "Remote"
+        (position) => position.employmentType === "remote"
       );
     }
     if (checkedTypeItems.contact) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.employmentType === "Contact"
+        (position) => position.employmentType === "contact"
       );
     }
 
     // Apply category filters
     if (checkedCategoryItems.design) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Design"
+        (position) => position.jobCategory === "design"
       );
     }
     if (checkedCategoryItems.business) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Business"
+        (position) => position.jobCategory === "business"
       );
     }
     if (checkedCategoryItems.finance) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Finance"
+        (position) => position.jobCategory === "finance"
       );
     }
     if (checkedCategoryItems.hr) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Human Resource"
+        (position) => position.jobCategory === "human resource"
       );
     }
     if (checkedCategoryItems.sales) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Sales"
+        (position) => position.jobCategory === "sales"
       );
     }
     if (checkedCategoryItems.marketing) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Marketing"
+        (position) => position.jobCategory === "marketing"
       );
     }
     if (checkedCategoryItems.softwareEngineer) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Software Engineer"
+        (position) => position.jobCategory === "software engineer"
       );
     }
     if (checkedCategoryItems.tech) {
       filteredPositions = filteredPositions.filter(
-        (position) => position.jobCategory === "Technology"
+        (position) => position.jobCategory === "technology"
       );
     }
     console.log(filteredPositions);

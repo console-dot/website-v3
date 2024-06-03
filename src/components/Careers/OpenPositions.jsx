@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import { setOpenPosition } from "../../api";
+import {
+  editOpenPositionCount,
+  getOpenPositions,
+  setOpenPosition,
+} from "../../api";
 import { ToastContainer, toast, Slide } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { setCareerPageData } from "../../redux";
+import { capitalizeFirstLetter } from "../../utils/helper";
 
 export const OpenPositions = ({ data, filterData }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,6 +27,7 @@ export const OpenPositions = ({ data, filterData }) => {
   });
 
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
 
   const itemsPerPage = 3;
   const newData = filterData ? filterData : data;
@@ -67,13 +75,37 @@ export const OpenPositions = ({ data, filterData }) => {
       designation: selectedPosition?.designation,
     };
 
-    console.log("newForm", newForm);
-
     const loadingToastId = toast.loading("Submitting...");
 
     setOpenPosition(newForm)
       .then((res) => {
+        toast.update(loadingToastId, {
+          render: "Form submitted successfully!",
+          type: "success",
+          isLoading: false,
+          autoClose: 3000,
+        });
         if (res.status === 200) {
+          const newCount = Number(selectedPosition?.noOfRequest) + 1;
+          const newForm = {
+            noOfRequest: newCount.toString(),
+          };
+          if (
+            selectedPosition?._id &&
+            selectedPosition?.noOfPositions <= selectedPosition?.capacity
+          ) {
+            editOpenPositionCount(newForm, selectedPosition?._id)
+              .then((res) => {
+                if (res?.status == 200) {
+                  getOpenPositions()
+                    .then((res) => {
+                      dispatch(setCareerPageData(res?.data));
+                    })
+                    .catch((err) => console.log(err));
+                }
+              })
+              .catch((err) => console.log(err));
+          }
           // Check if response status is 200 OK
           toast.update(loadingToastId, {
             render: "Form submitted successfully!",
@@ -81,17 +113,17 @@ export const OpenPositions = ({ data, filterData }) => {
             isLoading: false,
             autoClose: 3000,
           });
-          // setFormData({
-          //   fullName: "",
-          //   email: "",
-          //   city: "",
-          //   experience: "",
-          //   gender: "",
-          //   github: "",
-          //   phone: "",
-          //   resume: "",
-          //   designation: "",
-          // });
+          setFormData({
+            fullName: "",
+            email: "",
+            city: "",
+            experience: "",
+            gender: "",
+            github: "",
+            phone: "",
+            resume: "",
+            designation: "",
+          });
         } else {
           throw new Error("Failed to submit the form"); // Throw error for non-200 responses
         }
@@ -172,13 +204,13 @@ export const OpenPositions = ({ data, filterData }) => {
                     type="button"
                     className="text-fromclr lg:text-[16px] xl:text-[16px] 2xl:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] xl:font-semibold lg:font-semibold md:font-semibold sm:font-bold xs:font-bold xss:font-bold whitespace-nowrap py-2 xl:px-8 lg:px-8 md:px-8 sm:px-4 xs:px-4 xss:px-4 bg-btnGroup rounded-full"
                   >
-                    {i?.employmentType}
+                    {capitalizeFirstLetter(i?.employmentType)}
                   </button>
                   <button
                     type="button"
                     className="text-fromclr xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] xss:text-[12px] whitespace-nowrap xl:font-semibold lg:font-semibold md:font-semibold sm:font-bold xs:font-bold xss:font-bold p-2 xl:px-8 lg:px-8 md:px-8 sm:px-4 xs:px-4 xss:px-4 bg-btnGroup rounded-full"
                   >
-                    {i?.jobCategory}
+                    {capitalizeFirstLetter(i?.jobCategory)}
                   </button>
                 </div>
               </div>
@@ -202,7 +234,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   </div>
                   <div className="flex">
                     <span className="font-lato text-[14px]  text-justify text-webHeading">
-                      {i.applied} applied of {i.capacity} capacity
+                      {i?.noOfRequest} applied of {i?.capacity} capacity
                     </span>
                   </div>
                 </div>
@@ -243,7 +275,7 @@ export const OpenPositions = ({ data, filterData }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50">
           <div className="relative bg-white rounded-lg shadow-xl p-4  xl:w-1/3 lg:w-1/3 md:w-1/3 sm:w-[95%] xs:w-[95%] xss:w-[95%] h-[80%] overflow-y-auto">
             <h2 className="text-2xl text-webHeading font-bold mb-4">
-              Apply for {selectedPosition.title}
+              Apply for {selectedPosition?.designation}
             </h2>
             <form
               className="space-y-2"
@@ -259,7 +291,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   name="fullName"
                   placeholder="Enter Your Full Name"
                   className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                  value={formData.fullName}
+                  value={formData?.fullName}
                   onChange={handleInputChange}
                 />
               </div>
@@ -272,7 +304,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   name="email"
                   placeholder="Enter Your Email"
                   className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                  value={formData.email}
+                  value={formData?.email}
                   onChange={handleInputChange}
                 />
               </div>
@@ -285,7 +317,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   name="phone"
                   placeholder="Mobile Number"
                   className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                  value={formData.phone}
+                  value={formData?.phone}
                   onChange={handleInputChange}
                 />
               </div>
@@ -297,7 +329,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   <select
                     name="city"
                     className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                    value={formData.city}
+                    value={formData?.city}
                     onChange={handleInputChange}
                   >
                     <option value="">Select City</option>
@@ -326,7 +358,7 @@ export const OpenPositions = ({ data, filterData }) => {
                     type="date"
                     name="dob"
                     className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                    value={formData.dob}
+                    value={formData?.dob}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -338,7 +370,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   <select
                     name="gender"
                     className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                    value={formData.gender}
+                    value={formData?.gender}
                     onChange={handleInputChange}
                   >
                     <option value="">Select Gender</option>
@@ -359,7 +391,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   name="experience"
                   placeholder="Tell Us About Your Experience"
                   className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                  value={formData.experience}
+                  value={formData?.experience}
                   onChange={handleInputChange}
                 />
               </div>
@@ -375,7 +407,7 @@ export const OpenPositions = ({ data, filterData }) => {
                   name="github"
                   placeholder="Enter Your Github Link"
                   className="mt-1 block w-full text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2"
-                  value={formData.github}
+                  value={formData?.github}
                   onChange={handleInputChange}
                 />
               </div>

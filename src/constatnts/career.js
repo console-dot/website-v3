@@ -1,31 +1,31 @@
 export const checksTypeOfEmployement = [
   {
     type: "top",
-    title: "Full-time",
+    title: "full-time",
     value: "fullTime",
     check: false,
   },
   {
     type: "top",
-    title: "Part-time",
+    title: "part-time",
     value: "partTime",
     check: false,
   },
   {
     type: "top",
-    title: "Remote",
+    title: "remote",
     value: "remote",
     check: false,
   },
   {
     type: "top",
-    title: "Internship",
+    title: "internship",
     value: "internship",
     check: false,
   },
   {
     type: "top",
-    title: "Contract",
+    title: "contract",
     value: "contact",
     check: false,
   },
@@ -33,42 +33,42 @@ export const checksTypeOfEmployement = [
 
 export const checksCategories = [
   {
-    title: "Design",
+    title: "design",
     value: "design",
     check: false,
   },
   {
-    title: "Sales",
+    title: "sales",
     value: "sales",
     check: false,
   },
   {
-    title: "Marketing",
+    title: "marketing",
     value: "marketing",
     check: false,
   },
   {
-    title: "Business",
+    title: "business",
     value: "business",
     check: false,
   },
   {
-    title: "Human Resource",
+    title: "human resource",
     value: "hr",
     check: false,
   },
   {
-    title: "Finance",
+    title: "finance",
     value: "finance",
     check: false,
   },
   {
-    title: "Software Engineer",
+    title: "software engineer",
     value: "softwareEngineer",
     check: false,
   },
   {
-    title: "Technology",
+    title: "technology",
     value: "tech",
     check: false,
   },
