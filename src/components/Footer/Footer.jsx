@@ -251,7 +251,7 @@ const Footer = () => {
                             <div
                               key={index}
                               style={{
-                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
                               }}
                               className="w-8 h-8 flex justify-center items-center rounded-lg"
                             >
@@ -277,7 +277,7 @@ const Footer = () => {
                             <div
                               key={index}
                               style={{
-                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
                               }}
                               className="w-8 h-8 flex justify-center items-center rounded-lg"
                             >
@@ -296,7 +296,7 @@ const Footer = () => {
                             <div
                               key={index}
                               style={{
-                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
                               }}
                               className="w-8 h-8 flex justify-center items-center rounded-lg"
                             >
@@ -322,7 +322,7 @@ const Footer = () => {
                             <div
                               key={index}
                               style={{
-                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
                               }}
                               className="w-8 h-8 flex justify-center items-center rounded-lg"
                             >
@@ -348,7 +348,7 @@ const Footer = () => {
                             <div
                               key={index}
                               style={{
-                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
                               }}
                               className="w-8 h-8 flex justify-center items-center rounded-lg"
                             >
@@ -382,18 +382,138 @@ const Footer = () => {
                     className="xl:hidden lg:hidden md:hidden sm:flex xs:flex xss:flex flex justify-center items-center "
                     style={{ gap: "6px" }}
                   >
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <LinkedinIcon color="#14213D" />
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <FaGithub color="#14213D" />
-                    </div>
+                    {fd?.intro?.socialLinks?.map((item, index) => {
+                      return (
+                        <>
+                          {item?.name?.toLowerCase() == "linkedin" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <LinkedinIcon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.3,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "twitter" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <BsTwitterX color="#14213D" />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "clutch" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <CIcon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.9,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "g2" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <G2Icon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.9,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "goodfirms" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 90%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <AIcon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.9,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
 
