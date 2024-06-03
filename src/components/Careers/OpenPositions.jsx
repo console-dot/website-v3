@@ -78,6 +78,12 @@ export const OpenPositions = ({ data, filterData }) => {
 
     setOpenPosition(newForm)
       .then((res) => {
+        toast.update(loadingToastId, {
+          render: "Form submitted successfully!",
+          type: "success",
+          isLoading: false,
+          autoClose: 3000,
+        });
         if (res.status === 200) {
           const newCount = Number(selectedPosition?.noOfRequest) + 1;
           const newForm = {
@@ -99,7 +105,6 @@ export const OpenPositions = ({ data, filterData }) => {
               })
               .catch((err) => console.log(err));
           }
-          console.log("start");
           // Check if response status is 200 OK
           toast.update(loadingToastId, {
             render: "Form submitted successfully!",
@@ -107,18 +112,17 @@ export const OpenPositions = ({ data, filterData }) => {
             isLoading: false,
             autoClose: 3000,
           });
-          console.log("end");
-          // setFormData({
-          //   fullName: "",
-          //   email: "",
-          //   city: "",
-          //   experience: "",
-          //   gender: "",
-          //   github: "",
-          //   phone: "",
-          //   resume: "",
-          //   designation: "",
-          // });
+          setFormData({
+            fullName: "",
+            email: "",
+            city: "",
+            experience: "",
+            gender: "",
+            github: "",
+            phone: "",
+            resume: "",
+            designation: "",
+          });
         } else {
           throw new Error("Failed to submit the form"); // Throw error for non-200 responses
         }
