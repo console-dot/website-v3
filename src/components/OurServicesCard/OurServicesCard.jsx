@@ -45,15 +45,16 @@ const settings = {
   ],
 };
 
-
-
 export const Card = ({ expertise }) => {
   const BASE_URL = config.BASE_URL;
   return (
     <div className="">
       <Slider {...settings}>
         {expertise.map((expertise) => (
-          <div key={expertise?._id} className={expertise?._id % 2 != 0 ? "odd-border " : ""}>
+          <div
+            key={expertise?._id}
+            className={expertise?._id % 2 != 0 ? "odd-border " : ""}
+          >
             <div className="bg-white lg:h-[400px] xl:h-[400px] md:h-[400px] sm:h-[530px] xs:h-[530px] xss:h-[530px] shadow-lg rounded-lg p-9 flex flex-col items-center justify-center relative group border-b-4  border-custom-purple ">
               {/* Hover image */}
               <div className="absolute  w-full h-[400px] rounded-lg bg-custom-blue opacity-0 transition-opacity duration-300 group-hover:opacity-90">
@@ -78,9 +79,10 @@ export const Card = ({ expertise }) => {
                 {/* Inner div */}
                 <div className="flex items-center justify-center w-24 h-24 absolute">
                   <img
+                    style={{ borderRadius: "50%" }}
                     src={`${BASE_URL}/file/${expertise?.image}`}
                     alt="icon"
-                    className="w-2/4 h-2/4 object-cover"
+                    className="w-3/4 h-3/4 object-cover"
                   />
                 </div>
               </div>

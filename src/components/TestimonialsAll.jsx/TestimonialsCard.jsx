@@ -78,7 +78,7 @@ export const TestimonialsCard = ({testimonials}) => {
         {testimonials.slice(0, visibleCards).map((d, index) => (
           <div
             key={index}
-            className={`bg-white flex flex-col items-center justify-between transition-transform duration-300 rounded-xl p-6 w-full sm:w-[48%] md:w-[30%] shadow-md hover:shadow-xl hover:border-2 hover:border-dashed hover:border-custom-purple `}
+            className={`border-2 border-solid bg-white flex flex-col items-center justify-between transition-transform duration-300 rounded-xl p-6 w-full sm:w-[48%] md:w-[30%] shadow-md hover:shadow-xl hover:border-2 hover:border-dashed hover:border-custom-purple `}
           >
             <div className="flex items-center justify-center mb-4 h-24">
               <Inverted2 className="h-12 w-12" />

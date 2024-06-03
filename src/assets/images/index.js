@@ -75,7 +75,7 @@ import Test from "./test.png";
 import LandingBg from "./LandingBg.webp";
 import footerImg from "./footerImage.webp";
 import PreLoader from "./PreLoader.png";
-import TestimonialsBG from "./TestimonialsBG.png";
+import TestimonialsBG from "./TestimonialsBG.webp";
 import execSummaryImage from "./execSummaryImage.png";
 import projectOverviewImage from "./projectOverviewImage.png";
 import problemStatementImage from "./problemStatementImage.png";
