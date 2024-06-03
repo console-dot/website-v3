@@ -83,19 +83,18 @@ import solutionImage from "./solutionImage.png";
 import developmentProcessImage from "./developmentProcessImage.png";
 import challengesFacedImage from "./challengesFacedImage.png";
 import whywework from "./whywework.png";
-import herobgmobile from "./herobgmobile.webp"
+import herobgmobile from "./herobgmobile.webp";
+import g2 from "./g2-logo.png";
 
-
-
-export {herobgmobile };
-export {whywework };
-export {developmentProcessImage };
-export {challengesFacedImage };
-export {solutionImage };
-export {problemStatementImage};
-export {projectOverviewImage};
+export { herobgmobile };
+export { whywework };
+export { developmentProcessImage };
+export { challengesFacedImage };
+export { solutionImage };
+export { problemStatementImage };
+export { projectOverviewImage };
 export { execSummaryImage };
-export {TestimonialsBG};
+export { TestimonialsBG };
 export { PreLoader };
 export { NotFoundImg };
 export { uiuxdev1 };
@@ -173,5 +172,6 @@ export {
   Test,
   OffshoreBg,
   LandingBg,
-  footerImg
+  footerImg,
+  g2,
 };
