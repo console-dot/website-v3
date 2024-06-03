@@ -41,14 +41,26 @@ export const QuestionCard = ({ data }) => {
             </div>
             {clickedQuestion === index && (
               <div className="p-2 ml-16 ">
-                <h1 className="text-[16px] leading-6 font-poppins text-dottedBorder font-bold">
-                  Answer:
-                </h1>
                 <p className="text-[16px] leading-6 font-poppins">
                   {i?.answer}
                 </p>
               </div>
             )}
+            {clickedQuestion % 2 == 0
+              ? clickedQuestion === index - 1 && (
+                  <div className="p-2 ml-16 ">
+                    <p className="text-[16px] leading-6 font-poppins">
+                      {i?.answer}
+                    </p>
+                  </div>
+                )
+              : clickedQuestion === index + 1 && (
+                  <div className="p-2 ml-16 ">
+                    <p className="text-[16px] leading-6 font-poppins">
+                      {i?.answer}
+                    </p>
+                  </div>
+                )}
           </div>
         ))}
       </div>
