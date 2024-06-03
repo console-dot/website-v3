@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 
 export const CaseStudies = () => {
   const data = useSelector(selectcasestudyDetails);
-  console.log("data",data)
   return  <div className="w-full mb-8 overflow-hidden">
   <LandingPage data={landingPageDataCaseStudies} />
   <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xxs:p-2">
