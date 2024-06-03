@@ -123,10 +123,9 @@ export const ContactForm = () => {
             <option value="" disabled hidden>
               Select model to inquire
             </option>
-            <option value="M1">M1</option>
-            <option value="M2">M2</option>
-            <option value="M3">M3</option>
-            <option value="M4">M4</option>
+            <option value="Hourly">Hourly</option>
+            <option value="Fixed">Fixed</option>
+            <option value="Bot">Bot</option>
           </select>
           <input
             type="text"

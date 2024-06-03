@@ -10,8 +10,10 @@ import {
 } from "../../assets/images";
 import { OffShoreTop, Offshore2 } from "../../assets/icons";
 import CheckIcon from "../../assets/icons/CheckIcon";
+import { useNavigate } from "react-router-dom";
 
 export const OffshoreModel = ({ offshoreType }) => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center md:mt-16 mt-8">
@@ -40,7 +42,7 @@ export const OffshoreModel = ({ offshoreType }) => {
                 {offshoreType[0]?.type}
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
-              {offshoreType[0]?.description}
+                {offshoreType[0]?.description}
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -50,7 +52,7 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[0]?.advantages[0]}
+                  {offshoreType[0]?.advantages[0]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -58,7 +60,7 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[0]?.advantages[1]}
+                  {offshoreType[0]?.advantages[1]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -66,11 +68,16 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[0]?.advantages[2]}
+                  {offshoreType[0]?.advantages[2]}
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
-                <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button
+                  onClick={() => {
+                    navigate("/contact");
+                  }}
+                  className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+                >
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>
@@ -95,10 +102,10 @@ export const OffshoreModel = ({ offshoreType }) => {
           <div className="w-full flex flex-col pl-0">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
-              {offshoreType[1]?.type}
+                {offshoreType[1]?.type}
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
-              {offshoreType[1]?.description}
+                {offshoreType[1]?.description}
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -108,7 +115,7 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[1]?.advantages[0]}
+                  {offshoreType[1]?.advantages[0]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -116,7 +123,7 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[1]?.advantages[1]}
+                  {offshoreType[1]?.advantages[1]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -124,11 +131,16 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[1]?.advantages[2]}
+                  {offshoreType[1]?.advantages[2]}
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2">
-                <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button
+                  onClick={() => {
+                    navigate("/contact");
+                  }}
+                  className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+                >
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>
@@ -152,10 +164,10 @@ export const OffshoreModel = ({ offshoreType }) => {
           <div className="w-full flex flex-col">
             <div className="w-[100%]">
               <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-semibold leading-8 tracking-normal md:mt-4 mt-2">
-              {offshoreType[2]?.type}
+                {offshoreType[2]?.type}
               </p>
               <p className="text-aboutustext font-lato text-justify md:text-[16px] text-[12px] leading-6 md:mt-4 mt-2">
-              {offshoreType[2]?.description}
+                {offshoreType[2]?.description}
               </p>
               <p className="md:text-[16px] text-[12px] font-bold text-black mt-4">
                 Advantages:
@@ -165,7 +177,7 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[2]?.advantages[0]}
+                  {offshoreType[2]?.advantages[0]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -173,7 +185,7 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[2]?.advantages[1]}
+                  {offshoreType[2]?.advantages[1]}
                 </span>
               </div>
               <div className="flex items-start mt-4">
@@ -181,11 +193,16 @@ export const OffshoreModel = ({ offshoreType }) => {
                   <CheckIcon />
                 </div>
                 <span className="text-aboutustext md:text-[16px] text-[12px]">
-                {offshoreType[2]?.advantages[2]}
+                  {offshoreType[2]?.advantages[2]}
                 </span>
               </div>
               <div className="flex md:justify-start justify-center sm:mt-7 sm:mb-6 xs:mt-7 xs:mb-6 xss:mt-7 xss:mb-6 md:mt-7 md:mb-6 mt-2 mb-2 ">
-                <button className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue">
+                <button
+                  onClick={() => {
+                    navigate("/contact");
+                  }}
+                  className="md:px-24 md:py-2.5 px-16 py-3  bg-custom-lightBlue text-custom-purple rounded-full focus:outline-none transition-colors duration-300 hover:bg-gradient-to-tl  hover:from-custom-blue1 hover:to-custom-purple hover:text-custom-white active:bg-gradient-to-r active:from-custom-purple active:to-custom-blue"
+                >
                   <p className="font-Lato text-base font-medium leading-[28px] tracking-normal">
                     Avail Service
                   </p>
