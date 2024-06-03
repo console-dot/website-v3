@@ -1,10 +1,10 @@
 import React from "react";
 
-export const ProductResearchTop = () => {
+export const ProductResearchTop = ({height, width}) => {
   return (
     <svg
-      width="531"
-      height="409"
+      width={width||"531"}
+      height={height||"409"}
       viewBox="0 0 531 409"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

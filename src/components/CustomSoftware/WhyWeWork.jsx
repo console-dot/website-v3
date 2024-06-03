@@ -4,6 +4,7 @@ import {
   CloudCompIcon,
   CustomCollabIcon,
   CustomExpertiseIcon,
+  ProductResearchTop,
 } from "../../assets/icons";
 import { whywework } from "../../assets/images";
 import "./WhyChoose.css";
@@ -53,7 +54,8 @@ export const WhyWeWork = ({ delivers }) => {
       >
         <div className="lg:w-[50%] xl:w-[50%] md:w-[50%] sm:w-[100%] xs:w-[100%] xss:w-[100%]">
           <div className="flex justify-center items-center p-4">
-            <img src={whywework} alt="" width={400} height={400} />
+            {/* <img src={whywework} alt="" width={400} height={400} /> */}
+            <ProductResearchTop width={483} height={382} />
           </div>
         </div>
         <div
