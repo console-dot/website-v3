@@ -14,8 +14,9 @@ import "./Footer.css";
 import useIsMobile from "../../utils/hooks/useIsMobile";
 import { selectLandingPageDetails } from "../../redux";
 import { useSelector } from "react-redux";
+import { FaGithub } from "react-icons/fa";
 const Footer = () => {
-  const fd = useSelector(selectLandingPageDetails)
+  const fd = useSelector(selectLandingPageDetails);
   const [page, setPage] = useState("");
   const [data, setData] = useState({});
   const isMobile = useIsMobile();
@@ -238,85 +239,51 @@ const Footer = () => {
                   </a>
                 </div>
 
+                {console.log("icons", fd)}
+
                 {/* social icon section start */}
                 <div className="w-full  sm:w-full xs:w-full   md:mt-10  mt-16   flex justify-center md:flex md:justify-start   md:items-end opacity-25">
                   <div className="lg:flex md:flex sm:hidden xs:hidden xss:hidden gap-3 ">
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <button
-                        onClick={() => {
-                          const url = fd?.intro?.socialLinks[0]?.link;
-                          if (url) {
-                            window.open(url, "_blank");
-                          }
-                        }}
-                      >
-                        <LinkedinIcon
-                          color="#14213D"
+                    {fd?.intro?.socialLinks?.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
                           style={{
-                            height: "30px",
-                            width: "45px",
-                            opacity: 0.3,
+                            backgroundColor: "rgba(255, 255, 255 , 50%)",
                           }}
-                        />
-                      </button>
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <TwitterIcon
-                        color="#14213D"
-                        style={{
-                          height: "30px",
-                          width: "45px",
-                          opacity: "30%",
-                        }}
-                      />
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <CIcon
-                        color="#14213D"
-                        style={{
-                          backgroundColor: "black",
-                          height: "30px",
-                          width: "45px",
-                          opacity: "30%",
-                        }}
-                      />
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <AIcon
-                        color="#14213D"
-                        style={{
-                          backgroundColor: "black",
-                          height: "30px",
-                          width: "45px",
-                          opacity: "30%",
-                        }}
-                      />
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <OIcon
-                        color="#14213D"
-                        style={{
-                          height: "30px",
-                          width: "45px",
-                          opacity: "30%",
-                        }}
-                      />
-                    </div>
+                          className="w-8 h-8 flex justify-center items-center rounded-lg"
+                        >
+                          <button
+                            onClick={() => {
+                              const url = item?.link;
+                              if (url) {
+                                window.open(url, "_blank");
+                              }
+                            }}
+                          >
+                            {item?.name == "Linkedin" ? (
+                              <LinkedinIcon
+                                color="#14213D"
+                                style={{
+                                  height: "30px",
+                                  width: "45px",
+                                  opacity: 0.3,
+                                }}
+                              />
+                            ) : (
+                              <FaGithub
+                                color="#14213D"
+                                style={{
+                                  height: "30px",
+                                  width: "45px",
+                                  opacity: 0.9,
+                                }}
+                              />
+                            )}
+                          </button>
+                        </div>
+                      );
+                    })}
                   </div>
 
                   <div
@@ -333,25 +300,7 @@ const Footer = () => {
                       style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
                       className="w-8 h-8 flex justify-center items-center rounded-lg"
                     >
-                      <TwitterIcon color="#14213D" />
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <CIcon color="#14213D" />
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <AIcon color="#14213D" />
-                    </div>
-                    <div
-                      style={{ backgroundColor: "rgba(255, 255, 255 , 50%)" }}
-                      className="w-8 h-8 flex justify-center items-center rounded-lg"
-                    >
-                      <OIcon color="#14213D" />
+                      <FaGithub color="#14213D" />
                     </div>
                   </div>
                 </div>

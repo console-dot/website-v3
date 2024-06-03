@@ -16,3 +16,17 @@ export const getOpenPositions = () => {
     })
     .catch((err) => console.log(err));
 };
+
+export const editOpenPositionCount = (values, id) => {
+  return axios
+    .put(`${BASE_URL}/open-positions/${id}`, values, {
+      headers: {
+        "Content-Type": "application/json",
+        Version: "v2 ",
+      },
+    })
+    .then((res) => {
+      if (res?.data) return res?.data;
+    })
+    .catch((err) => console.log(err));
+};
