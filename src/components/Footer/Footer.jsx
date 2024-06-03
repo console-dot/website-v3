@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { footerImg, imageGit, logowhite } from "../../assets/images";
+import { footerImg, g2, imageGit, logowhite } from "../../assets/images";
 import { Contact } from "../../assets/images";
 import { Mail } from "../../assets/images";
 import { Address } from "../../assets/images";
@@ -15,6 +15,8 @@ import useIsMobile from "../../utils/hooks/useIsMobile";
 import { selectLandingPageDetails } from "../../redux";
 import { useSelector } from "react-redux";
 import { FaGithub } from "react-icons/fa";
+import { G2Icon } from "../../assets/icons";
+import { BsTwitterX } from "react-icons/bs";
 const Footer = () => {
   const fd = useSelector(selectLandingPageDetails);
   const [page, setPage] = useState("");
@@ -239,49 +241,139 @@ const Footer = () => {
                   </a>
                 </div>
 
-                {console.log("icons", fd)}
-
                 {/* social icon section start */}
                 <div className="w-full  sm:w-full xs:w-full   md:mt-10  mt-16   flex justify-center md:flex md:justify-start   md:items-end opacity-25">
                   <div className="lg:flex md:flex sm:hidden xs:hidden xss:hidden gap-3 ">
                     {fd?.intro?.socialLinks?.map((item, index) => {
                       return (
-                        <div
-                          key={index}
-                          style={{
-                            backgroundColor: "rgba(255, 255, 255 , 50%)",
-                          }}
-                          className="w-8 h-8 flex justify-center items-center rounded-lg"
-                        >
-                          <button
-                            onClick={() => {
-                              const url = item?.link;
-                              if (url) {
-                                window.open(url, "_blank");
-                              }
-                            }}
-                          >
-                            {item?.name == "Linkedin" ? (
-                              <LinkedinIcon
-                                color="#14213D"
-                                style={{
-                                  height: "30px",
-                                  width: "45px",
-                                  opacity: 0.3,
+                        <>
+                          {item?.name?.toLowerCase() == "linkedin" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
                                 }}
-                              />
-                            ) : (
-                              <FaGithub
-                                color="#14213D"
-                                style={{
-                                  height: "30px",
-                                  width: "45px",
-                                  opacity: 0.9,
+                              >
+                                <LinkedinIcon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.3,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "twitter" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
                                 }}
-                              />
-                            )}
-                          </button>
-                        </div>
+                              >
+                                <BsTwitterX color="#14213D" />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "clutch" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <CIcon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.9,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "g2" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <G2Icon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.9,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : item?.name?.toLowerCase() === "goodfirms" ? (
+                            <div
+                              key={index}
+                              style={{
+                                backgroundColor: "rgba(255, 255, 255 , 50%)",
+                              }}
+                              className="w-8 h-8 flex justify-center items-center rounded-lg"
+                            >
+                              <button
+                                onClick={() => {
+                                  const url = item?.link;
+                                  if (url) {
+                                    window.open(url, "_blank");
+                                  }
+                                }}
+                              >
+                                <AIcon
+                                  color="#14213D"
+                                  style={{
+                                    height: "30px",
+                                    width: "45px",
+                                    opacity: 0.9,
+                                  }}
+                                />
+                              </button>
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                        </>
                       );
                     })}
                   </div>

@@ -8,10 +8,15 @@ import AIcon from "../../assets/icons/AIcon";
 import OIcon from "../../assets/icons/OIcon";
 import useIsMobile from "../../utils/hooks/useIsMobile";
 import useIsXs from "../../utils/hooks/useIsXs";
+import { selectLandingPageDetails } from "../../redux";
+import { useSelector } from "react-redux";
+import { G2Icon } from "../../assets/icons";
+import { BsTwitterX } from "react-icons/bs";
 
 export default function Header() {
   const isMobileView = useIsMobile();
   const isXs = useIsXs();
+  const iconsData = useSelector(selectLandingPageDetails);
   return (
     <>
       <div
@@ -28,24 +33,47 @@ export default function Header() {
             className="flex items-center"
           >
             <div
-              style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-              className="w-8 h-8 flex justify-center items-center"
+              style={{
+                backgroundColor: "rgba(255, 255, 255 , 50%)",
+              }}
+              className="w-8 h-8 flex justify-center items-center rounded-lg"
             >
-              <FaPhoneVolume color={"white"} />
+              <button onClick={() => {}}>
+                <FaPhoneVolume
+                  color="#14213D"
+                  style={{
+                    height: "20px",
+                    width: "45px",
+                    opacity: 0.9,
+                  }}
+                />
+              </button>
             </div>
             <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
               +92 327 4067337
             </p>
           </div>
+
           <div
             style={{ width: "50%", gap: "5px" }}
             className="flex items-center"
           >
             <div
-              style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-              className="w-8 h-8 flex justify-center items-center"
+              style={{
+                backgroundColor: "rgba(255, 255, 255 , 50%)",
+              }}
+              className="w-8 h-8 flex justify-center items-center rounded-lg"
             >
-              <IoIosMail color={"white"} size={24} />
+              <button onClick={() => {}}>
+                <IoIosMail
+                  color="#14213D"
+                  style={{
+                    height: "30px",
+                    width: "45px",
+                    opacity: 0.9,
+                  }}
+                />
+              </button>
             </div>
             <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
               info@consoledot.com
@@ -61,36 +89,138 @@ export default function Header() {
           }}
           className="h-8 flex items-center xl:flex lg:flex md:flex sm:hidden xs:hidden xxs:hidden"
         >
-          <div
-            style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-            className="w-8 h-8 flex justify-center items-center"
-          >
-            <LinkedinIcon color={"white"} />
-          </div>
-          <div
-            style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-            className="w-8 h-8 flex justify-center items-center"
-          >
-            <TwitterIcon color={"white"} />
-          </div>
-          <div
-            style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-            className="w-8 h-8 flex justify-center items-center"
-          >
-            <CIcon color={"white"} />
-          </div>
-          <div
-            style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-            className="w-8 h-8 flex justify-center items-center"
-          >
-            <AIcon color={"white"} />
-          </div>
-          <div
-            style={{ backgroundColor: "rgba(39, 60, 79 , 28%)" }}
-            className="w-8 h-8 flex justify-center items-center"
-          >
-            <OIcon color={"white"} />
-          </div>
+          {iconsData?.intro?.socialLinks?.map((item, index) => {
+            return (
+              <>
+                {item?.name?.toLowerCase() == "linkedin" ? (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: "rgba(255, 255, 255 , 50%)",
+                    }}
+                    className="w-8 h-8 flex justify-center items-center rounded-lg"
+                  >
+                    <button
+                      onClick={() => {
+                        const url = item?.link;
+                        if (url) {
+                          window.open(url, "_blank");
+                        }
+                      }}
+                    >
+                      <LinkedinIcon
+                        color="#14213D"
+                        style={{
+                          height: "30px",
+                          width: "45px",
+                          opacity: 0.3,
+                        }}
+                      />
+                    </button>
+                  </div>
+                ) : item?.name?.toLowerCase() === "twitter" ? (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: "rgba(255, 255, 255 , 50%)",
+                    }}
+                    className="w-8 h-8 flex justify-center items-center rounded-lg"
+                  >
+                    <button
+                      onClick={() => {
+                        const url = item?.link;
+                        if (url) {
+                          window.open(url, "_blank");
+                        }
+                      }}
+                    >
+                      <BsTwitterX color="#14213D" />
+                    </button>
+                  </div>
+                ) : item?.name?.toLowerCase() === "clutch" ? (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: "rgba(255, 255, 255 , 50%)",
+                    }}
+                    className="w-8 h-8 flex justify-center items-center rounded-lg"
+                  >
+                    <button
+                      onClick={() => {
+                        const url = item?.link;
+                        if (url) {
+                          window.open(url, "_blank");
+                        }
+                      }}
+                    >
+                      <CIcon
+                        color="#14213D"
+                        style={{
+                          height: "30px",
+                          width: "45px",
+                          opacity: 0.9,
+                        }}
+                      />
+                    </button>
+                  </div>
+                ) : item?.name?.toLowerCase() === "g2" ? (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: "rgba(255, 255, 255 , 50%)",
+                    }}
+                    className="w-8 h-8 flex justify-center items-center rounded-lg"
+                  >
+                    <button
+                      onClick={() => {
+                        const url = item?.link;
+                        if (url) {
+                          window.open(url, "_blank");
+                        }
+                      }}
+                    >
+                      <G2Icon
+                        color="#14213D"
+                        style={{
+                          height: "30px",
+                          width: "45px",
+                          opacity: 0.9,
+                        }}
+                      />
+                    </button>
+                  </div>
+                ) : item?.name?.toLowerCase() === "goodfirms" ? (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: "rgba(255, 255, 255 , 50%)",
+                    }}
+                    className="w-8 h-8 flex justify-center items-center rounded-lg"
+                  >
+                    <button
+                      onClick={() => {
+                        const url = item?.link;
+                        if (url) {
+                          window.open(url, "_blank");
+                        }
+                      }}
+                    >
+                      <AIcon
+                        color="#14213D"
+                        style={{
+                          height: "30px",
+                          width: "45px",
+                          opacity: 0.9,
+                        }}
+                      />
+                    </button>
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </>
+            );
+          })}
         </div>
       </div>
     </>
