@@ -5,7 +5,7 @@ export const OSC = ({ workExperience }) => {
   const servicesData = [
     {
       image: image1,
-      title: workExperience?.countries.split(", ").length + "+" ,
+      title: workExperience?.countries + "+",
       description: `Countries where
                       we have happy
                       clients`,
@@ -60,5 +60,3 @@ export const OSC = ({ workExperience }) => {
     </div>
   );
 };
-
-
