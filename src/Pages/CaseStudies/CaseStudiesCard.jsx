@@ -1,31 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import {
-  execSummaryImage,
-  problemStatementImage,
-  solutionImage,
-  developmentProcessImage,
-  challengesFacedImage,
-  projectOverviewImage,
-} from "../../assets/images";
 import useIsMobile from "../../utils/hooks/useIsMobile";
-import {
-  AngularIcon,
-  BootstrapIcon,
-  BulmaIcon,
-  EmberIcon,
-  MUIIcon,
-  ReactIcon,
-  RepoIcon,
-  SIcon,
-  SvelteIcon,
-  VueIcon,
-} from "../../assets/icons";
 import config from "../../api/config";
+import { useNavigate } from "react-router-dom";
 
 const CardModal = ({ card, onClose }) => {
   const BASE_URL = config.BASE_URL;
-  const modalRef = useRef();
+  const modalRef = useRef(); 
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -51,9 +31,18 @@ const CardModal = ({ card, onClose }) => {
           <div className="w-[50%]">
             <h3 className="text-2xl text-webHeading font-bold">{card.title}</h3>
           </div>
-          <div className="w-[50%] flex justify-end">
-            <button onClick={onClose} className="sticky top-0">
-              <AiOutlineClose size={24} color="red" />
+          <div className="w-[50%] flex justify-end space-x-2">
+            <button
+              onClick={() => window.open(card.projectLink, "_blank")}
+              className="bg-blue-500 px-5 flex justify-center items-center rounded-lg text-white"
+            >
+              View
+            </button>
+            <button
+              onClick={onClose}
+              className="bg-red-500 px-5 flex justify-center items-center rounded-lg text-white"
+            >
+              Close
             </button>
           </div>
         </div>
@@ -92,10 +81,18 @@ const CardModal = ({ card, onClose }) => {
           </div>
           <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col justify-around mt-8 gap-8 rounded-lg">
             <div>
-              <img src={`${BASE_URL}/file/${card?.images[0]}`} alt="none" className="rounded-lg" />
+              <img
+                src={`${BASE_URL}/file/${card?.images[0]}`}
+                alt="none"
+                className="rounded-lg"
+              />
             </div>
             <div>
-              <img src={`${BASE_URL}/file/${card?.images[1]}`} alt="none" className="rounded-lg" />
+              <img
+                src={`${BASE_URL}/file/${card?.images[1]}`}
+                alt="none"
+                className="rounded-lg"
+              />
             </div>
           </div>
           <div className="flex flex-col mt-6">
