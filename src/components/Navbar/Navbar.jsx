@@ -22,7 +22,7 @@ export const NavBar = ({ section, setSection }) => {
         { name: "Digital Marketing", link: "digital-marketing" },
       ],
     },
-    { name: "Case Studies", link: "/case-study" },
+    { name: "Case Studies", link: "/casestudies" },
     { name: "Careers", link: "/careers" },
   ];
 

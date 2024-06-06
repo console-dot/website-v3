@@ -21,7 +21,7 @@ import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 import ScrollToTop from "./Pages/ScrollToTop";
 import Preloader from "./Pages/PreLoader/PreLoader";
 import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
-import { CaseStudies } from "./Pages";
+import { CaseStudies, CaseStudyPage } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 import { ServicesAll } from "./components/ServicesAll/ServicesAll";
 import {
@@ -188,6 +188,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />
+            <Route path="/case-studies/:title" element={<CaseStudyPage />} />
             <Route path="/CaseStudies/:id" element={<CardCaseStudy />} />
             <Route path="/services" element={<ServicesAll />} />
 
