@@ -1,0 +1,11 @@
+/* Add this CSS to your stylesheet */
+.sticky-nav {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; /* or any background color */
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Optional: for visual separation */
+  }
+  
