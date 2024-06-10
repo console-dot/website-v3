@@ -36,11 +36,13 @@ import {
   getcasestudy,
   getcustomservicepage,
   getproductresearchpage,
-  getFaqs, 
-  getOpenPositions
+  getFaqs,
+  getOpenPositions,
 } from "./api";
 import { useDispatch } from "react-redux";
-import { setCareerPageData, setFaqPageData,
+import {
+  setCareerPageData,
+  setFaqPageData,
   setARData,
   setAiData,
   setBlockChainData,
@@ -186,12 +188,10 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />
             <Route path="/case-studies/:title" element={<CaseStudyPage />} />
-            <Route path="/CaseStudies/:id" element={<CardCaseStudy />} />
             <Route path="/services" element={<ServicesAll />} />
-
+            <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />
