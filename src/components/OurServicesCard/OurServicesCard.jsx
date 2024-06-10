@@ -1,11 +1,33 @@
 import React from "react";
-import { IconBg, S3Icon, ourserviceshover } from "../../assets/images";
-import { S1Icon, S2Icon } from "../../assets/images";
+import { IconBg, ourserviceshover } from "../../assets/images";
 import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import config from "../../api/config";
+import {
+  CodeIcon,
+  SearchIcon,
+  ChipIcon,
+  ShieldCheckIcon,
+  DeviceMobileIcon,
+  GlobeAltIcon,
+  EyeIcon,
+  PencilIcon,
+  TrendingUpIcon,
+} from "@heroicons/react/outline";
+
+const icons = [
+  <CodeIcon className="h-8 w-8 text-white" />,
+  <SearchIcon className="h-8 w-8 text-white" />,
+  <ChipIcon className="h-8 w-8 text-white" />,
+  <ShieldCheckIcon className="h-8 w-8 text-white" />,
+  <DeviceMobileIcon className="h-8 w-8 text-white" />,
+  <GlobeAltIcon className="h-8 w-8 text-white" />,
+  <EyeIcon className="h-8 w-8 text-white" />,
+  <PencilIcon className="h-8 w-8 text-white" />,
+  <TrendingUpIcon className="h-8 w-8 text-white" />,
+];
 
 const settings = {
   dots: true,
@@ -50,7 +72,7 @@ export const Card = ({ expertise }) => {
   return (
     <div className="">
       <Slider {...settings}>
-        {expertise.map((expertise) => (
+        {expertise.map((expertise, index) => (
           <div
             key={expertise?._id}
             className={expertise?._id % 2 != 0 ? "odd-border " : ""}
@@ -78,12 +100,7 @@ export const Card = ({ expertise }) => {
 
                 {/* Inner div */}
                 <div className="flex items-center justify-center w-24 h-24 absolute">
-                  <img
-                    style={{ borderRadius: "50%" }}
-                    src={`${BASE_URL}/file/${expertise?.image}`}
-                    alt="icon"
-                    className="w-3/4 h-3/4 object-cover"
-                  />
+                  {icons[index % icons.length]}
                 </div>
               </div>
 

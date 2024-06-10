@@ -49,9 +49,28 @@ export default function Header() {
                 />
               </button>
             </div>
-            <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
-              {"+92 " + iconsData?.intro?.phone}
-            </p>
+            <div className="w-full">
+              <p>
+                <a
+                  href={`tel:+92${iconsData?.intro?.phone}`}
+                  className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white"
+                >
+                  +92 {iconsData?.intro?.phone}
+                </a>
+              </p>
+              {iconsData?.intro?.secondary ? (
+                <p>
+                  <a
+                    href={`tel:+92${iconsData?.intro?.secondary}`}
+                    className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white"
+                  >
+                    {iconsData?.intro?.secondary}
+                  </a>
+                </p>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
 
           <div
@@ -75,8 +94,13 @@ export default function Header() {
                 />
               </button>
             </div>
-            <p className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white">
-              {iconsData?.intro?.email}
+            <p>
+              <a
+                href={`mailto:${iconsData?.intro?.email}`}
+                className="font-Lato xl:text-[16px] lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-normal leading-5 tracking-tighter text-left text-white"
+              >
+                {iconsData?.intro?.email}
+              </a>
             </p>
           </div>
         </div>

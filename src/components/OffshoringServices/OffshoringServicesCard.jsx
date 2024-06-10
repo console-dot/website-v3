@@ -18,7 +18,7 @@ const Card = ({ heading, description }) => {
       <div className="flex-1 text-custom-grey text-left overflow-y-hidden hover:overflow-y-auto">
         <ul className="list-disc list-inside">
           {description.map((point, index) => (
-            <li key={index} className="flex items-center mb-2">
+            <li key={index} className="flex items-start mb-2">
               <div className="mr-2">
                 <CheckIcon />
               </div>
