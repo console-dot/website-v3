@@ -82,7 +82,6 @@ export const CaseStudyPage = () => {
       behavior: "smooth",
     });
   };
-  
 
   const handleNavClick = (section) => {
     const ref = sectionRefs.current[section];
@@ -97,7 +96,6 @@ export const CaseStudyPage = () => {
   if (!card) {
     return <div>No data available</div>;
   }
-  
 
   return (
     <div>
@@ -130,7 +128,6 @@ export const CaseStudyPage = () => {
               >
                 {`#${tag}`}
               </span>
-              
             ))}
           </div>
         </div>
@@ -170,6 +167,7 @@ export const CaseStudyPage = () => {
         <main className="md:w-2/3 lg:w-3/4 w-full  min-h-screen">
           <div className="p-2 md:p-4">
             <div className="md:ml-28 ml-0 md:p-0 p-4 md:w-[65%] text-justify w-full">
+              {/* highlights */}
               <section ref={sectionRefs.current.highlights} className="mb-20">
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Highlights
@@ -190,6 +188,7 @@ export const CaseStudyPage = () => {
               </section>
             </div>
             <div className="md:ml-28 ml-0 md:p-0 p-4 text-justify flex ">
+              {/* client */}
               <section ref={sectionRefs.current.client} className="mb-20">
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Client
@@ -267,24 +266,24 @@ export const CaseStudyPage = () => {
               </section>
             </div>
             <div className="md:ml-28 ml-0 md:p-0 p-4 md:w-[65%] text-justify w-full">
+              {/* product */}
               <section ref={sectionRefs.current.product} className="mb-20">
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Product
                 </h2>
                 <div className="mt-2">
                   <p className="text-webDescrip ">
-                    {card?.product?.split(" \\n")?.map((item) => {
-                      return (
-                        <>
-                          {item}
-                          <br />
-                        </>
-                      );
-                    })}
+                    {card?.product?.split("\\n").map((item, index) => (
+                      <React.Fragment key={index}>
+                        {item}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </p>
                 </div>
                 <hr className="mt-20 " />
               </section>
+              {/* goals */}
               <section
                 ref={sectionRefs.current.goals}
                 className="mb-20 text-justify"
@@ -309,13 +308,14 @@ export const CaseStudyPage = () => {
                 ))}
                 <hr className="mt-20 " />
               </section>
+              {/* chanllenges */}
               <section ref={sectionRefs.current.challenge} className="mb-20">
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Project Challenge
                 </h2>
                 {card?.challenges?.map((challenge, index) => (
                   <div className="mt-4 text-justify" key={index}>
-                    <div className="flex flex-row  items-center">
+                    <div className="flex flex-row  items-center gap-4">
                       <div className="w-[10%]">
                         <div className="w-8 h-8 bg-custom-purple opacity-80 flex justify-center items-center rounded-lg">
                           <span className="text-white">
@@ -340,6 +340,7 @@ export const CaseStudyPage = () => {
             </div>
 
             <div className="md:ml-28 ml-0 xl:p-0 lg:p-0 md:p-0 p-4 text-justify">
+              {/* solution */}
               <section ref={sectionRefs.current.solution} className="mb-20">
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Solution
@@ -347,14 +348,12 @@ export const CaseStudyPage = () => {
                 <div className="flex xl:flex-row lg:flex-row 2xl:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col gap-4">
                   <div className="lg:w-[100%] xl:w-[100%] md:w-[100%] sm:w-full xs:w-full xss:w-full text-justify">
                     <p className="text-webDescrip ">
-                      {card?.solution?.split(" \\n")?.map((item) => {
-                        return (
-                          <>
-                            {item}
-                            <br />
-                          </>
-                        );
-                      })}
+                      {card?.solution?.split("\\n").map((item, index) => (
+                        <React.Fragment key={index}>
+                          {item}
+                          <br />
+                        </React.Fragment>
+                      ))}
                     </p>
                   </div>
                   <div className="lg:w-[40%] xl:w-[40%] md:w-[40%] sm:w-full xs:w-full xss:w-full">
@@ -419,14 +418,14 @@ export const CaseStudyPage = () => {
                   Our Results
                 </h2>
                 <p className="text-webDescrip ">
-                  {card?.results?.description?.split(" \\n")?.map((item) => {
-                    return (
-                      <>
+                  {card?.results?.description
+                    ?.split("\\n")
+                    .map((item, index) => (
+                      <React.Fragment key={index}>
                         {item}
                         <br />
-                      </>
-                    );
-                  })}
+                      </React.Fragment>
+                    ))}
                 </p>
                 <div className="mt-4 text-justify">
                   {card?.results?.subHeadings?.map((subHeading, index) => (
