@@ -145,10 +145,14 @@ const Footer = () => {
                     </p>
                     <div className="md:text-[14px] text-[12px] md:mt-8 lg:mt-8 mt-2 font-lato text-left">
                       <div className="md:leading-10 leading-6 opacity-[85%]">
-                        <a href="#">Customer</a>
+                        <button onClick={() => navigate("testimonials")}>
+                          Customer
+                        </button>
                       </div>
                       <div className="md:leading-10 leading-6 opacity-[85%]">
-                        <a href="#">Technologies</a>
+                        <button onClick={() => navigate("/services")}>
+                          Technologies
+                        </button>
                       </div>
                       <div className="md:leading-10 leading-6 opacity-[85%]">
                         <button onClick={() => navigate("/careers")}>
@@ -208,8 +212,8 @@ const Footer = () => {
                       style={{ width: "20px", height: "20px" }}
                     />
                   </div>
-                  <a href="tel:+923274067437" className="text-xs">
-                    {fd?.intro?.phone}
+                  <a href={`tel:+92${fd?.intro?.phone}`} className="text-xs">
+                    +92 {fd?.intro?.phone}
                   </a>
                 </div>
                 <div className="flex items-start mb-4">
@@ -220,7 +224,7 @@ const Footer = () => {
                       style={{ width: "20px", height: "20px" }}
                     />
                   </div>
-                  <a href="mailto:info@consoledot.com" className="text-xs">
+                  <a href={`mailto:${fd?.intro?.email}`} className="text-xs">
                     {fd?.intro?.email}
                   </a>
                 </div>

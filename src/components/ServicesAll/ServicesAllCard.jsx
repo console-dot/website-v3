@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { IconBg, ourserviceshover } from "../../assets/images";
 import useIsMobile from "../../utils/hooks/useIsMobile";
-import { SiBlockchaindotcom } from "react-icons/si";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { TbAugmentedReality2 } from "react-icons/tb";
-import { PiFigmaLogoDuotone } from "react-icons/pi";
-import { VscGraph } from "react-icons/vsc";
-import {
-  MdOutlineDeveloperMode,
-  MdOutlineIntegrationInstructions,
-} from "react-icons/md";
-import { CgWebsite } from "react-icons/cg";
-import { LuPackageSearch } from "react-icons/lu";
 import config from "../../api/config";
+import {
+  CodeIcon,
+  SearchIcon,
+  ChipIcon,
+  ShieldCheckIcon,
+  DeviceMobileIcon,
+  GlobeAltIcon,
+  EyeIcon,
+  PencilIcon,
+  TrendingUpIcon,
+} from "@heroicons/react/outline";
+
+const icons = [
+  <CodeIcon className="h-8 w-8 text-white" />,
+  <SearchIcon className="h-8 w-8 text-white" />,
+  <ChipIcon className="h-8 w-8 text-white" />,
+  <ShieldCheckIcon className="h-8 w-8 text-white" />,
+  <DeviceMobileIcon className="h-8 w-8 text-white" />,
+  <GlobeAltIcon className="h-8 w-8 text-white" />,
+  <EyeIcon className="h-8 w-8 text-white" />,
+  <PencilIcon className="h-8 w-8 text-white" />,
+  <TrendingUpIcon className="h-8 w-8 text-white" />,
+];
 
 export const ServicesAllCard = ({ expertise }) => {
   const isMobile = useIsMobile();
@@ -63,12 +75,7 @@ export const ServicesAllCard = ({ expertise }) => {
 
               {/* Inner div */}
               <div className="flex items-center justify-center w-24 h-24 absolute">
-                <img
-                  style={{ borderRadius: "50%" }}
-                  src={`${BASE_URL}/file/${d?.image}`}
-                  alt="background"
-                  className="absolute w-3/4 h-3/4 object-cover"
-                />
+                {icons[index % icons.length]}
                 <div className="relative  object-cover">{d.img}</div>
               </div>
             </div>

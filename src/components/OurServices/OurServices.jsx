@@ -1,11 +1,6 @@
 import React from "react";
-import { Card, OurServicesCard } from "../OurServicesCard/OurServicesCard";
-import { image1 } from "../../assets/images";
-import { image2 } from "../../assets/images";
-import { image3 } from "../../assets/images";
-import { image4 } from "../../assets/images";
+import { Card } from "../OurServicesCard/OurServicesCard";
 import useIsMobile from "../../utils/hooks/useIsMobile";
-import { OSC } from "../OurServicesCard/OSC";
 import { useNavigate } from "react-router-dom";
 const OurServices = ({ expertise }) => {
   const isMobile = useIsMobile();
