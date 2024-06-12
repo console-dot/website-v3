@@ -13,3 +13,4 @@ export * from "./careersPage";
 export * from "./faqPage";
 export * from "./contactUs";
 export * from "./openPosition";
+export * from "./heroDescription";

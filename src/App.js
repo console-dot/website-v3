@@ -21,7 +21,7 @@ import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 import ScrollToTop from "./Pages/ScrollToTop";
 import Preloader from "./Pages/PreLoader/PreLoader";
 import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
-import { CaseStudies, CaseStudyPage } from "./Pages";
+import { CaseStudies, CaseStudyPage, PrivacyPolicy } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 import { ServicesAll } from "./components/ServicesAll/ServicesAll";
 import {
@@ -38,6 +38,7 @@ import {
   getproductresearchpage,
   getFaqs,
   getOpenPositions,
+  getHeroDescription // Imported function missing in the conflict
 } from "./api";
 import { useDispatch } from "react-redux";
 import {
@@ -53,6 +54,7 @@ import {
   setcasestudyData,
   setproductresearchData,
   setwebdevData,
+  setHeroDescriptionData // Missing import added
 } from "./redux";
 import { setmobdevData } from "./redux/mobdevSlice";
 
@@ -139,15 +141,25 @@ function App() {
         dispatch(setcasestudyData(res?.data));
       })
       .catch((err) => console.log(err));
+
+    //OpenPositon get call
     getOpenPositions()
       .then((res) => {
         dispatch(setCareerPageData(res?.data));
       })
       .catch((err) => console.log(err));
 
+    //OpenFaqs get call
     getFaqs()
       .then((res) => {
         dispatch(setFaqPageData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //HeroDescription get call
+    getHeroDescription()
+      .then((res) => {
+        dispatch(setHeroDescriptionData(res?.data));
       })
       .catch((err) => console.log(err));
   }, []);
@@ -191,7 +203,8 @@ function App() {
             <Route path="/CaseStudies" element={<CaseStudies />} />
             <Route path="/case-studies/:title" element={<CaseStudyPage />} />
             <Route path="/services" element={<ServicesAll />} />
-            <Route path="/Testimonials" element={<TestimonialsAll />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} /> {/* Added route */}
+            <Route path="/Testimonials" element={<TestimonialsAll />} /> {/* Added route */}
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />
@@ -201,3 +214,4 @@ function App() {
   );
 }
 export default App;
+

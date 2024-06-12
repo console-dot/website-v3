@@ -10,7 +10,7 @@ import {
 import { OpenPositions } from "../components/Careers/OpenPositions";
 import useIsMobile from "../utils/hooks/useIsMobile";
 import { FilterIcon } from "../assets/icons";
-import { selectCareerPageDetails, setCareerPageData } from "../redux";
+import { selectCareerPageDetails, selectHeroDescriptionDetails, setCareerPageData } from "../redux";
 import { useDispatch, useSelector } from "react-redux";
 import { getOpenPositions } from "../api";
 
@@ -22,6 +22,7 @@ export const Careers = () => {
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
   const openPositionData = useSelector(selectCareerPageDetails);
+  const heroDesc = useSelector(selectHeroDescriptionDetails);
 
   const closeModal = () => setModalOpen(false);
 
@@ -40,7 +41,7 @@ export const Careers = () => {
 
   return (
     <div className="w-full mb-8 relative overflow-hidden">
-      <LandingPage data={landingPageDataCareers} />
+      <LandingPage data={landingPageDataCareers} heroDescription={heroDesc?.openPositionHero} />
       <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xss:px-8 w-full flex flex-col xl:gap-16 lg:gap-16 md:gap-16 sm:gap-4 xs:gap-4 xss:gap-4 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-[-2.5rem] xs:mt-[-2.5rem] xss:mt-[-2.5rem]">
         <div className="xl:block lg:block md:block sm:flex xs:flex xss:flex xl:justify-start sm:justify-between xs:justify-between xss:justify-between">
           <SearchInput

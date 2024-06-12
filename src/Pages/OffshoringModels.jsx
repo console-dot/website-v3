@@ -12,7 +12,7 @@ export const OffshoringModels = () => {
   const data1 = useSelector(selectLandingPageDetails);
   return (
     <div className="bg-offwhite w-full flex flex-col justify-center items-center overflow-hidden">
-      <OffShoreModelHero />
+      <OffShoreModelHero heroDescription={data?.heroDescription} />
 
       <div className="w-full flex flex-col justify-start items-center  xss:p-8 xl:p-0 lg:p-0 md:p-0 sm:p-4 xs:p-8">
         <OffShoreModelText1 topDescription={data?.topDescription} />

@@ -15,3 +15,4 @@ export   const landingPageDataContact={topHeading:'Contact',midHeading:"Contact 
 export   const landingPageDataTestimonials={topHeading:'Testimonials',midHeading:"What they say", bottomHeading:"",backgroundImage: TestimonialsBG}
 export   const landingPageDataCaseStudies={topHeading:'Join Us',midHeading:"Case Studies", bottomHeading:"",backgroundImage: CaseStudyBg}
 export   const landingPageDataServices={topHeading:'Our Expertise',midHeading:"Our Services", bottomHeading:"",backgroundImage: MobdevBg}
+export   const landingPageDataPrivacyPolicy={topHeading:'Effective : June 1st 2024 ',midHeading:"Privacy Policy", bottomHeading:"Effective : June 1st 2024",backgroundImage: CaseStudyBg}
