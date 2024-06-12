@@ -3,7 +3,7 @@ import { OffshoreBg, StarEffect, offshorehero } from "../../assets/images";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-export const OffShoreModelHero = () => {
+export const OffShoreModelHero = ({heroDescription}) => {
   return (
     <div
       className="w-full md:h-[70vh] lg:h-[77vh] h-[30vh]"
@@ -41,6 +41,9 @@ export const OffShoreModelHero = () => {
             OFFSHORING SERVICES AT CONSOLEDOT:
             <span className="md:block md:mt-1"></span> YOUR GATEWAY TO
             EXCEPTIONAL DEVELOPMENT SOLUTIONS
+          </p>
+          <p className="font-lato md:text-[16px] text-[12px]  leading-2 tracking-normal mt-2">
+            {heroDescription}
           </p>
           <span className="md:block md:mt-1"></span>
         </div>

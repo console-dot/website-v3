@@ -1,7 +1,6 @@
 import React from "react";
-import { StarEffect } from "../../../assets/images";
 
-export default function LandingPage({ data }) {
+export default function LandingPage({ data, heroDescription }) {
   return (
     <div
       className="w-full xl:h-[80vh] lg:h-[80vh] md:h-[80vh] sm:h-[40vh] xs:h-[40vh] xss:h-[40vh]"
@@ -22,7 +21,7 @@ export default function LandingPage({ data }) {
               <h1 className="text-[28px] text-white mb-4 font-bold">
                 {data.midHeading.toUpperCase()}
               </h1>
-              <h1 className="text-[16px] text-white">{data.bottomHeading}</h1>
+              <h1 className="text-[16px] text-white">{heroDescription}</h1>
             </div>
           </div>
         </div>

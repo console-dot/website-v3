@@ -11,3 +11,4 @@ export * from "./aiSlice";
 export * from "./arvrSlice";
 export * from "./uiuxSlice";
 export * from "./casestudySlice";
+export * from "./heroDescSlice";

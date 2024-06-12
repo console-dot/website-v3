@@ -21,7 +21,7 @@ import { PageNotFound } from "./Pages/NotFound/PageNotFound";
 import ScrollToTop from "./Pages/ScrollToTop";
 import Preloader from "./Pages/PreLoader/PreLoader";
 import { TestimonialsAll } from "./components/TestimonialsAll.jsx/TestimonialsAll";
-import { CaseStudies, CaseStudyPage } from "./Pages";
+import { CaseStudies, CaseStudyPage, PrivacyPolicy } from "./Pages";
 import { CardCaseStudy } from "./Pages/CaseStudies/CardCaseStudy";
 import { ServicesAll } from "./components/ServicesAll/ServicesAll";
 import {
@@ -36,11 +36,14 @@ import {
   getcasestudy,
   getcustomservicepage,
   getproductresearchpage,
-  getFaqs, 
-  getOpenPositions
+  getFaqs,
+  getOpenPositions,
+  getHeroDescription,
 } from "./api";
 import { useDispatch } from "react-redux";
-import { setCareerPageData, setFaqPageData,
+import {
+  setCareerPageData,
+  setFaqPageData,
   setARData,
   setAiData,
   setBlockChainData,
@@ -51,6 +54,7 @@ import { setCareerPageData, setFaqPageData,
   setcasestudyData,
   setproductresearchData,
   setwebdevData,
+  setHeroDescriptionData,
 } from "./redux";
 import { setmobdevData } from "./redux/mobdevSlice";
 
@@ -137,15 +141,25 @@ function App() {
         dispatch(setcasestudyData(res?.data));
       })
       .catch((err) => console.log(err));
+
+    //OpenPositon get call
     getOpenPositions()
       .then((res) => {
         dispatch(setCareerPageData(res?.data));
       })
       .catch((err) => console.log(err));
 
+    //OpenFaqs get call
     getFaqs()
       .then((res) => {
         dispatch(setFaqPageData(res?.data));
+      })
+      .catch((err) => console.log(err));
+
+    //HeroDescription get call
+    getHeroDescription()
+      .then((res) => {
+        dispatch(setHeroDescriptionData(res?.data));
       })
       .catch((err) => console.log(err));
   }, []);
@@ -191,6 +205,7 @@ function App() {
             <Route path="/case-studies/:title" element={<CaseStudyPage />} />
             <Route path="/CaseStudies/:id" element={<CardCaseStudy />} />
             <Route path="/services" element={<ServicesAll />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
 
             <Route path="*" element={<PageNotFound />} />
           </Routes>

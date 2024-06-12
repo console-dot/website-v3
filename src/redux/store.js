@@ -13,6 +13,7 @@ import aiSlice from "./aiSlice";
 import arvrSlice from "./arvrSlice";
 import uiuxSlice from "./uiuxSlice";
 import caseStudySlice from "./casestudySlice";
+import heroDescriptionReducer from "./heroDescSlice";
 
 export const store = configureStore({
   reducer: {
@@ -30,6 +31,6 @@ export const store = configureStore({
     arvr: arvrSlice,
     uiux: uiuxSlice,
     casestudy:caseStudySlice,
-
+    heroDescription: heroDescriptionReducer,
   },
 });
