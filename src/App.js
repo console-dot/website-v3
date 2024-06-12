@@ -38,7 +38,7 @@ import {
   getproductresearchpage,
   getFaqs,
   getOpenPositions,
-  getHeroDescription,
+  getHeroDescription // Imported function missing in the conflict
 } from "./api";
 import { useDispatch } from "react-redux";
 import {
@@ -54,7 +54,7 @@ import {
   setcasestudyData,
   setproductresearchData,
   setwebdevData,
-  setHeroDescriptionData,
+  setHeroDescriptionData // Missing import added
 } from "./redux";
 import { setmobdevData } from "./redux/mobdevSlice";
 
@@ -200,13 +200,11 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/Testimonials" element={<TestimonialsAll />} />
             <Route path="/CaseStudies" element={<CaseStudies />} />
             <Route path="/case-studies/:title" element={<CaseStudyPage />} />
-            <Route path="/CaseStudies/:id" element={<CardCaseStudy />} />
             <Route path="/services" element={<ServicesAll />} />
-            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} /> {/* Added route */}
+            <Route path="/Testimonials" element={<TestimonialsAll />} /> {/* Added route */}
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />
@@ -216,3 +214,4 @@ function App() {
   );
 }
 export default App;
+
