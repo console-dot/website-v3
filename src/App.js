@@ -38,7 +38,7 @@ import {
   getproductresearchpage,
   getFaqs,
   getOpenPositions,
-  getHeroDescription // Imported function missing in the conflict
+  getHeroDescription, 
 } from "./api";
 import { useDispatch } from "react-redux";
 import {
@@ -54,7 +54,7 @@ import {
   setcasestudyData,
   setproductresearchData,
   setwebdevData,
-  setHeroDescriptionData // Missing import added
+  setHeroDescriptionData,
 } from "./redux";
 import { setmobdevData } from "./redux/mobdevSlice";
 
