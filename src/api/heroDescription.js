@@ -4,12 +4,11 @@ import config from "./config";
 const BASE_URL = config.BASE_URL;
 
 export const getHeroDescription = () => {
-  const token = localStorage.getItem("@dashboard-token");
   return axios
     .get(`${BASE_URL}/hero-description`, {
       headers: {
         "Content-Type": "application/json",
-        Authorization: "JWT " + token,
+        version: "v2",
       },
     })
     .then((res) => {
@@ -19,5 +18,3 @@ export const getHeroDescription = () => {
     })
     .catch((err) => console.log(err));
 };
-
-
