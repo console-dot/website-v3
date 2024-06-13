@@ -19,32 +19,32 @@ export const CaseStudiesCard = ({ data }) => {
     );
   };
 
+
   const handleCardClick = (card) => {
-    const encodedTitle = encodeURIComponent(card.title);
-    navigate(`/case-studies/${encodedTitle}`, { state: { card } });
+    const formattedTitle = card.title.replace(/\s+/g, '-');
+    navigate(`/case-studies/${formattedTitle}`, { state: { card } });
   };
 
   return (
     <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {data.slice(0, visibleCards).map((caseStudy, index) => (
           <div
             key={index}
             onClick={() => handleCardClick(caseStudy)}
-            className="cursor-pointer"
+            className="cursor-pointer h-[100%]  bg-white"
           >
             <img
               src={`${BASE_URL}/file/${caseStudy.projectImage}`}
               alt={caseStudy.title}
-              className="w-full h-40 object-cover"
+              className="w-full h-[50%] object-fill"
             />
-            <div className="bg-white flex flex-col items-start p-6 shadow-md hover:shadow-xl">
-              <h3 className="text-lg text-webHeading font-bold mb-2 h-10">
+            <hr />
+            <div className=" flex flex-col items-start p-6 h-[40%] shadow-md hover:shadow-xl">
+              <h3 className="text-2xl text-webHeading font-bold mb-2 ">
                 {caseStudy.title}
               </h3>
-              <div className="text-webDescrip mb-4 h-20 overflow-hidden">
-                {caseStudy.description}
-              </div>
+              
             </div>
           </div>
         ))}

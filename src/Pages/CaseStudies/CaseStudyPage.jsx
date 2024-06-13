@@ -102,7 +102,7 @@ export const CaseStudyPage = () => {
       {/* Header Start */}
       <div
         ref={headerRef}
-        className="w-full md:h-[450px] h-60 mb-20 flex justify-center items-start relative"
+        className="w-full md:h-[450px] h-60 mb-20 flex justify-center object-fill items-start relative"
         style={{
           backgroundImage: `url(${BASE_URL}/file/${card.projectImage})`,
           backgroundSize: "cover",
@@ -114,12 +114,14 @@ export const CaseStudyPage = () => {
           <h1 className="text-white  text-3xl  md:text-4xl font-bold leading-none tracking-normal mx-10">
             {card.title.toUpperCase()}
           </h1>
-          <button
-            className="border border-white rounded-full mx-10 mt-4 py-2 px-5 text-white hover:bg-white hover:text-custom-purple"
-            onClick={() => window.open(card.projectLink, "_blank")}
-          >
-            View Demo
-          </button>
+          {card.projectLink && (
+            <button
+              className="border border-white rounded-full mx-10 mt-4 py-2 px-5 text-white hover:bg-white hover:text-custom-purple"
+              onClick={() => window.open(card.projectLink, "_blank")}
+            >
+              View Demo
+            </button>
+          )}
           <div className="flex flex-col  gap-2 mt-[20%] absolute md:mx-[70%] mx-56 ">
             {card?.tags.map((tag, index) => (
               <span
