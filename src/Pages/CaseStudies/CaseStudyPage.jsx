@@ -5,11 +5,20 @@ import { IoIosArrowDown, IoMdGlobe } from "react-icons/io";
 import { FaArrowDown, FaUsers } from "react-icons/fa6";
 import { MdBusinessCenter } from "react-icons/md";
 import { CgUserlane } from "react-icons/cg";
+import { getcasestudy } from "../../api";
+import { setcasestudyData } from "../../redux";
+import { useDispatch } from "react-redux";
+import { removeHyphen } from "../../utils";
+import RainbowLoader from "../Loader/RainbowLoader";
+import WaveLoader from "../Loader/WaveLoader";
 
 export const CaseStudyPage = () => {
-  const BASE_URL = config.BASE_URL;
   const location = useLocation();
   const { card } = location.state || {};
+  const [project, setProject] = useState(card);
+  const BASE_URL = config.BASE_URL;
+  const projectName = location.pathname.split("/")[2];
+  const dispatch = useDispatch();
 
   const sections = [
     "highlights",
@@ -30,6 +39,23 @@ export const CaseStudyPage = () => {
   const [activeSection, setActiveSection] = useState("highlights");
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const headerRef = useRef(null);
+
+  // Incase user visit casseStudies directly
+  useEffect(() => {
+    if (card == undefined) {
+      getcasestudy()
+        .then((res) => {
+          dispatch(setcasestudyData(res?.data));
+          const response = res?.data?.find(
+            (item) => item?.title.trim() == removeHyphen(projectName)
+          );
+          setProject(response);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      setProject(card);
+    }
+  }, [card]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -93,8 +119,9 @@ export const CaseStudyPage = () => {
     }
   };
 
-  if (!card) {
-    return <div>No data available</div>;
+  if (!project) {
+    // return <RainbowLoader />;
+    return <WaveLoader />;
   }
 
   return (
@@ -104,7 +131,7 @@ export const CaseStudyPage = () => {
         ref={headerRef}
         className="w-full md:h-[450px] h-60 mb-20 flex justify-center object-fill items-start relative"
         style={{
-          backgroundImage: `url(${BASE_URL}/file/${card.projectImage})`,
+          backgroundImage: `url(${BASE_URL}/file/${project.projectImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           opacity: "95%",
@@ -112,18 +139,18 @@ export const CaseStudyPage = () => {
       >
         <div className="p-8 bg-cust-blue-100 bg-opacity-70 w-full h-full flex flex-col justify-center items-start">
           <h1 className="text-white  text-3xl  md:text-4xl font-bold leading-none tracking-normal mx-10">
-            {card.title.toUpperCase()}
+            {project.title.toUpperCase()}
           </h1>
-          {card.projectLink && (
+          {project.projectLink && (
             <button
               className="border border-white rounded-full mx-10 mt-4 py-2 px-5 text-white hover:bg-white hover:text-custom-purple"
-              onClick={() => window.open(card.projectLink, "_blank")}
+              onClick={() => window.open(project.projectLink, "_blank")}
             >
               View Demo
             </button>
           )}
           <div className="flex flex-col  gap-2 mt-[20%] absolute md:mx-[70%] mx-56 ">
-            {card?.tags.map((tag, index) => (
+            {project?.tags.map((tag, index) => (
               <span
                 key={index}
                 className="bg-custom-lightBlue text-white rounded-full md:px-8 md:py-1 md:text-sm px-4 py-1 text-xs "
@@ -174,7 +201,7 @@ export const CaseStudyPage = () => {
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Highlights
                 </h2>
-                {card?.highlights?.map((highlight, index) => (
+                {project?.highlights?.map((highlight, index) => (
                   <div key={index} className="mt-2">
                     <label className="text-custom-purple text-xl">•</label>{" "}
                     <label className="text-webHeading font-semibold">
@@ -198,7 +225,7 @@ export const CaseStudyPage = () => {
                 <div className="flex xl:flex-row lg:flex-row 2xl:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col gap-4">
                   <div className="lg:w-[100%] xl:w-[100%] md:w-[100%] sm:w-full xs:w-full xss:w-full mt-2">
                     <p className="text-webDescrip ">
-                      {card?.client[0]?.description
+                      {project?.client[0]?.description
                         ?.split(" \\n")
                         ?.map((item) => {
                           return (
@@ -220,7 +247,7 @@ export const CaseStudyPage = () => {
                           </div>
                           <div className="flex w-[40%]">
                             <span className="text-sm ">
-                              {card?.client[0]?.country}
+                              {project?.client[0]?.country}
                             </span>
                           </div>
                         </div>
@@ -232,7 +259,7 @@ export const CaseStudyPage = () => {
                           </div>
                           <div className="flex w-[40%]">
                             <span className="text-sm ">
-                              {card?.client[0]?.industry}
+                              {project?.client[0]?.industry}
                             </span>
                           </div>
                         </div>
@@ -244,7 +271,7 @@ export const CaseStudyPage = () => {
                           </div>
                           <div className="flex w-[40%]">
                             <span className="text-sm ">
-                              {card?.client[0]?.teamSize}
+                              {project?.client[0]?.teamSize}
                             </span>
                           </div>
                         </div>
@@ -256,7 +283,7 @@ export const CaseStudyPage = () => {
                           </div>
                           <div className="flex w-[40%]">
                             <span className="text-sm ">
-                              {card?.client[0]?.name}
+                              {project?.client[0]?.name}
                             </span>
                           </div>
                         </div>
@@ -275,7 +302,7 @@ export const CaseStudyPage = () => {
                 </h2>
                 <div className="mt-2">
                   <p className="text-webDescrip ">
-                    {card?.product?.split("\\n").map((item, index) => (
+                    {project?.product?.split("\\n").map((item, index) => (
                       <React.Fragment key={index}>
                         {item}
                         <br />
@@ -293,7 +320,7 @@ export const CaseStudyPage = () => {
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Goals and Objectives
                 </h2>
-                {card?.goals?.map((goal, index) => (
+                {project?.goals?.map((goal, index) => (
                   <div key={index}>
                     <div className="mt-2">
                       <label className="text-custom-purple text-xl">•</label>{" "}
@@ -315,7 +342,7 @@ export const CaseStudyPage = () => {
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
                   Project Challenge
                 </h2>
-                {card?.challenges?.map((challenge, index) => (
+                {project?.challenges?.map((challenge, index) => (
                   <div className="mt-4 text-justify" key={index}>
                     <div className="flex flex-row  items-center gap-4">
                       <div className="w-[10%]">
@@ -350,7 +377,7 @@ export const CaseStudyPage = () => {
                 <div className="flex xl:flex-row lg:flex-row 2xl:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col gap-4">
                   <div className="lg:w-[100%] xl:w-[100%] md:w-[100%] sm:w-full xs:w-full xss:w-full text-justify">
                     <p className="text-webDescrip ">
-                      {card?.solution?.split("\\n").map((item, index) => (
+                      {project?.solution?.split("\\n").map((item, index) => (
                         <React.Fragment key={index}>
                           {item}
                           <br />
@@ -364,8 +391,8 @@ export const CaseStudyPage = () => {
                         <h2 className="text-xl font-semibold text-custom-purple">
                           Tech Stack
                         </h2>
-                        {card.techStack &&
-                          card.techStack
+                        {project.techStack &&
+                          project.techStack
                             .reduce((unique, tech) => {
                               if (!unique.includes(tech.type)) {
                                 unique.push(tech.type);
@@ -380,7 +407,7 @@ export const CaseStudyPage = () => {
                                   </span>
                                 </div>
                                 <div className="flex flex-wrap flex-row justify-start items-center gap-2 ">
-                                  {card.techStack
+                                  {project.techStack
                                     .filter((t) => t.type === type)
                                     .map((filteredTech, idx) => (
                                       <div
@@ -420,7 +447,7 @@ export const CaseStudyPage = () => {
                   Our Results
                 </h2>
                 <p className="text-webDescrip ">
-                  {card?.results?.description
+                  {project?.results?.description
                     ?.split("\\n")
                     .map((item, index) => (
                       <React.Fragment key={index}>
@@ -430,7 +457,7 @@ export const CaseStudyPage = () => {
                     ))}
                 </p>
                 <div className="mt-4 text-justify">
-                  {card?.results?.subHeadings?.map((subHeading, index) => (
+                  {project?.results?.subHeadings?.map((subHeading, index) => (
                     <div className="mt-4 text-justify" key={index}>
                       <div className="flex flex-row gap-4 items-center">
                         <div className="w-[10%]">
@@ -456,8 +483,8 @@ export const CaseStudyPage = () => {
                 <hr className="mt-20 " />
               </section>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                {card.images &&
-                  card.images.map((image, index) => (
+                {project?.images &&
+                  project?.images.map((image, index) => (
                     <img
                       key={index}
                       src={`${BASE_URL}/file/${image}`}

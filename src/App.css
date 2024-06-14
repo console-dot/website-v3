@@ -16,7 +16,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.slick-arroe{
+.slick-arroe {
   margin-left: -10px !important;
 }
 .slick-next:before {
@@ -29,7 +29,12 @@
   border-right: 2px dashed;
   border-bottom: 2px dashed;
   border-radius: 2%;
-  border-color: rgba(14, 119, 137, 1); /* Customize the dashed border as needed */
+  border-color: rgba(
+    14,
+    119,
+    137,
+    1
+  ); /* Customize the dashed border as needed */
 }
 
 .odd-border {
@@ -37,12 +42,16 @@
   border-left: 2px dashed;
   border-right: 2px dashed;
   border-radius: 2%;
-  border-color: rgba(14, 119, 137, 1); /* Customize the dashed border as needed */
+  border-color: rgba(
+    14,
+    119,
+    137,
+    1
+  ); /* Customize the dashed border as needed */
 }
 
-
 .slick-dots li button:before {
-  content: '_' !important;
+  content: "_" !important;
   color: rgba(14, 119, 137, 1) !important;
   font-size: 36px !important;
   font-weight: bolder !important;
@@ -54,9 +63,8 @@
   }
 }
 
-.slick-slide > div{
+.slick-slide > div {
   margin: 0 10px !important;
-  
 }
 .slick-prev {
   display: block;
@@ -133,4 +141,61 @@
     transform: translateX(100%);
     opacity: 0;
   }
+}
+
+/* Loader Animation Case Studies */
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.animate-wave {
+  animation: wave 1s linear infinite;
+}
+
+/* Loader Animation Rainbow Case Studies */
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(calc(250px - 20px));
+  }
+  65% {
+    transform: translateX(calc(250px - 20px));
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes loading-text {
+  0% {
+    content: "Loading";
+  }
+  25% {
+    content: "Loading.";
+  }
+  50% {
+    content: "Loading..";
+  }
+  75% {
+    content: "Loading...";
+  }
+}
+
+.animate-loader {
+  animation: loader 3s ease-in-out infinite;
+}
+
+.animate-loading-text:after {
+  content: "Loading";
+  animation: loading-text 3s infinite;
 }
