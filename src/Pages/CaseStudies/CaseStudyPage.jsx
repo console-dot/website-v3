@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { removeHyphen } from "../../utils";
 import RainbowLoader from "../Loader/RainbowLoader";
 import WaveLoader from "../Loader/WaveLoader";
+import { capitalizeFirstLetter } from "../../utils/helper";
 
 export const CaseStudyPage = () => {
   const location = useLocation();
@@ -131,7 +132,7 @@ export const CaseStudyPage = () => {
         ref={headerRef}
         className="w-full md:h-[450px] h-60 mb-20 flex justify-center object-fill items-start relative"
         style={{
-          backgroundImage: `url(${BASE_URL}/file/${project.projectImage})`,
+          backgroundImage: `url(${BASE_URL}/file/${project?.projectImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           opacity: "95%",
@@ -186,7 +187,7 @@ export const CaseStudyPage = () => {
                 >
                   <div className="flex flex-row gap-3 text-lg ">
                     <label>•</label>
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                    {section?.charAt(0)?.toUpperCase() + section?.slice(1)}
                   </div>
                 </button>
               ))}
@@ -205,11 +206,11 @@ export const CaseStudyPage = () => {
                   <div key={index} className="mt-2">
                     <label className="text-custom-purple text-xl">•</label>{" "}
                     <label className="text-webHeading font-semibold">
-                      {highlight.heading}
+                      {highlight?.heading}
                     </label>
                     {" : "}
                     <label className="text-webDescrip">
-                      {highlight.description}
+                      {highlight?.description}
                     </label>
                   </div>
                 ))}
@@ -325,12 +326,12 @@ export const CaseStudyPage = () => {
                     <div className="mt-2">
                       <label className="text-custom-purple text-xl">•</label>{" "}
                       <label className="text-webHeading font-semibold">
-                        {goal.heading}
+                        {goal?.heading}
                       </label>
                     </div>
                     <div className="mt-1">
                       <label className="text-webDescrip">
-                        {goal.description}
+                        {goal?.description}
                       </label>
                     </div>
                   </div>
@@ -354,11 +355,11 @@ export const CaseStudyPage = () => {
                       </div>
                       <div>
                         <span className="text-webHeading font-semibold">
-                          {challenge.heading}
+                          {challenge?.heading}
                           {" : "}
                         </span>{" "}
                         <span className="text-webDescrip">
-                          {challenge.description}
+                          {challenge?.description}
                         </span>
                       </div>
                     </div>
@@ -391,11 +392,11 @@ export const CaseStudyPage = () => {
                         <h2 className="text-xl font-semibold text-custom-purple">
                           Tech Stack
                         </h2>
-                        {project.techStack &&
-                          project.techStack
+                        {project?.techStack &&
+                          project?.techStack
                             .reduce((unique, tech) => {
-                              if (!unique.includes(tech.type)) {
-                                unique.push(tech.type);
+                              if (!unique.includes(tech?.type)) {
+                                unique.push(tech?.type);
                               }
                               return unique;
                             }, [])
@@ -403,7 +404,7 @@ export const CaseStudyPage = () => {
                               <div key={index} className="p-4">
                                 <div className="mb-3">
                                   <span className="text-base font-semibold text-custom-blue ">
-                                    {type}
+                                    {type && capitalizeFirstLetter(type)}
                                   </span>
                                 </div>
                                 <div className="flex flex-wrap flex-row justify-start items-center gap-2 ">
@@ -416,7 +417,7 @@ export const CaseStudyPage = () => {
                                       >
                                         <div className="mx-auto bg-custom-lightBlue w-10 h-10 rounded-md flex justify-center items-center">
                                           <img
-                                            src={`${BASE_URL}/file/${filteredTech.image}`}
+                                            src={`${BASE_URL}/file/${filteredTech?.image}`}
                                             alt={filteredTech.name}
                                             className="w-6 h-6 "
                                             onError={(e) => {
@@ -427,7 +428,7 @@ export const CaseStudyPage = () => {
                                           />
                                         </div>
                                         <div className="text-xs mx-auto text-webDescrip ">
-                                          {filteredTech.name}
+                                          {filteredTech?.name}
                                         </div>
                                       </div>
                                     ))}
@@ -469,10 +470,10 @@ export const CaseStudyPage = () => {
                         </div>
                         <div>
                           <span className="text-webHeading font-semibold">
-                            {subHeading.heading}
+                            {subHeading?.heading}
                           </span>{" "}
                           <span className="text-webDescrip">
-                            {subHeading.description}
+                            {subHeading?.description}
                           </span>
                         </div>
                       </div>
