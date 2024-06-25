@@ -203,8 +203,8 @@ function App() {
             <Route path="/CaseStudies" element={<CaseStudies />} />
             <Route path="/case-studies/:title" element={<CaseStudyPage />} />
             <Route path="/services" element={<ServicesAll />} />
-            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} /> {/* Added route */}
-            <Route path="/Testimonials" element={<TestimonialsAll />} /> {/* Added route */}
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} /> 
+            <Route path="/Testimonials" element={<TestimonialsAll />} /> 
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />

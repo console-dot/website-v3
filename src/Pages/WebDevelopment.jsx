@@ -25,7 +25,6 @@ export const WebDevelopment = () => {
         <div className=" pb-4">
           {" "}
           <TopComponent
-            title={"Services"}
             heading={
               "Transforming Visions into Captivating Digital Experiences"
             }
@@ -42,7 +41,7 @@ export const WebDevelopment = () => {
         <Process
           data={processCardsWeb}
           heading={"WEB DEVELOPMENT PROCESS/ADDING NEW FEATURE IN EXISTING APP"}
-          title={"Web Development Process "}
+          
           maxRow={5}
         />
 

@@ -42,9 +42,6 @@ export const WhyChooseAr = ({ heading, whyChooseUs, cardsInRow }) => {
   return (
     <div className="w-full mt-12">
       <div className="flex flex-col text-center gap-2 items-center justify-center w-full">
-        <h1 className="text-[16px]  leading-5 text-dottedBorder">
-          Why Choose Us
-        </h1>
         <h1 className="text-[28px] xs:text-[20px] xxs:text-[16px] leading-10 text-custom-purple font-bold">
           {heading.toUpperCase()}
         </h1>

@@ -17,9 +17,6 @@ export const OffshoreModel = ({ offshoreType }) => {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center md:mt-16 mt-8">
-        <div className="font-Lato md:text-[16px] text-[12px] text-custom-blue">
-          Offshoring Models
-        </div>
         <div className="font-Poppins md:text-[28px] text-[18px] font-bold text-custom-purple md:mt-2 mt-1">
           EXPLORE OUR OFFSHORING MODELS
         </div>

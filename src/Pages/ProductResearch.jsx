@@ -17,7 +17,6 @@ export const ProductResearch = () => {
         <div className="pb-4">
           {" "}
           <TopComponent
-            title={"Services"}
             heading={"Navigating Success with \n Insightful Product Research"}
             description={data?.description}
             image={<ProductResearchTop />}

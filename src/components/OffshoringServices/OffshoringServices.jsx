@@ -2,13 +2,9 @@ import React from "react";
 import { CardArray } from "./OffshoringServicesCard";
 import { imageGit } from "../../assets/images";
 import { ContactSection } from "./ContactSection";
-const OffshoringServices = ({title,heading,offshoreComparison}) => {
-  
+const OffshoringServices = ({ heading, offshoreComparison }) => {
   return (
     <div className="w-full flex flex-col items-center xl:mt-8 xl:mb-8 lg:mt-8 lg:mb-8 md:mt-6 md:mb-6 sm:mt-6 sm:mb-6 xs:mt-6 xs:mb-6 xss:mt-6 xss:mb-6 ">
-      <div className="font-Lato lg:text-[16px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-custom-blue">
-        {title}
-      </div>
       <div className="font-Poppins lg:text-[28px] md:text-[28px] sm:text-[18px] xs:text-[18px] font-bold text-custom-purple mt-4">
         {heading}
       </div>

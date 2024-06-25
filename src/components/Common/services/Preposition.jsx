@@ -2,15 +2,11 @@ import React from "react";
 import { Divider } from "../../../constatnts/Divider";
 import { Inverted1, Inverted2 } from "../../../assets/icons";
 
-export const Preposition = ({ title, heading, proposition }) => {
+export const Preposition = ({ heading, proposition }) => {
   return (
     <div className="w-full flex lg:mt-16 xl:mt-16 2xl:mt-16 sm:mt-2 xs:mt-2 xss:mt-0 lg:mb-10 xl:mb-10 2xl:mb-10 sm:mb-8 xs:mb-8 xss:mb-8 ">
       <div className="flex pb-8 pt-2 w-full lg:flex-row md:flex-col sm:flex-col xxs:flex-col xs:flex-col items-center justify-center px-12 md:px-8 sm:px-8 xs:px-2 xxs:px-1 gap-4 bg-white lg:h-[237px] xl:h-[237px] 2xl:h-[237px] md:h-[237px] sm:h-[237px] xs:h-full">
         <div className="flex flex-col md:justify-center sm:justify-center xs:justify-center xxs:justify-center gap-2 items-start xl:w-[30%] 2xl:w-[30%] lg:w-[30%] md:w-full sm:w-full xs:w-full xxs:w-full">
-          <div className="flex md:justify-center md:w-full sm:justify-center sm:w-full xs:justify-center xs:w-full xxs:justify-center xxs:w-full">
-            {" "}
-            <h1 className="text-[16px] leading-5 text-dottedBorder">{title}</h1>
-          </div>
           <div className="flex md:justify-center md:w-full sm:justify-center sm:w-full xs:justify-center xs:w-full xxs:justify-center xxs:w-full">
             <h1 className="text-[28px] xs:text-[24px] xxs:text-[20px] leading-10 text-custom-purple font-bold">
               {heading?.toUpperCase()}

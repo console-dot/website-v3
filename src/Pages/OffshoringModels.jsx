@@ -19,7 +19,6 @@ export const OffshoringModels = () => {
         <OffshoreModel offshoreType={data?.offshoreType} />
       </div>
       <OffshoringServices
-        title={"Model Comparison"}
         heading={"OFFSHORING MODELS COMPARISON"}
         offshoreComparison={data1?.offshoreComparison?.[0]?.offshoreType}
       />

@@ -67,9 +67,6 @@ export const TechStackUiUx = ({ data, description }) => {
         {isMobile ? (
           <div className="bg-transparent w-full xl:p-12 2xl:p-12 lg:p-12 md:p-4 sm:p-4 xs:p-4 xxs:p-2">
             <div className="flex flex-col gap-2 items-center justify-center w-full">
-              <h1 className="text-[14px] leading-5 text-custom-purple">
-                Tech Stack We Use
-              </h1>
               <h1 className="text-[28px] font-poppins leading-10 text-custom-purple font-bold">
                 TECH STACK
               </h1>
@@ -85,9 +82,6 @@ export const TechStackUiUx = ({ data, description }) => {
         <div className="bg-white w-full xl:p-12 2xl:p-12 lg:p-12 md:p-4 sm:p-4 xs:p-4 xxs:p-2">
           {!isMobile ? (
             <div className="flex flex-col gap-2 items-center justify-center w-full">
-              <h1 className="text-[14px] leading-5 text-custom-purple">
-                Tech Stack We Use
-              </h1>
               <h1 className="text-[28px] font-poppins leading-10 text-custom-purple font-bold">
                 TECH STACK
               </h1>

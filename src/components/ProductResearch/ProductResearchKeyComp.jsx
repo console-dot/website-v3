@@ -56,11 +56,11 @@ export const ProductResearchKeyComp = ({ keyComponents }) => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024, // tablet and larger breakpoint
-        settings: "unslick", // destroys slick on larger screens
+        breakpoint: 1024,
+        settings: "unslick",
       },
       {
-        breakpoint: 768, // mobile breakpoint
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -72,9 +72,6 @@ export const ProductResearchKeyComp = ({ keyComponents }) => {
   return (
     <div className="flex flex-col items-center justify-center w-full mt-12">
       <div className="flex flex-col gap-2 items-center justify-center w-3/5 sm:w-full md:w-full xs:w-full xxs:w-full ">
-        <h1 className="text-[16px] leading-5 text-dottedBorder">
-          Key Components
-        </h1>
         <h1 className="text-[28px] w-full leading-10 text-custom-purple font-bold text-center">
           KEY COMPONENTS OF CONSOLEDOT'S PRODUCT RESEARCH SERVICES:
         </h1>

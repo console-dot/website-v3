@@ -32,7 +32,7 @@ export const CaseStudiesCard = ({ data }) => {
           <div
             key={index}
             onClick={() => handleCardClick(caseStudy)}
-            className="cursor-pointer h-[100%]  bg-white"
+            className="cursor-pointer h-[100%]  bg-white shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-110"
           >
             <img
               src={`${BASE_URL}/file/${caseStudy.projectImage}`}
@@ -40,7 +40,7 @@ export const CaseStudiesCard = ({ data }) => {
               className="w-full h-[50%] object-fill"
             />
             <hr />
-            <div className=" flex flex-col items-start p-6 h-[40%] shadow-md hover:shadow-xl">
+            <div className=" flex flex-col items-start p-6  ">
               <h3 className="text-2xl text-webHeading font-bold mb-2 ">
                 {caseStudy.title}
               </h3>

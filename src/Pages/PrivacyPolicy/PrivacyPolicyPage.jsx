@@ -105,7 +105,7 @@ export const PrivacyPolicyPage = () => {
           </aside>
         )}
         <main className="md:w-1/3 lg:w-3/4 w-full min-h-screen">
-          <div className="p-2 md:p-4">
+          <div className="p-8 md:p-4">
             <section ref={headerRef} className="mb-20">
               <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2">
                 Welcome to ConsoleDot!

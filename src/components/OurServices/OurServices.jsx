@@ -8,9 +8,6 @@ const OurServices = ({ expertise }) => {
   return (
     <>
       <div className="flex flex-col items-center pt-6 ">
-        <div className="font-Lato  md:text-[16px] text-[12px] text-custom-blue">
-          Our Experties
-        </div>
         <div className="font-Poppins  md:text-[28px] text-[18px] font-bold text-custom-purple mt-4">
           OUR SERVICES
         </div>
