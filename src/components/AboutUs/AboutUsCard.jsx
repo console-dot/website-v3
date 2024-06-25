@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Inverted2 } from "../../assets/icons";
 import config from "../../api/config";
+import useIsMobile from "../../utils/hooks/useIsMobile";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const CustomNextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -62,6 +64,8 @@ const settings = {
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 1,
+        prevArrow: null, // Hide prev arrow on mobile
+        nextArrow: null, // Hide next arrow on mobile
       },
     },
     {
@@ -69,15 +73,29 @@ const settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        prevArrow: null, // Hide prev arrow on mobile
+        nextArrow: null, // Hide next arrow on mobile
       },
     },
   ],
 };
 
 const Card = ({ testimonials }) => {
+  const isMobile = useIsMobile();
   const BASE_URL = config.BASE_URL;
   return (
-    <div className="">
+    <div className="relative">
+      {isMobile && (
+        <div
+          className={`absolute animate-bounce-right custom-arrow-right z-10 top-[50%] right-0`}
+          style={{ display: "block" }}
+        >
+          <FaAngleDoubleRight
+            className="text-custom-purple opacity-70"
+            style={{ height: 24, width: 24 }}
+          />
+        </div>
+      )}
       <Slider {...settings} style={{ gap: "10px" }}>
         {testimonials?.map((testimonial) => (
           <div
