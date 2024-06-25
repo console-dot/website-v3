@@ -16,12 +16,14 @@ export const BlockchainDevelopment = () => {
   const data = useSelector(selectBlockChainDetails);
   return (
     <div className="w-full mb-8 overflow-hidden">
-      <LandingPage data={landingPageDataBlockchain} heroDescription={data?.heroDescription}/>
+      <LandingPage
+        data={landingPageDataBlockchain}
+        heroDescription={data?.heroDescription}
+      />
       <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-8 xss:p-8">
         <div className="pb-4">
           {" "}
           <TopComponent
-            title={"Services"}
             heading={
               "EMPOWERING TOMORROW: CONSOLEDOT'S BLOCKCHAIN DEVELOPMENT SOLUTIONS"
             }
@@ -33,7 +35,6 @@ export const BlockchainDevelopment = () => {
         <Process
           data={processCardsBlockchainDev}
           heading={"How ConsoleDot Executes the Blockchain Development Process"}
-          title={"Blockchain Development Process"}
           maxRow={5}
         />
         <WhyChooseBC

@@ -10,7 +10,7 @@ const Card = ({ heading, description }) => {
   return (
     <div className="bg-white shadow-lg xl:w-full lg:w-full md:w-full xl:h-[420px] lg:h-[420px] md:h-[420px] h-[400px] rounded-lg flex flex-col justify-between xl:p-6 lg:px-1 lg:pb-6 md:px-6 md:pb-6 sm:px-6 sm:pb-6 xs:px-6 xs:pb-6 xss:px-6 xss:pb-6 xl:hover:-translate-y-8 lg:hover:-translate-y-8 md:hover:-translate-y-8 sm:hover:-translate-y-0 xs:hover:-translate-y-0 xss:hover:-translate-y-0 hover:border-dashed hover:border-2 hover:border-custom-purple transition duration-300 ease-in-out mt-6 md:mb-0">
       {/* Header Section */}
-      <div className="text-center mb-4 text-custom-purple">
+      <div className="text-center mb-4 text-custom-purple md:mt-0 mt-10">
         <h2 className="text-[24px] font-bold">{heading}</h2>
       </div>
 

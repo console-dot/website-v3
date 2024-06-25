@@ -19,28 +19,24 @@ export const WhyWeWork = ({ delivers }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Update visibility state based on whether the container is in view
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } // Trigger when 50% of the container is in view
+      { threshold: 0.5 } 
     );
 
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
-
-    // Clean up the observer when the component unmounts
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
       }
     };
-  }, []); // Empty dependency array ensures the effect runs only once
+  }, []); 
 
   return (
     <div className="">
       <div className="flex flex-col gap-2 items-center justify-center w-full">
-        <h1 className="text-[16px] leading-5 text-dottedBorder">Why We Work</h1>
         <h1 className="text-[28px] xs:text-[20px] xxs:text-[16px] leading-10 text-custom-purple font-bold">
           HOW CONSOLEDOT DELIVERS:
         </h1>
@@ -54,7 +50,6 @@ export const WhyWeWork = ({ delivers }) => {
       >
         <div className="lg:w-[50%] xl:w-[50%] md:w-[50%] sm:w-[100%] xs:w-[100%] xss:w-[100%]">
           <div className="flex justify-center items-center p-4">
-            {/* <img src={whywework} alt="" width={400} height={400} /> */}
             <ProductResearchTop width={483} height={382} />
           </div>
         </div>

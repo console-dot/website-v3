@@ -42,9 +42,9 @@ export const OffShoreModelHero = ({heroDescription}) => {
             <span className="md:block md:mt-1"></span> YOUR GATEWAY TO
             EXCEPTIONAL DEVELOPMENT SOLUTIONS
           </p>
-          <p className="font-lato md:text-[16px] text-[12px]  leading-2 tracking-normal mt-2">
+          {/* <p className="font-lato md:text-[16px] text-[12px]  leading-2 tracking-normal mt-2">
             {heroDescription}
-          </p>
+          </p> */}
           <span className="md:block md:mt-1"></span>
         </div>
       </div>

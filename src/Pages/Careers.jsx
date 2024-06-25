@@ -42,7 +42,7 @@ export const Careers = () => {
   return (
     <div className="w-full mb-8 relative overflow-hidden">
       <LandingPage data={landingPageDataCareers} heroDescription={heroDesc?.openPositionHero} />
-      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xss:px-8 w-full flex flex-col xl:gap-16 lg:gap-16 md:gap-16 sm:gap-4 xs:gap-4 xss:gap-4 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-[-2.5rem] xs:mt-[-2.5rem] xss:mt-[-2.5rem]">
+      <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-4 xss:px-8 w-full flex flex-col xl:gap-16 lg:gap-16 md:gap-16 sm:gap-4 xs:gap-4 xss:gap-4 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-2 xs:mt-2 xss:mt-2">
         <div className="xl:block lg:block md:block sm:flex xs:flex xss:flex xl:justify-start sm:justify-between xs:justify-between xss:justify-between">
           <SearchInput
             openPositionData={openPositionData}

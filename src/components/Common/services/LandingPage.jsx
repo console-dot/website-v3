@@ -21,7 +21,7 @@ export default function LandingPage({ data, heroDescription }) {
               <h1 className="text-[28px] text-white mb-4 font-bold">
                 {data.midHeading.toUpperCase()}
               </h1>
-              <h1 className="text-[16px] text-white">{heroDescription}</h1>
+              {/* <h1 className="text-[16px] text-white">{heroDescription}</h1> */}
             </div>
           </div>
         </div>

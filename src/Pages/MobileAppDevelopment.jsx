@@ -18,7 +18,6 @@ export const MobileAppDevelopment = () => {
         <div className="pb-4">
           {" "}
           <TopComponent
-            title={"Services"}
             heading={"Empowering Businesses in the Palm of Your Hand"}
             description={data?.description}
             image={<ArVrTop />}
@@ -35,7 +34,7 @@ export const MobileAppDevelopment = () => {
           heading={
             "Mobile Development Process/Adding new Feature in existing App"
           }
-          title={"Mobile Development Process"}
+        
           maxRow={5}
         />
 

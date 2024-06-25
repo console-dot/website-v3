@@ -17,12 +17,14 @@ export const ArVrDevelopment = () => {
   const data = useSelector(selectARDetails);
   return (
     <div className="w-full mb-8 overflow-hidden">
-      <LandingPage data={landingPageDataArVr} heroDescription={data?.heroDescription} />
+      <LandingPage
+        data={landingPageDataArVr}
+        heroDescription={data?.heroDescription}
+      />
       <div className="lg:p-16 xl:p-16 2xl:p-16 sm:p-8 xs:p-8 xss:p-8">
         <div className="pb-4">
           {" "}
           <TopComponent
-            title={"Services"}
             heading={"Immerse and Innovate: ConsoleDot's AR/VR Solutions"}
             description={data?.description}
             image={<ArVrTop />}
@@ -32,7 +34,6 @@ export const ArVrDevelopment = () => {
         <Process
           data={processCardsArVr}
           heading={"How ConsoleDot Executes the AR/VR Development Process"}
-          title={"AR/VR Development Process"}
         />
         <WhyChooseAr
           heading={"Why Choose ConsoleDot for AR/VR?"}

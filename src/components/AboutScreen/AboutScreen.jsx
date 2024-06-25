@@ -2,14 +2,11 @@ import React from "react";
 import { HomeTop2, aboutService } from "../../assets/images";
 import { HomeTop } from "../../assets/icons";
 
-export const AboutScreen = ({description}) => {
+export const AboutScreen = ({ description }) => {
   return (
     <div className="w-[100%] flex  mt-6 md:mt-16 ">
-      <div className="flex flex-wrap  bg-backgroundColor">
+      <div className="flex flex-wrap justify-center items-center  bg-backgroundColor">
         <div className="w-full md:w-1/2 md:p-20 p-8">
-          <p className="text-custom-blue font-poppins md:text-[16px] text-[12px] font-normal leading-none tracking-normal">
-            About the company
-          </p>
           <p className="text-custom-purple font-poppins md:text-[28px] text-[18px] font-bold  tracking-normal md:mt-3 mt-1 ">
             ABOUT CONSOLEDOT
           </p>
@@ -20,7 +17,7 @@ export const AboutScreen = ({description}) => {
           </div>
 
           <p className="text-aboutustext text-justify  font-lato  md:text-[16px] text-[12px] font-normal leading-8  mt-4">
-          {description}
+            {description}
           </p>
         </div>
         <div className="w-full md:w-1/2 flex justify-center md:pl-6 lg:pl-8">

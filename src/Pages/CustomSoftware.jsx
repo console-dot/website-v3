@@ -22,14 +22,13 @@ export const CustomSoftware = () => {
         <div className="pb-4">
           {" "}
           <TopComponent
-            title={"Services"}
             heading={"Crafting Tailored Solutions for Unique Business Demands"}
             description={data?.description}
             image={<CustomSoftTop />}
           />
         </div>
         <Preposition
-          title={"Proposition"}
+          
           heading={"Our Proposition"}
           proposition={data?.proposition}
         />
