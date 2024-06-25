@@ -72,7 +72,7 @@ export const Card = ({ expertise }) => {
   return (
     <div className="">
       <Slider {...settings}>
-        {expertise.map((expertise, index) => (
+        {expertise?.map((expertise, index) => (
           <div
             key={expertise?._id}
             className={expertise?._id % 2 != 0 ? "odd-border " : ""}

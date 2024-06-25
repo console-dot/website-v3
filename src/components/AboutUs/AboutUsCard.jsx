@@ -51,7 +51,7 @@ const Card = ({ testimonials }) => {
   return (
     <div className="">
       <Slider {...settings} style={{ gap: "10px" }}>
-        {testimonials.map((testimonial) => (
+        {testimonials?.map((testimonial) => (
           <div
             key={testimonial?._id}
             className="bg-white flex items-center justify-center transition-transform duration-300 rounded-xl p-3 py-10"

@@ -46,9 +46,9 @@ const Card = ({ heading, description }) => {
 };
 
 export const CardArray = ({ offshoreComparison }) => {
-  const cards = offshoreComparison.map((offshore) => ({
-    heading: offshore.type,
-    description: offshore.comparison,
+  const cards = offshoreComparison?.map((offshore) => ({
+    heading: offshore?.type,
+    description: offshore?.comparison,
   }));
 
   const settings = {
