@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon";
@@ -12,11 +12,23 @@ import { selectLandingPageDetails } from "../../redux";
 import { useSelector } from "react-redux";
 import { G2Icon } from "../../assets/icons";
 import { BsTwitterX } from "react-icons/bs";
+import Typed from "typed.js";
 
 export default function Header() {
   const isMobileView = useIsMobile();
   const isXs = useIsXs();
   const iconsData = useSelector(selectLandingPageDetails);
+  useEffect(() => {
+    const typed = new Typed("#typed", {
+      stringsElement: "#typed-strings",
+      typeSpeed: 30,
+      loop: true,
+      showCursor: false,
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   return (
     <>
       <div
@@ -102,6 +114,29 @@ export default function Header() {
                 {iconsData?.intro?.email}
               </a>
             </p>
+          </div>
+        </div>
+        <div
+          style={{
+            color: "rgba(255, 255, 255 , 50%)",
+            width: "26%",
+            display: isMobileView ? "none" : "",
+          }}
+          className="h-8 flex items-center xl:flex lg:flex md:flex sm:hidden xs:hidden xxs:hidden"
+        >
+          <div id="typed-strings">
+            <p>
+              <i>Inovate</i> <strong>The Technology</strong>
+            </p>
+            <p>
+              <i>Empowering</i> <strong>Your Digital Transformation</strong>
+            </p>
+            <p>
+              <i>Your Partner</i> <strong>in Digital Excellence</strong>
+            </p>
+          </div>
+          <div style={{ height: "20px" }}>
+            <p className="text-secondary" id="typed"></p>
           </div>
         </div>
         {/* Right */}
