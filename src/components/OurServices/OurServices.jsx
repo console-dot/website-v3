@@ -24,6 +24,7 @@ const OurServices = ({ expertise }) => {
       </div>
 
       <div className="xl:pl-16 xl:pr-16 xl:pt-16 lg:pl-16 lg:pr-16 lg:pt-16 md:pl-16 md:pr-16 md:pt-16 pl-5 pr-5 pt-6">
+        
         <Card expertise={expertise} />
         <div className="flex md:justify-end justify-center md:pt-3 pt-10 ">
           <button

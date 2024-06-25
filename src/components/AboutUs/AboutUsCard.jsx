@@ -8,6 +8,32 @@ import Slider from "react-slick";
 import { Inverted2 } from "../../assets/icons";
 import config from "../../api/config";
 
+const CustomNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} animate-bounce-right custom-arrow-right`}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      <i className="fas fa-arrow-right"></i>
+    </div>
+  );
+};
+
+const CustomPrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} animate-bounce-left custom-arrow-left`}
+      style={{ ...style, display: "block", left: -40 }}
+      onClick={onClick}
+    >
+      <i className="fas fa-arrow-left"></i>
+    </div>
+  );
+};
+
 const settings = {
   dots: true,
   infinite: false,
@@ -17,6 +43,8 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
+  nextArrow: <CustomNextArrow />,
+  prevArrow: <CustomPrevArrow />,
 
   responsive: [
     {
