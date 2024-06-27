@@ -347,15 +347,15 @@ export const CaseStudyPage = () => {
                   </h2>
                   {project?.challenges?.map((challenge, index) => (
                     <div className="mt-4 text-justify" key={index}>
-                      <div className="flex flex-row  items-center gap-4">
-                        <div className="w-[10%]">
+                      <div className="flex flex-row  items-center gap-4 w-full">
+                        <div className="w-[5%]">
                           <div className="w-8 h-8 bg-custom-purple opacity-80 flex justify-center items-center rounded-lg">
                             <span className="text-white">
                               {String(index + 1).padStart(2, "0")}
                             </span>
                           </div>
                         </div>
-                        <div>
+                        <div className="w-[95%]">
                           <span className="text-webHeading font-semibold">
                             {challenge?.heading}
                             {" : "}
@@ -466,15 +466,15 @@ export const CaseStudyPage = () => {
                 <div className="mt-4 text-justify">
                   {project?.results?.subHeadings?.map((subHeading, index) => (
                     <div className="mt-4 text-justify" key={index}>
-                      <div className="flex flex-row gap-4 items-center">
-                        <div className="w-[10%]">
+                      <div className="flex flex-row justify-start gap-4 items-center w-full">
+                        <div className="w-[5%]">
                           <div className="w-8 h-8 bg-custom-purple opacity-80 flex justify-center items-center rounded-lg">
                             <span className="text-white">
                               {String(index + 1).padStart(2, "0")}
                             </span>
                           </div>
                         </div>
-                        <div>
+                        <div className="w-[95%]" >
                           <span className="text-webHeading font-semibold">
                             {subHeading?.heading}
                           </span>{" "}
