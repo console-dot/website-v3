@@ -220,11 +220,11 @@ export const CaseStudyPage = () => {
             <div className="md:ml-28 ml-0 md:p-0 p-4 text-justify flex ">
               {/* client */}
               <section ref={sectionRefs.current.client} className="mb-20">
-                <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
-                  Client
-                </h2>
                 <div className="flex xl:flex-row lg:flex-row 2xl:flex-row md:flex-row sm:flex-col xs:flex-col xss:flex-col gap-4">
                   <div className="lg:w-[100%] xl:w-[100%] md:w-[100%] sm:w-full xs:w-full xss:w-full mt-2">
+                    <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
+                      Client
+                    </h2>
                     <p className="text-webDescrip ">
                       {project?.client[0]?.description
                         ?.split(" \\n")
@@ -295,81 +295,138 @@ export const CaseStudyPage = () => {
                 <hr className="mt-20  w-[70%]" />
               </section>
             </div>
-            <div className="md:ml-28 ml-0 md:p-0 p-4 md:w-[65%] text-justify w-full">
+            <div className="md:ml-28 ml-0 md:p-0 p-4 md:w-[100%] text-justify w-full">
               {/* product */}
-              <section ref={sectionRefs.current.product} className="mb-20">
-                <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
-                  Product
-                </h2>
-                <div className="mt-2">
-                  <p className="text-webDescrip ">
-                    {project?.product?.split("\\n").map((item, index) => (
-                      <React.Fragment key={index}>
-                        {item}
-                        <br />
-                      </React.Fragment>
-                    ))}
-                  </p>
-                </div>
-                <hr className="mt-20 " />
-              </section>
-              {/* goals */}
-              <section
-                ref={sectionRefs.current.goals}
-                className="mb-20 text-justify"
-              >
-                <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
-                  Goals and Objectives
-                </h2>
-                {project?.goals?.map((goal, index) => (
-                  <div key={index}>
-                    <div className="mt-2">
-                      <label className="text-custom-purple text-xl">•</label>{" "}
-                      <label className="text-webHeading font-semibold">
-                        {goal?.heading}
-                      </label>
-                    </div>
-                    <div className="mt-1">
-                      <label className="text-webDescrip">
-                        {goal?.description}
-                      </label>
-                    </div>
+              <div className="flex flex-row items-start ">
+                <div className="w-[65%] mr-4">
+                <section ref={sectionRefs.current.product} className="mb-20">
+                  <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
+                    Product
+                  </h2>
+                  <div className="mt-2">
+                    <p className="text-webDescrip ">
+                      {project?.product?.split("\\n").map((item, index) => (
+                        <React.Fragment key={index}>
+                          {item}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </p>
                   </div>
-                ))}
-                <hr className="mt-20 " />
-              </section>
-              {/* chanllenges */}
-              <section ref={sectionRefs.current.challenge} className="mb-20">
-                <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
-                  Project Challenge
-                </h2>
-                {project?.challenges?.map((challenge, index) => (
-                  <div className="mt-4 text-justify" key={index}>
-                    <div className="flex flex-row  items-center gap-4">
-                      <div className="w-[10%]">
-                        <div className="w-8 h-8 bg-custom-purple opacity-80 flex justify-center items-center rounded-lg">
-                          <span className="text-white">
-                            {String(index + 1).padStart(2, "0")}
+                  <hr className="mt-20 " />
+                </section>
+                {/* goals */}
+                <section
+                  ref={sectionRefs.current.goals}
+                  className="mb-20 text-justify"
+                >
+                  <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
+                    Goals and Objectives
+                  </h2>
+                  {project?.goals?.map((goal, index) => (
+                    <div key={index}>
+                      <div className="mt-2">
+                        <label className="text-custom-purple text-xl">•</label>{" "}
+                        <label className="text-webHeading font-semibold">
+                          {goal?.heading}
+                        </label>
+                      </div>
+                      <div className="mt-1">
+                        <label className="text-webDescrip">
+                          {goal?.description}
+                        </label>
+                      </div>
+                    </div>
+                  ))}
+                  <hr className="mt-20 " />
+                </section>
+                {/* chanllenges */}
+                <section ref={sectionRefs.current.challenge} className="mb-20">
+                  <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
+                    Project Challenge
+                  </h2>
+                  {project?.challenges?.map((challenge, index) => (
+                    <div className="mt-4 text-justify" key={index}>
+                      <div className="flex flex-row  items-center gap-4">
+                        <div className="w-[10%]">
+                          <div className="w-8 h-8 bg-custom-purple opacity-80 flex justify-center items-center rounded-lg">
+                            <span className="text-white">
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span className="text-webHeading font-semibold">
+                            {challenge?.heading}
+                            {" : "}
+                          </span>{" "}
+                          <span className="text-webDescrip">
+                            {challenge?.description}
                           </span>
                         </div>
                       </div>
-                      <div>
-                        <span className="text-webHeading font-semibold">
-                          {challenge?.heading}
-                          {" : "}
-                        </span>{" "}
-                        <span className="text-webDescrip">
-                          {challenge?.description}
-                        </span>
-                      </div>
+                    </div>
+                  ))}
+                  <hr className="mt-20 " />
+                </section>
+                </div>
+                <div>
+                <div className="lg:w-[40%] xl:w-[40%] md:w-[40%] sm:w-full xs:w-full xss:w-full">
+                  <div className="">
+                    <div>
+                      <h2 className="text-xl font-semibold text-custom-purple">
+                        Tech Stack
+                      </h2>
+                      {project?.techStack &&
+                        project?.techStack
+                          .reduce((unique, tech) => {
+                            if (!unique.includes(tech?.type)) {
+                              unique.push(tech?.type);
+                            }
+                            return unique;
+                          }, [])
+                          .map((type, index) => (
+                            <div key={index} className="p-4">
+                              <div className="mb-3">
+                                <span className="text-base font-semibold text-custom-blue ">
+                                  {type && capitalizeFirstLetter(type)}
+                                </span>
+                              </div>
+                              <div className="flex flex-wrap flex-row justify-start items-center gap-2 ">
+                                {project.techStack
+                                  .filter((t) => t.type === type)
+                                  .map((filteredTech, idx) => (
+                                    <div
+                                      key={idx}
+                                      className="flex flex-col justify-center "
+                                    >
+                                      <div className="mx-auto bg-custom-lightBlue w-10 h-10 rounded-md flex justify-center items-center">
+                                        <img
+                                          src={`${BASE_URL}/file/${filteredTech?.image}`}
+                                          alt={filteredTech.name}
+                                          className="w-6 h-6 "
+                                          onError={(e) => {
+                                            e.target.onerror = null;
+                                            e.target.src = "your-404-image-url";
+                                          }}
+                                        />
+                                      </div>
+                                      <div className="text-xs mx-auto text-webDescrip ">
+                                        {filteredTech?.name}
+                                      </div>
+                                    </div>
+                                  ))}
+                              </div>
+                            </div>
+                          ))}
                     </div>
                   </div>
-                ))}
-                <hr className="mt-20 " />
-              </section>
+                </div>
+                </div>
+              </div>
             </div>
 
-            <div className="md:ml-28 ml-0 xl:p-0 lg:p-0 md:p-0 p-4 text-justify">
+            <div className="md:ml-28 ml-0 xl:p-0 lg:p-0 md:p-0 p-4 md:w-[65%] w-full text-justify">
               {/* solution */}
               <section ref={sectionRefs.current.solution} className="mb-20">
                 <h2 className="text-3xl font-bold text-custom-purple md:mb-5 mb-2 ">
@@ -386,58 +443,7 @@ export const CaseStudyPage = () => {
                       ))}
                     </p>
                   </div>
-                  <div className="lg:w-[40%] xl:w-[40%] md:w-[40%] sm:w-full xs:w-full xss:w-full">
-                    <div className="">
-                      <div>
-                        <h2 className="text-xl font-semibold text-custom-purple">
-                          Tech Stack
-                        </h2>
-                        {project?.techStack &&
-                          project?.techStack
-                            .reduce((unique, tech) => {
-                              if (!unique.includes(tech?.type)) {
-                                unique.push(tech?.type);
-                              }
-                              return unique;
-                            }, [])
-                            .map((type, index) => (
-                              <div key={index} className="p-4">
-                                <div className="mb-3">
-                                  <span className="text-base font-semibold text-custom-blue ">
-                                    {type && capitalizeFirstLetter(type)}
-                                  </span>
-                                </div>
-                                <div className="flex flex-wrap flex-row justify-start items-center gap-2 ">
-                                  {project.techStack
-                                    .filter((t) => t.type === type)
-                                    .map((filteredTech, idx) => (
-                                      <div
-                                        key={idx}
-                                        className="flex flex-col justify-center "
-                                      >
-                                        <div className="mx-auto bg-custom-lightBlue w-10 h-10 rounded-md flex justify-center items-center">
-                                          <img
-                                            src={`${BASE_URL}/file/${filteredTech?.image}`}
-                                            alt={filteredTech.name}
-                                            className="w-6 h-6 "
-                                            onError={(e) => {
-                                              e.target.onerror = null;
-                                              e.target.src =
-                                                "your-404-image-url";
-                                            }}
-                                          />
-                                        </div>
-                                        <div className="text-xs mx-auto text-webDescrip ">
-                                          {filteredTech?.name}
-                                        </div>
-                                      </div>
-                                    ))}
-                                </div>
-                              </div>
-                            ))}
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
                 <hr className="mt-20  w-[70%]" />
               </section>
