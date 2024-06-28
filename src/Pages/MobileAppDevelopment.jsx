@@ -32,7 +32,7 @@ export const MobileAppDevelopment = () => {
         <Process
           data={processCardsMobDev}
           heading={
-            "Mobile Development Process/Adding new Feature in existing App"
+            "Mobile Development Process"
           }
         
           maxRow={5}
@@ -49,7 +49,7 @@ export const MobileAppDevelopment = () => {
         <TechStackMobDev 
           data={data?.techStack}
           description={
-            "Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof"
+            "Our technology stack is carefully curated to ensure your app is built on a foundation of reliability, scalability, and innovation"
           }
         />
       </div>

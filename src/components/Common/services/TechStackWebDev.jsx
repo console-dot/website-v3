@@ -49,6 +49,19 @@ export const TechStackWebDev = ({ data, description }) => {
     },
     {
       id: 4,
+      title: "Ci/Cd tools",
+      icons: data
+        .filter((item) => item.type === "CI/CD")
+        .map((item) => (
+          <img
+            src={`${BASE_URL}/file/${item.image}`}
+            alt={item.name}
+            className="flex items-center justify-center h-20 w-20 rounded-lg"
+          />
+        )),
+    },
+    {
+      id: 5,
       title: "VCS",
       icons: data
         .filter((item) => item.type === "VCS")
@@ -61,7 +74,7 @@ export const TechStackWebDev = ({ data, description }) => {
         )),
     },
     {
-      id: 5,
+      id: 6,
       title: "Testing tools",
       icons: data
         .filter((item) => item.type === "Testing")

@@ -47,7 +47,7 @@ export const UiUxDevelopment = () => {
         <TechStackUiUx
           data={data?.techStack}
           description={
-            "Our technology stack is carefully chosen to empower our designers in delivering cutting-edge UI/UX solutions:"
+            "Our technology stack is carefully chosen to empower our designers in delivering cutting-edge UI/UX solutions"
           }
         />
       </div>

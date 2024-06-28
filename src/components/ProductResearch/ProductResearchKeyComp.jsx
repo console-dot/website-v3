@@ -44,7 +44,7 @@ export const ProductResearchKeyComp = ({ keyComponents }) => {
       heading: "Road Map Development",
       icon: <RoadmaoDevIcon />,
       para1: keyComponents[0]?.roadMap[0],
-      para2: keyComponents[0]?.roadMap[0],
+      para2: keyComponents[0]?.roadMap[1],
     },
   ];
 

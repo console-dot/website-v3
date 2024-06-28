@@ -58,7 +58,7 @@ export const AIDevelopment = () => {
         <TechStackAi
           data={data?.techStack}
           description={
-            "Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof:"
+            "Our technology stack is carefully selected to ensure your AI solutions are at the forefront of innovation"
           }
         />
       </div>

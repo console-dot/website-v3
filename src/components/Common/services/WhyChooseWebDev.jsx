@@ -5,26 +5,30 @@ import {
   MobExpertise,
   MobileCollabIcon,
   MonInnovatIcon,
+  UserCentricIcon,
+  Webdev2,
+  Webdev3,
+  
 } from "../../../assets/icons";
 import useIsMobile from "../../../utils/hooks/useIsMobile";
 export const WhyChooseWebDev = ({ heading, whyChooseUs, cardsInRow }) => {
   const data = [
     {
       id: 1,
-      title: "Expertise",
-      icon: <MobExpertise />,
+      title: "User-Centric Design",
+      icon: <UserCentricIcon />,
       description: whyChooseUs[0],
     },
     {
       id: 2,
-      title: "Innovative Solutions",
-      icon: <MonInnovatIcon />,
+      title: "Cross-Platform Compatibility",
+      icon: <Webdev2/>,
       description: whyChooseUs[1],
     },
     {
       id: 3,
-      title: "Client Collaboration",
-      icon: <MobileCollabIcon />,
+      title: "Performance Optimization",
+      icon: <Webdev3 />,
       description: whyChooseUs[2],
     },
   ];
