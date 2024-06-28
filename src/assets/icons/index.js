@@ -80,8 +80,10 @@ export * from "./CloudCompIcon1";
 export * from "./HomeTop";
 export * from "./OffShoreTop";
 export * from "./Offshore2";
-export * from './CheckIcon'
-export * from './FilterIcon'
-export * from './CustomExpertise'
-export * from './CustomCollab'
-export * from './G2Icon'
+export * from './CheckIcon';
+export * from './FilterIcon';
+export * from './CustomExpertise';
+export * from './CustomCollab';
+export * from './G2Icon';
+export * from './Webdev2';
+export * from './Webdev3';

@@ -16,7 +16,7 @@ export const footerData =
         btnText: " Let's Talk ConsoleDot!",
       },
       productResearch: {
-        heading: "Unlock possibilities with ConsoleDot. Your success, our commitment.",
+        heading: "Elevate your digital experiences with Consoledot's expertise in web development.",
         subHeading: "Ready to transform your ideas into successful software solutions? Choose Consoledot's Product Research Services for a roadmap that leads to innovation, market success, and sustainable growth. Contact us today and let's navigate the future together.",
         btnText: " Let's Talk ConsoleDot!",
       },

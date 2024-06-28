@@ -38,13 +38,15 @@ const CustomPrevArrow = (props) => {
 
 const settings = {
   dots: true,
-  infinite: false,
+  infinite: true,
   className: "center",
   centerPadding: "60px",
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
+  autoplay: true,
+  autoplaySpeed: 2000, 
   nextArrow: <CustomNextArrow />,
   prevArrow: <CustomPrevArrow />,
 

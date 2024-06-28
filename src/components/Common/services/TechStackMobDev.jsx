@@ -10,7 +10,7 @@ export const TechStackMobDev = ({ data, description }) => {
   const techStack = [
     {
       id: 1,
-      title: "Frontend Technologies",
+      title: "Frontend ",
       icons: data
         .filter((item) => item.type === "Frontend")
         .map((item) => (
@@ -23,7 +23,7 @@ export const TechStackMobDev = ({ data, description }) => {
     },
     {
       id: 2,
-      title: "Backend Technologies",
+      title: "Backend",
       icons: data
         .filter((item) => item.type === "Backend")
         .map((item) => (
@@ -62,7 +62,7 @@ export const TechStackMobDev = ({ data, description }) => {
     },
     {
       id: 5,
-      title: "Version Control System",
+      title: "Version Control",
       icons: data
         .filter((item) => item.type === "VCS")
         .map((item) => (
@@ -75,7 +75,7 @@ export const TechStackMobDev = ({ data, description }) => {
     },
     {
       id: 6,
-      title: "API",
+      title: "APIs",
       icons: data
         .filter((item) => item.type === "API")
         .map((item) => (

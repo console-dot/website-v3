@@ -46,7 +46,7 @@ export const ArVrDevelopment = () => {
         <TechStackAr
           data={data?.techStack}
           description={
-            "Our technology stack is carefully curated to deliver AR/VR solutions that push the boundaries of immersive experiences:"
+            "Our technology stack is carefully curated to deliver AR/VR solutions that push the boundaries of immersive experiences"
           }
         />
       </div>

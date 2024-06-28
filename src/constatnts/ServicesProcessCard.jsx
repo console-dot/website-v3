@@ -1,13 +1,45 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Vector } from "../assets/icons";
 import { Dot } from "../components/WebLandingPage";
 import useIsMobile from "../utils/hooks/useIsMobile";
 
 export const ServicesProcessCard = ({ data, maxRow }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [autoSlide, setAutoSlide] = useState(true);
+  const cardRef = useRef(null);
   const gradientStyle = {
     background: "linear-gradient(180deg, #0E7789 0%, #3C5A85 100%)",
   };
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    let slideInterval;
+    if (autoSlide) {
+      slideInterval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+      }, 2000);
+    }
+    return () => {
+      clearInterval(slideInterval);
+    };
+  }, [autoSlide, data.length]);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (cardRef.current && !cardRef.current.contains(event.target)) {
+        setAutoSlide(true);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
+  const handleUserTap = () => {
+    setAutoSlide(false);
+  };
+
   return (
     <>
       {!isMobile ? (
@@ -22,9 +54,9 @@ export const ServicesProcessCard = ({ data, maxRow }) => {
         >
           {data?.map((i, index) => (
             <div
-            key={index}
+              key={index}
               className={`flex flex-col w-full gap-4 ${
-                parseInt(i?.heading) % 2 != 0
+                parseInt(i?.heading) % 2 !== 0
                   ? "flex-col-reverse"
                   : "flex-col mt-32"
               }`}
@@ -53,7 +85,7 @@ export const ServicesProcessCard = ({ data, maxRow }) => {
                 <h1 className="text-[16px] mb-4 leading-6 font-poppins font-bold text-start text-webHeading">
                   {i?.title}
                 </h1>
-                <p className="text-webDescrip text-[16px] leading-6 text-justify">
+                <p className="text-webDescrip text-[16px] leading-6 text-left">
                   {i?.desccription}
                 </p>
               </div>
@@ -61,8 +93,18 @@ export const ServicesProcessCard = ({ data, maxRow }) => {
           ))}
         </div>
       ) : (
-        <div className="w-full overflow-x-auto flex sm:hidden py-4">
-          <div className="flex gap-4">
+        <div
+          className="w-full overflow-x-auto flex sm:hidden py-4"
+          onTouchStart={handleUserTap}
+        >
+          <div
+            className="flex gap-4"
+            style={{
+              transform: `translateX(-${currentIndex * 200}px)`,
+              transition: "transform 0.5s ease-in-out",
+            }}
+            ref={cardRef}
+          >
             {data?.map((i, index) => (
               <div
                 key={index}
@@ -70,13 +112,12 @@ export const ServicesProcessCard = ({ data, maxRow }) => {
               >
                 <div
                   className={`flex flex-col w-full gap-4 ${
-                    parseInt(i?.heading) % 2 != 0
+                    parseInt(i?.heading) % 2 !== 0
                       ? "flex-col-reverse"
                       : "flex-col mt-32"
                   }`}
                 >
                   <div
-                    key={index}
                     className={`w-full h-[162px] relative px-2 flex  ${
                       i?.flexDirection ? i?.flexDirection : "flex-col"
                     } gap-4 justify-center items-center ${
@@ -100,7 +141,7 @@ export const ServicesProcessCard = ({ data, maxRow }) => {
                     <h1 className="text-[16px] mb-4 leading-6 font-poppins font-bold text-start text-webHeading">
                       {i?.title}
                     </h1>
-                    <p className="text-webDescrip text-[16px] leading-6 text-justify">
+                    <p className="text-webDescrip text-[16px] leading-6 text-left">
                       {i?.desccription}
                     </p>
                   </div>

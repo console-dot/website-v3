@@ -40,7 +40,7 @@ export const WebDevelopment = () => {
 
         <Process
           data={processCardsWeb}
-          heading={"WEB DEVELOPMENT PROCESS/ADDING NEW FEATURE IN EXISTING APP"}
+          heading={"WEB DEVELOPMENT PROCESS"}
           
           maxRow={5}
         />
@@ -55,7 +55,7 @@ export const WebDevelopment = () => {
         <TechStackWebDev
           data={data?.techStack}
           description={
-            "Our technology stack is meticulously chosen to ensure your blockchain solution is secure, scalable, and future-proof"
+            "Our technology stack is carefully curated to ensure your website is built on a foundation of reliability, scalability, and innovation"
           }
         />
       </div>

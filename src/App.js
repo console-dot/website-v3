@@ -200,7 +200,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/CaseStudies" element={<CaseStudies />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:title" element={<CaseStudyPage />} />
             <Route path="/services" element={<ServicesAll />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} /> 
